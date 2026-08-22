@@ -1,0 +1,6 @@
+{
+  "@@locale": "fr",
+  "appName": "Nutrivoya",
+  "appTagline": "Une nutrition qui s'adapte à votre alimentation, votre culture et votre vie.",
+  "@@comment": "Placeholder French localization. Most strings fall back to English until validated by a native speaker."
+}

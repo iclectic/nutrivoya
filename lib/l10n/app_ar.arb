@@ -1,0 +1,6 @@
+{
+  "@@locale": "ar",
+  "appName": "نوتريفويا",
+  "appTagline": "تغذية تعمل مع طعامك وثقافتك وحياتك.",
+  "@@comment": "Placeholder Arabic localization. Most strings fall back to English until validated by a native speaker. RTL layout is supported."
+}

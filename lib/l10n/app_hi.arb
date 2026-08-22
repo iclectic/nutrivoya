@@ -1,0 +1,6 @@
+{
+  "@@locale": "hi",
+  "appName": "न्यूट्रिवोया",
+  "appTagline": "ऐसा पोषण जो आपके खाने, आपकी संस्कृति और आपकी ज़िंदगी के साथ काम करता है।",
+  "@@comment": "Placeholder Hindi localization. Most strings fall back to English until validated by a native speaker."
+}

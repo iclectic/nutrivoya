@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Exec(flutter)",
+      "Exec(rm)",
+      "Exec(shopt)",
+      "Exec(grep)",
+      "Exec(sed)",
+      "Exec(mkdir)",
+      "Exec(ls)",
+      "Exec(head)",
+      "Exec(dart)",
+      "Exec(find lib)",
+      "Exec(find test)"
+    ]
+  }
+}
