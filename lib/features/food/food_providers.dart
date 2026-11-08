@@ -4,6 +4,7 @@ import '../../core/models/food.dart';
 import '../../core/models/food_search_result.dart';
 import '../../features/profile/profile_controller.dart';
 import '../diary/diary_providers.dart';
+import '../recipes/recipe_providers.dart';
 import 'data/usda_food_data_central_adapter.dart';
 import 'food_repository.dart';
 import 'food_search_service.dart';
@@ -38,12 +39,21 @@ final foodSearchResultsProvider =
     final entries = await ref.watch(recentFoodsProvider.future);
     recent = entries.map((e) => e.foodId).toSet();
   } catch (_) {}
-  return repo.search(query, profile: profile, recentFoodIds: recent);
+  final results =
+      await repo.search(query, profile: profile, recentFoodIds: recent);
+  final recipes = ref.watch(recipesProvider).map((r) => r.toFood()).toList();
+  if (recipes.isEmpty) return results;
+  final recipeResults = ref
+      .watch(foodSearchServiceProvider)
+      .search(query, recipes, profile: profile, recentFoodIds: recent);
+  return [...recipeResults, ...results];
 });
 
 /// A single food by id (for the details screen).
 final foodByIdProvider =
     FutureProvider.autoDispose.family<Food?, String>((ref, id) async {
+  final recipe = ref.watch(recipesProvider.notifier).byFoodId(id);
+  if (recipe != null) return recipe.toFood();
   final repo = ref.watch(foodRepositoryProvider);
   return repo.getById(id);
 });

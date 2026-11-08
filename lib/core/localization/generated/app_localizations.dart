@@ -1497,6 +1497,125 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Sync unavailable — data is stored on this device'**
   String get settingsSyncUnavailable;
+
+  /// No description provided for @settingsRecipes.
+  ///
+  /// In en, this message translates to:
+  /// **'My recipes'**
+  String get settingsRecipes;
+
+  /// No description provided for @recipesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'My recipes'**
+  String get recipesTitle;
+
+  /// No description provided for @recipesEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No recipes yet. Build one from the ingredients you actually cook with — nutrition is calculated from each ingredient.'**
+  String get recipesEmpty;
+
+  /// No description provided for @recipeNew.
+  ///
+  /// In en, this message translates to:
+  /// **'New recipe'**
+  String get recipeNew;
+
+  /// No description provided for @recipeEdit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit recipe'**
+  String get recipeEdit;
+
+  /// No description provided for @recipeDelete.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete recipe'**
+  String get recipeDelete;
+
+  /// No description provided for @recipeName.
+  ///
+  /// In en, this message translates to:
+  /// **'Recipe name'**
+  String get recipeName;
+
+  /// No description provided for @recipeServings.
+  ///
+  /// In en, this message translates to:
+  /// **'Servings'**
+  String get recipeServings;
+
+  /// No description provided for @recipeYield.
+  ///
+  /// In en, this message translates to:
+  /// **'Cooked weight (g, optional)'**
+  String get recipeYield;
+
+  /// No description provided for @recipeYieldHelp.
+  ///
+  /// In en, this message translates to:
+  /// **'Weigh the finished pot to account for water gained or lost while cooking. Leave empty to use the ingredient total.'**
+  String get recipeYieldHelp;
+
+  /// No description provided for @recipeIngredients.
+  ///
+  /// In en, this message translates to:
+  /// **'Ingredients'**
+  String get recipeIngredients;
+
+  /// No description provided for @recipeAddIngredient.
+  ///
+  /// In en, this message translates to:
+  /// **'Add ingredient'**
+  String get recipeAddIngredient;
+
+  /// No description provided for @recipeSearchIngredient.
+  ///
+  /// In en, this message translates to:
+  /// **'Search ingredients'**
+  String get recipeSearchIngredient;
+
+  /// No description provided for @recipeGrams.
+  ///
+  /// In en, this message translates to:
+  /// **'g'**
+  String get recipeGrams;
+
+  /// No description provided for @recipePerServing.
+  ///
+  /// In en, this message translates to:
+  /// **'Per serving ({grams} g)'**
+  String recipePerServing(String grams);
+
+  /// No description provided for @recipeNutritionLine.
+  ///
+  /// In en, this message translates to:
+  /// **'{kcal} kcal · protein {protein} g · carbs {carbs} g · fat {fat} g'**
+  String recipeNutritionLine(
+    String kcal,
+    String protein,
+    String carbs,
+    String fat,
+  );
+
+  /// No description provided for @recipeSave.
+  ///
+  /// In en, this message translates to:
+  /// **'Save recipe'**
+  String get recipeSave;
+
+  /// No description provided for @recipeNeedsIngredients.
+  ///
+  /// In en, this message translates to:
+  /// **'Add a name and at least one ingredient'**
+  String get recipeNeedsIngredients;
+
+  /// No description provided for @recipeMissingData.
+  ///
+  /// In en, this message translates to:
+  /// **'Some ingredients have no data for a nutrient, so it is shown as unavailable rather than guessed.'**
+  String get recipeMissingData;
 }
 
 class _AppLocalizationsDelegate

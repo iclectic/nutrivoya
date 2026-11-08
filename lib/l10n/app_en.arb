@@ -313,5 +313,26 @@
     }
   },
   "settingsSyncDone": "Diary synced",
-  "settingsSyncUnavailable": "Sync unavailable — data is stored on this device"
+  "settingsSyncUnavailable": "Sync unavailable — data is stored on this device",
+  "settingsRecipes": "My recipes",
+  "recipesTitle": "My recipes",
+  "recipesEmpty": "No recipes yet. Build one from the ingredients you actually cook with — nutrition is calculated from each ingredient.",
+  "recipeNew": "New recipe",
+  "recipeEdit": "Edit recipe",
+  "recipeDelete": "Delete recipe",
+  "recipeName": "Recipe name",
+  "recipeServings": "Servings",
+  "recipeYield": "Cooked weight (g, optional)",
+  "recipeYieldHelp": "Weigh the finished pot to account for water gained or lost while cooking. Leave empty to use the ingredient total.",
+  "recipeIngredients": "Ingredients",
+  "recipeAddIngredient": "Add ingredient",
+  "recipeSearchIngredient": "Search ingredients",
+  "recipeGrams": "g",
+  "recipePerServing": "Per serving ({grams} g)",
+  "@recipePerServing": {"placeholders": {"grams": {"type": "String"}}},
+  "recipeNutritionLine": "{kcal} kcal · protein {protein} g · carbs {carbs} g · fat {fat} g",
+  "@recipeNutritionLine": {"placeholders": {"kcal": {"type": "String"}, "protein": {"type": "String"}, "carbs": {"type": "String"}, "fat": {"type": "String"}}},
+  "recipeSave": "Save recipe",
+  "recipeNeedsIngredients": "Add a name and at least one ingredient",
+  "recipeMissingData": "Some ingredients have no data for a nutrient, so it is shown as unavailable rather than guessed."
 }

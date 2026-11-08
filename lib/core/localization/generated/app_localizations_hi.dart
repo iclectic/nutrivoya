@@ -761,4 +761,73 @@ class AppLocalizationsHi extends AppLocalizations {
   @override
   String get settingsSyncUnavailable =>
       'Sync unavailable — data is stored on this device';
+
+  @override
+  String get settingsRecipes => 'My recipes';
+
+  @override
+  String get recipesTitle => 'My recipes';
+
+  @override
+  String get recipesEmpty =>
+      'No recipes yet. Build one from the ingredients you actually cook with — nutrition is calculated from each ingredient.';
+
+  @override
+  String get recipeNew => 'New recipe';
+
+  @override
+  String get recipeEdit => 'Edit recipe';
+
+  @override
+  String get recipeDelete => 'Delete recipe';
+
+  @override
+  String get recipeName => 'Recipe name';
+
+  @override
+  String get recipeServings => 'Servings';
+
+  @override
+  String get recipeYield => 'Cooked weight (g, optional)';
+
+  @override
+  String get recipeYieldHelp =>
+      'Weigh the finished pot to account for water gained or lost while cooking. Leave empty to use the ingredient total.';
+
+  @override
+  String get recipeIngredients => 'Ingredients';
+
+  @override
+  String get recipeAddIngredient => 'Add ingredient';
+
+  @override
+  String get recipeSearchIngredient => 'Search ingredients';
+
+  @override
+  String get recipeGrams => 'g';
+
+  @override
+  String recipePerServing(String grams) {
+    return 'Per serving ($grams g)';
+  }
+
+  @override
+  String recipeNutritionLine(
+    String kcal,
+    String protein,
+    String carbs,
+    String fat,
+  ) {
+    return '$kcal kcal · protein $protein g · carbs $carbs g · fat $fat g';
+  }
+
+  @override
+  String get recipeSave => 'Save recipe';
+
+  @override
+  String get recipeNeedsIngredients => 'Add a name and at least one ingredient';
+
+  @override
+  String get recipeMissingData =>
+      'Some ingredients have no data for a nutrient, so it is shown as unavailable rather than guessed.';
 }
