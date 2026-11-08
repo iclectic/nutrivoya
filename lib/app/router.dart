@@ -11,6 +11,7 @@ import '../features/onboarding/onboarding_screen.dart';
 import '../features/profile/profile_screen.dart';
 import '../features/profile/profile_controller.dart';
 import '../features/recipes/recipes_screen.dart';
+import '../features/barcode/barcode_screens.dart';
 import 'main_shell.dart';
 
 /// A [Listenable] that notifies go_router to re-run redirects whenever auth
@@ -89,6 +90,15 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/goals',
         builder: (context, state) => const GoalsScreen(),
+      ),
+      GoRoute(
+        path: '/barcode',
+        builder: (context, state) => const BarcodeScanScreen(),
+      ),
+      GoRoute(
+        path: '/barcode/:code',
+        builder: (context, state) =>
+            BarcodeProductScreen(barcode: state.pathParameters['code']!),
       ),
       GoRoute(
         path: '/recipes',

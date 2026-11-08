@@ -4,6 +4,7 @@ import '../../core/models/food.dart';
 import '../../core/models/food_search_result.dart';
 import '../../features/profile/profile_controller.dart';
 import '../diary/diary_providers.dart';
+import '../barcode/open_food_facts_adapter.dart';
 import '../recipes/recipe_providers.dart';
 import 'data/usda_food_data_central_adapter.dart';
 import 'food_repository.dart';
@@ -54,6 +55,8 @@ final foodByIdProvider =
     FutureProvider.autoDispose.family<Food?, String>((ref, id) async {
   final recipe = ref.watch(recipesProvider.notifier).byFoodId(id);
   if (recipe != null) return recipe.toFood();
+  final packaged = ref.watch(packagedFoodCacheProvider).byFoodId(id);
+  if (packaged != null) return packaged;
   final repo = ref.watch(foodRepositoryProvider);
   return repo.getById(id);
 });

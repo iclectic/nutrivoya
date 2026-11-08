@@ -1616,6 +1616,114 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Some ingredients have no data for a nutrient, so it is shown as unavailable rather than guessed.'**
   String get recipeMissingData;
+
+  /// No description provided for @barcodeTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan a barcode'**
+  String get barcodeTitle;
+
+  /// No description provided for @barcodeScanTooltip.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan barcode'**
+  String get barcodeScanTooltip;
+
+  /// No description provided for @barcodeManualHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Or type the barcode number'**
+  String get barcodeManualHint;
+
+  /// No description provided for @barcodeLookup.
+  ///
+  /// In en, this message translates to:
+  /// **'Look up'**
+  String get barcodeLookup;
+
+  /// No description provided for @barcodeInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'That doesn\'t look like a valid barcode'**
+  String get barcodeInvalid;
+
+  /// No description provided for @barcodeCameraUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Camera unavailable — enter the barcode number below.'**
+  String get barcodeCameraUnavailable;
+
+  /// No description provided for @barcodeProductTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Packaged product'**
+  String get barcodeProductTitle;
+
+  /// No description provided for @barcodeNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'Product not found in Open Food Facts. You can search by name instead.'**
+  String get barcodeNotFound;
+
+  /// No description provided for @barcodeLookupFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Couldn\'t reach the product database. Check your connection and try again.'**
+  String get barcodeLookupFailed;
+
+  /// No description provided for @barcodeSearchByName.
+  ///
+  /// In en, this message translates to:
+  /// **'Search by name'**
+  String get barcodeSearchByName;
+
+  /// No description provided for @barcodeSource.
+  ///
+  /// In en, this message translates to:
+  /// **'Source: Open Food Facts (community data, not verified by Nutrivoya)'**
+  String get barcodeSource;
+
+  /// No description provided for @barcodePer100g.
+  ///
+  /// In en, this message translates to:
+  /// **'Nutrition per 100 g'**
+  String get barcodePer100g;
+
+  /// No description provided for @barcodeVerifyCheckbox.
+  ///
+  /// In en, this message translates to:
+  /// **'I checked these values against the label on the package'**
+  String get barcodeVerifyCheckbox;
+
+  /// No description provided for @barcodeUse.
+  ///
+  /// In en, this message translates to:
+  /// **'Use this product'**
+  String get barcodeUse;
+
+  /// No description provided for @barcodeIssueMissingEnergy.
+  ///
+  /// In en, this message translates to:
+  /// **'The energy value is missing — please check the label.'**
+  String get barcodeIssueMissingEnergy;
+
+  /// No description provided for @barcodeIssueMissingMacros.
+  ///
+  /// In en, this message translates to:
+  /// **'Some macronutrient values are missing; they will be shown as unavailable.'**
+  String get barcodeIssueMissingMacros;
+
+  /// No description provided for @barcodeIssueEnergyMismatch.
+  ///
+  /// In en, this message translates to:
+  /// **'Calories don\'t add up from protein, carbs and fat — the product data may contain an error.'**
+  String get barcodeIssueEnergyMismatch;
+
+  /// No description provided for @barcodeIssueImplausible.
+  ///
+  /// In en, this message translates to:
+  /// **'Some values look impossible per 100 g — please check the label.'**
+  String get barcodeIssueImplausible;
 }
 
 class _AppLocalizationsDelegate

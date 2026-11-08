@@ -830,4 +830,67 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get recipeMissingData =>
       'Some ingredients have no data for a nutrient, so it is shown as unavailable rather than guessed.';
+
+  @override
+  String get barcodeTitle => 'Scan a barcode';
+
+  @override
+  String get barcodeScanTooltip => 'Scan barcode';
+
+  @override
+  String get barcodeManualHint => 'Or type the barcode number';
+
+  @override
+  String get barcodeLookup => 'Look up';
+
+  @override
+  String get barcodeInvalid => 'That doesn\'t look like a valid barcode';
+
+  @override
+  String get barcodeCameraUnavailable =>
+      'Camera unavailable — enter the barcode number below.';
+
+  @override
+  String get barcodeProductTitle => 'Packaged product';
+
+  @override
+  String get barcodeNotFound =>
+      'Product not found in Open Food Facts. You can search by name instead.';
+
+  @override
+  String get barcodeLookupFailed =>
+      'Couldn\'t reach the product database. Check your connection and try again.';
+
+  @override
+  String get barcodeSearchByName => 'Search by name';
+
+  @override
+  String get barcodeSource =>
+      'Source: Open Food Facts (community data, not verified by Nutrivoya)';
+
+  @override
+  String get barcodePer100g => 'Nutrition per 100 g';
+
+  @override
+  String get barcodeVerifyCheckbox =>
+      'I checked these values against the label on the package';
+
+  @override
+  String get barcodeUse => 'Use this product';
+
+  @override
+  String get barcodeIssueMissingEnergy =>
+      'The energy value is missing — please check the label.';
+
+  @override
+  String get barcodeIssueMissingMacros =>
+      'Some macronutrient values are missing; they will be shown as unavailable.';
+
+  @override
+  String get barcodeIssueEnergyMismatch =>
+      'Calories don\'t add up from protein, carbs and fat — the product data may contain an error.';
+
+  @override
+  String get barcodeIssueImplausible =>
+      'Some values look impossible per 100 g — please check the label.';
 }

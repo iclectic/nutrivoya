@@ -329,10 +329,49 @@
   "recipeSearchIngredient": "Search ingredients",
   "recipeGrams": "g",
   "recipePerServing": "Per serving ({grams} g)",
-  "@recipePerServing": {"placeholders": {"grams": {"type": "String"}}},
+  "@recipePerServing": {
+    "placeholders": {
+      "grams": {
+        "type": "String"
+      }
+    }
+  },
   "recipeNutritionLine": "{kcal} kcal · protein {protein} g · carbs {carbs} g · fat {fat} g",
-  "@recipeNutritionLine": {"placeholders": {"kcal": {"type": "String"}, "protein": {"type": "String"}, "carbs": {"type": "String"}, "fat": {"type": "String"}}},
+  "@recipeNutritionLine": {
+    "placeholders": {
+      "kcal": {
+        "type": "String"
+      },
+      "protein": {
+        "type": "String"
+      },
+      "carbs": {
+        "type": "String"
+      },
+      "fat": {
+        "type": "String"
+      }
+    }
+  },
   "recipeSave": "Save recipe",
   "recipeNeedsIngredients": "Add a name and at least one ingredient",
-  "recipeMissingData": "Some ingredients have no data for a nutrient, so it is shown as unavailable rather than guessed."
+  "recipeMissingData": "Some ingredients have no data for a nutrient, so it is shown as unavailable rather than guessed.",
+  "barcodeTitle": "Scan a barcode",
+  "barcodeScanTooltip": "Scan barcode",
+  "barcodeManualHint": "Or type the barcode number",
+  "barcodeLookup": "Look up",
+  "barcodeInvalid": "That doesn't look like a valid barcode",
+  "barcodeCameraUnavailable": "Camera unavailable — enter the barcode number below.",
+  "barcodeProductTitle": "Packaged product",
+  "barcodeNotFound": "Product not found in Open Food Facts. You can search by name instead.",
+  "barcodeLookupFailed": "Couldn't reach the product database. Check your connection and try again.",
+  "barcodeSearchByName": "Search by name",
+  "barcodeSource": "Source: Open Food Facts (community data, not verified by Nutrivoya)",
+  "barcodePer100g": "Nutrition per 100 g",
+  "barcodeVerifyCheckbox": "I checked these values against the label on the package",
+  "barcodeUse": "Use this product",
+  "barcodeIssueMissingEnergy": "The energy value is missing — please check the label.",
+  "barcodeIssueMissingMacros": "Some macronutrient values are missing; they will be shown as unavailable.",
+  "barcodeIssueEnergyMismatch": "Calories don't add up from protein, carbs and fat — the product data may contain an error.",
+  "barcodeIssueImplausible": "Some values look impossible per 100 g — please check the label."
 }

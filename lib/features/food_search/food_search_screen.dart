@@ -35,7 +35,17 @@ class _FoodSearchScreenState extends ConsumerState<FoodSearchScreen> {
     final resultsAsync = ref.watch(foodSearchResultsProvider);
 
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.searchTitle)),
+      appBar: AppBar(
+        title: Text(l10n.searchTitle),
+        actions: [
+          IconButton(
+            key: const Key('search-scan-barcode'),
+            tooltip: l10n.barcodeScanTooltip,
+            icon: const Icon(Icons.qr_code_scanner),
+            onPressed: () => context.push('/barcode'),
+          ),
+        ],
+      ),
       body: SafeArea(
         child: Column(
           children: [
