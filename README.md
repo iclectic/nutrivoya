@@ -11,8 +11,25 @@ Western packaged foods, and to evaluate food by its actual nutritional
 composition, preparation, portion and dietary context — never by cultural
 stereotype.
 
-This repository currently contains **Milestone 1 — Foundation**,
-**Milestone 2 — Food Data Core**, and **Milestone 3 — Food Logging**.
+This repository contains Milestones 1–10 of the plan. Milestone 11 (photo
+recognition) is intentionally deferred until the core food system has been
+validated with real users.
+
+## Status — Milestones 4–10
+
+| Milestone | What is included |
+| --- | --- |
+| M3 sync | Offline-first Supabase diary sync: drift schema v2 (`remoteId`, `updatedAt`, `deletedAt`), soft deletes, push-then-pull last-write-wins merge that never overwrites unsynced local edits, RLS migration in `supabase/migrations/`. Without Supabase config the app offers a local-only mode. |
+| M4 Goals & Targets | `EnergyRequirementService` (Mifflin–St Jeor, activity multipliers, physiological input kept separate from gender identity), `MacroTargetService` (protein/fat/carb/fibre), guardrails (≤1 %/week loss, ≤25 % deficit, BMR/1200 kcal floor; no deficit for pregnancy, breastfeeding, underweight or under-18), goals screen, dashboard "x / target". |
+| M5 Cultural Food Intelligence | Unicode/script-aware normalisation (Arabic, Devanagari, Gurmukhi, Latin diacritics), phonetic matching for transliterations (dhal/daal/dal), recently logged foods ranked first, countries/cultural context/preparation/ingredients metadata, `RecipeNutritionCalculator`, `ConfidenceScorer`, multi-continent dataset (USDA SR Legacy values; dishes computed from documented standard recipes and labelled `recipeEstimated`). |
+| M6 Recipe Builder | Personal recipes with ingredient search, grams, servings and cooked yield; nutrition calculated per serving, missing data stays unavailable; recipes are searchable and loggable (`/recipes`). |
+| M7 Multilingual | Draft core-UI translations for fr/es/hi/pa/ar (flagged `draft-unvalidated`; safety text deliberately stays English until native-speaker review), food names shown in the UI language, ARB coverage/placeholder tests, Arabic RTL widget tests. |
+| M8 Barcode Products | `mobile_scanner` camera scanning + manual entry, GTIN validation, Open Food Facts adapter, label sanity checks, explicit "I checked the label" verification before use, offline cache of verified products. |
+| M9 Ask Nutrivoya | Deterministic assistant (`/assistant`): day review, meal balancing (familiar cuisines first), food insights, same-tradition swap ideas. Every number comes from structured data; high-risk topics (eating disorders, pregnancy, medication, kidney disease…) get a referral, not numbers. |
+| M10 Advanced Tracking | Optional weight log with smoothed trend, body measurements, water, favourites, frequent foods, live search suggestions, meal templates (`/progress`). |
+
+Translations and the food dataset still need review by native speakers and a
+nutrition professional before release.
 
 ## Status — Milestone 3 (Food Logging)
 
@@ -130,10 +147,7 @@ scanning, photo recognition or AI features — those arrive in later milestones.
 
 ### What is intentionally out of scope for Milestone 3
 
-- BMR/TDEE and macro target calculations (Milestone 4)
-- Full Cultural Food Intelligence dataset (Milestone 5)
-- Recipe builder, barcode scanning, AI assistant, photo recognition
-- Supabase sync (entries are flagged `syncPending` for a future sync layer)
+- (Historical — these have since been delivered in Milestones 4–10, see above.)
 
 ## Project structure
 
