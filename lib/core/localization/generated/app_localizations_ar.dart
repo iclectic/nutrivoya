@@ -15,49 +15,49 @@ class AppLocalizationsAr extends AppLocalizations {
   String get appTagline => 'تغذية تعمل مع طعامك وثقافتك وحياتك.';
 
   @override
-  String get commonCancel => 'Cancel';
+  String get commonCancel => 'إلغاء';
 
   @override
-  String get commonContinue => 'Continue';
+  String get commonContinue => 'متابعة';
 
   @override
-  String get commonSave => 'Save';
+  String get commonSave => 'حفظ';
 
   @override
-  String get commonSkip => 'Skip';
+  String get commonSkip => 'تخطي';
 
   @override
-  String get commonBack => 'Back';
+  String get commonBack => 'رجوع';
 
   @override
-  String get commonNext => 'Next';
+  String get commonNext => 'التالي';
 
   @override
-  String get commonGetStarted => 'Get started';
+  String get commonGetStarted => 'ابدأ';
 
   @override
-  String get commonLoading => 'Loading…';
+  String get commonLoading => 'جارٍ التحميل…';
 
   @override
-  String get commonRetry => 'Retry';
+  String get commonRetry => 'إعادة المحاولة';
 
   @override
-  String get commonError => 'Something went wrong';
+  String get commonError => 'حدث خطأ ما';
 
   @override
-  String get commonClose => 'Close';
+  String get commonClose => 'إغلاق';
 
   @override
-  String get navDashboard => 'Today';
+  String get navDashboard => 'اليوم';
 
   @override
-  String get navDiary => 'Diary';
+  String get navDiary => 'اليوميات';
 
   @override
-  String get navSearch => 'Search';
+  String get navSearch => 'بحث';
 
   @override
-  String get navSettings => 'Settings';
+  String get navSettings => 'الإعدادات';
 
   @override
   String get authLoginTitle => 'Welcome back';
@@ -223,25 +223,25 @@ class AppLocalizationsAr extends AppLocalizations {
   String get dashboardGreetingEvening => 'Good evening';
 
   @override
-  String get dashboardToday => 'Today';
+  String get dashboardToday => 'اليوم';
 
   @override
-  String get dashboardCalories => 'Calories';
+  String get dashboardCalories => 'السعرات الحرارية';
 
   @override
-  String get dashboardProtein => 'Protein';
+  String get dashboardProtein => 'البروتين';
 
   @override
-  String get dashboardCarbs => 'Carbohydrates';
+  String get dashboardCarbs => 'الكربوهيدرات';
 
   @override
-  String get dashboardFat => 'Fat';
+  String get dashboardFat => 'الدهون';
 
   @override
-  String get dashboardFibre => 'Fibre';
+  String get dashboardFibre => 'الألياف';
 
   @override
-  String get dashboardLogFood => 'Log food';
+  String get dashboardLogFood => 'تسجيل طعام';
 
   @override
   String get dashboardEmptyTitle => 'Nothing logged yet';
@@ -255,19 +255,19 @@ class AppLocalizationsAr extends AppLocalizations {
       'Targets will be set up after onboarding.';
 
   @override
-  String get diaryTitle => 'Diary';
+  String get diaryTitle => 'اليوميات';
 
   @override
-  String get diaryMealBreakfast => 'Breakfast';
+  String get diaryMealBreakfast => 'الفطور';
 
   @override
-  String get diaryMealLunch => 'Lunch';
+  String get diaryMealLunch => 'الغداء';
 
   @override
-  String get diaryMealDinner => 'Dinner';
+  String get diaryMealDinner => 'العشاء';
 
   @override
-  String get diaryMealSnacks => 'Snacks';
+  String get diaryMealSnacks => 'الوجبات الخفيفة';
 
   @override
   String get diaryEmpty => 'No entries yet.';
@@ -276,10 +276,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get diaryAddToMeal => 'Add food';
 
   @override
-  String get searchTitle => 'Search';
+  String get searchTitle => 'بحث';
 
   @override
-  String get searchHint => 'What did you eat?';
+  String get searchHint => 'ماذا أكلت؟';
 
   @override
   String get searchEmpty =>
@@ -290,7 +290,7 @@ class AppLocalizationsAr extends AppLocalizations {
       'No results yet. Food search will be available in a later milestone.';
 
   @override
-  String get searchRecent => 'Recent';
+  String get searchRecent => 'الأخيرة';
 
   @override
   String get searchFrequent => 'Frequent';
@@ -302,25 +302,25 @@ class AppLocalizationsAr extends AppLocalizations {
   String get searchMyRecipes => 'My recipes';
 
   @override
-  String get settingsTitle => 'Settings';
+  String get settingsTitle => 'الإعدادات';
 
   @override
-  String get settingsAppearance => 'Appearance';
+  String get settingsAppearance => 'المظهر';
 
   @override
-  String get settingsTheme => 'Theme';
+  String get settingsTheme => 'السمة';
 
   @override
-  String get settingsThemeSystem => 'System';
+  String get settingsThemeSystem => 'النظام';
 
   @override
-  String get settingsThemeLight => 'Light';
+  String get settingsThemeLight => 'فاتح';
 
   @override
-  String get settingsThemeDark => 'Dark';
+  String get settingsThemeDark => 'داكن';
 
   @override
-  String get settingsLanguage => 'Language';
+  String get settingsLanguage => 'اللغة';
 
   @override
   String get settingsLanguageEn => 'English';
@@ -341,10 +341,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get settingsLanguageAr => 'العربية';
 
   @override
-  String get settingsAccount => 'Account';
+  String get settingsAccount => 'الحساب';
 
   @override
-  String get settingsSignOut => 'Sign out';
+  String get settingsSignOut => 'تسجيل الخروج';
 
   @override
   String get settingsAbout => 'About Nutrivoya';
@@ -354,16 +354,16 @@ class AppLocalizationsAr extends AppLocalizations {
       'Nutrivoya is a multilingual, culturally intelligent nutrition and calorie-tracking app that helps people understand and improve the food they actually eat — without telling them that health requires abandoning their culture.';
 
   @override
-  String get settingsProfile => 'Profile';
+  String get settingsProfile => 'الملف الشخصي';
 
   @override
-  String get settingsGoals => 'Goals';
+  String get settingsGoals => 'الأهداف';
 
   @override
   String get settingsComingSoon => 'Coming soon';
 
   @override
-  String get profileTitle => 'Profile';
+  String get profileTitle => 'الملف الشخصي';
 
   @override
   String get profileGoal => 'Goal';
@@ -378,7 +378,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get profileEdit => 'Edit profile';
 
   @override
-  String get goalsTitle => 'Nutrition goals';
+  String get goalsTitle => 'أهداف التغذية';
 
   @override
   String get goalsNotSet => 'Not set yet';
@@ -623,4 +623,521 @@ class AppLocalizationsAr extends AppLocalizations {
   String diaryEntryCalories(int kcal) {
     return '$kcal kcal';
   }
+
+  @override
+  String get goalsEstimateNote =>
+      'These are estimates based on standard equations (Mifflin-St Jeor). Your actual needs may vary, and they can be refined over time using your weight trend.';
+
+  @override
+  String get goalsMaintenance => 'Estimated maintenance';
+
+  @override
+  String get goalsBmr => 'Estimated resting energy (BMR)';
+
+  @override
+  String goalsKcalValue(String value) {
+    return '$value kcal';
+  }
+
+  @override
+  String goalsGramValue(String value) {
+    return '$value g';
+  }
+
+  @override
+  String get goalsCompleteProfile =>
+      'Complete your profile to see estimated targets.';
+
+  @override
+  String get goalsRateTitle => 'Rate of change (kg per week)';
+
+  @override
+  String goalsRateValue(String value) {
+    return '$value kg/week';
+  }
+
+  @override
+  String get goalsCustomTarget => 'Custom calorie target';
+
+  @override
+  String get goalsCustomTargetHint => 'Leave empty to use the estimate';
+
+  @override
+  String get goalsUseEstimate => 'Use estimate';
+
+  @override
+  String get goalsSave => 'Save';
+
+  @override
+  String get goalsUsingCustom => 'Using your custom target';
+
+  @override
+  String get goalsLifeStage => 'Life stage (optional)';
+
+  @override
+  String get goalsLifeStageNone => 'Prefer not to say / not applicable';
+
+  @override
+  String get goalsLifeStagePregnant => 'Pregnant';
+
+  @override
+  String get goalsLifeStageBreastfeeding => 'Breastfeeding';
+
+  @override
+  String get goalsLifeStagePostpartum => 'Postpartum';
+
+  @override
+  String get goalsLifeStagePerimenopause => 'Perimenopause';
+
+  @override
+  String get goalsLifeStageMenopause => 'Menopause';
+
+  @override
+  String get goalsWarningRateCapped =>
+      'Your requested rate was reduced to a gentler, more sustainable pace.';
+
+  @override
+  String get goalsWarningFloor =>
+      'Your target was kept above a safe minimum intake.';
+
+  @override
+  String get goalsWarningPregnancy =>
+      'Nutrivoya doesn\'t set weight-loss targets during pregnancy. Please discuss nutrition and weight with your midwife or clinician.';
+
+  @override
+  String get goalsWarningBreastfeeding =>
+      'While breastfeeding, extra energy is included and no aggressive deficit is set. A health professional can advise on gradual changes.';
+
+  @override
+  String get goalsWarningUnderweight =>
+      'Your BMI is below 18.5, so Nutrivoya won\'t set a weight-loss target. Consider speaking with a health professional.';
+
+  @override
+  String get goalsWarningMinor =>
+      'Weight-loss targets aren\'t set for people under 18. A doctor or registered dietitian can give personalised guidance.';
+
+  @override
+  String get goalsWarningNeutral =>
+      'Physiological input wasn\'t specified, so a neutral equation was used. Estimates may be less precise.';
+
+  @override
+  String get goalsWarningCustomLow =>
+      'This target is very low. Very low intakes can be unsafe without medical supervision.';
+
+  @override
+  String dashboardOfTarget(String consumed, String target) {
+    return '$consumed / $target kcal';
+  }
+
+  @override
+  String dashboardRemaining(String value) {
+    return '$value kcal remaining (estimate)';
+  }
+
+  @override
+  String dashboardAbove(String value) {
+    return '$value kcal above estimate';
+  }
+
+  @override
+  String get authContinueOffline => 'Continue without an account';
+
+  @override
+  String get authOfflineNote =>
+      'Your data stays on this device only. Accounts and sync are available when Nutrivoya is connected to its backend.';
+
+  @override
+  String get settingsSyncNow => 'Sync now';
+
+  @override
+  String settingsSyncPending(int count) {
+    return '$count changes waiting to sync';
+  }
+
+  @override
+  String get settingsSyncDone => 'Diary synced';
+
+  @override
+  String get settingsSyncUnavailable =>
+      'Sync unavailable — data is stored on this device';
+
+  @override
+  String get settingsRecipes => 'وصفاتي';
+
+  @override
+  String get recipesTitle => 'وصفاتي';
+
+  @override
+  String get recipesEmpty =>
+      'No recipes yet. Build one from the ingredients you actually cook with — nutrition is calculated from each ingredient.';
+
+  @override
+  String get recipeNew => 'New recipe';
+
+  @override
+  String get recipeEdit => 'Edit recipe';
+
+  @override
+  String get recipeDelete => 'Delete recipe';
+
+  @override
+  String get recipeName => 'Recipe name';
+
+  @override
+  String get recipeServings => 'Servings';
+
+  @override
+  String get recipeYield => 'Cooked weight (g, optional)';
+
+  @override
+  String get recipeYieldHelp =>
+      'Weigh the finished pot to account for water gained or lost while cooking. Leave empty to use the ingredient total.';
+
+  @override
+  String get recipeIngredients => 'Ingredients';
+
+  @override
+  String get recipeAddIngredient => 'Add ingredient';
+
+  @override
+  String get recipeSearchIngredient => 'Search ingredients';
+
+  @override
+  String get recipeGrams => 'g';
+
+  @override
+  String recipePerServing(String grams) {
+    return 'Per serving ($grams g)';
+  }
+
+  @override
+  String recipeNutritionLine(
+    String kcal,
+    String protein,
+    String carbs,
+    String fat,
+  ) {
+    return '$kcal kcal · protein $protein g · carbs $carbs g · fat $fat g';
+  }
+
+  @override
+  String get recipeSave => 'Save recipe';
+
+  @override
+  String get recipeNeedsIngredients => 'Add a name and at least one ingredient';
+
+  @override
+  String get recipeMissingData =>
+      'Some ingredients have no data for a nutrient, so it is shown as unavailable rather than guessed.';
+
+  @override
+  String get barcodeTitle => 'Scan a barcode';
+
+  @override
+  String get barcodeScanTooltip => 'Scan barcode';
+
+  @override
+  String get barcodeManualHint => 'Or type the barcode number';
+
+  @override
+  String get barcodeLookup => 'Look up';
+
+  @override
+  String get barcodeInvalid => 'That doesn\'t look like a valid barcode';
+
+  @override
+  String get barcodeCameraUnavailable =>
+      'Camera unavailable — enter the barcode number below.';
+
+  @override
+  String get barcodeProductTitle => 'Packaged product';
+
+  @override
+  String get barcodeNotFound =>
+      'Product not found in Open Food Facts. You can search by name instead.';
+
+  @override
+  String get barcodeLookupFailed =>
+      'Couldn\'t reach the product database. Check your connection and try again.';
+
+  @override
+  String get barcodeSearchByName => 'Search by name';
+
+  @override
+  String get barcodeSource =>
+      'Source: Open Food Facts (community data, not verified by Nutrivoya)';
+
+  @override
+  String get barcodePer100g => 'Nutrition per 100 g';
+
+  @override
+  String get barcodeVerifyCheckbox =>
+      'I checked these values against the label on the package';
+
+  @override
+  String get barcodeUse => 'Use this product';
+
+  @override
+  String get barcodeIssueMissingEnergy =>
+      'The energy value is missing — please check the label.';
+
+  @override
+  String get barcodeIssueMissingMacros =>
+      'Some macronutrient values are missing; they will be shown as unavailable.';
+
+  @override
+  String get barcodeIssueEnergyMismatch =>
+      'Calories don\'t add up from protein, carbs and fat — the product data may contain an error.';
+
+  @override
+  String get barcodeIssueImplausible =>
+      'Some values look impossible per 100 g — please check the label.';
+
+  @override
+  String get settingsAssistant => 'Ask Nutrivoya';
+
+  @override
+  String get assistantTitle => 'Ask Nutrivoya';
+
+  @override
+  String get assistantIntro =>
+      'I answer from Nutrivoya\'s food data, your diary and your estimated targets — I never make up nutrition numbers. I\'m not a substitute for medical advice.';
+
+  @override
+  String get assistantProfileCaution =>
+      'Because of your profile (for example pregnancy, breastfeeding, age or low body weight), please check any changes to how you eat with a qualified professional.';
+
+  @override
+  String get assistantAskDay => 'How is my day going?';
+
+  @override
+  String get assistantAskBalance => 'Balance my next meal';
+
+  @override
+  String get assistantAskFood => 'Tell me about a food';
+
+  @override
+  String get assistantAskSwap => 'Ideas for a food I eat';
+
+  @override
+  String get assistantInputHint => 'Ask a question';
+
+  @override
+  String get assistantDayEmpty =>
+      'Nothing logged yet today. Whenever you eat, log it and I can help you see how the day is shaping up.';
+
+  @override
+  String assistantDayNoTargets(String kcal, String protein, String fibre) {
+    return 'So far today: $kcal kcal, $protein g protein and $fibre g fibre. Set up goals to compare with personal targets.';
+  }
+
+  @override
+  String assistantDaySummary(
+    String kcal,
+    String target,
+    String protein,
+    String proteinTarget,
+    String fibre,
+    String fibreTarget,
+  ) {
+    return 'So far today: $kcal of about $target kcal, $protein of $proteinTarget g protein and $fibre of $fibreTarget g fibre. Targets are estimates, not strict rules.';
+  }
+
+  @override
+  String get assistantBalanceNoTargets =>
+      'Set up your goals first so I can compare with personal targets.';
+
+  @override
+  String get assistantBalanceOnTrack =>
+      'Protein and fibre are close to today\'s estimates — enjoy your next meal the way you like it.';
+
+  @override
+  String assistantBalanceProtein(String gap) {
+    return 'Protein is about $gap g below today\'s estimate. Options with plenty of protein, familiar cuisines first:';
+  }
+
+  @override
+  String assistantBalanceFibre(String gap) {
+    return 'Fibre is about $gap g below today\'s estimate. Options rich in fibre:';
+  }
+
+  @override
+  String assistantFoodSummary(
+    String name,
+    String grams,
+    String kcal,
+    String protein,
+    String carbs,
+    String fat,
+  ) {
+    return '$name: a $grams g serving has about $kcal kcal, $protein g protein, $carbs g carbs and $fat g fat.';
+  }
+
+  @override
+  String get assistantFoodUnavailable =>
+      'Some values aren\'t available for this food, so I won\'t estimate them.';
+
+  @override
+  String assistantFoodCulture(String places) {
+    return 'Food tradition: $places.';
+  }
+
+  @override
+  String assistantFoodSource(String source, String confidence) {
+    return 'Data: $source · confidence: $confidence.';
+  }
+
+  @override
+  String get assistantHighlightHighProtein => 'A rich source of protein.';
+
+  @override
+  String get assistantHighlightSourceProtein =>
+      'Provides a useful amount of protein.';
+
+  @override
+  String get assistantHighlightHighFibre => 'High in fibre.';
+
+  @override
+  String get assistantHighlightSourceFibre => 'A source of fibre.';
+
+  @override
+  String get assistantHighlightEnergyDense =>
+      'Energy-dense — portion size makes a big difference to the total.';
+
+  @override
+  String get assistantHighlightLight => 'Low in energy per 100 g.';
+
+  @override
+  String get assistantHighlightHighSodium =>
+      'Fairly high in salt — worth knowing if you\'re watching sodium.';
+
+  @override
+  String get assistantSwapIntro =>
+      'Ideas from the same food tradition — not replacements, just options:';
+
+  @override
+  String assistantSwapMoreFibre(String name) {
+    return '$name — more fibre per calorie';
+  }
+
+  @override
+  String assistantSwapMoreProtein(String name) {
+    return '$name — more protein per calorie';
+  }
+
+  @override
+  String assistantSwapLighter(String name) {
+    return '$name — lighter per 100 g';
+  }
+
+  @override
+  String get assistantSwapNone =>
+      'I don\'t have close alternatives from the same tradition yet. Adjusting the portion, or adding vegetables or legumes on the side, are simple options.';
+
+  @override
+  String get assistantUnknown =>
+      'I can help with your day so far, balancing your next meal, information about a food, or ideas from the same cuisine. Try one of the suggestions above.';
+
+  @override
+  String get assistantSafety =>
+      'This deserves personal care. Please talk to a doctor, registered dietitian or another qualified professional — I won\'t give targets or numbers for this.';
+
+  @override
+  String get assistantSafetyEatingDisorder =>
+      'If you\'re struggling with eating, you\'re not alone. Please reach out to a doctor or an eating-disorder support service in your country.';
+
+  @override
+  String get progressTitle => 'Progress & tracking';
+
+  @override
+  String get progressTooltip => 'Progress & tracking';
+
+  @override
+  String get progressWeight => 'Weight (optional)';
+
+  @override
+  String get progressWeightHint => 'Weight (kg)';
+
+  @override
+  String get progressAdd => 'Add';
+
+  @override
+  String get progressNoWeight =>
+      'No weigh-ins yet. Logging weight is entirely optional.';
+
+  @override
+  String progressWeightAverage(String avg) {
+    return 'Recent average: $avg kg';
+  }
+
+  @override
+  String progressWeightTrend(String avg, String change) {
+    return 'Recent average: $avg kg · trend $change kg per week';
+  }
+
+  @override
+  String get progressWeightNote =>
+      'Weight naturally moves day to day with water, food and hormones; the trend over weeks is more meaningful than any single reading.';
+
+  @override
+  String get progressMeasurements => 'Body measurements (optional)';
+
+  @override
+  String get progressWaist => 'Waist (cm)';
+
+  @override
+  String get progressHip => 'Hip (cm)';
+
+  @override
+  String get progressNoMeasurements => 'No measurements yet.';
+
+  @override
+  String get progressWater => 'Water';
+
+  @override
+  String progressWaterToday(String ml) {
+    return '$ml ml today';
+  }
+
+  @override
+  String get progressWaterAdd => '+250 ml';
+
+  @override
+  String get progressTemplates => 'Meal templates';
+
+  @override
+  String get progressTemplatesEmpty =>
+      'Save a meal you eat often and log it again in one tap.';
+
+  @override
+  String get progressTemplateSave => 'Save a meal from this day';
+
+  @override
+  String get progressTemplateName => 'Template name';
+
+  @override
+  String get progressTemplateNoEntries =>
+      'No foods are logged for that meal on this day.';
+
+  @override
+  String progressTemplateLog(String meal) {
+    return 'Log to $meal';
+  }
+
+  @override
+  String progressTemplateLogged(String name) {
+    return '$name logged';
+  }
+
+  @override
+  String get progressTemplateDelete => 'Delete template';
+
+  @override
+  String get favouriteAdd => 'Add to favourites';
+
+  @override
+  String get favouriteRemove => 'Remove from favourites';
+
+  @override
+  String get searchNothingYet => 'Nothing here yet';
 }

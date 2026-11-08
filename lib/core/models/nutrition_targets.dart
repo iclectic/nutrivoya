@@ -4,9 +4,8 @@ import 'nutrition_goal.dart';
 
 /// Daily nutrition targets.
 ///
-/// In Milestone 1 these are placeholders only — actual values are computed by
-/// `EnergyRequirementService` in Milestone 4. The model exists so the
-/// dashboard/settings can render the structure now.
+/// Computed by `EnergyRequirementService` + `MacroTargetService`; always an
+/// estimate.
 @immutable
 class NutritionTargets {
   const NutritionTargets({

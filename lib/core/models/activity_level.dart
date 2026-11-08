@@ -1,7 +1,7 @@
 /// Daily activity level used in energy-requirement equations.
 ///
 /// Maps to a multiplier applied to BMR to estimate TDEE. The exact multipliers
-/// live in `EnergyRequirementService` (Milestone 4); this enum only captures
+/// live in `EnergyRequirementService`; this enum only captures
 /// the user-facing category.
 enum ActivityLevel {
   sedentary,

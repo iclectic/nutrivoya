@@ -10,6 +10,10 @@ import '../features/goals/goals_screen.dart';
 import '../features/onboarding/onboarding_screen.dart';
 import '../features/profile/profile_screen.dart';
 import '../features/profile/profile_controller.dart';
+import '../features/recipes/recipes_screen.dart';
+import '../features/barcode/barcode_screens.dart';
+import '../features/assistant/assistant_screen.dart';
+import '../features/tracking/progress_screen.dart';
 import 'main_shell.dart';
 
 /// A [Listenable] that notifies go_router to re-run redirects whenever auth
@@ -88,6 +92,32 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/goals',
         builder: (context, state) => const GoalsScreen(),
+      ),
+      GoRoute(
+        path: '/barcode',
+        builder: (context, state) => const BarcodeScanScreen(),
+      ),
+      GoRoute(
+        path: '/barcode/:code',
+        builder: (context, state) =>
+            BarcodeProductScreen(barcode: state.pathParameters['code']!),
+      ),
+      GoRoute(
+        path: '/assistant',
+        builder: (context, state) => const AssistantScreen(),
+      ),
+      GoRoute(
+        path: '/progress',
+        builder: (context, state) => const ProgressScreen(),
+      ),
+      GoRoute(
+        path: '/recipes',
+        builder: (context, state) => const RecipesScreen(),
+      ),
+      GoRoute(
+        path: '/recipes/edit',
+        builder: (context, state) =>
+            RecipeEditorScreen(recipeId: state.uri.queryParameters['id']),
       ),
       GoRoute(
         path: '/home',

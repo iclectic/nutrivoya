@@ -2,13 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../core/localization/language_options.dart';
+import '../../core/localization/locale_controller.dart';
 import '../../core/models/activity_level.dart';
 import '../../core/models/nutrition_goal.dart';
 import '../../core/models/physiological_input.dart';
+import '../../core/models/reproductive_context.dart';
 import '../../core/models/user_profile.dart';
 import '../../core/storage/local_preferences.dart';
 import '../../features/auth/auth_controller.dart';
 import '../../features/profile/profile_controller.dart';
+import '../goals/goal_labels.dart';
+import '../goals/targets_providers.dart';
 import '../../shared/extensions/app_localizations_x.dart';
 
 /// Multi-step onboarding flow.
@@ -34,6 +39,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   PhysiologicalInput _physio = PhysiologicalInput.unspecified;
   ActivityLevel _activity = ActivityLevel.sedentary;
   final List<String> _cuisines = [];
+  ReproductiveContext _repro = ReproductiveContext.none;
 
   static const _cuisineSuggestions = [
     'Punjabi', 'Nigerian', 'Ghanaian', 'Jamaican', 'Mexican',
@@ -77,11 +83,10 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
     }
   }
 
-  Future<void> _complete() async {
+  UserProfile _buildProfile() {
     final authState = ref.read(authControllerProvider);
     final userId = authState is Authenticated ? authState.userId : 'local';
-
-    final profile = UserProfile(
+    return UserProfile(
       id: userId,
       ageYears: int.tryParse(_ageCtrl.text) ?? 0,
       heightCm: double.tryParse(_heightCtrl.text) ?? 0,
@@ -90,8 +95,12 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
       activityLevel: _activity,
       goal: _goal ?? NutritionGoal.trackOnly,
       familiarCuisines: List.unmodifiable(_cuisines),
+      reproductiveContext: _repro,
     );
+  }
 
+  Future<void> _complete() async {
+    final profile = _buildProfile();
     await ref.read(profileControllerProvider.notifier).save(profile);
     await ref.read(localPreferencesSyncProvider).setOnboardingComplete(true);
     ref.read(onboardingCompleteProvider.notifier).state = true;
@@ -387,6 +396,8 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   }
 
   Widget _languageStep(AppLocalizations l10n) {
+    final current = ref.watch(localeProvider) ??
+        Localizations.localeOf(context);
     return _StepPadding(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -398,20 +409,25 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     color: Theme.of(context).colorScheme.onSurfaceVariant,
                   )),
-          const SizedBox(height: 24),
-          Center(
-            child: Icon(Icons.language,
-                size: 64, color: Theme.of(context).colorScheme.primary),
-          ),
           const SizedBox(height: 16),
-          Text(l10n.settingsLanguage,
-              style: Theme.of(context).textTheme.titleSmall),
-          const SizedBox(height: 8),
-          Text(
-            l10n.settingsComingSoon,
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  color: Theme.of(context).colorScheme.onSurfaceVariant,
-                ),
+          RadioGroup<String>(
+            groupValue: current.languageCode,
+            onChanged: (code) {
+              if (code != null) {
+                ref.read(localeProvider.notifier).set(Locale(code));
+              }
+            },
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                for (final (loc, label) in languageOptions(l10n))
+                  RadioListTile<String>(
+                    key: Key('onboarding-lang-${loc.languageCode}'),
+                    value: loc.languageCode,
+                    title: Text(label),
+                  ),
+              ],
+            ),
           ),
         ],
       ),
@@ -431,15 +447,68 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                     color: Theme.of(context).colorScheme.onSurfaceVariant,
                   )),
           const SizedBox(height: 16),
-          Card(
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Text(l10n.onboardingSummaryComingSoon),
-            ),
+          ..._summaryTargets(l10n),
+          const SizedBox(height: 16),
+          Text(l10n.goalsLifeStage,
+              style: Theme.of(context).textTheme.titleSmall),
+          DropdownButton<ReproductiveContext>(
+            isExpanded: true,
+            value: _repro,
+            onChanged: (c) =>
+                setState(() => _repro = c ?? ReproductiveContext.none),
+            items: ReproductiveContext.values
+                .map((c) => DropdownMenuItem(
+                      value: c,
+                      child: Text(reproductiveContextLabel(c, l10n)),
+                    ))
+                .toList(),
           ),
         ],
       ),
     );
+  }
+}
+
+extension on _OnboardingScreenState {
+  List<Widget> _summaryTargets(AppLocalizations l10n) {
+    final profile = _buildProfile();
+    if (!profile.isPlausible) {
+      return [Card(child: ListTile(title: Text(l10n.goalsCompleteProfile)))];
+    }
+    final estimate =
+        ref.read(energyRequirementServiceProvider).estimate(profile);
+    final t = ref
+        .read(macroTargetServiceProvider)
+        .targets(profile, estimate.targetKcal);
+    String g(double? v) => l10n.goalsGramValue('${v?.round() ?? '—'}');
+    return [
+      for (final w in estimate.warnings)
+        TargetWarningCard(text: targetWarningText(w, l10n)),
+      Card(
+        child: Column(
+          children: [
+            ListTile(
+              key: const Key('onboarding-summary-calories'),
+              title: Text(l10n.goalsCalorieTarget),
+              trailing: Text(
+                  l10n.goalsKcalValue('${t.calorieTargetKcal!.round()}')),
+            ),
+            ListTile(
+                title: Text(l10n.goalsProteinTarget),
+                trailing: Text(g(t.proteinTargetG))),
+            ListTile(
+                title: Text(l10n.goalsCarbTarget),
+                trailing: Text(g(t.carbTargetG))),
+            ListTile(
+                title: Text(l10n.goalsFatTarget),
+                trailing: Text(g(t.fatTargetG))),
+            ListTile(
+                title: Text(l10n.goalsFibreTarget),
+                trailing: Text(g(t.fibreTargetG))),
+          ],
+        ),
+      ),
+    ];
   }
 }
 

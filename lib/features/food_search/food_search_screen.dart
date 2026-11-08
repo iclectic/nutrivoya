@@ -5,7 +5,10 @@ import 'package:go_router/go_router.dart';
 import '../../core/models/food_search_result.dart';
 import '../../shared/extensions/app_localizations_x.dart';
 import '../../shared/widgets/empty_state.dart';
+import '../diary/diary_providers.dart';
 import '../food/food_providers.dart';
+import '../recipes/recipe_providers.dart';
+import '../tracking/tracking_providers.dart';
 
 /// Food search screen.
 ///
@@ -35,7 +38,17 @@ class _FoodSearchScreenState extends ConsumerState<FoodSearchScreen> {
     final resultsAsync = ref.watch(foodSearchResultsProvider);
 
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.searchTitle)),
+      appBar: AppBar(
+        title: Text(l10n.searchTitle),
+        actions: [
+          IconButton(
+            key: const Key('search-scan-barcode'),
+            tooltip: l10n.barcodeScanTooltip,
+            icon: const Icon(Icons.qr_code_scanner),
+            onPressed: () => context.push('/barcode'),
+          ),
+        ],
+      ),
       body: SafeArea(
         child: Column(
           children: [
@@ -86,24 +99,36 @@ class _FoodSearchScreenState extends ConsumerState<FoodSearchScreen> {
   }
 
   Widget _suggestions(AppLocalizations l10n) {
+    final recent = ref.watch(recentFoodsProvider).valueOrNull ?? const [];
+    final frequent = ref.watch(frequentFoodsProvider).valueOrNull ?? const [];
+    final favourites = ref.watch(favouritesProvider);
+    final recipes = ref.watch(recipesProvider);
     final sections = [
-      (l10n.searchRecent, Icons.history),
-      (l10n.searchFrequent, Icons.trending_up),
-      (l10n.searchFavourites, Icons.star_outline),
-      (l10n.searchMyRecipes, Icons.menu_book_outlined),
+      (l10n.searchRecent, Icons.history, [for (final e in recent) (e.foodId, e.foodName)]),
+      (l10n.searchFrequent, Icons.trending_up, [for (final e in frequent) (e.foodId, e.foodName)]),
+      (l10n.searchFavourites, Icons.star_outline, [for (final e in favourites.entries) (e.key, e.value)]),
+      (l10n.searchMyRecipes, Icons.menu_book_outlined, [for (final r in recipes) (r.foodId, r.name)]),
     ];
     return ListView(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       children: [
         EmptyState(icon: Icons.search, title: l10n.searchEmpty),
         const SizedBox(height: 16),
-        ...sections.map((s) => ListTile(
-              leading: Icon(s.$2),
-              title: Text(s.$1),
+        for (final (title, icon, items) in sections) ...[
+          ListTile(
+            leading: Icon(icon),
+            title: Text(title, style: Theme.of(context).textTheme.titleSmall),
+            subtitle: items.isEmpty ? Text(l10n.searchNothingYet) : null,
+          ),
+          for (final (id, name) in items.take(5))
+            ListTile(
+              key: Key('suggestion-$id'),
+              contentPadding: const EdgeInsetsDirectional.only(start: 56, end: 16),
+              title: Text(name),
               trailing: const Icon(Icons.chevron_right),
-              enabled: false,
-              onTap: () {},
-            )),
+              onTap: () => context.push('/food/$id'),
+            ),
+        ],
       ],
     );
   }
@@ -118,12 +143,12 @@ class _FoodSearchScreenState extends ConsumerState<FoodSearchScreen> {
         return Card(
           margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
           child: ListTile(
-            title: Text(food.displayName),
+            title: Text(food.nameFor(Localizations.localeOf(context).languageCode)),
             subtitle: Text(
               [
                 if (food.cuisine != null) food.cuisine,
                 if (result.matchedName != null &&
-                    result.matchedName != food.displayName)
+                    result.matchedName != food.nameFor(Localizations.localeOf(context).languageCode))
                   result.matchedName,
               ].join(' · '),
             ),

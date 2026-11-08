@@ -11,6 +11,7 @@ import '../../core/utils/nutrition_calculator.dart';
 import '../../shared/extensions/app_localizations_x.dart';
 import '../diary/diary_providers.dart';
 import '../food/food_providers.dart';
+import '../tracking/tracking_providers.dart';
 import 'portion_selector.dart';
 
 /// Food details screen — the "Food Result Card" plus portion selection.
@@ -37,7 +38,23 @@ class _FoodDetailsScreenState extends ConsumerState<FoodDetailsScreen> {
     final foodAsync = ref.watch(foodByIdProvider(widget.foodId));
 
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.foodDetailsTitle)),
+      appBar: AppBar(
+        title: Text(l10n.foodDetailsTitle),
+        actions: [
+          Builder(builder: (context) {
+            final fav = ref.watch(favouritesProvider).containsKey(widget.foodId);
+            return IconButton(
+              key: const Key('food-favourite'),
+              tooltip: fav ? l10n.favouriteRemove : l10n.favouriteAdd,
+              icon: Icon(fav ? Icons.star : Icons.star_outline),
+              onPressed: () => ref.read(favouritesProvider.notifier).toggle(
+                    widget.foodId,
+                    foodAsync.valueOrNull?.displayName ?? widget.foodId,
+                  ),
+            );
+          }),
+        ],
+      ),
       body: foodAsync.when(
         loading: () => const Center(child: CircularProgressIndicator()),
         error: (e, _) => Center(child: Text(l10n.commonError)),
@@ -173,7 +190,7 @@ class _FoodDetailsBody extends ConsumerWidget {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(
-            l10n.diaryEntryAdded(food.displayName, _mealLabel(meal, l10n)),
+            l10n.diaryEntryAdded(food.nameFor(Localizations.localeOf(context).languageCode), _mealLabel(meal, l10n)),
           ),
           action: SnackBarAction(
             label: l10n.navDiary,
@@ -237,8 +254,8 @@ class _Header extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(food.displayName, style: Theme.of(context).textTheme.headlineSmall),
-        if (food.canonicalName != food.displayName)
+        Text(food.nameFor(Localizations.localeOf(context).languageCode), style: Theme.of(context).textTheme.headlineSmall),
+        if (food.canonicalName != food.nameFor(Localizations.localeOf(context).languageCode))
           Text(food.canonicalName,
               style: Theme.of(context).textTheme.bodySmall?.copyWith(
                     color: Theme.of(context).colorScheme.onSurfaceVariant,
@@ -250,6 +267,8 @@ class _Header extends StatelessWidget {
             children: [
               if (food.cuisine != null) Chip(label: Text(food.cuisine!)),
               if (food.region != null) Chip(label: Text('${l10n.foodDetailsRegion}: ${food.region}')),
+              if (food.preparationMethod != null) Chip(label: Text(food.preparationMethod!)),
+              for (final c in food.culturalContexts) Chip(label: Text(c)),
             ],
           ),
         ],

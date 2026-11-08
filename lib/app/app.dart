@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../core/localization/generated/app_localizations.dart';
 import '../core/localization/locale_controller.dart';
 import '../core/storage/theme_controller.dart';
+import '../features/diary/sync/diary_sync_service.dart';
 import 'router.dart';
 import 'theme.dart';
 
@@ -17,6 +18,7 @@ class NutrivoyaApp extends ConsumerWidget {
     final themeMode = ref.watch(themeModeProvider);
     final locale = ref.watch(localeProvider);
     final router = ref.watch(goRouterProvider);
+    ref.watch(diaryAutoSyncProvider);
 
     return MaterialApp.router(
       title: 'Nutrivoya',

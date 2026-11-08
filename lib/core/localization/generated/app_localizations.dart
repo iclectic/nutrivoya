@@ -1275,6 +1275,841 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{kcal} kcal'**
   String diaryEntryCalories(int kcal);
+
+  /// No description provided for @goalsEstimateNote.
+  ///
+  /// In en, this message translates to:
+  /// **'These are estimates based on standard equations (Mifflin-St Jeor). Your actual needs may vary, and they can be refined over time using your weight trend.'**
+  String get goalsEstimateNote;
+
+  /// No description provided for @goalsMaintenance.
+  ///
+  /// In en, this message translates to:
+  /// **'Estimated maintenance'**
+  String get goalsMaintenance;
+
+  /// No description provided for @goalsBmr.
+  ///
+  /// In en, this message translates to:
+  /// **'Estimated resting energy (BMR)'**
+  String get goalsBmr;
+
+  /// No description provided for @goalsKcalValue.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} kcal'**
+  String goalsKcalValue(String value);
+
+  /// No description provided for @goalsGramValue.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} g'**
+  String goalsGramValue(String value);
+
+  /// No description provided for @goalsCompleteProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete your profile to see estimated targets.'**
+  String get goalsCompleteProfile;
+
+  /// No description provided for @goalsRateTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Rate of change (kg per week)'**
+  String get goalsRateTitle;
+
+  /// No description provided for @goalsRateValue.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} kg/week'**
+  String goalsRateValue(String value);
+
+  /// No description provided for @goalsCustomTarget.
+  ///
+  /// In en, this message translates to:
+  /// **'Custom calorie target'**
+  String get goalsCustomTarget;
+
+  /// No description provided for @goalsCustomTargetHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Leave empty to use the estimate'**
+  String get goalsCustomTargetHint;
+
+  /// No description provided for @goalsUseEstimate.
+  ///
+  /// In en, this message translates to:
+  /// **'Use estimate'**
+  String get goalsUseEstimate;
+
+  /// No description provided for @goalsSave.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get goalsSave;
+
+  /// No description provided for @goalsUsingCustom.
+  ///
+  /// In en, this message translates to:
+  /// **'Using your custom target'**
+  String get goalsUsingCustom;
+
+  /// No description provided for @goalsLifeStage.
+  ///
+  /// In en, this message translates to:
+  /// **'Life stage (optional)'**
+  String get goalsLifeStage;
+
+  /// No description provided for @goalsLifeStageNone.
+  ///
+  /// In en, this message translates to:
+  /// **'Prefer not to say / not applicable'**
+  String get goalsLifeStageNone;
+
+  /// No description provided for @goalsLifeStagePregnant.
+  ///
+  /// In en, this message translates to:
+  /// **'Pregnant'**
+  String get goalsLifeStagePregnant;
+
+  /// No description provided for @goalsLifeStageBreastfeeding.
+  ///
+  /// In en, this message translates to:
+  /// **'Breastfeeding'**
+  String get goalsLifeStageBreastfeeding;
+
+  /// No description provided for @goalsLifeStagePostpartum.
+  ///
+  /// In en, this message translates to:
+  /// **'Postpartum'**
+  String get goalsLifeStagePostpartum;
+
+  /// No description provided for @goalsLifeStagePerimenopause.
+  ///
+  /// In en, this message translates to:
+  /// **'Perimenopause'**
+  String get goalsLifeStagePerimenopause;
+
+  /// No description provided for @goalsLifeStageMenopause.
+  ///
+  /// In en, this message translates to:
+  /// **'Menopause'**
+  String get goalsLifeStageMenopause;
+
+  /// No description provided for @goalsWarningRateCapped.
+  ///
+  /// In en, this message translates to:
+  /// **'Your requested rate was reduced to a gentler, more sustainable pace.'**
+  String get goalsWarningRateCapped;
+
+  /// No description provided for @goalsWarningFloor.
+  ///
+  /// In en, this message translates to:
+  /// **'Your target was kept above a safe minimum intake.'**
+  String get goalsWarningFloor;
+
+  /// No description provided for @goalsWarningPregnancy.
+  ///
+  /// In en, this message translates to:
+  /// **'Nutrivoya doesn\'t set weight-loss targets during pregnancy. Please discuss nutrition and weight with your midwife or clinician.'**
+  String get goalsWarningPregnancy;
+
+  /// No description provided for @goalsWarningBreastfeeding.
+  ///
+  /// In en, this message translates to:
+  /// **'While breastfeeding, extra energy is included and no aggressive deficit is set. A health professional can advise on gradual changes.'**
+  String get goalsWarningBreastfeeding;
+
+  /// No description provided for @goalsWarningUnderweight.
+  ///
+  /// In en, this message translates to:
+  /// **'Your BMI is below 18.5, so Nutrivoya won\'t set a weight-loss target. Consider speaking with a health professional.'**
+  String get goalsWarningUnderweight;
+
+  /// No description provided for @goalsWarningMinor.
+  ///
+  /// In en, this message translates to:
+  /// **'Weight-loss targets aren\'t set for people under 18. A doctor or registered dietitian can give personalised guidance.'**
+  String get goalsWarningMinor;
+
+  /// No description provided for @goalsWarningNeutral.
+  ///
+  /// In en, this message translates to:
+  /// **'Physiological input wasn\'t specified, so a neutral equation was used. Estimates may be less precise.'**
+  String get goalsWarningNeutral;
+
+  /// No description provided for @goalsWarningCustomLow.
+  ///
+  /// In en, this message translates to:
+  /// **'This target is very low. Very low intakes can be unsafe without medical supervision.'**
+  String get goalsWarningCustomLow;
+
+  /// No description provided for @dashboardOfTarget.
+  ///
+  /// In en, this message translates to:
+  /// **'{consumed} / {target} kcal'**
+  String dashboardOfTarget(String consumed, String target);
+
+  /// No description provided for @dashboardRemaining.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} kcal remaining (estimate)'**
+  String dashboardRemaining(String value);
+
+  /// No description provided for @dashboardAbove.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} kcal above estimate'**
+  String dashboardAbove(String value);
+
+  /// No description provided for @authContinueOffline.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue without an account'**
+  String get authContinueOffline;
+
+  /// No description provided for @authOfflineNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Your data stays on this device only. Accounts and sync are available when Nutrivoya is connected to its backend.'**
+  String get authOfflineNote;
+
+  /// No description provided for @settingsSyncNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Sync now'**
+  String get settingsSyncNow;
+
+  /// No description provided for @settingsSyncPending.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} changes waiting to sync'**
+  String settingsSyncPending(int count);
+
+  /// No description provided for @settingsSyncDone.
+  ///
+  /// In en, this message translates to:
+  /// **'Diary synced'**
+  String get settingsSyncDone;
+
+  /// No description provided for @settingsSyncUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Sync unavailable — data is stored on this device'**
+  String get settingsSyncUnavailable;
+
+  /// No description provided for @settingsRecipes.
+  ///
+  /// In en, this message translates to:
+  /// **'My recipes'**
+  String get settingsRecipes;
+
+  /// No description provided for @recipesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'My recipes'**
+  String get recipesTitle;
+
+  /// No description provided for @recipesEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No recipes yet. Build one from the ingredients you actually cook with — nutrition is calculated from each ingredient.'**
+  String get recipesEmpty;
+
+  /// No description provided for @recipeNew.
+  ///
+  /// In en, this message translates to:
+  /// **'New recipe'**
+  String get recipeNew;
+
+  /// No description provided for @recipeEdit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit recipe'**
+  String get recipeEdit;
+
+  /// No description provided for @recipeDelete.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete recipe'**
+  String get recipeDelete;
+
+  /// No description provided for @recipeName.
+  ///
+  /// In en, this message translates to:
+  /// **'Recipe name'**
+  String get recipeName;
+
+  /// No description provided for @recipeServings.
+  ///
+  /// In en, this message translates to:
+  /// **'Servings'**
+  String get recipeServings;
+
+  /// No description provided for @recipeYield.
+  ///
+  /// In en, this message translates to:
+  /// **'Cooked weight (g, optional)'**
+  String get recipeYield;
+
+  /// No description provided for @recipeYieldHelp.
+  ///
+  /// In en, this message translates to:
+  /// **'Weigh the finished pot to account for water gained or lost while cooking. Leave empty to use the ingredient total.'**
+  String get recipeYieldHelp;
+
+  /// No description provided for @recipeIngredients.
+  ///
+  /// In en, this message translates to:
+  /// **'Ingredients'**
+  String get recipeIngredients;
+
+  /// No description provided for @recipeAddIngredient.
+  ///
+  /// In en, this message translates to:
+  /// **'Add ingredient'**
+  String get recipeAddIngredient;
+
+  /// No description provided for @recipeSearchIngredient.
+  ///
+  /// In en, this message translates to:
+  /// **'Search ingredients'**
+  String get recipeSearchIngredient;
+
+  /// No description provided for @recipeGrams.
+  ///
+  /// In en, this message translates to:
+  /// **'g'**
+  String get recipeGrams;
+
+  /// No description provided for @recipePerServing.
+  ///
+  /// In en, this message translates to:
+  /// **'Per serving ({grams} g)'**
+  String recipePerServing(String grams);
+
+  /// No description provided for @recipeNutritionLine.
+  ///
+  /// In en, this message translates to:
+  /// **'{kcal} kcal · protein {protein} g · carbs {carbs} g · fat {fat} g'**
+  String recipeNutritionLine(
+    String kcal,
+    String protein,
+    String carbs,
+    String fat,
+  );
+
+  /// No description provided for @recipeSave.
+  ///
+  /// In en, this message translates to:
+  /// **'Save recipe'**
+  String get recipeSave;
+
+  /// No description provided for @recipeNeedsIngredients.
+  ///
+  /// In en, this message translates to:
+  /// **'Add a name and at least one ingredient'**
+  String get recipeNeedsIngredients;
+
+  /// No description provided for @recipeMissingData.
+  ///
+  /// In en, this message translates to:
+  /// **'Some ingredients have no data for a nutrient, so it is shown as unavailable rather than guessed.'**
+  String get recipeMissingData;
+
+  /// No description provided for @barcodeTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan a barcode'**
+  String get barcodeTitle;
+
+  /// No description provided for @barcodeScanTooltip.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan barcode'**
+  String get barcodeScanTooltip;
+
+  /// No description provided for @barcodeManualHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Or type the barcode number'**
+  String get barcodeManualHint;
+
+  /// No description provided for @barcodeLookup.
+  ///
+  /// In en, this message translates to:
+  /// **'Look up'**
+  String get barcodeLookup;
+
+  /// No description provided for @barcodeInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'That doesn\'t look like a valid barcode'**
+  String get barcodeInvalid;
+
+  /// No description provided for @barcodeCameraUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Camera unavailable — enter the barcode number below.'**
+  String get barcodeCameraUnavailable;
+
+  /// No description provided for @barcodeProductTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Packaged product'**
+  String get barcodeProductTitle;
+
+  /// No description provided for @barcodeNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'Product not found in Open Food Facts. You can search by name instead.'**
+  String get barcodeNotFound;
+
+  /// No description provided for @barcodeLookupFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Couldn\'t reach the product database. Check your connection and try again.'**
+  String get barcodeLookupFailed;
+
+  /// No description provided for @barcodeSearchByName.
+  ///
+  /// In en, this message translates to:
+  /// **'Search by name'**
+  String get barcodeSearchByName;
+
+  /// No description provided for @barcodeSource.
+  ///
+  /// In en, this message translates to:
+  /// **'Source: Open Food Facts (community data, not verified by Nutrivoya)'**
+  String get barcodeSource;
+
+  /// No description provided for @barcodePer100g.
+  ///
+  /// In en, this message translates to:
+  /// **'Nutrition per 100 g'**
+  String get barcodePer100g;
+
+  /// No description provided for @barcodeVerifyCheckbox.
+  ///
+  /// In en, this message translates to:
+  /// **'I checked these values against the label on the package'**
+  String get barcodeVerifyCheckbox;
+
+  /// No description provided for @barcodeUse.
+  ///
+  /// In en, this message translates to:
+  /// **'Use this product'**
+  String get barcodeUse;
+
+  /// No description provided for @barcodeIssueMissingEnergy.
+  ///
+  /// In en, this message translates to:
+  /// **'The energy value is missing — please check the label.'**
+  String get barcodeIssueMissingEnergy;
+
+  /// No description provided for @barcodeIssueMissingMacros.
+  ///
+  /// In en, this message translates to:
+  /// **'Some macronutrient values are missing; they will be shown as unavailable.'**
+  String get barcodeIssueMissingMacros;
+
+  /// No description provided for @barcodeIssueEnergyMismatch.
+  ///
+  /// In en, this message translates to:
+  /// **'Calories don\'t add up from protein, carbs and fat — the product data may contain an error.'**
+  String get barcodeIssueEnergyMismatch;
+
+  /// No description provided for @barcodeIssueImplausible.
+  ///
+  /// In en, this message translates to:
+  /// **'Some values look impossible per 100 g — please check the label.'**
+  String get barcodeIssueImplausible;
+
+  /// No description provided for @settingsAssistant.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask Nutrivoya'**
+  String get settingsAssistant;
+
+  /// No description provided for @assistantTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask Nutrivoya'**
+  String get assistantTitle;
+
+  /// No description provided for @assistantIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'I answer from Nutrivoya\'s food data, your diary and your estimated targets — I never make up nutrition numbers. I\'m not a substitute for medical advice.'**
+  String get assistantIntro;
+
+  /// No description provided for @assistantProfileCaution.
+  ///
+  /// In en, this message translates to:
+  /// **'Because of your profile (for example pregnancy, breastfeeding, age or low body weight), please check any changes to how you eat with a qualified professional.'**
+  String get assistantProfileCaution;
+
+  /// No description provided for @assistantAskDay.
+  ///
+  /// In en, this message translates to:
+  /// **'How is my day going?'**
+  String get assistantAskDay;
+
+  /// No description provided for @assistantAskBalance.
+  ///
+  /// In en, this message translates to:
+  /// **'Balance my next meal'**
+  String get assistantAskBalance;
+
+  /// No description provided for @assistantAskFood.
+  ///
+  /// In en, this message translates to:
+  /// **'Tell me about a food'**
+  String get assistantAskFood;
+
+  /// No description provided for @assistantAskSwap.
+  ///
+  /// In en, this message translates to:
+  /// **'Ideas for a food I eat'**
+  String get assistantAskSwap;
+
+  /// No description provided for @assistantInputHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask a question'**
+  String get assistantInputHint;
+
+  /// No description provided for @assistantDayEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing logged yet today. Whenever you eat, log it and I can help you see how the day is shaping up.'**
+  String get assistantDayEmpty;
+
+  /// No description provided for @assistantDayNoTargets.
+  ///
+  /// In en, this message translates to:
+  /// **'So far today: {kcal} kcal, {protein} g protein and {fibre} g fibre. Set up goals to compare with personal targets.'**
+  String assistantDayNoTargets(String kcal, String protein, String fibre);
+
+  /// No description provided for @assistantDaySummary.
+  ///
+  /// In en, this message translates to:
+  /// **'So far today: {kcal} of about {target} kcal, {protein} of {proteinTarget} g protein and {fibre} of {fibreTarget} g fibre. Targets are estimates, not strict rules.'**
+  String assistantDaySummary(
+    String kcal,
+    String target,
+    String protein,
+    String proteinTarget,
+    String fibre,
+    String fibreTarget,
+  );
+
+  /// No description provided for @assistantBalanceNoTargets.
+  ///
+  /// In en, this message translates to:
+  /// **'Set up your goals first so I can compare with personal targets.'**
+  String get assistantBalanceNoTargets;
+
+  /// No description provided for @assistantBalanceOnTrack.
+  ///
+  /// In en, this message translates to:
+  /// **'Protein and fibre are close to today\'s estimates — enjoy your next meal the way you like it.'**
+  String get assistantBalanceOnTrack;
+
+  /// No description provided for @assistantBalanceProtein.
+  ///
+  /// In en, this message translates to:
+  /// **'Protein is about {gap} g below today\'s estimate. Options with plenty of protein, familiar cuisines first:'**
+  String assistantBalanceProtein(String gap);
+
+  /// No description provided for @assistantBalanceFibre.
+  ///
+  /// In en, this message translates to:
+  /// **'Fibre is about {gap} g below today\'s estimate. Options rich in fibre:'**
+  String assistantBalanceFibre(String gap);
+
+  /// No description provided for @assistantFoodSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'{name}: a {grams} g serving has about {kcal} kcal, {protein} g protein, {carbs} g carbs and {fat} g fat.'**
+  String assistantFoodSummary(
+    String name,
+    String grams,
+    String kcal,
+    String protein,
+    String carbs,
+    String fat,
+  );
+
+  /// No description provided for @assistantFoodUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Some values aren\'t available for this food, so I won\'t estimate them.'**
+  String get assistantFoodUnavailable;
+
+  /// No description provided for @assistantFoodCulture.
+  ///
+  /// In en, this message translates to:
+  /// **'Food tradition: {places}.'**
+  String assistantFoodCulture(String places);
+
+  /// No description provided for @assistantFoodSource.
+  ///
+  /// In en, this message translates to:
+  /// **'Data: {source} · confidence: {confidence}.'**
+  String assistantFoodSource(String source, String confidence);
+
+  /// No description provided for @assistantHighlightHighProtein.
+  ///
+  /// In en, this message translates to:
+  /// **'A rich source of protein.'**
+  String get assistantHighlightHighProtein;
+
+  /// No description provided for @assistantHighlightSourceProtein.
+  ///
+  /// In en, this message translates to:
+  /// **'Provides a useful amount of protein.'**
+  String get assistantHighlightSourceProtein;
+
+  /// No description provided for @assistantHighlightHighFibre.
+  ///
+  /// In en, this message translates to:
+  /// **'High in fibre.'**
+  String get assistantHighlightHighFibre;
+
+  /// No description provided for @assistantHighlightSourceFibre.
+  ///
+  /// In en, this message translates to:
+  /// **'A source of fibre.'**
+  String get assistantHighlightSourceFibre;
+
+  /// No description provided for @assistantHighlightEnergyDense.
+  ///
+  /// In en, this message translates to:
+  /// **'Energy-dense — portion size makes a big difference to the total.'**
+  String get assistantHighlightEnergyDense;
+
+  /// No description provided for @assistantHighlightLight.
+  ///
+  /// In en, this message translates to:
+  /// **'Low in energy per 100 g.'**
+  String get assistantHighlightLight;
+
+  /// No description provided for @assistantHighlightHighSodium.
+  ///
+  /// In en, this message translates to:
+  /// **'Fairly high in salt — worth knowing if you\'re watching sodium.'**
+  String get assistantHighlightHighSodium;
+
+  /// No description provided for @assistantSwapIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Ideas from the same food tradition — not replacements, just options:'**
+  String get assistantSwapIntro;
+
+  /// No description provided for @assistantSwapMoreFibre.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} — more fibre per calorie'**
+  String assistantSwapMoreFibre(String name);
+
+  /// No description provided for @assistantSwapMoreProtein.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} — more protein per calorie'**
+  String assistantSwapMoreProtein(String name);
+
+  /// No description provided for @assistantSwapLighter.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} — lighter per 100 g'**
+  String assistantSwapLighter(String name);
+
+  /// No description provided for @assistantSwapNone.
+  ///
+  /// In en, this message translates to:
+  /// **'I don\'t have close alternatives from the same tradition yet. Adjusting the portion, or adding vegetables or legumes on the side, are simple options.'**
+  String get assistantSwapNone;
+
+  /// No description provided for @assistantUnknown.
+  ///
+  /// In en, this message translates to:
+  /// **'I can help with your day so far, balancing your next meal, information about a food, or ideas from the same cuisine. Try one of the suggestions above.'**
+  String get assistantUnknown;
+
+  /// No description provided for @assistantSafety.
+  ///
+  /// In en, this message translates to:
+  /// **'This deserves personal care. Please talk to a doctor, registered dietitian or another qualified professional — I won\'t give targets or numbers for this.'**
+  String get assistantSafety;
+
+  /// No description provided for @assistantSafetyEatingDisorder.
+  ///
+  /// In en, this message translates to:
+  /// **'If you\'re struggling with eating, you\'re not alone. Please reach out to a doctor or an eating-disorder support service in your country.'**
+  String get assistantSafetyEatingDisorder;
+
+  /// No description provided for @progressTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Progress & tracking'**
+  String get progressTitle;
+
+  /// No description provided for @progressTooltip.
+  ///
+  /// In en, this message translates to:
+  /// **'Progress & tracking'**
+  String get progressTooltip;
+
+  /// No description provided for @progressWeight.
+  ///
+  /// In en, this message translates to:
+  /// **'Weight (optional)'**
+  String get progressWeight;
+
+  /// No description provided for @progressWeightHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Weight (kg)'**
+  String get progressWeightHint;
+
+  /// No description provided for @progressAdd.
+  ///
+  /// In en, this message translates to:
+  /// **'Add'**
+  String get progressAdd;
+
+  /// No description provided for @progressNoWeight.
+  ///
+  /// In en, this message translates to:
+  /// **'No weigh-ins yet. Logging weight is entirely optional.'**
+  String get progressNoWeight;
+
+  /// No description provided for @progressWeightAverage.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent average: {avg} kg'**
+  String progressWeightAverage(String avg);
+
+  /// No description provided for @progressWeightTrend.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent average: {avg} kg · trend {change} kg per week'**
+  String progressWeightTrend(String avg, String change);
+
+  /// No description provided for @progressWeightNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Weight naturally moves day to day with water, food and hormones; the trend over weeks is more meaningful than any single reading.'**
+  String get progressWeightNote;
+
+  /// No description provided for @progressMeasurements.
+  ///
+  /// In en, this message translates to:
+  /// **'Body measurements (optional)'**
+  String get progressMeasurements;
+
+  /// No description provided for @progressWaist.
+  ///
+  /// In en, this message translates to:
+  /// **'Waist (cm)'**
+  String get progressWaist;
+
+  /// No description provided for @progressHip.
+  ///
+  /// In en, this message translates to:
+  /// **'Hip (cm)'**
+  String get progressHip;
+
+  /// No description provided for @progressNoMeasurements.
+  ///
+  /// In en, this message translates to:
+  /// **'No measurements yet.'**
+  String get progressNoMeasurements;
+
+  /// No description provided for @progressWater.
+  ///
+  /// In en, this message translates to:
+  /// **'Water'**
+  String get progressWater;
+
+  /// No description provided for @progressWaterToday.
+  ///
+  /// In en, this message translates to:
+  /// **'{ml} ml today'**
+  String progressWaterToday(String ml);
+
+  /// No description provided for @progressWaterAdd.
+  ///
+  /// In en, this message translates to:
+  /// **'+250 ml'**
+  String get progressWaterAdd;
+
+  /// No description provided for @progressTemplates.
+  ///
+  /// In en, this message translates to:
+  /// **'Meal templates'**
+  String get progressTemplates;
+
+  /// No description provided for @progressTemplatesEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Save a meal you eat often and log it again in one tap.'**
+  String get progressTemplatesEmpty;
+
+  /// No description provided for @progressTemplateSave.
+  ///
+  /// In en, this message translates to:
+  /// **'Save a meal from this day'**
+  String get progressTemplateSave;
+
+  /// No description provided for @progressTemplateName.
+  ///
+  /// In en, this message translates to:
+  /// **'Template name'**
+  String get progressTemplateName;
+
+  /// No description provided for @progressTemplateNoEntries.
+  ///
+  /// In en, this message translates to:
+  /// **'No foods are logged for that meal on this day.'**
+  String get progressTemplateNoEntries;
+
+  /// No description provided for @progressTemplateLog.
+  ///
+  /// In en, this message translates to:
+  /// **'Log to {meal}'**
+  String progressTemplateLog(String meal);
+
+  /// No description provided for @progressTemplateLogged.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} logged'**
+  String progressTemplateLogged(String name);
+
+  /// No description provided for @progressTemplateDelete.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete template'**
+  String get progressTemplateDelete;
+
+  /// No description provided for @favouriteAdd.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to favourites'**
+  String get favouriteAdd;
+
+  /// No description provided for @favouriteRemove.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove from favourites'**
+  String get favouriteRemove;
+
+  /// No description provided for @searchNothingYet.
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing here yet'**
+  String get searchNothingYet;
 }
 
 class _AppLocalizationsDelegate

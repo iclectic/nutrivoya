@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../core/models/diary_entry.dart';
 import '../../core/models/meal_type.dart';
+import '../../core/models/nutrition_targets.dart';
 import '../../features/profile/profile_controller.dart';
 import '../../shared/extensions/app_localizations_x.dart';
 import '../../shared/widgets/empty_state.dart';
 import '../diary/diary_providers.dart';
+import '../goals/targets_providers.dart';
 
 /// Dashboard — daily totals and meal summary with live diary data.
 class DashboardScreen extends ConsumerWidget {
@@ -19,11 +22,18 @@ class DashboardScreen extends ConsumerWidget {
     final greeting = _greeting(l10n);
     final totalsAsync = ref.watch(dailyTotalsProvider);
     final entriesAsync = ref.watch(diaryEntriesProvider);
+    final targets = ref.watch(nutritionTargetsProvider);
 
     return Scaffold(
       appBar: AppBar(
         title: Text(l10n.dashboardToday),
         actions: [
+          IconButton(
+            key: const Key('dashboard-progress'),
+            icon: const Icon(Icons.insights_outlined),
+            tooltip: l10n.progressTooltip,
+            onPressed: () => context.push('/progress'),
+          ),
           IconButton(
             icon: const Icon(Icons.calendar_today_outlined),
             tooltip: l10n.diarySelectDate,
@@ -46,13 +56,15 @@ class DashboardScreen extends ConsumerWidget {
             totalsAsync.when(
               loading: () => const _CalorieCardPlaceholder(),
               error: (_, _) => const _CalorieCardPlaceholder(),
-              data: (totals) => _CalorieCard(totals: totals, l10n: l10n),
+              data: (totals) =>
+                  _CalorieCard(totals: totals, targets: targets, l10n: l10n),
             ),
             const SizedBox(height: 16),
             totalsAsync.when(
               loading: () => const SizedBox(height: 80),
               error: (_, _) => const SizedBox(height: 80),
-              data: (totals) => _MacroRow(totals: totals, l10n: l10n),
+              data: (totals) =>
+                  _MacroRow(totals: totals, targets: targets, l10n: l10n),
             ),
             const SizedBox(height: 24),
             entriesAsync.when(
@@ -83,7 +95,7 @@ class DashboardScreen extends ConsumerWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () => Navigator.of(context).pushNamed('search'),
+        onPressed: () => context.go('/search'),
         icon: const Icon(Icons.add),
         label: Text(l10n.dashboardLogFood),
       ),
@@ -129,12 +141,19 @@ class _CalorieCardPlaceholder extends StatelessWidget {
 }
 
 class _CalorieCard extends StatelessWidget {
-  const _CalorieCard({required this.totals, required this.l10n});
+  const _CalorieCard({
+    required this.totals,
+    required this.targets,
+    required this.l10n,
+  });
   final DailyTotals totals;
+  final NutritionTargets targets;
   final AppLocalizations l10n;
 
   @override
   Widget build(BuildContext context) {
+    final target = targets.calorieTargetKcal;
+    final consumed = totals.caloriesRounded;
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(20),
@@ -145,9 +164,28 @@ class _CalorieCard extends StatelessWidget {
                 style: Theme.of(context).textTheme.titleMedium),
             const SizedBox(height: 8),
             Text(
-              '${totals.caloriesRounded} ${l10n.diaryKcalShort}',
+              target == null
+                  ? '$consumed ${l10n.diaryKcalShort}'
+                  : l10n.dashboardOfTarget(
+                      '$consumed', '${target.round()}'),
+              key: const Key('dashboard-calories'),
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            if (target != null) ...[
+              const SizedBox(height: 8),
+              LinearProgressIndicator(
+                value: target > 0 ? (consumed / target).clamp(0, 1) : 0,
+              ),
+              const SizedBox(height: 4),
+              Text(
+                consumed <= target
+                    ? l10n.dashboardRemaining('${(target - consumed).round()}')
+                    : l10n.dashboardAbove('${(consumed - target).round()}'),
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
+            ] else
+              Text(l10n.dashboardTargetsPlaceholder,
+                  style: Theme.of(context).textTheme.bodySmall),
             const SizedBox(height: 4),
             Text(
               '${totals.entryCount} ${totals.entryCount == 1 ? "entry" : "entries"}',
@@ -163,17 +201,22 @@ class _CalorieCard extends StatelessWidget {
 }
 
 class _MacroRow extends StatelessWidget {
-  const _MacroRow({required this.totals, required this.l10n});
+  const _MacroRow({
+    required this.totals,
+    required this.targets,
+    required this.l10n,
+  });
   final DailyTotals totals;
+  final NutritionTargets targets;
   final AppLocalizations l10n;
 
   @override
   Widget build(BuildContext context) {
     final macros = [
-      (l10n.dashboardProtein, totals.proteinG, 'g'),
-      (l10n.dashboardCarbs, totals.carbohydrateG, 'g'),
-      (l10n.dashboardFat, totals.fatG, 'g'),
-      (l10n.dashboardFibre, totals.fibreG, 'g'),
+      (l10n.dashboardProtein, totals.proteinG, targets.proteinTargetG),
+      (l10n.dashboardCarbs, totals.carbohydrateG, targets.carbTargetG),
+      (l10n.dashboardFat, totals.fatG, targets.fatTargetG),
+      (l10n.dashboardFibre, totals.fibreG, targets.fibreTargetG),
     ];
     return Row(
       children: macros
@@ -189,9 +232,17 @@ class _MacroRow extends StatelessWidget {
                             textAlign: TextAlign.center),
                         const SizedBox(height: 4),
                         Text(
-                          '${m.$2.toStringAsFixed(0)} ${m.$3}',
+                          m.$3 == null
+                              ? '${m.$2.toStringAsFixed(0)} g'
+                              : '${m.$2.toStringAsFixed(0)}/${m.$3!.round()} g',
                           style: Theme.of(context).textTheme.titleMedium,
                         ),
+                        if (m.$3 != null && m.$3! > 0) ...[
+                          const SizedBox(height: 6),
+                          LinearProgressIndicator(
+                            value: (m.$2 / m.$3!).clamp(0, 1),
+                          ),
+                        ],
                       ],
                     ),
                   ),
@@ -247,7 +298,7 @@ class _MealSection extends StatelessWidget {
                           color: Theme.of(context).colorScheme.onSurfaceVariant,
                         )),
               TextButton.icon(
-                onPressed: () => Navigator.of(context).pushNamed('search'),
+                onPressed: () => context.go('/search'),
                 icon: const Icon(Icons.add, size: 18),
                 label: Text(l10n.diaryAddToMeal),
               ),

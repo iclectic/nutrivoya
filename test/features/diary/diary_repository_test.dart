@@ -83,7 +83,7 @@ void main() {
   });
 
   group('DiaryRepository.delete', () {
-    test('deletes an entry by id', () async {
+    test('deletes an entry by id (hidden from queries)', () async {
       await repo.add(_entry());
       final entries = await repo.entriesForDate(DateTime(2024, 6, 15));
       expect(entries.length, 1);

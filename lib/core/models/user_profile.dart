@@ -3,12 +3,12 @@ import 'package:flutter/foundation.dart';
 import 'activity_level.dart';
 import 'nutrition_goal.dart';
 import 'physiological_input.dart';
+import 'reproductive_context.dart';
 
 /// User profile captured during onboarding.
 ///
 /// Only the minimum required for personalized energy estimates is stored.
-/// Optional fields (e.g. reproductive context) are intentionally absent in
-/// Milestone 1 and will be added behind explicit opt-in later.
+/// Optional fields (target rate, reproductive context) are opt-in.
 @immutable
 class UserProfile {
   const UserProfile({
@@ -21,6 +21,8 @@ class UserProfile {
     required this.goal,
     this.familiarCuisines = const <String>[],
     this.displayName,
+    this.targetRateKgPerWeek,
+    this.reproductiveContext = ReproductiveContext.none,
   });
 
   /// Supabase auth user id (or a local placeholder id when offline).
@@ -37,6 +39,15 @@ class UserProfile {
   final List<String> familiarCuisines;
 
   final String? displayName;
+
+  /// Desired rate of weight change in kg/week (absolute value). Only used for
+  /// weight-loss / weight-gain goals; guardrails cap unsafe values.
+  final double? targetRateKgPerWeek;
+
+  /// Optional opt-in life-stage context.
+  final ReproductiveContext reproductiveContext;
+
+  double get bmi => weightKg / ((heightCm / 100) * (heightCm / 100));
 
   /// Basic sanity guardrails. Does not perform medical validation.
   bool get isPlausible =>
@@ -57,6 +68,8 @@ class UserProfile {
     NutritionGoal? goal,
     List<String>? familiarCuisines,
     String? displayName,
+    double? targetRateKgPerWeek,
+    ReproductiveContext? reproductiveContext,
   }) {
     return UserProfile(
       id: id ?? this.id,
@@ -68,6 +81,8 @@ class UserProfile {
       goal: goal ?? this.goal,
       familiarCuisines: familiarCuisines ?? this.familiarCuisines,
       displayName: displayName ?? this.displayName,
+      targetRateKgPerWeek: targetRateKgPerWeek ?? this.targetRateKgPerWeek,
+      reproductiveContext: reproductiveContext ?? this.reproductiveContext,
     );
   }
 
@@ -84,7 +99,9 @@ class UserProfile {
           activityLevel == other.activityLevel &&
           goal == other.goal &&
           listEquals(familiarCuisines, other.familiarCuisines) &&
-          displayName == other.displayName;
+          displayName == other.displayName &&
+          targetRateKgPerWeek == other.targetRateKgPerWeek &&
+          reproductiveContext == other.reproductiveContext;
 
   @override
   int get hashCode => Object.hash(
@@ -97,5 +114,7 @@ class UserProfile {
         goal,
         Object.hashAll(familiarCuisines),
         displayName,
+        targetRateKgPerWeek,
+        reproductiveContext,
       );
 }

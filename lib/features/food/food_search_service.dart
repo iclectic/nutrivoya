@@ -10,8 +10,8 @@ import '../../core/models/user_profile.dart';
 ///   query -> normalize -> exact primary -> exact alias ->
 ///   cuisine-preferred -> prefix -> contains -> fuzzy fallback
 ///
-/// "Previously logged foods" ranking is Milestone 3 (no diary yet). For
-/// Milestone 2, ranking favours exact and cuisine matches.
+/// Within a match rank, previously logged foods ([recentFoodIds]) come first.
+/// A phonetic step catches romanization variants ("dhal" → "dal").
 class FoodSearchService {
   const FoodSearchService();
 
@@ -21,6 +21,7 @@ class FoodSearchService {
     String query,
     Iterable<Food> foods, {
     UserProfile? profile,
+    Set<String> recentFoodIds = const {},
   }) {
     final normalized = FoodName.normalize(query);
     if (normalized.isEmpty) return const [];
@@ -44,6 +45,9 @@ class FoodSearchService {
     results.sort((a, b) {
       final byRank = b.matchKind.rank.compareTo(a.matchKind.rank);
       if (byRank != 0) return byRank;
+      final aRecent = recentFoodIds.contains(a.food.id) ? 1 : 0;
+      final bRecent = recentFoodIds.contains(b.food.id) ? 1 : 0;
+      if (aRecent != bRecent) return bRecent.compareTo(aRecent);
       // Tie-break: prefer foods with configured calorie data, then name.
       final aKcal =
           a.food.nutrientPer100g(NutrientCode.energyKcal) != null ? 1 : 0;
@@ -123,7 +127,21 @@ class FoodSearchService {
       );
     }
 
-    // 5. Fuzzy: any query token appears as a name token.
+    // 5. Phonetic: transliteration variants (dhal/daal/dal, chapatti/chapati).
+    final queryKey = FoodName.phoneticKey(normalizedQuery);
+    final phonetic = allNames.firstWhereOrNull((n) {
+      final key = FoodName.phoneticKey(n.normalized);
+      return key == queryKey || (queryKey.length >= 3 && key.startsWith(queryKey));
+    });
+    if (phonetic != null) {
+      return FoodSearchResult(
+        food: food,
+        matchKind: SearchMatchKind.fuzzy,
+        matchedName: phonetic.display,
+      );
+    }
+
+    // 6. Fuzzy: any query token appears as a name token.
     if (_tokenOverlap(normalizedQuery, allNames)) {
       return FoodSearchResult(
         food: food,
