@@ -892,4 +892,157 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get barcodeIssueImplausible =>
       'Some values look impossible per 100 g — please check the label.';
+
+  @override
+  String get settingsAssistant => 'Ask Nutrivoya';
+
+  @override
+  String get assistantTitle => 'Ask Nutrivoya';
+
+  @override
+  String get assistantIntro =>
+      'I answer from Nutrivoya\'s food data, your diary and your estimated targets — I never make up nutrition numbers. I\'m not a substitute for medical advice.';
+
+  @override
+  String get assistantProfileCaution =>
+      'Because of your profile (for example pregnancy, breastfeeding, age or low body weight), please check any changes to how you eat with a qualified professional.';
+
+  @override
+  String get assistantAskDay => 'How is my day going?';
+
+  @override
+  String get assistantAskBalance => 'Balance my next meal';
+
+  @override
+  String get assistantAskFood => 'Tell me about a food';
+
+  @override
+  String get assistantAskSwap => 'Ideas for a food I eat';
+
+  @override
+  String get assistantInputHint => 'Ask a question';
+
+  @override
+  String get assistantDayEmpty =>
+      'Nothing logged yet today. Whenever you eat, log it and I can help you see how the day is shaping up.';
+
+  @override
+  String assistantDayNoTargets(String kcal, String protein, String fibre) {
+    return 'So far today: $kcal kcal, $protein g protein and $fibre g fibre. Set up goals to compare with personal targets.';
+  }
+
+  @override
+  String assistantDaySummary(
+    String kcal,
+    String target,
+    String protein,
+    String proteinTarget,
+    String fibre,
+    String fibreTarget,
+  ) {
+    return 'So far today: $kcal of about $target kcal, $protein of $proteinTarget g protein and $fibre of $fibreTarget g fibre. Targets are estimates, not strict rules.';
+  }
+
+  @override
+  String get assistantBalanceNoTargets =>
+      'Set up your goals first so I can compare with personal targets.';
+
+  @override
+  String get assistantBalanceOnTrack =>
+      'Protein and fibre are close to today\'s estimates — enjoy your next meal the way you like it.';
+
+  @override
+  String assistantBalanceProtein(String gap) {
+    return 'Protein is about $gap g below today\'s estimate. Options with plenty of protein, familiar cuisines first:';
+  }
+
+  @override
+  String assistantBalanceFibre(String gap) {
+    return 'Fibre is about $gap g below today\'s estimate. Options rich in fibre:';
+  }
+
+  @override
+  String assistantFoodSummary(
+    String name,
+    String grams,
+    String kcal,
+    String protein,
+    String carbs,
+    String fat,
+  ) {
+    return '$name: a $grams g serving has about $kcal kcal, $protein g protein, $carbs g carbs and $fat g fat.';
+  }
+
+  @override
+  String get assistantFoodUnavailable =>
+      'Some values aren\'t available for this food, so I won\'t estimate them.';
+
+  @override
+  String assistantFoodCulture(String places) {
+    return 'Food tradition: $places.';
+  }
+
+  @override
+  String assistantFoodSource(String source, String confidence) {
+    return 'Data: $source · confidence: $confidence.';
+  }
+
+  @override
+  String get assistantHighlightHighProtein => 'A rich source of protein.';
+
+  @override
+  String get assistantHighlightSourceProtein =>
+      'Provides a useful amount of protein.';
+
+  @override
+  String get assistantHighlightHighFibre => 'High in fibre.';
+
+  @override
+  String get assistantHighlightSourceFibre => 'A source of fibre.';
+
+  @override
+  String get assistantHighlightEnergyDense =>
+      'Energy-dense — portion size makes a big difference to the total.';
+
+  @override
+  String get assistantHighlightLight => 'Low in energy per 100 g.';
+
+  @override
+  String get assistantHighlightHighSodium =>
+      'Fairly high in salt — worth knowing if you\'re watching sodium.';
+
+  @override
+  String get assistantSwapIntro =>
+      'Ideas from the same food tradition — not replacements, just options:';
+
+  @override
+  String assistantSwapMoreFibre(String name) {
+    return '$name — more fibre per calorie';
+  }
+
+  @override
+  String assistantSwapMoreProtein(String name) {
+    return '$name — more protein per calorie';
+  }
+
+  @override
+  String assistantSwapLighter(String name) {
+    return '$name — lighter per 100 g';
+  }
+
+  @override
+  String get assistantSwapNone =>
+      'I don\'t have close alternatives from the same tradition yet. Adjusting the portion, or adding vegetables or legumes on the side, are simple options.';
+
+  @override
+  String get assistantUnknown =>
+      'I can help with your day so far, balancing your next meal, information about a food, or ideas from the same cuisine. Try one of the suggestions above.';
+
+  @override
+  String get assistantSafety =>
+      'This deserves personal care. Please talk to a doctor, registered dietitian or another qualified professional — I won\'t give targets or numbers for this.';
+
+  @override
+  String get assistantSafetyEatingDisorder =>
+      'If you\'re struggling with eating, you\'re not alone. Please reach out to a doctor or an eating-disorder support service in your country.';
 }

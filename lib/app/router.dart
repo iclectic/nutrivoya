@@ -12,6 +12,7 @@ import '../features/profile/profile_screen.dart';
 import '../features/profile/profile_controller.dart';
 import '../features/recipes/recipes_screen.dart';
 import '../features/barcode/barcode_screens.dart';
+import '../features/assistant/assistant_screen.dart';
 import 'main_shell.dart';
 
 /// A [Listenable] that notifies go_router to re-run redirects whenever auth
@@ -99,6 +100,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
         path: '/barcode/:code',
         builder: (context, state) =>
             BarcodeProductScreen(barcode: state.pathParameters['code']!),
+      ),
+      GoRoute(
+        path: '/assistant',
+        builder: (context, state) => const AssistantScreen(),
       ),
       GoRoute(
         path: '/recipes',

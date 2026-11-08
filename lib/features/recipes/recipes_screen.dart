@@ -119,7 +119,7 @@ class _RecipeEditorScreenState extends ConsumerState<RecipeEditorScreen> {
   Future<void> _addIngredient() async {
     final food = await showDialog<Food>(
       context: context,
-      builder: (_) => const _IngredientSearchDialog(),
+      builder: (_) => const FoodPickerDialog(),
     );
     if (food == null) return;
     setState(() {
@@ -269,14 +269,14 @@ class _RecipeEditorScreenState extends ConsumerState<RecipeEditorScreen> {
   }
 }
 
-class _IngredientSearchDialog extends ConsumerStatefulWidget {
-  const _IngredientSearchDialog();
+class FoodPickerDialog extends ConsumerStatefulWidget {
+  const FoodPickerDialog({super.key});
 
   @override
-  ConsumerState<_IngredientSearchDialog> createState() => _IngredientSearchDialogState();
+  ConsumerState<FoodPickerDialog> createState() => FoodPickerDialogState();
 }
 
-class _IngredientSearchDialogState extends ConsumerState<_IngredientSearchDialog> {
+class FoodPickerDialogState extends ConsumerState<FoodPickerDialog> {
   Future<List<FoodSearchResult>> _results = Future.value(const []);
 
   void _search(String q) {

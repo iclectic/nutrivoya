@@ -373,5 +373,149 @@
   "barcodeIssueMissingEnergy": "The energy value is missing — please check the label.",
   "barcodeIssueMissingMacros": "Some macronutrient values are missing; they will be shown as unavailable.",
   "barcodeIssueEnergyMismatch": "Calories don't add up from protein, carbs and fat — the product data may contain an error.",
-  "barcodeIssueImplausible": "Some values look impossible per 100 g — please check the label."
+  "barcodeIssueImplausible": "Some values look impossible per 100 g — please check the label.",
+  "settingsAssistant": "Ask Nutrivoya",
+  "assistantTitle": "Ask Nutrivoya",
+  "assistantIntro": "I answer from Nutrivoya's food data, your diary and your estimated targets — I never make up nutrition numbers. I'm not a substitute for medical advice.",
+  "assistantProfileCaution": "Because of your profile (for example pregnancy, breastfeeding, age or low body weight), please check any changes to how you eat with a qualified professional.",
+  "assistantAskDay": "How is my day going?",
+  "assistantAskBalance": "Balance my next meal",
+  "assistantAskFood": "Tell me about a food",
+  "assistantAskSwap": "Ideas for a food I eat",
+  "assistantInputHint": "Ask a question",
+  "assistantDayEmpty": "Nothing logged yet today. Whenever you eat, log it and I can help you see how the day is shaping up.",
+  "assistantDayNoTargets": "So far today: {kcal} kcal, {protein} g protein and {fibre} g fibre. Set up goals to compare with personal targets.",
+  "@assistantDayNoTargets": {
+    "placeholders": {
+      "kcal": {
+        "type": "String"
+      },
+      "protein": {
+        "type": "String"
+      },
+      "fibre": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantDaySummary": "So far today: {kcal} of about {target} kcal, {protein} of {proteinTarget} g protein and {fibre} of {fibreTarget} g fibre. Targets are estimates, not strict rules.",
+  "@assistantDaySummary": {
+    "placeholders": {
+      "kcal": {
+        "type": "String"
+      },
+      "target": {
+        "type": "String"
+      },
+      "protein": {
+        "type": "String"
+      },
+      "proteinTarget": {
+        "type": "String"
+      },
+      "fibre": {
+        "type": "String"
+      },
+      "fibreTarget": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBalanceNoTargets": "Set up your goals first so I can compare with personal targets.",
+  "assistantBalanceOnTrack": "Protein and fibre are close to today's estimates — enjoy your next meal the way you like it.",
+  "assistantBalanceProtein": "Protein is about {gap} g below today's estimate. Options with plenty of protein, familiar cuisines first:",
+  "@assistantBalanceProtein": {
+    "placeholders": {
+      "gap": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBalanceFibre": "Fibre is about {gap} g below today's estimate. Options rich in fibre:",
+  "@assistantBalanceFibre": {
+    "placeholders": {
+      "gap": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantFoodSummary": "{name}: a {grams} g serving has about {kcal} kcal, {protein} g protein, {carbs} g carbs and {fat} g fat.",
+  "@assistantFoodSummary": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "grams": {
+        "type": "String"
+      },
+      "kcal": {
+        "type": "String"
+      },
+      "protein": {
+        "type": "String"
+      },
+      "carbs": {
+        "type": "String"
+      },
+      "fat": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantFoodUnavailable": "Some values aren't available for this food, so I won't estimate them.",
+  "assistantFoodCulture": "Food tradition: {places}.",
+  "@assistantFoodCulture": {
+    "placeholders": {
+      "places": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantFoodSource": "Data: {source} · confidence: {confidence}.",
+  "@assistantFoodSource": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      },
+      "confidence": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantHighlightHighProtein": "A rich source of protein.",
+  "assistantHighlightSourceProtein": "Provides a useful amount of protein.",
+  "assistantHighlightHighFibre": "High in fibre.",
+  "assistantHighlightSourceFibre": "A source of fibre.",
+  "assistantHighlightEnergyDense": "Energy-dense — portion size makes a big difference to the total.",
+  "assistantHighlightLight": "Low in energy per 100 g.",
+  "assistantHighlightHighSodium": "Fairly high in salt — worth knowing if you're watching sodium.",
+  "assistantSwapIntro": "Ideas from the same food tradition — not replacements, just options:",
+  "assistantSwapMoreFibre": "{name} — more fibre per calorie",
+  "@assistantSwapMoreFibre": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantSwapMoreProtein": "{name} — more protein per calorie",
+  "@assistantSwapMoreProtein": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantSwapLighter": "{name} — lighter per 100 g",
+  "@assistantSwapLighter": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantSwapNone": "I don't have close alternatives from the same tradition yet. Adjusting the portion, or adding vegetables or legumes on the side, are simple options.",
+  "assistantUnknown": "I can help with your day so far, balancing your next meal, information about a food, or ideas from the same cuisine. Try one of the suggestions above.",
+  "assistantSafety": "This deserves personal care. Please talk to a doctor, registered dietitian or another qualified professional — I won't give targets or numbers for this.",
+  "assistantSafetyEatingDisorder": "If you're struggling with eating, you're not alone. Please reach out to a doctor or an eating-disorder support service in your country."
 }

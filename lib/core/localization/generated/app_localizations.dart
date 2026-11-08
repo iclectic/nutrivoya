@@ -1724,6 +1724,230 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Some values look impossible per 100 g — please check the label.'**
   String get barcodeIssueImplausible;
+
+  /// No description provided for @settingsAssistant.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask Nutrivoya'**
+  String get settingsAssistant;
+
+  /// No description provided for @assistantTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask Nutrivoya'**
+  String get assistantTitle;
+
+  /// No description provided for @assistantIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'I answer from Nutrivoya\'s food data, your diary and your estimated targets — I never make up nutrition numbers. I\'m not a substitute for medical advice.'**
+  String get assistantIntro;
+
+  /// No description provided for @assistantProfileCaution.
+  ///
+  /// In en, this message translates to:
+  /// **'Because of your profile (for example pregnancy, breastfeeding, age or low body weight), please check any changes to how you eat with a qualified professional.'**
+  String get assistantProfileCaution;
+
+  /// No description provided for @assistantAskDay.
+  ///
+  /// In en, this message translates to:
+  /// **'How is my day going?'**
+  String get assistantAskDay;
+
+  /// No description provided for @assistantAskBalance.
+  ///
+  /// In en, this message translates to:
+  /// **'Balance my next meal'**
+  String get assistantAskBalance;
+
+  /// No description provided for @assistantAskFood.
+  ///
+  /// In en, this message translates to:
+  /// **'Tell me about a food'**
+  String get assistantAskFood;
+
+  /// No description provided for @assistantAskSwap.
+  ///
+  /// In en, this message translates to:
+  /// **'Ideas for a food I eat'**
+  String get assistantAskSwap;
+
+  /// No description provided for @assistantInputHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask a question'**
+  String get assistantInputHint;
+
+  /// No description provided for @assistantDayEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing logged yet today. Whenever you eat, log it and I can help you see how the day is shaping up.'**
+  String get assistantDayEmpty;
+
+  /// No description provided for @assistantDayNoTargets.
+  ///
+  /// In en, this message translates to:
+  /// **'So far today: {kcal} kcal, {protein} g protein and {fibre} g fibre. Set up goals to compare with personal targets.'**
+  String assistantDayNoTargets(String kcal, String protein, String fibre);
+
+  /// No description provided for @assistantDaySummary.
+  ///
+  /// In en, this message translates to:
+  /// **'So far today: {kcal} of about {target} kcal, {protein} of {proteinTarget} g protein and {fibre} of {fibreTarget} g fibre. Targets are estimates, not strict rules.'**
+  String assistantDaySummary(
+    String kcal,
+    String target,
+    String protein,
+    String proteinTarget,
+    String fibre,
+    String fibreTarget,
+  );
+
+  /// No description provided for @assistantBalanceNoTargets.
+  ///
+  /// In en, this message translates to:
+  /// **'Set up your goals first so I can compare with personal targets.'**
+  String get assistantBalanceNoTargets;
+
+  /// No description provided for @assistantBalanceOnTrack.
+  ///
+  /// In en, this message translates to:
+  /// **'Protein and fibre are close to today\'s estimates — enjoy your next meal the way you like it.'**
+  String get assistantBalanceOnTrack;
+
+  /// No description provided for @assistantBalanceProtein.
+  ///
+  /// In en, this message translates to:
+  /// **'Protein is about {gap} g below today\'s estimate. Options with plenty of protein, familiar cuisines first:'**
+  String assistantBalanceProtein(String gap);
+
+  /// No description provided for @assistantBalanceFibre.
+  ///
+  /// In en, this message translates to:
+  /// **'Fibre is about {gap} g below today\'s estimate. Options rich in fibre:'**
+  String assistantBalanceFibre(String gap);
+
+  /// No description provided for @assistantFoodSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'{name}: a {grams} g serving has about {kcal} kcal, {protein} g protein, {carbs} g carbs and {fat} g fat.'**
+  String assistantFoodSummary(
+    String name,
+    String grams,
+    String kcal,
+    String protein,
+    String carbs,
+    String fat,
+  );
+
+  /// No description provided for @assistantFoodUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Some values aren\'t available for this food, so I won\'t estimate them.'**
+  String get assistantFoodUnavailable;
+
+  /// No description provided for @assistantFoodCulture.
+  ///
+  /// In en, this message translates to:
+  /// **'Food tradition: {places}.'**
+  String assistantFoodCulture(String places);
+
+  /// No description provided for @assistantFoodSource.
+  ///
+  /// In en, this message translates to:
+  /// **'Data: {source} · confidence: {confidence}.'**
+  String assistantFoodSource(String source, String confidence);
+
+  /// No description provided for @assistantHighlightHighProtein.
+  ///
+  /// In en, this message translates to:
+  /// **'A rich source of protein.'**
+  String get assistantHighlightHighProtein;
+
+  /// No description provided for @assistantHighlightSourceProtein.
+  ///
+  /// In en, this message translates to:
+  /// **'Provides a useful amount of protein.'**
+  String get assistantHighlightSourceProtein;
+
+  /// No description provided for @assistantHighlightHighFibre.
+  ///
+  /// In en, this message translates to:
+  /// **'High in fibre.'**
+  String get assistantHighlightHighFibre;
+
+  /// No description provided for @assistantHighlightSourceFibre.
+  ///
+  /// In en, this message translates to:
+  /// **'A source of fibre.'**
+  String get assistantHighlightSourceFibre;
+
+  /// No description provided for @assistantHighlightEnergyDense.
+  ///
+  /// In en, this message translates to:
+  /// **'Energy-dense — portion size makes a big difference to the total.'**
+  String get assistantHighlightEnergyDense;
+
+  /// No description provided for @assistantHighlightLight.
+  ///
+  /// In en, this message translates to:
+  /// **'Low in energy per 100 g.'**
+  String get assistantHighlightLight;
+
+  /// No description provided for @assistantHighlightHighSodium.
+  ///
+  /// In en, this message translates to:
+  /// **'Fairly high in salt — worth knowing if you\'re watching sodium.'**
+  String get assistantHighlightHighSodium;
+
+  /// No description provided for @assistantSwapIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Ideas from the same food tradition — not replacements, just options:'**
+  String get assistantSwapIntro;
+
+  /// No description provided for @assistantSwapMoreFibre.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} — more fibre per calorie'**
+  String assistantSwapMoreFibre(String name);
+
+  /// No description provided for @assistantSwapMoreProtein.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} — more protein per calorie'**
+  String assistantSwapMoreProtein(String name);
+
+  /// No description provided for @assistantSwapLighter.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} — lighter per 100 g'**
+  String assistantSwapLighter(String name);
+
+  /// No description provided for @assistantSwapNone.
+  ///
+  /// In en, this message translates to:
+  /// **'I don\'t have close alternatives from the same tradition yet. Adjusting the portion, or adding vegetables or legumes on the side, are simple options.'**
+  String get assistantSwapNone;
+
+  /// No description provided for @assistantUnknown.
+  ///
+  /// In en, this message translates to:
+  /// **'I can help with your day so far, balancing your next meal, information about a food, or ideas from the same cuisine. Try one of the suggestions above.'**
+  String get assistantUnknown;
+
+  /// No description provided for @assistantSafety.
+  ///
+  /// In en, this message translates to:
+  /// **'This deserves personal care. Please talk to a doctor, registered dietitian or another qualified professional — I won\'t give targets or numbers for this.'**
+  String get assistantSafety;
+
+  /// No description provided for @assistantSafetyEatingDisorder.
+  ///
+  /// In en, this message translates to:
+  /// **'If you\'re struggling with eating, you\'re not alone. Please reach out to a doctor or an eating-disorder support service in your country.'**
+  String get assistantSafetyEatingDisorder;
 }
 
 class _AppLocalizationsDelegate

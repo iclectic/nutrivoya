@@ -100,6 +100,12 @@ class SettingsScreen extends ConsumerWidget {
               onTap: () => context.push('/recipes'),
             ),
             ListTile(
+              leading: const Icon(Icons.chat_bubble_outline),
+              title: Text(l10n.settingsAssistant),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => context.push('/assistant'),
+            ),
+            ListTile(
               leading: const Icon(Icons.logout),
               title: Text(l10n.settingsSignOut),
               onTap: () async {
