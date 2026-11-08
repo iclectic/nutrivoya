@@ -25,4 +25,13 @@ class DiaryEntries extends Table {
   DateTimeColumn get loggedAt => dateTime()();
   DateTimeColumn get createdAt => dateTime().withDefault(currentDateAndTime)();
   BoolColumn get syncPending => boolean().withDefault(const Constant(false))();
+
+  /// Client-generated UUID shared with the Supabase row (schema v2).
+  TextColumn get remoteId => text().nullable().unique()();
+
+  /// Last local modification, used for last-write-wins merging (schema v2).
+  DateTimeColumn get updatedAt => dateTime().nullable()();
+
+  /// Soft-delete marker so deletions can be synced before purging (schema v2).
+  DateTimeColumn get deletedAt => dateTime().nullable()();
 }

@@ -300,5 +300,18 @@
         "type": "String"
       }
     }
-  }
+  },
+  "authContinueOffline": "Continue without an account",
+  "authOfflineNote": "Your data stays on this device only. Accounts and sync are available when Nutrivoya is connected to its backend.",
+  "settingsSyncNow": "Sync now",
+  "settingsSyncPending": "{count} changes waiting to sync",
+  "@settingsSyncPending": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsSyncDone": "Diary synced",
+  "settingsSyncUnavailable": "Sync unavailable — data is stored on this device"
 }

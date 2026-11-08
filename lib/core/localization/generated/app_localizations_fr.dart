@@ -739,4 +739,26 @@ class AppLocalizationsFr extends AppLocalizations {
   String dashboardAbove(String value) {
     return '$value kcal above estimate';
   }
+
+  @override
+  String get authContinueOffline => 'Continue without an account';
+
+  @override
+  String get authOfflineNote =>
+      'Your data stays on this device only. Accounts and sync are available when Nutrivoya is connected to its backend.';
+
+  @override
+  String get settingsSyncNow => 'Sync now';
+
+  @override
+  String settingsSyncPending(int count) {
+    return '$count changes waiting to sync';
+  }
+
+  @override
+  String get settingsSyncDone => 'Diary synced';
+
+  @override
+  String get settingsSyncUnavailable =>
+      'Sync unavailable — data is stored on this device';
 }

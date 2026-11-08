@@ -156,6 +156,23 @@ class _AuthFormScreenState extends ConsumerState<AuthFormScreen> {
                         ? l10n.authSwitchToLogin
                         : l10n.authSwitchToSignup),
                   ),
+                  if (!ref.watch(authRepositoryProvider).isConfigured) ...[
+                    const Divider(height: 32),
+                    OutlinedButton.icon(
+                      key: const Key('auth-continue-offline'),
+                      icon: const Icon(Icons.phone_android),
+                      onPressed: () => ref
+                          .read(authControllerProvider.notifier)
+                          .continueWithoutAccount(),
+                      label: Text(l10n.authContinueOffline),
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      l10n.authOfflineNote,
+                      style: Theme.of(context).textTheme.bodySmall,
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
                   if (errorKey != null) ...[
                     const SizedBox(height: 8),
                     Text(

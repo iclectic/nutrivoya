@@ -5,11 +5,12 @@ import '../../core/database/diary_database.dart';
 import '../../core/models/diary_entry.dart';
 import '../../core/models/meal_type.dart';
 import '../../core/models/nutrition_confidence.dart';
+import '../../core/utils/uuid.dart';
 
 /// Repository for diary entries (offline-first, drift/SQLite).
 ///
-/// All operations are local. The `syncPending` flag is set on new entries so
-/// a future sync layer can push them to Supabase when connectivity returns.
+/// All operations are local. Mutations set `syncPending` so `DiarySyncService`
+/// can push them to Supabase; deletions are soft until synced.
 class DiaryRepository {
   DiaryRepository(this._db);
 
@@ -34,6 +35,8 @@ class DiaryRepository {
       sourceName: Value(entry.sourceName),
       loggedAt: entry.loggedAt,
       syncPending: const Value(true),
+      remoteId: Value(entry.remoteId ?? generateUuidV4()),
+      updatedAt: Value(DateTime.now()),
     );
     return _db.into(_db.diaryEntries).insert(companion);
   }
@@ -52,6 +55,7 @@ class DiaryRepository {
       fatG: Value(entry.fatG),
       fibreG: Value(entry.fibreG),
       syncPending: const Value(true),
+      updatedAt: Value(DateTime.now()),
     );
     final rows = await (_db.update(_db.diaryEntries)
           ..where((t) => t.id.equals(entry.id!)))
@@ -59,9 +63,68 @@ class DiaryRepository {
     return rows > 0;
   }
 
-  /// Delete an entry by id.
+  /// Delete an entry by id (soft delete until the deletion is synced).
   Future<int> delete(int id) async {
-    return (_db.delete(_db.diaryEntries)..where((t) => t.id.equals(id))).go();
+    final now = DateTime.now();
+    return (_db.update(_db.diaryEntries)..where((t) => t.id.equals(id))).write(
+      DiaryEntriesCompanion(
+        deletedAt: Value(now),
+        updatedAt: Value(now),
+        syncPending: const Value(true),
+      ),
+    );
+  }
+
+  /// Rows (including soft-deleted ones) awaiting push to the backend.
+  Future<List<DiaryEntryRow>> pendingRows() {
+    return (_db.select(_db.diaryEntries)
+          ..where((t) => t.syncPending.equals(true)))
+        .get();
+  }
+
+  /// Marks pushed rows as synced and purges pushed soft-deleted rows.
+  Future<void> markSynced(List<DiaryEntryRow> rows) async {
+    await _db.transaction(() async {
+      for (final row in rows) {
+        final q = _db.diaryEntries;
+        if (row.deletedAt != null) {
+          await (_db.delete(q)..where((t) => t.id.equals(row.id))).go();
+        } else {
+          await (_db.update(q)
+                ..where((t) =>
+                    t.id.equals(row.id) &
+                    t.updatedAt.isValue(row.updatedAt ?? row.createdAt)))
+              .write(const DiaryEntriesCompanion(syncPending: Value(false)));
+        }
+      }
+    });
+  }
+
+  /// Applies a remote change (last-write-wins against unsynced local edits).
+  Future<void> applyRemote(DiaryEntriesCompanion remote) async {
+    final remoteId = remote.remoteId.value!;
+    final remoteUpdated = remote.updatedAt.value;
+    final local = await (_db.select(_db.diaryEntries)
+          ..where((t) => t.remoteId.equals(remoteId)))
+        .getSingleOrNull();
+    if (local != null &&
+        local.syncPending &&
+        local.updatedAt != null &&
+        remoteUpdated != null &&
+        local.updatedAt!.isAfter(remoteUpdated)) {
+      return;
+    }
+    final deleted = remote.deletedAt.present && remote.deletedAt.value != null;
+    if (local == null) {
+      if (deleted) return;
+      await _db.into(_db.diaryEntries).insert(remote);
+    } else if (deleted) {
+      await (_db.delete(_db.diaryEntries)..where((t) => t.id.equals(local.id)))
+          .go();
+    } else {
+      await (_db.update(_db.diaryEntries)..where((t) => t.id.equals(local.id)))
+          .write(remote);
+    }
   }
 
   /// Get all entries for a given date (by calendar day of [date]).
@@ -69,7 +132,9 @@ class DiaryRepository {
     final dayStart = DateTime(date.year, date.month, date.day);
     final dayEnd = dayStart.add(const Duration(days: 1));
     final rows = await (_db.select(_db.diaryEntries)
-          ..where((t) => t.loggedAt.isBetweenValues(dayStart, dayEnd))
+          ..where((t) =>
+              t.loggedAt.isBetweenValues(dayStart, dayEnd) &
+              t.deletedAt.isNull())
           ..orderBy([(t) => OrderingTerm.asc(t.loggedAt)]))
         .get();
     return rows.map(_toDomain).toList();
@@ -95,7 +160,9 @@ class DiaryRepository {
     final dayStart = DateTime(date.year, date.month, date.day);
     final dayEnd = dayStart.add(const Duration(days: 1));
     return (_db.select(_db.diaryEntries)
-          ..where((t) => t.loggedAt.isBetweenValues(dayStart, dayEnd))
+          ..where((t) =>
+              t.loggedAt.isBetweenValues(dayStart, dayEnd) &
+              t.deletedAt.isNull())
           ..orderBy([(t) => OrderingTerm.asc(t.loggedAt)]))
         .watch()
         .map((rows) => rows.map(_toDomain).toList());
@@ -109,6 +176,7 @@ class DiaryRepository {
   /// Recent foods (distinct by foodId, most recent first), for quick re-logging.
   Future<List<DiaryEntry>> recentFoods({int limit = 10}) async {
     final rows = await (_db.select(_db.diaryEntries)
+          ..where((t) => t.deletedAt.isNull())
           ..orderBy([(t) => OrderingTerm.desc(t.loggedAt)])
           ..limit(limit * 3))
         .get();
@@ -155,6 +223,8 @@ class DiaryRepository {
       sourceName: row.sourceName,
       loggedAt: row.loggedAt,
       syncPending: row.syncPending,
+      remoteId: row.remoteId,
+      updatedAt: row.updatedAt,
     );
   }
 }

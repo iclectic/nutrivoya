@@ -1461,6 +1461,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{value} kcal above estimate'**
   String dashboardAbove(String value);
+
+  /// No description provided for @authContinueOffline.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue without an account'**
+  String get authContinueOffline;
+
+  /// No description provided for @authOfflineNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Your data stays on this device only. Accounts and sync are available when Nutrivoya is connected to its backend.'**
+  String get authOfflineNote;
+
+  /// No description provided for @settingsSyncNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Sync now'**
+  String get settingsSyncNow;
+
+  /// No description provided for @settingsSyncPending.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} changes waiting to sync'**
+  String settingsSyncPending(int count);
+
+  /// No description provided for @settingsSyncDone.
+  ///
+  /// In en, this message translates to:
+  /// **'Diary synced'**
+  String get settingsSyncDone;
+
+  /// No description provided for @settingsSyncUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Sync unavailable — data is stored on this device'**
+  String get settingsSyncUnavailable;
 }
 
 class _AppLocalizationsDelegate

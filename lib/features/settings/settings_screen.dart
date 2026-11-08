@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../core/localization/language_options.dart';
+import '../diary/sync/diary_sync_service.dart';
 import '../../core/localization/locale_controller.dart';
 import '../../core/storage/local_preferences.dart';
 import '../../core/storage/theme_controller.dart';
@@ -66,6 +67,20 @@ class SettingsScreen extends ConsumerWidget {
               ),
             ),
             _SectionHeader(l10n.settingsAccount),
+            ListTile(
+              leading: const Icon(Icons.sync),
+              title: Text(l10n.settingsSyncNow),
+              subtitle: ref.watch(diarySyncServiceProvider) == null
+                  ? Text(l10n.settingsSyncUnavailable)
+                  : null,
+              enabled: ref.watch(diarySyncServiceProvider) != null,
+              onTap: () async {
+                final messenger = ScaffoldMessenger.of(context);
+                await ref.read(diarySyncServiceProvider)?.syncSafely();
+                messenger.showSnackBar(
+                    SnackBar(content: Text(l10n.settingsSyncDone)));
+              },
+            ),
             ListTile(
               leading: const Icon(Icons.person_outline),
               title: Text(l10n.settingsProfile),

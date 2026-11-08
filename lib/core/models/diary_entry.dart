@@ -31,6 +31,8 @@ class DiaryEntry {
     this.sourceName,
     required this.loggedAt,
     this.syncPending = false,
+    this.remoteId,
+    this.updatedAt,
   });
 
   final int? id;
@@ -55,6 +57,12 @@ class DiaryEntry {
   final String? sourceName;
   final DateTime loggedAt;
   final bool syncPending;
+
+  /// UUID shared with the backend row; null until first persisted.
+  final String? remoteId;
+
+  /// Last local modification time.
+  final DateTime? updatedAt;
 
   /// Build a DiaryEntry from a Food + portion/grams selection.
   factory DiaryEntry.fromFood({
