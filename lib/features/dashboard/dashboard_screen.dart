@@ -29,6 +29,12 @@ class DashboardScreen extends ConsumerWidget {
         title: Text(l10n.dashboardToday),
         actions: [
           IconButton(
+            key: const Key('dashboard-progress'),
+            icon: const Icon(Icons.insights_outlined),
+            tooltip: l10n.progressTooltip,
+            onPressed: () => context.push('/progress'),
+          ),
+          IconButton(
             icon: const Icon(Icons.calendar_today_outlined),
             tooltip: l10n.diarySelectDate,
             onPressed: () => _pickDate(context, ref),

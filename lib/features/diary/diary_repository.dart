@@ -193,6 +193,25 @@ class DiaryRepository {
     return recent;
   }
 
+  /// Foods logged at least twice recently, most frequent first.
+  Future<List<DiaryEntry>> frequentFoods({int limit = 8}) async {
+    final rows = await (_db.select(_db.diaryEntries)
+          ..where((t) => t.deletedAt.isNull())
+          ..orderBy([(t) => OrderingTerm.desc(t.loggedAt)])
+          ..limit(300))
+        .get();
+    final counts = <String, int>{};
+    final latest = <String, DiaryEntry>{};
+    for (final row in rows) {
+      final e = _toDomain(row);
+      counts[e.foodId] = (counts[e.foodId] ?? 0) + 1;
+      latest.putIfAbsent(e.foodId, () => e);
+    }
+    final ids = counts.keys.where((id) => counts[id]! >= 2).toList()
+      ..sort((a, b) => counts[b]!.compareTo(counts[a]!));
+    return [for (final id in ids.take(limit)) latest[id]!];
+  }
+
   /// Count of entries pending sync.
   Future<int> pendingSyncCount() async {
     final pending = await (_db.selectOnly(_db.diaryEntries)

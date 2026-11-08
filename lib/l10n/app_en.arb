@@ -517,5 +517,70 @@
   "assistantSwapNone": "I don't have close alternatives from the same tradition yet. Adjusting the portion, or adding vegetables or legumes on the side, are simple options.",
   "assistantUnknown": "I can help with your day so far, balancing your next meal, information about a food, or ideas from the same cuisine. Try one of the suggestions above.",
   "assistantSafety": "This deserves personal care. Please talk to a doctor, registered dietitian or another qualified professional — I won't give targets or numbers for this.",
-  "assistantSafetyEatingDisorder": "If you're struggling with eating, you're not alone. Please reach out to a doctor or an eating-disorder support service in your country."
+  "assistantSafetyEatingDisorder": "If you're struggling with eating, you're not alone. Please reach out to a doctor or an eating-disorder support service in your country.",
+  "progressTitle": "Progress & tracking",
+  "progressTooltip": "Progress & tracking",
+  "progressWeight": "Weight (optional)",
+  "progressWeightHint": "Weight (kg)",
+  "progressAdd": "Add",
+  "progressNoWeight": "No weigh-ins yet. Logging weight is entirely optional.",
+  "progressWeightAverage": "Recent average: {avg} kg",
+  "@progressWeightAverage": {
+    "placeholders": {
+      "avg": {
+        "type": "String"
+      }
+    }
+  },
+  "progressWeightTrend": "Recent average: {avg} kg · trend {change} kg per week",
+  "@progressWeightTrend": {
+    "placeholders": {
+      "avg": {
+        "type": "String"
+      },
+      "change": {
+        "type": "String"
+      }
+    }
+  },
+  "progressWeightNote": "Weight naturally moves day to day with water, food and hormones; the trend over weeks is more meaningful than any single reading.",
+  "progressMeasurements": "Body measurements (optional)",
+  "progressWaist": "Waist (cm)",
+  "progressHip": "Hip (cm)",
+  "progressNoMeasurements": "No measurements yet.",
+  "progressWater": "Water",
+  "progressWaterToday": "{ml} ml today",
+  "@progressWaterToday": {
+    "placeholders": {
+      "ml": {
+        "type": "String"
+      }
+    }
+  },
+  "progressWaterAdd": "+250 ml",
+  "progressTemplates": "Meal templates",
+  "progressTemplatesEmpty": "Save a meal you eat often and log it again in one tap.",
+  "progressTemplateSave": "Save a meal from this day",
+  "progressTemplateName": "Template name",
+  "progressTemplateNoEntries": "No foods are logged for that meal on this day.",
+  "progressTemplateLog": "Log to {meal}",
+  "@progressTemplateLog": {
+    "placeholders": {
+      "meal": {
+        "type": "String"
+      }
+    }
+  },
+  "progressTemplateLogged": "{name} logged",
+  "@progressTemplateLogged": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "progressTemplateDelete": "Delete template",
+  "favouriteAdd": "Add to favourites",
+  "favouriteRemove": "Remove from favourites",
+  "searchNothingYet": "Nothing here yet"
 }

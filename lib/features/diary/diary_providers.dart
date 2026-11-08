@@ -49,6 +49,11 @@ final recentFoodsProvider = FutureProvider.autoDispose<List<DiaryEntry>>((ref) {
   return repo.recentFoods();
 });
 
+/// Frequently logged foods for quick re-logging.
+final frequentFoodsProvider = FutureProvider.autoDispose<List<DiaryEntry>>((ref) {
+  return ref.watch(diaryRepositoryProvider).frequentFoods();
+});
+
 /// Controller for diary operations (add/update/delete).
 class DiaryController extends Notifier {
   @override

@@ -1046,4 +1046,99 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get assistantSafetyEatingDisorder =>
       'If you\'re struggling with eating, you\'re not alone. Please reach out to a doctor or an eating-disorder support service in your country.';
+
+  @override
+  String get progressTitle => 'Progress & tracking';
+
+  @override
+  String get progressTooltip => 'Progress & tracking';
+
+  @override
+  String get progressWeight => 'Weight (optional)';
+
+  @override
+  String get progressWeightHint => 'Weight (kg)';
+
+  @override
+  String get progressAdd => 'Add';
+
+  @override
+  String get progressNoWeight =>
+      'No weigh-ins yet. Logging weight is entirely optional.';
+
+  @override
+  String progressWeightAverage(String avg) {
+    return 'Recent average: $avg kg';
+  }
+
+  @override
+  String progressWeightTrend(String avg, String change) {
+    return 'Recent average: $avg kg · trend $change kg per week';
+  }
+
+  @override
+  String get progressWeightNote =>
+      'Weight naturally moves day to day with water, food and hormones; the trend over weeks is more meaningful than any single reading.';
+
+  @override
+  String get progressMeasurements => 'Body measurements (optional)';
+
+  @override
+  String get progressWaist => 'Waist (cm)';
+
+  @override
+  String get progressHip => 'Hip (cm)';
+
+  @override
+  String get progressNoMeasurements => 'No measurements yet.';
+
+  @override
+  String get progressWater => 'Water';
+
+  @override
+  String progressWaterToday(String ml) {
+    return '$ml ml today';
+  }
+
+  @override
+  String get progressWaterAdd => '+250 ml';
+
+  @override
+  String get progressTemplates => 'Meal templates';
+
+  @override
+  String get progressTemplatesEmpty =>
+      'Save a meal you eat often and log it again in one tap.';
+
+  @override
+  String get progressTemplateSave => 'Save a meal from this day';
+
+  @override
+  String get progressTemplateName => 'Template name';
+
+  @override
+  String get progressTemplateNoEntries =>
+      'No foods are logged for that meal on this day.';
+
+  @override
+  String progressTemplateLog(String meal) {
+    return 'Log to $meal';
+  }
+
+  @override
+  String progressTemplateLogged(String name) {
+    return '$name logged';
+  }
+
+  @override
+  String get progressTemplateDelete => 'Delete template';
+
+  @override
+  String get favouriteAdd => 'Add to favourites';
+
+  @override
+  String get favouriteRemove => 'Remove from favourites';
+
+  @override
+  String get searchNothingYet => 'Nothing here yet';
 }

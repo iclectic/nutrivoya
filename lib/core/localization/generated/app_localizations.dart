@@ -1948,6 +1948,168 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'If you\'re struggling with eating, you\'re not alone. Please reach out to a doctor or an eating-disorder support service in your country.'**
   String get assistantSafetyEatingDisorder;
+
+  /// No description provided for @progressTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Progress & tracking'**
+  String get progressTitle;
+
+  /// No description provided for @progressTooltip.
+  ///
+  /// In en, this message translates to:
+  /// **'Progress & tracking'**
+  String get progressTooltip;
+
+  /// No description provided for @progressWeight.
+  ///
+  /// In en, this message translates to:
+  /// **'Weight (optional)'**
+  String get progressWeight;
+
+  /// No description provided for @progressWeightHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Weight (kg)'**
+  String get progressWeightHint;
+
+  /// No description provided for @progressAdd.
+  ///
+  /// In en, this message translates to:
+  /// **'Add'**
+  String get progressAdd;
+
+  /// No description provided for @progressNoWeight.
+  ///
+  /// In en, this message translates to:
+  /// **'No weigh-ins yet. Logging weight is entirely optional.'**
+  String get progressNoWeight;
+
+  /// No description provided for @progressWeightAverage.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent average: {avg} kg'**
+  String progressWeightAverage(String avg);
+
+  /// No description provided for @progressWeightTrend.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent average: {avg} kg · trend {change} kg per week'**
+  String progressWeightTrend(String avg, String change);
+
+  /// No description provided for @progressWeightNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Weight naturally moves day to day with water, food and hormones; the trend over weeks is more meaningful than any single reading.'**
+  String get progressWeightNote;
+
+  /// No description provided for @progressMeasurements.
+  ///
+  /// In en, this message translates to:
+  /// **'Body measurements (optional)'**
+  String get progressMeasurements;
+
+  /// No description provided for @progressWaist.
+  ///
+  /// In en, this message translates to:
+  /// **'Waist (cm)'**
+  String get progressWaist;
+
+  /// No description provided for @progressHip.
+  ///
+  /// In en, this message translates to:
+  /// **'Hip (cm)'**
+  String get progressHip;
+
+  /// No description provided for @progressNoMeasurements.
+  ///
+  /// In en, this message translates to:
+  /// **'No measurements yet.'**
+  String get progressNoMeasurements;
+
+  /// No description provided for @progressWater.
+  ///
+  /// In en, this message translates to:
+  /// **'Water'**
+  String get progressWater;
+
+  /// No description provided for @progressWaterToday.
+  ///
+  /// In en, this message translates to:
+  /// **'{ml} ml today'**
+  String progressWaterToday(String ml);
+
+  /// No description provided for @progressWaterAdd.
+  ///
+  /// In en, this message translates to:
+  /// **'+250 ml'**
+  String get progressWaterAdd;
+
+  /// No description provided for @progressTemplates.
+  ///
+  /// In en, this message translates to:
+  /// **'Meal templates'**
+  String get progressTemplates;
+
+  /// No description provided for @progressTemplatesEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Save a meal you eat often and log it again in one tap.'**
+  String get progressTemplatesEmpty;
+
+  /// No description provided for @progressTemplateSave.
+  ///
+  /// In en, this message translates to:
+  /// **'Save a meal from this day'**
+  String get progressTemplateSave;
+
+  /// No description provided for @progressTemplateName.
+  ///
+  /// In en, this message translates to:
+  /// **'Template name'**
+  String get progressTemplateName;
+
+  /// No description provided for @progressTemplateNoEntries.
+  ///
+  /// In en, this message translates to:
+  /// **'No foods are logged for that meal on this day.'**
+  String get progressTemplateNoEntries;
+
+  /// No description provided for @progressTemplateLog.
+  ///
+  /// In en, this message translates to:
+  /// **'Log to {meal}'**
+  String progressTemplateLog(String meal);
+
+  /// No description provided for @progressTemplateLogged.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} logged'**
+  String progressTemplateLogged(String name);
+
+  /// No description provided for @progressTemplateDelete.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete template'**
+  String get progressTemplateDelete;
+
+  /// No description provided for @favouriteAdd.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to favourites'**
+  String get favouriteAdd;
+
+  /// No description provided for @favouriteRemove.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove from favourites'**
+  String get favouriteRemove;
+
+  /// No description provided for @searchNothingYet.
+  ///
+  /// In en, this message translates to:
+  /// **'Nothing here yet'**
+  String get searchNothingYet;
 }
 
 class _AppLocalizationsDelegate
