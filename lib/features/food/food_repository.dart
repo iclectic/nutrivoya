@@ -16,6 +16,7 @@ abstract class FoodRepository {
   Future<List<FoodSearchResult>> search(
     String query, {
     UserProfile? profile,
+    Set<String> recentFoodIds = const {},
   });
 
   Future<Food?> getById(String id);
@@ -40,6 +41,7 @@ class CompositeFoodRepository implements FoodRepository {
   Future<List<FoodSearchResult>> search(
     String query, {
     UserProfile? profile,
+    Set<String> recentFoodIds = const {},
   }) async {
     final local = LocalFoodDataset.all();
 
@@ -53,7 +55,8 @@ class CompositeFoodRepository implements FoodRepository {
     }
 
     final merged = [...local, ...remote];
-    return _searchService.search(query, merged, profile: profile);
+    return _searchService.search(query, merged,
+        profile: profile, recentFoodIds: recentFoodIds);
   }
 
   @override
@@ -83,8 +86,10 @@ class LocalFoodRepository implements FoodRepository {
   Future<List<FoodSearchResult>> search(
     String query, {
     UserProfile? profile,
+    Set<String> recentFoodIds = const {},
   }) async {
-    return _searchService.search(query, LocalFoodDataset.all(), profile: profile);
+    return _searchService.search(query, LocalFoodDataset.all(),
+        profile: profile, recentFoodIds: recentFoodIds);
   }
 
   @override

@@ -250,6 +250,8 @@ class _Header extends StatelessWidget {
             children: [
               if (food.cuisine != null) Chip(label: Text(food.cuisine!)),
               if (food.region != null) Chip(label: Text('${l10n.foodDetailsRegion}: ${food.region}')),
+              if (food.preparationMethod != null) Chip(label: Text(food.preparationMethod!)),
+              for (final c in food.culturalContexts) Chip(label: Text(c)),
             ],
           ),
         ],

@@ -4,6 +4,7 @@ import '../../../core/models/food_portion.dart';
 import '../../../core/models/food_source.dart';
 import '../../../core/models/nutrient.dart';
 import '../../../core/models/nutrition_confidence.dart';
+import 'global_food_dataset.dart';
 
 /// Tier 3 — Nutrivoya's curated cultural-food dataset seed.
 ///
@@ -13,9 +14,9 @@ import '../../../core/models/nutrition_confidence.dart';
 /// Nutrivoya never fabricates precision.
 ///
 /// This is a small offline seed so the app is functional without network.
-/// It is NOT exhaustive; the full Cultural Food Intelligence dataset is
-/// Milestone 5, and the USDA adapter (Tier 1) provides the authoritative
-/// connection to a trusted structured dataset.
+/// It is NOT exhaustive: [GlobalFoodDataset] adds multi-continent foods and
+/// recipe-computed dishes, and the USDA adapter (Tier 1) provides the
+/// authoritative connection to a trusted structured dataset.
 class LocalFoodDataset {
   const LocalFoodDataset._();
 
@@ -93,6 +94,11 @@ class LocalFoodDataset {
         names: [
           FoodName(name: 'White rice, cooked', languageCode: 'en', nameType: NameType.primary),
           FoodName(name: 'chawal', languageCode: 'hi', nameType: NameType.transliteration),
+          FoodName(name: 'arroz', languageCode: 'es', nameType: NameType.translation),
+          FoodName(name: 'riz', languageCode: 'fr', nameType: NameType.translation),
+          FoodName(name: 'أرز', languageCode: 'ar', nameType: NameType.translation),
+          FoodName(name: 'चावल', languageCode: 'hi', nameType: NameType.translation),
+          FoodName(name: 'ਚੌਲ', languageCode: 'pa', nameType: NameType.translation),
           FoodName(name: 'cooked rice', languageCode: 'en', nameType: NameType.alias),
           FoodName(name: 'steamed rice', languageCode: 'en', nameType: NameType.alias),
         ],
@@ -237,6 +243,10 @@ class LocalFoodDataset {
         cuisine: 'South Asian',
         defaultServingGrams: 164,
         names: [
+          FoodName(name: 'garbanzos', languageCode: 'es', nameType: NameType.translation),
+          FoodName(name: 'pois chiches', languageCode: 'fr', nameType: NameType.translation),
+          FoodName(name: 'حمص', languageCode: 'ar', nameType: NameType.translation),
+          FoodName(name: 'kabuli chana', languageCode: 'hi', nameType: NameType.transliteration),
           FoodName(name: 'Chickpeas, cooked', languageCode: 'en', nameType: NameType.primary),
           FoodName(name: 'chana', languageCode: 'hi', nameType: NameType.transliteration),
           FoodName(name: 'garbanzo beans', languageCode: 'en', nameType: NameType.alias),
@@ -344,6 +354,7 @@ class LocalFoodDataset {
         nutrientsPer100g: _n(230, 11, 8, 17, 3, satFat: 7, sodiumMg: 500),
         source: _nutrivoyaEstimated,
       ),
+      ...GlobalFoodDataset.all(),
     ];
   }
 

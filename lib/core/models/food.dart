@@ -34,6 +34,10 @@ class Food {
     this.portions = const <FoodPortion>[],
     this.createdAt,
     this.updatedAt,
+    this.countries = const <String>[],
+    this.culturalContexts = const <String>[],
+    this.preparationMethod,
+    this.ingredients = const <String>[],
   });
 
   final String id;
@@ -70,6 +74,24 @@ class Food {
   final DateTime? createdAt;
   final DateTime? updatedAt;
 
+  /// Additional ISO country codes where the food is commonly eaten — foods
+  /// cross borders, so one `countryCode` is not enough.
+  final List<String> countries;
+
+  /// Cultural/meal contexts (e.g. "everyday staple", "festive", "street food").
+  /// Descriptive only — never a health judgement.
+  final List<String> culturalContexts;
+
+  /// Preparation method (e.g. "boiled", "fried", "baked"), which materially
+  /// changes nutrition.
+  final String? preparationMethod;
+
+  /// Main ingredients for composite dishes, for transparency.
+  final List<String> ingredients;
+
+  /// All countries associated with the food.
+  Set<String> get allCountries => {?countryCode, ...countries};
+
   /// Convenience: confidence from the source record.
   NutritionConfidence get confidence => source.confidence;
 
@@ -104,6 +126,10 @@ class Food {
     List<FoodPortion>? portions,
     Map<NutrientCode, NutrientAmount>? nutrientsPer100g,
     FoodSource? source,
+    List<String>? countries,
+    List<String>? culturalContexts,
+    String? preparationMethod,
+    List<String>? ingredients,
   }) {
     return Food(
       id: id ?? this.id,
@@ -117,6 +143,12 @@ class Food {
       portions: portions ?? this.portions,
       nutrientsPer100g: nutrientsPer100g ?? this.nutrientsPer100g,
       source: source ?? this.source,
+      createdAt: createdAt,
+      updatedAt: updatedAt,
+      countries: countries ?? this.countries,
+      culturalContexts: culturalContexts ?? this.culturalContexts,
+      preparationMethod: preparationMethod ?? this.preparationMethod,
+      ingredients: ingredients ?? this.ingredients,
     );
   }
 
@@ -135,7 +167,11 @@ class Food {
           listEquals(names, other.names) &&
           listEquals(portions, other.portions) &&
           mapEquals(nutrientsPer100g, other.nutrientsPer100g) &&
-          source == other.source;
+          source == other.source &&
+          listEquals(countries, other.countries) &&
+          listEquals(culturalContexts, other.culturalContexts) &&
+          preparationMethod == other.preparationMethod &&
+          listEquals(ingredients, other.ingredients);
 
   @override
   int get hashCode => Object.hash(
@@ -150,5 +186,9 @@ class Food {
         Object.hashAll(portions),
         Object.hashAll(nutrientsPer100g.values),
         source,
+        Object.hashAll(countries),
+        Object.hashAll(culturalContexts),
+        preparationMethod,
+        Object.hashAll(ingredients),
       );
 }
