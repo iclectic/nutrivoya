@@ -16,49 +16,49 @@ class AppLocalizationsFr extends AppLocalizations {
       'Une nutrition qui s\'adapte à votre alimentation, votre culture et votre vie.';
 
   @override
-  String get commonCancel => 'Cancel';
+  String get commonCancel => 'Annuler';
 
   @override
-  String get commonContinue => 'Continue';
+  String get commonContinue => 'Continuer';
 
   @override
-  String get commonSave => 'Save';
+  String get commonSave => 'Enregistrer';
 
   @override
-  String get commonSkip => 'Skip';
+  String get commonSkip => 'Passer';
 
   @override
-  String get commonBack => 'Back';
+  String get commonBack => 'Retour';
 
   @override
-  String get commonNext => 'Next';
+  String get commonNext => 'Suivant';
 
   @override
-  String get commonGetStarted => 'Get started';
+  String get commonGetStarted => 'Commencer';
 
   @override
-  String get commonLoading => 'Loading…';
+  String get commonLoading => 'Chargement…';
 
   @override
-  String get commonRetry => 'Retry';
+  String get commonRetry => 'Réessayer';
 
   @override
-  String get commonError => 'Something went wrong';
+  String get commonError => 'Une erreur s\'est produite';
 
   @override
-  String get commonClose => 'Close';
+  String get commonClose => 'Fermer';
 
   @override
-  String get navDashboard => 'Today';
+  String get navDashboard => 'Aujourd\'hui';
 
   @override
-  String get navDiary => 'Diary';
+  String get navDiary => 'Journal';
 
   @override
-  String get navSearch => 'Search';
+  String get navSearch => 'Rechercher';
 
   @override
-  String get navSettings => 'Settings';
+  String get navSettings => 'Paramètres';
 
   @override
   String get authLoginTitle => 'Welcome back';
@@ -224,25 +224,25 @@ class AppLocalizationsFr extends AppLocalizations {
   String get dashboardGreetingEvening => 'Good evening';
 
   @override
-  String get dashboardToday => 'Today';
+  String get dashboardToday => 'Aujourd\'hui';
 
   @override
   String get dashboardCalories => 'Calories';
 
   @override
-  String get dashboardProtein => 'Protein';
+  String get dashboardProtein => 'Protéines';
 
   @override
-  String get dashboardCarbs => 'Carbohydrates';
+  String get dashboardCarbs => 'Glucides';
 
   @override
-  String get dashboardFat => 'Fat';
+  String get dashboardFat => 'Lipides';
 
   @override
-  String get dashboardFibre => 'Fibre';
+  String get dashboardFibre => 'Fibres';
 
   @override
-  String get dashboardLogFood => 'Log food';
+  String get dashboardLogFood => 'Ajouter un aliment';
 
   @override
   String get dashboardEmptyTitle => 'Nothing logged yet';
@@ -256,19 +256,19 @@ class AppLocalizationsFr extends AppLocalizations {
       'Targets will be set up after onboarding.';
 
   @override
-  String get diaryTitle => 'Diary';
+  String get diaryTitle => 'Journal';
 
   @override
-  String get diaryMealBreakfast => 'Breakfast';
+  String get diaryMealBreakfast => 'Petit-déjeuner';
 
   @override
-  String get diaryMealLunch => 'Lunch';
+  String get diaryMealLunch => 'Déjeuner';
 
   @override
-  String get diaryMealDinner => 'Dinner';
+  String get diaryMealDinner => 'Dîner';
 
   @override
-  String get diaryMealSnacks => 'Snacks';
+  String get diaryMealSnacks => 'Collations';
 
   @override
   String get diaryEmpty => 'No entries yet.';
@@ -277,10 +277,10 @@ class AppLocalizationsFr extends AppLocalizations {
   String get diaryAddToMeal => 'Add food';
 
   @override
-  String get searchTitle => 'Search';
+  String get searchTitle => 'Rechercher';
 
   @override
-  String get searchHint => 'What did you eat?';
+  String get searchHint => 'Qu\'avez-vous mangé ?';
 
   @override
   String get searchEmpty =>
@@ -291,7 +291,7 @@ class AppLocalizationsFr extends AppLocalizations {
       'No results yet. Food search will be available in a later milestone.';
 
   @override
-  String get searchRecent => 'Recent';
+  String get searchRecent => 'Récents';
 
   @override
   String get searchFrequent => 'Frequent';
@@ -303,25 +303,25 @@ class AppLocalizationsFr extends AppLocalizations {
   String get searchMyRecipes => 'My recipes';
 
   @override
-  String get settingsTitle => 'Settings';
+  String get settingsTitle => 'Paramètres';
 
   @override
-  String get settingsAppearance => 'Appearance';
+  String get settingsAppearance => 'Apparence';
 
   @override
-  String get settingsTheme => 'Theme';
+  String get settingsTheme => 'Thème';
 
   @override
-  String get settingsThemeSystem => 'System';
+  String get settingsThemeSystem => 'Système';
 
   @override
-  String get settingsThemeLight => 'Light';
+  String get settingsThemeLight => 'Clair';
 
   @override
-  String get settingsThemeDark => 'Dark';
+  String get settingsThemeDark => 'Sombre';
 
   @override
-  String get settingsLanguage => 'Language';
+  String get settingsLanguage => 'Langue';
 
   @override
   String get settingsLanguageEn => 'English';
@@ -342,10 +342,10 @@ class AppLocalizationsFr extends AppLocalizations {
   String get settingsLanguageAr => 'العربية';
 
   @override
-  String get settingsAccount => 'Account';
+  String get settingsAccount => 'Compte';
 
   @override
-  String get settingsSignOut => 'Sign out';
+  String get settingsSignOut => 'Se déconnecter';
 
   @override
   String get settingsAbout => 'About Nutrivoya';
@@ -355,16 +355,16 @@ class AppLocalizationsFr extends AppLocalizations {
       'Nutrivoya is a multilingual, culturally intelligent nutrition and calorie-tracking app that helps people understand and improve the food they actually eat — without telling them that health requires abandoning their culture.';
 
   @override
-  String get settingsProfile => 'Profile';
+  String get settingsProfile => 'Profil';
 
   @override
-  String get settingsGoals => 'Goals';
+  String get settingsGoals => 'Objectifs';
 
   @override
   String get settingsComingSoon => 'Coming soon';
 
   @override
-  String get profileTitle => 'Profile';
+  String get profileTitle => 'Profil';
 
   @override
   String get profileGoal => 'Goal';
@@ -379,7 +379,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get profileEdit => 'Edit profile';
 
   @override
-  String get goalsTitle => 'Nutrition goals';
+  String get goalsTitle => 'Objectifs nutritionnels';
 
   @override
   String get goalsNotSet => 'Not set yet';
@@ -763,10 +763,10 @@ class AppLocalizationsFr extends AppLocalizations {
       'Sync unavailable — data is stored on this device';
 
   @override
-  String get settingsRecipes => 'My recipes';
+  String get settingsRecipes => 'Mes recettes';
 
   @override
-  String get recipesTitle => 'My recipes';
+  String get recipesTitle => 'Mes recettes';
 
   @override
   String get recipesEmpty =>

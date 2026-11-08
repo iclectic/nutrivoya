@@ -102,6 +102,17 @@ class Food {
       ];
 
   /// Primary display name: the first primary name, else canonical.
+  /// Name to show for a UI [languageCode]: a primary/translation name in that
+  /// language when available, otherwise [displayName].
+  String nameFor(String languageCode) {
+    for (final type in const [NameType.primary, NameType.translation]) {
+      for (final n in names) {
+        if (n.nameType == type && n.languageCode == languageCode) return n.name;
+      }
+    }
+    return displayName;
+  }
+
   String get displayName =>
       names.firstWhere(
         (n) => n.nameType == NameType.primary,

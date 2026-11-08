@@ -118,12 +118,12 @@ class _FoodSearchScreenState extends ConsumerState<FoodSearchScreen> {
         return Card(
           margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
           child: ListTile(
-            title: Text(food.displayName),
+            title: Text(food.nameFor(Localizations.localeOf(context).languageCode)),
             subtitle: Text(
               [
                 if (food.cuisine != null) food.cuisine,
                 if (result.matchedName != null &&
-                    result.matchedName != food.displayName)
+                    result.matchedName != food.nameFor(Localizations.localeOf(context).languageCode))
                   result.matchedName,
               ].join(' · '),
             ),

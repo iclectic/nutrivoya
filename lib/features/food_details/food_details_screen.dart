@@ -173,7 +173,7 @@ class _FoodDetailsBody extends ConsumerWidget {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(
-            l10n.diaryEntryAdded(food.displayName, _mealLabel(meal, l10n)),
+            l10n.diaryEntryAdded(food.nameFor(Localizations.localeOf(context).languageCode), _mealLabel(meal, l10n)),
           ),
           action: SnackBarAction(
             label: l10n.navDiary,
@@ -237,8 +237,8 @@ class _Header extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(food.displayName, style: Theme.of(context).textTheme.headlineSmall),
-        if (food.canonicalName != food.displayName)
+        Text(food.nameFor(Localizations.localeOf(context).languageCode), style: Theme.of(context).textTheme.headlineSmall),
+        if (food.canonicalName != food.nameFor(Localizations.localeOf(context).languageCode))
           Text(food.canonicalName,
               style: Theme.of(context).textTheme.bodySmall?.copyWith(
                     color: Theme.of(context).colorScheme.onSurfaceVariant,
