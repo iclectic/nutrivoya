@@ -8,7 +8,6 @@
   "@appTagline": {
     "description": "Welcome screen tagline"
   },
-
   "commonCancel": "Cancel",
   "commonContinue": "Continue",
   "commonSave": "Save",
@@ -20,12 +19,10 @@
   "commonRetry": "Retry",
   "commonError": "Something went wrong",
   "commonClose": "Close",
-
   "navDashboard": "Today",
   "navDiary": "Diary",
   "navSearch": "Search",
   "navSettings": "Settings",
-
   "authLoginTitle": "Welcome back",
   "authLoginSubtitle": "Sign in to continue tracking your nutrition.",
   "authSignupTitle": "Create your account",
@@ -42,7 +39,6 @@
   "authErrorEmailInUse": "An account already exists for this email.",
   "authErrorWeakPassword": "Please choose a stronger password.",
   "authErrorGeneric": "Authentication failed. Please try again.",
-
   "onboardingWelcomeTitle": "Welcome to Nutrivoya",
   "onboardingWelcomeBody": "Nutrition that works with your food, your culture and your life.",
   "onboardingGoalTitle": "What would you like Nutrivoya to help with?",
@@ -75,7 +71,6 @@
   "onboardingSummaryTitle": "Your estimated nutrition target",
   "onboardingSummaryBody": "This is an estimate based on standard equations. Your actual needs may vary, and we can refine this over time using your weight trend.",
   "onboardingSummaryComingSoon": "Personalized calorie and macro targets will be calculated in a later step.",
-
   "dashboardGreetingMorning": "Good morning",
   "dashboardGreetingAfternoon": "Good afternoon",
   "dashboardGreetingEvening": "Good evening",
@@ -89,7 +84,6 @@
   "dashboardEmptyTitle": "Nothing logged yet",
   "dashboardEmptyBody": "Search for a food to start tracking your day.",
   "dashboardTargetsPlaceholder": "Targets will be set up after onboarding.",
-
   "diaryTitle": "Diary",
   "diaryMealBreakfast": "Breakfast",
   "diaryMealLunch": "Lunch",
@@ -97,7 +91,6 @@
   "diaryMealSnacks": "Snacks",
   "diaryEmpty": "No entries yet.",
   "diaryAddToMeal": "Add food",
-
   "searchTitle": "Search",
   "searchHint": "What did you eat?",
   "searchEmpty": "Search for foods like roti, jollof rice, dal or mango.",
@@ -106,7 +99,6 @@
   "searchFrequent": "Frequent",
   "searchFavourites": "Favourites",
   "searchMyRecipes": "My recipes",
-
   "settingsTitle": "Settings",
   "settingsAppearance": "Appearance",
   "settingsTheme": "Theme",
@@ -127,13 +119,11 @@
   "settingsProfile": "Profile",
   "settingsGoals": "Goals",
   "settingsComingSoon": "Coming soon",
-
   "profileTitle": "Profile",
   "profileGoal": "Goal",
   "profileActivity": "Activity level",
   "profileCuisines": "Familiar cuisines",
   "profileEdit": "Edit profile",
-
   "goalsTitle": "Nutrition goals",
   "goalsNotSet": "Not set yet",
   "goalsCalorieTarget": "Calorie target",
@@ -141,7 +131,6 @@
   "goalsCarbTarget": "Carbohydrate target",
   "goalsFatTarget": "Fat target",
   "goalsFibreTarget": "Fibre target",
-
   "confidenceLabel": "Estimate confidence",
   "confidenceHigh": "High",
   "confidenceHighNote": "Official food-composition data",
@@ -150,14 +139,12 @@
   "confidenceEstimated": "Estimated",
   "confidenceEstimatedNote": "Based on common ingredients and portion size",
   "confidenceUnknown": "Unknown",
-
   "sourceLabel": "Source",
   "sourceAuthoritative": "Authoritative food-composition dataset",
   "sourcePackaged": "Packaged-food database",
   "sourceNutrivoyaCurated": "Nutrivoya curated dataset",
   "sourceRecipeEstimated": "Recipe-based estimate",
   "sourceUserSubmitted": "User-submitted",
-
   "portionLabel": "Portion",
   "portionSmall": "Small",
   "portionMedium": "Medium",
@@ -165,7 +152,6 @@
   "portionGrams": "Grams",
   "portionQuantity": "Quantity",
   "portionCustom": "Custom grams",
-
   "nutrientEnergyKcal": "Calories",
   "nutrientProteinG": "Protein",
   "nutrientCarbohydrateG": "Carbohydrates",
@@ -184,7 +170,6 @@
   "nutrientVitaminDUg": "Vitamin D",
   "nutrientVitaminB12Ug": "Vitamin B12",
   "nutrientFolateUg": "Folate",
-
   "foodDetailsTitle": "Food details",
   "foodDetailsAddToMeal": "Add to meal",
   "foodDetailsPerPortion": "per portion",
@@ -198,21 +183,25 @@
   "foodDetailsCuisine": "Cuisine",
   "foodDetailsRegion": "Region",
   "foodDetailsAliases": "Also known as",
-
   "searchResultsCount": "{count, plural, =0{No results} =1{1 result} other{{count} results}}",
   "@searchResultsCount": {
     "placeholders": {
-      "count": {"type": "int"}
+      "count": {
+        "type": "int"
+      }
     }
   },
   "searchTryExample": "Try: roti, jollof rice, dal, mango",
-
   "diaryAddToMealTitle": "Add to which meal?",
   "diaryEntryAdded": "{food} added to {meal}",
   "@diaryEntryAdded": {
     "placeholders": {
-      "food": {"type": "String"},
-      "meal": {"type": "String"}
+      "food": {
+        "type": "String"
+      },
+      "meal": {
+        "type": "String"
+      }
     }
   },
   "diaryEntryDeleted": "Entry deleted",
@@ -231,7 +220,85 @@
   "diaryEntryCalories": "{kcal} kcal",
   "@diaryEntryCalories": {
     "placeholders": {
-      "kcal": {"type": "int"}
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "goalsEstimateNote": "These are estimates based on standard equations (Mifflin-St Jeor). Your actual needs may vary, and they can be refined over time using your weight trend.",
+  "goalsMaintenance": "Estimated maintenance",
+  "goalsBmr": "Estimated resting energy (BMR)",
+  "goalsKcalValue": "{value} kcal",
+  "@goalsKcalValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "goalsGramValue": "{value} g",
+  "@goalsGramValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "goalsCompleteProfile": "Complete your profile to see estimated targets.",
+  "goalsRateTitle": "Rate of change (kg per week)",
+  "goalsRateValue": "{value} kg/week",
+  "@goalsRateValue": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "goalsCustomTarget": "Custom calorie target",
+  "goalsCustomTargetHint": "Leave empty to use the estimate",
+  "goalsUseEstimate": "Use estimate",
+  "goalsSave": "Save",
+  "goalsUsingCustom": "Using your custom target",
+  "goalsLifeStage": "Life stage (optional)",
+  "goalsLifeStageNone": "Prefer not to say / not applicable",
+  "goalsLifeStagePregnant": "Pregnant",
+  "goalsLifeStageBreastfeeding": "Breastfeeding",
+  "goalsLifeStagePostpartum": "Postpartum",
+  "goalsLifeStagePerimenopause": "Perimenopause",
+  "goalsLifeStageMenopause": "Menopause",
+  "goalsWarningRateCapped": "Your requested rate was reduced to a gentler, more sustainable pace.",
+  "goalsWarningFloor": "Your target was kept above a safe minimum intake.",
+  "goalsWarningPregnancy": "Nutrivoya doesn't set weight-loss targets during pregnancy. Please discuss nutrition and weight with your midwife or clinician.",
+  "goalsWarningBreastfeeding": "While breastfeeding, extra energy is included and no aggressive deficit is set. A health professional can advise on gradual changes.",
+  "goalsWarningUnderweight": "Your BMI is below 18.5, so Nutrivoya won't set a weight-loss target. Consider speaking with a health professional.",
+  "goalsWarningMinor": "Weight-loss targets aren't set for people under 18. A doctor or registered dietitian can give personalised guidance.",
+  "goalsWarningNeutral": "Physiological input wasn't specified, so a neutral equation was used. Estimates may be less precise.",
+  "goalsWarningCustomLow": "This target is very low. Very low intakes can be unsafe without medical supervision.",
+  "dashboardOfTarget": "{consumed} / {target} kcal",
+  "@dashboardOfTarget": {
+    "placeholders": {
+      "consumed": {
+        "type": "String"
+      },
+      "target": {
+        "type": "String"
+      }
+    }
+  },
+  "dashboardRemaining": "{value} kcal remaining (estimate)",
+  "@dashboardRemaining": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "dashboardAbove": "{value} kcal above estimate",
+  "@dashboardAbove": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
     }
   }
 }

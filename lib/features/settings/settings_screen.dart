@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../core/localization/language_options.dart';
 import '../../core/localization/locale_controller.dart';
 import '../../core/storage/local_preferences.dart';
 import '../../core/storage/theme_controller.dart';
@@ -59,30 +60,8 @@ class SettingsScreen extends ConsumerWidget {
                 underline: const SizedBox(),
                 onChanged: (l) => ref.read(localeProvider.notifier).set(l),
                 items: [
-                  DropdownMenuItem(
-                    value: const Locale('en'),
-                    child: Text(l10n.settingsLanguageEn),
-                  ),
-                  DropdownMenuItem(
-                    value: const Locale('fr'),
-                    child: Text(l10n.settingsLanguageFr),
-                  ),
-                  DropdownMenuItem(
-                    value: const Locale('es'),
-                    child: Text(l10n.settingsLanguageEs),
-                  ),
-                  DropdownMenuItem(
-                    value: const Locale('hi'),
-                    child: Text(l10n.settingsLanguageHi),
-                  ),
-                  DropdownMenuItem(
-                    value: const Locale('pa'),
-                    child: Text(l10n.settingsLanguagePa),
-                  ),
-                  DropdownMenuItem(
-                    value: const Locale('ar'),
-                    child: Text(l10n.settingsLanguageAr),
-                  ),
+                  for (final (loc, label) in languageOptions(l10n))
+                    DropdownMenuItem(value: loc, child: Text(label)),
                 ],
               ),
             ),

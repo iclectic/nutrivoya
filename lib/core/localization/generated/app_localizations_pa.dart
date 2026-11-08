@@ -624,4 +624,119 @@ class AppLocalizationsPa extends AppLocalizations {
   String diaryEntryCalories(int kcal) {
     return '$kcal kcal';
   }
+
+  @override
+  String get goalsEstimateNote =>
+      'These are estimates based on standard equations (Mifflin-St Jeor). Your actual needs may vary, and they can be refined over time using your weight trend.';
+
+  @override
+  String get goalsMaintenance => 'Estimated maintenance';
+
+  @override
+  String get goalsBmr => 'Estimated resting energy (BMR)';
+
+  @override
+  String goalsKcalValue(String value) {
+    return '$value kcal';
+  }
+
+  @override
+  String goalsGramValue(String value) {
+    return '$value g';
+  }
+
+  @override
+  String get goalsCompleteProfile =>
+      'Complete your profile to see estimated targets.';
+
+  @override
+  String get goalsRateTitle => 'Rate of change (kg per week)';
+
+  @override
+  String goalsRateValue(String value) {
+    return '$value kg/week';
+  }
+
+  @override
+  String get goalsCustomTarget => 'Custom calorie target';
+
+  @override
+  String get goalsCustomTargetHint => 'Leave empty to use the estimate';
+
+  @override
+  String get goalsUseEstimate => 'Use estimate';
+
+  @override
+  String get goalsSave => 'Save';
+
+  @override
+  String get goalsUsingCustom => 'Using your custom target';
+
+  @override
+  String get goalsLifeStage => 'Life stage (optional)';
+
+  @override
+  String get goalsLifeStageNone => 'Prefer not to say / not applicable';
+
+  @override
+  String get goalsLifeStagePregnant => 'Pregnant';
+
+  @override
+  String get goalsLifeStageBreastfeeding => 'Breastfeeding';
+
+  @override
+  String get goalsLifeStagePostpartum => 'Postpartum';
+
+  @override
+  String get goalsLifeStagePerimenopause => 'Perimenopause';
+
+  @override
+  String get goalsLifeStageMenopause => 'Menopause';
+
+  @override
+  String get goalsWarningRateCapped =>
+      'Your requested rate was reduced to a gentler, more sustainable pace.';
+
+  @override
+  String get goalsWarningFloor =>
+      'Your target was kept above a safe minimum intake.';
+
+  @override
+  String get goalsWarningPregnancy =>
+      'Nutrivoya doesn\'t set weight-loss targets during pregnancy. Please discuss nutrition and weight with your midwife or clinician.';
+
+  @override
+  String get goalsWarningBreastfeeding =>
+      'While breastfeeding, extra energy is included and no aggressive deficit is set. A health professional can advise on gradual changes.';
+
+  @override
+  String get goalsWarningUnderweight =>
+      'Your BMI is below 18.5, so Nutrivoya won\'t set a weight-loss target. Consider speaking with a health professional.';
+
+  @override
+  String get goalsWarningMinor =>
+      'Weight-loss targets aren\'t set for people under 18. A doctor or registered dietitian can give personalised guidance.';
+
+  @override
+  String get goalsWarningNeutral =>
+      'Physiological input wasn\'t specified, so a neutral equation was used. Estimates may be less precise.';
+
+  @override
+  String get goalsWarningCustomLow =>
+      'This target is very low. Very low intakes can be unsafe without medical supervision.';
+
+  @override
+  String dashboardOfTarget(String consumed, String target) {
+    return '$consumed / $target kcal';
+  }
+
+  @override
+  String dashboardRemaining(String value) {
+    return '$value kcal remaining (estimate)';
+  }
+
+  @override
+  String dashboardAbove(String value) {
+    return '$value kcal above estimate';
+  }
 }

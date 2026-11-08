@@ -5,13 +5,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/models/activity_level.dart';
 import '../../core/models/nutrition_goal.dart';
 import '../../core/models/physiological_input.dart';
+import '../../core/models/reproductive_context.dart';
 import '../../core/models/user_profile.dart';
 import '../../core/storage/local_preferences.dart';
 
 /// Persists the user profile locally (offline-first).
 ///
-/// In a later milestone this syncs with Supabase; for Milestone 1 it is stored
-/// in SharedPreferences as JSON so onboarding survives app restarts.
+/// Stored in SharedPreferences as JSON so onboarding survives app restarts;
+/// pushed to Supabase by the sync layer when signed in.
 class ProfileRepository {
   ProfileRepository(this._prefs);
 
@@ -38,6 +39,9 @@ class ProfileRepository {
             (json['familiarCuisines'] as List<dynamic>?)?.map((e) => e.toString()).toList() ??
                 const <String>[],
         displayName: json['displayName'] as String?,
+        targetRateKgPerWeek: (json['targetRateKgPerWeek'] as num?)?.toDouble(),
+        reproductiveContext:
+            ReproductiveContextX.fromId(json['reproductiveContext'] as String?),
       );
     } catch (_) {
       return null;
@@ -55,6 +59,8 @@ class ProfileRepository {
       'goal': profile.goal.id,
       'familiarCuisines': profile.familiarCuisines,
       'displayName': profile.displayName,
+      'targetRateKgPerWeek': profile.targetRateKgPerWeek,
+      'reproductiveContext': profile.reproductiveContext.id,
     });
     await _prefs.setString(_keyProfile, json);
   }

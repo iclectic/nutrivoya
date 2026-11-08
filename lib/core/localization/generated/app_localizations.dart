@@ -1275,6 +1275,192 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{kcal} kcal'**
   String diaryEntryCalories(int kcal);
+
+  /// No description provided for @goalsEstimateNote.
+  ///
+  /// In en, this message translates to:
+  /// **'These are estimates based on standard equations (Mifflin-St Jeor). Your actual needs may vary, and they can be refined over time using your weight trend.'**
+  String get goalsEstimateNote;
+
+  /// No description provided for @goalsMaintenance.
+  ///
+  /// In en, this message translates to:
+  /// **'Estimated maintenance'**
+  String get goalsMaintenance;
+
+  /// No description provided for @goalsBmr.
+  ///
+  /// In en, this message translates to:
+  /// **'Estimated resting energy (BMR)'**
+  String get goalsBmr;
+
+  /// No description provided for @goalsKcalValue.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} kcal'**
+  String goalsKcalValue(String value);
+
+  /// No description provided for @goalsGramValue.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} g'**
+  String goalsGramValue(String value);
+
+  /// No description provided for @goalsCompleteProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete your profile to see estimated targets.'**
+  String get goalsCompleteProfile;
+
+  /// No description provided for @goalsRateTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Rate of change (kg per week)'**
+  String get goalsRateTitle;
+
+  /// No description provided for @goalsRateValue.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} kg/week'**
+  String goalsRateValue(String value);
+
+  /// No description provided for @goalsCustomTarget.
+  ///
+  /// In en, this message translates to:
+  /// **'Custom calorie target'**
+  String get goalsCustomTarget;
+
+  /// No description provided for @goalsCustomTargetHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Leave empty to use the estimate'**
+  String get goalsCustomTargetHint;
+
+  /// No description provided for @goalsUseEstimate.
+  ///
+  /// In en, this message translates to:
+  /// **'Use estimate'**
+  String get goalsUseEstimate;
+
+  /// No description provided for @goalsSave.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get goalsSave;
+
+  /// No description provided for @goalsUsingCustom.
+  ///
+  /// In en, this message translates to:
+  /// **'Using your custom target'**
+  String get goalsUsingCustom;
+
+  /// No description provided for @goalsLifeStage.
+  ///
+  /// In en, this message translates to:
+  /// **'Life stage (optional)'**
+  String get goalsLifeStage;
+
+  /// No description provided for @goalsLifeStageNone.
+  ///
+  /// In en, this message translates to:
+  /// **'Prefer not to say / not applicable'**
+  String get goalsLifeStageNone;
+
+  /// No description provided for @goalsLifeStagePregnant.
+  ///
+  /// In en, this message translates to:
+  /// **'Pregnant'**
+  String get goalsLifeStagePregnant;
+
+  /// No description provided for @goalsLifeStageBreastfeeding.
+  ///
+  /// In en, this message translates to:
+  /// **'Breastfeeding'**
+  String get goalsLifeStageBreastfeeding;
+
+  /// No description provided for @goalsLifeStagePostpartum.
+  ///
+  /// In en, this message translates to:
+  /// **'Postpartum'**
+  String get goalsLifeStagePostpartum;
+
+  /// No description provided for @goalsLifeStagePerimenopause.
+  ///
+  /// In en, this message translates to:
+  /// **'Perimenopause'**
+  String get goalsLifeStagePerimenopause;
+
+  /// No description provided for @goalsLifeStageMenopause.
+  ///
+  /// In en, this message translates to:
+  /// **'Menopause'**
+  String get goalsLifeStageMenopause;
+
+  /// No description provided for @goalsWarningRateCapped.
+  ///
+  /// In en, this message translates to:
+  /// **'Your requested rate was reduced to a gentler, more sustainable pace.'**
+  String get goalsWarningRateCapped;
+
+  /// No description provided for @goalsWarningFloor.
+  ///
+  /// In en, this message translates to:
+  /// **'Your target was kept above a safe minimum intake.'**
+  String get goalsWarningFloor;
+
+  /// No description provided for @goalsWarningPregnancy.
+  ///
+  /// In en, this message translates to:
+  /// **'Nutrivoya doesn\'t set weight-loss targets during pregnancy. Please discuss nutrition and weight with your midwife or clinician.'**
+  String get goalsWarningPregnancy;
+
+  /// No description provided for @goalsWarningBreastfeeding.
+  ///
+  /// In en, this message translates to:
+  /// **'While breastfeeding, extra energy is included and no aggressive deficit is set. A health professional can advise on gradual changes.'**
+  String get goalsWarningBreastfeeding;
+
+  /// No description provided for @goalsWarningUnderweight.
+  ///
+  /// In en, this message translates to:
+  /// **'Your BMI is below 18.5, so Nutrivoya won\'t set a weight-loss target. Consider speaking with a health professional.'**
+  String get goalsWarningUnderweight;
+
+  /// No description provided for @goalsWarningMinor.
+  ///
+  /// In en, this message translates to:
+  /// **'Weight-loss targets aren\'t set for people under 18. A doctor or registered dietitian can give personalised guidance.'**
+  String get goalsWarningMinor;
+
+  /// No description provided for @goalsWarningNeutral.
+  ///
+  /// In en, this message translates to:
+  /// **'Physiological input wasn\'t specified, so a neutral equation was used. Estimates may be less precise.'**
+  String get goalsWarningNeutral;
+
+  /// No description provided for @goalsWarningCustomLow.
+  ///
+  /// In en, this message translates to:
+  /// **'This target is very low. Very low intakes can be unsafe without medical supervision.'**
+  String get goalsWarningCustomLow;
+
+  /// No description provided for @dashboardOfTarget.
+  ///
+  /// In en, this message translates to:
+  /// **'{consumed} / {target} kcal'**
+  String dashboardOfTarget(String consumed, String target);
+
+  /// No description provided for @dashboardRemaining.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} kcal remaining (estimate)'**
+  String dashboardRemaining(String value);
+
+  /// No description provided for @dashboardAbove.
+  ///
+  /// In en, this message translates to:
+  /// **'{value} kcal above estimate'**
+  String dashboardAbove(String value);
 }
 
 class _AppLocalizationsDelegate

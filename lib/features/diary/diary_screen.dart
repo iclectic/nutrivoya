@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../core/models/diary_entry.dart';
 import '../../core/models/meal_type.dart';
@@ -164,7 +165,7 @@ class _MealGroup extends ConsumerWidget {
                               Theme.of(context).colorScheme.onSurfaceVariant,
                         )),
               TextButton.icon(
-                onPressed: () => Navigator.of(context).pushNamed('search'),
+                onPressed: () => context.go('/search'),
                 icon: const Icon(Icons.add, size: 18),
                 label: Text(l10n.diaryAddToMeal),
               ),
