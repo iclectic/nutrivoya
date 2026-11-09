@@ -2938,6 +2938,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Only verified submissions can be published'**
   String get catalogPublishNeedVerified;
+
+  /// No description provided for @settingsOnDevicePhotoAssist.
+  ///
+  /// In en, this message translates to:
+  /// **'On-device photo assist'**
+  String get settingsOnDevicePhotoAssist;
+
+  /// No description provided for @settingsOnDevicePhotoAssistNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Match your description to food vocabulary on this device, then look up structured nutrition. Never invents calories from the image.'**
+  String get settingsOnDevicePhotoAssistNote;
+
+  /// No description provided for @photoOnDeviceAssistNote.
+  ///
+  /// In en, this message translates to:
+  /// **'On-device assist is on: your description is matched to food vocabulary, then looked up in the database. Pixels alone never invent foods or calories.'**
+  String get photoOnDeviceAssistNote;
+
+  /// No description provided for @photoReasonRecognizer.
+  ///
+  /// In en, this message translates to:
+  /// **'On-device vocabulary match'**
+  String get photoReasonRecognizer;
+
+  /// No description provided for @photoReasonCuisineToken.
+  ///
+  /// In en, this message translates to:
+  /// **'Familiar-cuisine vocabulary match'**
+  String get photoReasonCuisineToken;
+
+  /// No description provided for @photoReasonSearchMatch.
+  ///
+  /// In en, this message translates to:
+  /// **'Description search match'**
+  String get photoReasonSearchMatch;
 }
 
 class _AppLocalizationsDelegate

@@ -9,6 +9,7 @@ import '../../features/add_product/add_product_providers.dart';
 import '../../features/add_product/submission_review_service.dart';
 import '../../features/auth/auth_controller.dart';
 import '../../features/diary/sync/diary_sync_service.dart';
+import '../../features/photo/photo_providers.dart';
 import '../../features/profile/profile_controller.dart';
 import '../../shared/extensions/app_localizations_x.dart';
 
@@ -114,6 +115,15 @@ class SettingsScreen extends ConsumerWidget {
               onChanged: (v) => ref
                   .read(addProductControllerProvider.notifier)
                   .setReviewerMode(v),
+            ),
+            SwitchListTile(
+              secondary: const Icon(Icons.document_scanner_outlined),
+              title: Text(l10n.settingsOnDevicePhotoAssist),
+              subtitle: Text(l10n.settingsOnDevicePhotoAssistNote),
+              value: ref.watch(onDevicePhotoAssistProvider),
+              onChanged: (v) => ref
+                  .read(onDevicePhotoAssistProvider.notifier)
+                  .setEnabled(v),
             ),
             ListTile(
               leading: const Icon(Icons.rate_review_outlined),

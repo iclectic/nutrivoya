@@ -1,8 +1,10 @@
 import 'dart:typed_data';
 
 import '../models/food.dart';
+import '../models/food_label_token.dart';
 import '../models/photo_recognition.dart';
 import '../models/user_profile.dart';
+import 'on_device_food_label_model.dart';
 
 /// Looks up structured foods from a photo session.
 ///
@@ -64,12 +66,12 @@ class SearchAssistedPhotoRecognizer implements FoodPhotoRecognizer {
   }
 }
 
-/// Test / future plug-in recognizer that maps a description token list to
-/// queries, still requiring structured lookup and never inventing kcal.
+/// Test / plug-in recognizer that maps fixed token strings to queries,
+/// still requiring structured lookup and never inventing kcal.
 class QueryTokenPhotoRecognizer implements FoodPhotoRecognizer {
   const QueryTokenPhotoRecognizer({this.tokens = const []});
 
-  /// Tokens a future on-device model might emit (e.g. "rice", "dal").
+  /// Tokens an on-device model might emit (e.g. "rice", "dal").
   final List<String> tokens;
 
   @override
@@ -110,6 +112,80 @@ class QueryTokenPhotoRecognizer implements FoodPhotoRecognizer {
         if (out.length >= 8) return out;
       }
     }
+    return out;
+  }
+}
+
+/// Runs an [OnDeviceFoodLabelModel] for tokens, looks each up in structured
+/// food data, and merges with a description search — never inventing kcal.
+class OnDeviceAssistedPhotoRecognizer implements FoodPhotoRecognizer {
+  const OnDeviceAssistedPhotoRecognizer({
+    required this.labelModel,
+    this.descriptionRecognizer = const SearchAssistedPhotoRecognizer(),
+    this.vocabulary = const [],
+  });
+
+  final OnDeviceFoodLabelModel labelModel;
+  final FoodPhotoRecognizer descriptionRecognizer;
+  final List<String> vocabulary;
+
+  @override
+  Future<List<PhotoFoodSuggestion>> suggest({
+    required Uint8List imageBytes,
+    String? description,
+    UserProfile? profile,
+    Future<List<Food>> Function(String query)? foodLookup,
+  }) async {
+    if (imageBytes.isEmpty || foodLookup == null) return const [];
+
+    final tokens = await labelModel.analyze(
+      imageBytes: imageBytes,
+      description: description,
+      profile: profile,
+      vocabulary: vocabulary.isEmpty ? null : vocabulary,
+    );
+
+    final seen = <String>{};
+    final out = <PhotoFoodSuggestion>[];
+
+    // Token → structured lookup (uncertain / low only).
+    final sortedTokens = List<FoodLabelToken>.from(tokens)
+      ..sort((a, b) => b.confidence.compareTo(a.confidence));
+    for (final token in sortedTokens) {
+      if (!token.isUsable) continue;
+      final foods = await foodLookup(token.token);
+      for (final food in foods) {
+        if (!seen.add(food.id)) continue;
+        out.add(
+          PhotoFoodSuggestion(
+            food: food,
+            source: PhotoSuggestionSource.recognizerQuery,
+            matchConfidence: token.confidence >= 0.75
+                ? PhotoMatchConfidence.uncertain
+                : PhotoMatchConfidence.low,
+            matchedQuery: token.token,
+            reasonKey: token.source == FoodLabelTokenSource.cuisineBias
+                ? 'photoReasonCuisineToken'
+                : 'photoReasonRecognizer',
+          ),
+        );
+        if (out.length >= 8) return out;
+      }
+    }
+
+    // Also merge plain description search results.
+    final fromDescription = await descriptionRecognizer.suggest(
+      imageBytes: imageBytes,
+      description: description,
+      profile: profile,
+      foodLookup: foodLookup,
+    );
+    for (final suggestion in fromDescription) {
+      if (!seen.add(suggestion.food.id)) continue;
+      out.add(suggestion);
+      if (out.length >= 8) break;
+    }
+
     return out;
   }
 }

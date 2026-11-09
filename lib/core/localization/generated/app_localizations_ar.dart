@@ -1642,4 +1642,24 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get catalogPublishNeedVerified =>
       'Only verified submissions can be published';
+
+  @override
+  String get settingsOnDevicePhotoAssist => 'مساعدة الصور على الجهاز';
+
+  @override
+  String get settingsOnDevicePhotoAssistNote =>
+      'يطابق وصفك مع مفردات الطعام على هذا الجهاز ثم يبحث عن تغذية منظمة. لا يخترع سعرات من الصورة أبدًا.';
+
+  @override
+  String get photoOnDeviceAssistNote =>
+      'المساعدة على الجهاز مفعّلة: يُطابق وصفك مع مفردات الطعام ثم يُبحث في قاعدة البيانات. البكسلات وحدها لا تخترع أطعمة أو سعرات.';
+
+  @override
+  String get photoReasonRecognizer => 'مطابقة مفردات على الجهاز';
+
+  @override
+  String get photoReasonCuisineToken => 'مطابقة مفردات مطبخ مألوف';
+
+  @override
+  String get photoReasonSearchMatch => 'مطابقة بحث الوصف';
 }

@@ -878,5 +878,11 @@
     "catalogVerifiedBadge": "Verified submission",
     "catalogPublishAction": "Publish to catalog",
     "catalogPublishDone": "Published to the public catalog",
-    "catalogPublishNeedVerified": "Only verified submissions can be published"
+    "catalogPublishNeedVerified": "Only verified submissions can be published",
+  "settingsOnDevicePhotoAssist": "डिवाइस पर फ़ोटो सहायता",
+  "settingsOnDevicePhotoAssistNote": "आपके विवरण को इस डिवाइस पर खाद्य शब्दावली से मिलाता है, फिर संरचित पोषण खोजता है। छवि से कैलोरी नहीं बनाता।",
+  "photoOnDeviceAssistNote": "डिवाइस सहायता चालू है: आपका विवरण खाद्य शब्दावली से मिलाया जाता है, फिर डेटाबेस में खोजा जाता है। केवल पिक्सेल से भोजन या कैलोरी नहीं बनते।",
+  "photoReasonRecognizer": "डिवाइस शब्दावली मिलान",
+  "photoReasonCuisineToken": "परिचित व्यंजन शब्दावली मिलान",
+  "photoReasonSearchMatch": "विवरण खोज मिलान"
 }

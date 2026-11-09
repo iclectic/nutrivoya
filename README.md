@@ -11,9 +11,22 @@ Western packaged foods, and to evaluate food by its actual nutritional
 composition, preparation, portion and dietary context — never by cultural
 stereotype.
 
-This repository currently contains **Milestones 1–17**:
-Foundation through Submission Review, plus Micronutrient Tracking,
-Cultural Meal Suggestions, and Nutrition Education / Public Catalog.
+This repository currently contains **Milestones 1–18**:
+Foundation through Submission Review, Micronutrient Tracking,
+Cultural Meal Suggestions, Nutrition Education / Public Catalog, and
+deeper on-device photo recognition (tokens → structured lookup).
+
+## Status — Milestone 18 (On-device Photo Recognition)
+
+Milestone 18 deepens photo assist without inventing nutrition from pixels:
+
+- `OnDeviceFoodLabelModel` emits **query tokens + confidence only**
+- `VocabularyOnDeviceFoodLabelModel` matches descriptions to curated aliases
+- `StubPixelHistogramLabelModel` always returns empty (pixels ≠ food DB)
+- `CuisineBiasedOnDeviceFoodLabelModel` lightly boosts familiar-cuisine tokens
+- `OnDeviceAssistedPhotoRecognizer` looks tokens up in structured foods
+- Settings toggle: **On-device photo assist** (on by default)
+- User confirmation and structured kcal/macros remain mandatory
 
 ## Status — Milestone 17 (Nutrition Education & Public Catalog)
 
@@ -82,9 +95,9 @@ pixels:
 - Portion estimate from cultural servings — user must confirm
 - Hand-off to food details for final verify + log
 
-Pluggable `FoodPhotoRecognizer` (default: description-assisted search).
-A future on-device model can emit query tokens; nutrition still comes
-only from structured food records.
+Pluggable `FoodPhotoRecognizer` (default with Milestone 18: on-device
+vocabulary tokens → structured lookup). Nutrition still comes only from
+structured food records — never invented from the image.
 
 ## Status — Milestone 10 (Advanced Tracking)
 
@@ -475,7 +488,6 @@ guidance. Aggressive weight-loss targets are not enabled in pregnancy.
 
 ## Next milestone
 
-Core milestones 1–17 are implemented against the original plan’s major
-features. Remaining stretch work includes deeper on-device recognition
-models and store-readiness polish — always with user confirmation and
-structured nutrition lookup.
+Core milestones 1–18 are implemented against the original plan’s major
+features. Remaining stretch work is mainly store-readiness polish —
+always with user confirmation and structured nutrition lookup.

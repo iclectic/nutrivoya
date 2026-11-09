@@ -74,6 +74,19 @@ class _PhotoRecognitionScreenState
     }
   }
 
+  String _reasonLabel(AppLocalizations l10n, String key) {
+    switch (key) {
+      case 'photoReasonRecognizer':
+        return l10n.photoReasonRecognizer;
+      case 'photoReasonCuisineToken':
+        return l10n.photoReasonCuisineToken;
+      case 'photoReasonSearchMatch':
+        return l10n.photoReasonSearchMatch;
+      default:
+        return l10n.photoReasonSearchMatch;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
@@ -112,19 +125,36 @@ class _PhotoRecognitionScreenState
                     color: Theme.of(context).colorScheme.error,
                   ),
             ),
+            if (ref.watch(onDevicePhotoAssistProvider)) ...[
+              const SizedBox(height: 8),
+              Text(
+                l10n.photoOnDeviceAssistNote,
+                style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                      color: Theme.of(context).colorScheme.onSurfaceVariant,
+                    ),
+              ),
+            ],
             const SizedBox(height: 16),
 
             if (!session.hasPhoto) ...[
-              FilledButton.icon(
-                onPressed: () => _pick(ImageSource.camera),
-                icon: const Icon(Icons.photo_camera_outlined),
-                label: Text(l10n.photoTakePhoto),
+              Semantics(
+                button: true,
+                label: l10n.photoTakePhoto,
+                child: FilledButton.icon(
+                  onPressed: () => _pick(ImageSource.camera),
+                  icon: const Icon(Icons.photo_camera_outlined),
+                  label: Text(l10n.photoTakePhoto),
+                ),
               ),
               const SizedBox(height: 8),
-              OutlinedButton.icon(
-                onPressed: () => _pick(ImageSource.gallery),
-                icon: const Icon(Icons.photo_library_outlined),
-                label: Text(l10n.photoChooseGallery),
+              Semantics(
+                button: true,
+                label: l10n.photoChooseGallery,
+                child: OutlinedButton.icon(
+                  onPressed: () => _pick(ImageSource.gallery),
+                  icon: const Icon(Icons.photo_library_outlined),
+                  label: Text(l10n.photoChooseGallery),
+                ),
               ),
             ] else ...[
               ClipRRect(
@@ -205,6 +235,7 @@ class _PhotoRecognitionScreenState
                       [
                         if (s.food.cuisine != null) s.food.cuisine!,
                         _confidenceLabel(l10n, s.matchConfidence),
+                        _reasonLabel(l10n, s.reasonKey),
                       ].join(' · '),
                     ),
                     trailing: selected

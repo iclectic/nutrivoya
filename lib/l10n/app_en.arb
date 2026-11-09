@@ -877,5 +877,11 @@
     "catalogVerifiedBadge": "Verified submission",
     "catalogPublishAction": "Publish to catalog",
     "catalogPublishDone": "Published to the public catalog",
-    "catalogPublishNeedVerified": "Only verified submissions can be published"
+    "catalogPublishNeedVerified": "Only verified submissions can be published",
+  "settingsOnDevicePhotoAssist": "On-device photo assist",
+  "settingsOnDevicePhotoAssistNote": "Match your description to food vocabulary on this device, then look up structured nutrition. Never invents calories from the image.",
+  "photoOnDeviceAssistNote": "On-device assist is on: your description is matched to food vocabulary, then looked up in the database. Pixels alone never invent foods or calories.",
+  "photoReasonRecognizer": "On-device vocabulary match",
+  "photoReasonCuisineToken": "Familiar-cuisine vocabulary match",
+  "photoReasonSearchMatch": "Description search match"
 }
