@@ -7,6 +7,7 @@ import '../../core/models/food.dart';
 import '../../core/models/food_portion.dart';
 import '../../core/models/meal_type.dart';
 import 'diary_repository.dart';
+import 'sync/diary_sync_service.dart';
 
 /// Provider for the drift diary database (singleton).
 final diaryDatabaseProvider = Provider<DiaryDatabase>((ref) {
@@ -73,19 +74,26 @@ class DiaryController extends Notifier {
       loggedAt: loggedAt,
     );
     final id = await _repo.add(entry);
-    if (kDebugMode) debugPrint('[Diary] added entry id=$id for ${food.displayName}');
+    _requestSync();
+    if (kDebugMode) {
+      debugPrint('[Diary] added entry id=$id for ${food.displayName}');
+    }
     return id;
   }
 
   /// Update an existing entry's quantity/grams.
   Future<void> updateEntry(DiaryEntry entry) async {
     await _repo.update(entry);
+    _requestSync();
   }
 
   /// Delete an entry.
   Future<void> deleteEntry(int id) async {
     await _repo.delete(id);
+    _requestSync();
   }
+
+  void _requestSync() => ref.read(diarySyncServiceProvider)?.syncSafely();
 }
 
 final diaryControllerProvider = NotifierProvider<DiaryController, void>(

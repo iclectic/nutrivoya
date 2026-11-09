@@ -209,6 +209,40 @@ class $DiaryEntriesTable extends DiaryEntries
     ),
     defaultValue: const Constant(false),
   );
+  static const VerificationMeta _remoteIdMeta = const VerificationMeta(
+    'remoteId',
+  );
+  @override
+  late final GeneratedColumn<String> remoteId = GeneratedColumn<String>(
+    'remote_id',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways('UNIQUE'),
+  );
+  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
+    'updatedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
+    'updated_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _deletedAtMeta = const VerificationMeta(
+    'deletedAt',
+  );
+  @override
+  late final GeneratedColumn<DateTime> deletedAt = GeneratedColumn<DateTime>(
+    'deleted_at',
+    aliasedName,
+    true,
+    type: DriftSqlType.dateTime,
+    requiredDuringInsert: false,
+  );
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -229,6 +263,9 @@ class $DiaryEntriesTable extends DiaryEntries
     loggedAt,
     createdAt,
     syncPending,
+    remoteId,
+    updatedAt,
+    deletedAt,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -374,6 +411,24 @@ class $DiaryEntriesTable extends DiaryEntries
         ),
       );
     }
+    if (data.containsKey('remote_id')) {
+      context.handle(
+        _remoteIdMeta,
+        remoteId.isAcceptableOrUnknown(data['remote_id']!, _remoteIdMeta),
+      );
+    }
+    if (data.containsKey('updated_at')) {
+      context.handle(
+        _updatedAtMeta,
+        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
+      );
+    }
+    if (data.containsKey('deleted_at')) {
+      context.handle(
+        _deletedAtMeta,
+        deletedAt.isAcceptableOrUnknown(data['deleted_at']!, _deletedAtMeta),
+      );
+    }
     return context;
   }
 
@@ -455,6 +510,18 @@ class $DiaryEntriesTable extends DiaryEntries
         DriftSqlType.bool,
         data['${effectivePrefix}sync_pending'],
       )!,
+      remoteId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}remote_id'],
+      ),
+      updatedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}updated_at'],
+      ),
+      deletedAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.dateTime,
+        data['${effectivePrefix}deleted_at'],
+      ),
     );
   }
 
@@ -483,6 +550,15 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
   final DateTime loggedAt;
   final DateTime createdAt;
   final bool syncPending;
+
+  /// Client-generated UUID shared with the Supabase row (schema v3).
+  final String? remoteId;
+
+  /// Last local modification, used for last-write-wins merging (schema v3).
+  final DateTime? updatedAt;
+
+  /// Soft-delete marker so deletions can be synced before purging (schema v3).
+  final DateTime? deletedAt;
   const DiaryEntryRow({
     required this.id,
     required this.foodId,
@@ -502,6 +578,9 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
     required this.loggedAt,
     required this.createdAt,
     required this.syncPending,
+    this.remoteId,
+    this.updatedAt,
+    this.deletedAt,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -538,6 +617,15 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
     map['logged_at'] = Variable<DateTime>(loggedAt);
     map['created_at'] = Variable<DateTime>(createdAt);
     map['sync_pending'] = Variable<bool>(syncPending);
+    if (!nullToAbsent || remoteId != null) {
+      map['remote_id'] = Variable<String>(remoteId);
+    }
+    if (!nullToAbsent || updatedAt != null) {
+      map['updated_at'] = Variable<DateTime>(updatedAt);
+    }
+    if (!nullToAbsent || deletedAt != null) {
+      map['deleted_at'] = Variable<DateTime>(deletedAt);
+    }
     return map;
   }
 
@@ -573,6 +661,15 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
       loggedAt: Value(loggedAt),
       createdAt: Value(createdAt),
       syncPending: Value(syncPending),
+      remoteId: remoteId == null && nullToAbsent
+          ? const Value.absent()
+          : Value(remoteId),
+      updatedAt: updatedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(updatedAt),
+      deletedAt: deletedAt == null && nullToAbsent
+          ? const Value.absent()
+          : Value(deletedAt),
     );
   }
 
@@ -600,6 +697,9 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
       loggedAt: serializer.fromJson<DateTime>(json['loggedAt']),
       createdAt: serializer.fromJson<DateTime>(json['createdAt']),
       syncPending: serializer.fromJson<bool>(json['syncPending']),
+      remoteId: serializer.fromJson<String?>(json['remoteId']),
+      updatedAt: serializer.fromJson<DateTime?>(json['updatedAt']),
+      deletedAt: serializer.fromJson<DateTime?>(json['deletedAt']),
     );
   }
   @override
@@ -624,6 +724,9 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
       'loggedAt': serializer.toJson<DateTime>(loggedAt),
       'createdAt': serializer.toJson<DateTime>(createdAt),
       'syncPending': serializer.toJson<bool>(syncPending),
+      'remoteId': serializer.toJson<String?>(remoteId),
+      'updatedAt': serializer.toJson<DateTime?>(updatedAt),
+      'deletedAt': serializer.toJson<DateTime?>(deletedAt),
     };
   }
 
@@ -646,6 +749,9 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
     DateTime? loggedAt,
     DateTime? createdAt,
     bool? syncPending,
+    Value<String?> remoteId = const Value.absent(),
+    Value<DateTime?> updatedAt = const Value.absent(),
+    Value<DateTime?> deletedAt = const Value.absent(),
   }) => DiaryEntryRow(
     id: id ?? this.id,
     foodId: foodId ?? this.foodId,
@@ -667,6 +773,9 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
     loggedAt: loggedAt ?? this.loggedAt,
     createdAt: createdAt ?? this.createdAt,
     syncPending: syncPending ?? this.syncPending,
+    remoteId: remoteId.present ? remoteId.value : this.remoteId,
+    updatedAt: updatedAt.present ? updatedAt.value : this.updatedAt,
+    deletedAt: deletedAt.present ? deletedAt.value : this.deletedAt,
   );
   DiaryEntryRow copyWithCompanion(DiaryEntriesCompanion data) {
     return DiaryEntryRow(
@@ -702,6 +811,9 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
       syncPending: data.syncPending.present
           ? data.syncPending.value
           : this.syncPending,
+      remoteId: data.remoteId.present ? data.remoteId.value : this.remoteId,
+      updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+      deletedAt: data.deletedAt.present ? data.deletedAt.value : this.deletedAt,
     );
   }
 
@@ -725,13 +837,16 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
           ..write('sourceName: $sourceName, ')
           ..write('loggedAt: $loggedAt, ')
           ..write('createdAt: $createdAt, ')
-          ..write('syncPending: $syncPending')
+          ..write('syncPending: $syncPending, ')
+          ..write('remoteId: $remoteId, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('deletedAt: $deletedAt')
           ..write(')'))
         .toString();
   }
 
   @override
-  int get hashCode => Object.hash(
+  int get hashCode => Object.hashAll([
     id,
     foodId,
     foodName,
@@ -750,7 +865,10 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
     loggedAt,
     createdAt,
     syncPending,
-  );
+    remoteId,
+    updatedAt,
+    deletedAt,
+  ]);
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -772,7 +890,10 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
           other.sourceName == this.sourceName &&
           other.loggedAt == this.loggedAt &&
           other.createdAt == this.createdAt &&
-          other.syncPending == this.syncPending);
+          other.syncPending == this.syncPending &&
+          other.remoteId == this.remoteId &&
+          other.updatedAt == this.updatedAt &&
+          other.deletedAt == this.deletedAt);
 }
 
 class DiaryEntriesCompanion extends UpdateCompanion<DiaryEntryRow> {
@@ -794,6 +915,9 @@ class DiaryEntriesCompanion extends UpdateCompanion<DiaryEntryRow> {
   final Value<DateTime> loggedAt;
   final Value<DateTime> createdAt;
   final Value<bool> syncPending;
+  final Value<String?> remoteId;
+  final Value<DateTime?> updatedAt;
+  final Value<DateTime?> deletedAt;
   const DiaryEntriesCompanion({
     this.id = const Value.absent(),
     this.foodId = const Value.absent(),
@@ -813,6 +937,9 @@ class DiaryEntriesCompanion extends UpdateCompanion<DiaryEntryRow> {
     this.loggedAt = const Value.absent(),
     this.createdAt = const Value.absent(),
     this.syncPending = const Value.absent(),
+    this.remoteId = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.deletedAt = const Value.absent(),
   });
   DiaryEntriesCompanion.insert({
     this.id = const Value.absent(),
@@ -833,6 +960,9 @@ class DiaryEntriesCompanion extends UpdateCompanion<DiaryEntryRow> {
     required DateTime loggedAt,
     this.createdAt = const Value.absent(),
     this.syncPending = const Value.absent(),
+    this.remoteId = const Value.absent(),
+    this.updatedAt = const Value.absent(),
+    this.deletedAt = const Value.absent(),
   }) : foodId = Value(foodId),
        foodName = Value(foodName),
        foodCanonicalName = Value(foodCanonicalName),
@@ -858,6 +988,9 @@ class DiaryEntriesCompanion extends UpdateCompanion<DiaryEntryRow> {
     Expression<DateTime>? loggedAt,
     Expression<DateTime>? createdAt,
     Expression<bool>? syncPending,
+    Expression<String>? remoteId,
+    Expression<DateTime>? updatedAt,
+    Expression<DateTime>? deletedAt,
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
@@ -878,6 +1011,9 @@ class DiaryEntriesCompanion extends UpdateCompanion<DiaryEntryRow> {
       if (loggedAt != null) 'logged_at': loggedAt,
       if (createdAt != null) 'created_at': createdAt,
       if (syncPending != null) 'sync_pending': syncPending,
+      if (remoteId != null) 'remote_id': remoteId,
+      if (updatedAt != null) 'updated_at': updatedAt,
+      if (deletedAt != null) 'deleted_at': deletedAt,
     });
   }
 
@@ -900,6 +1036,9 @@ class DiaryEntriesCompanion extends UpdateCompanion<DiaryEntryRow> {
     Value<DateTime>? loggedAt,
     Value<DateTime>? createdAt,
     Value<bool>? syncPending,
+    Value<String?>? remoteId,
+    Value<DateTime?>? updatedAt,
+    Value<DateTime?>? deletedAt,
   }) {
     return DiaryEntriesCompanion(
       id: id ?? this.id,
@@ -920,6 +1059,9 @@ class DiaryEntriesCompanion extends UpdateCompanion<DiaryEntryRow> {
       loggedAt: loggedAt ?? this.loggedAt,
       createdAt: createdAt ?? this.createdAt,
       syncPending: syncPending ?? this.syncPending,
+      remoteId: remoteId ?? this.remoteId,
+      updatedAt: updatedAt ?? this.updatedAt,
+      deletedAt: deletedAt ?? this.deletedAt,
     );
   }
 
@@ -980,6 +1122,15 @@ class DiaryEntriesCompanion extends UpdateCompanion<DiaryEntryRow> {
     if (syncPending.present) {
       map['sync_pending'] = Variable<bool>(syncPending.value);
     }
+    if (remoteId.present) {
+      map['remote_id'] = Variable<String>(remoteId.value);
+    }
+    if (updatedAt.present) {
+      map['updated_at'] = Variable<DateTime>(updatedAt.value);
+    }
+    if (deletedAt.present) {
+      map['deleted_at'] = Variable<DateTime>(deletedAt.value);
+    }
     return map;
   }
 
@@ -1003,7 +1154,10 @@ class DiaryEntriesCompanion extends UpdateCompanion<DiaryEntryRow> {
           ..write('sourceName: $sourceName, ')
           ..write('loggedAt: $loggedAt, ')
           ..write('createdAt: $createdAt, ')
-          ..write('syncPending: $syncPending')
+          ..write('syncPending: $syncPending, ')
+          ..write('remoteId: $remoteId, ')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('deletedAt: $deletedAt')
           ..write(')'))
         .toString();
   }
@@ -2091,6 +2245,9 @@ typedef $$DiaryEntriesTableCreateCompanionBuilder =
       required DateTime loggedAt,
       Value<DateTime> createdAt,
       Value<bool> syncPending,
+      Value<String?> remoteId,
+      Value<DateTime?> updatedAt,
+      Value<DateTime?> deletedAt,
     });
 typedef $$DiaryEntriesTableUpdateCompanionBuilder =
     DiaryEntriesCompanion Function({
@@ -2112,6 +2269,9 @@ typedef $$DiaryEntriesTableUpdateCompanionBuilder =
       Value<DateTime> loggedAt,
       Value<DateTime> createdAt,
       Value<bool> syncPending,
+      Value<String?> remoteId,
+      Value<DateTime?> updatedAt,
+      Value<DateTime?> deletedAt,
     });
 
 class $$DiaryEntriesTableFilterComposer
@@ -2210,6 +2370,21 @@ class $$DiaryEntriesTableFilterComposer
 
   ColumnFilters<bool> get syncPending => $composableBuilder(
     column: $table.syncPending,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get remoteId => $composableBuilder(
+    column: $table.remoteId,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<DateTime> get deletedAt => $composableBuilder(
+    column: $table.deletedAt,
     builder: (column) => ColumnFilters(column),
   );
 }
@@ -2312,6 +2487,21 @@ class $$DiaryEntriesTableOrderingComposer
     column: $table.syncPending,
     builder: (column) => ColumnOrderings(column),
   );
+
+  ColumnOrderings<String> get remoteId => $composableBuilder(
+    column: $table.remoteId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
+    column: $table.updatedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<DateTime> get deletedAt => $composableBuilder(
+    column: $table.deletedAt,
+    builder: (column) => ColumnOrderings(column),
+  );
 }
 
 class $$DiaryEntriesTableAnnotationComposer
@@ -2390,6 +2580,15 @@ class $$DiaryEntriesTableAnnotationComposer
     column: $table.syncPending,
     builder: (column) => column,
   );
+
+  GeneratedColumn<String> get remoteId =>
+      $composableBuilder(column: $table.remoteId, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get updatedAt =>
+      $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get deletedAt =>
+      $composableBuilder(column: $table.deletedAt, builder: (column) => column);
 }
 
 class $$DiaryEntriesTableTableManager
@@ -2441,6 +2640,9 @@ class $$DiaryEntriesTableTableManager
                 Value<DateTime> loggedAt = const Value.absent(),
                 Value<DateTime> createdAt = const Value.absent(),
                 Value<bool> syncPending = const Value.absent(),
+                Value<String?> remoteId = const Value.absent(),
+                Value<DateTime?> updatedAt = const Value.absent(),
+                Value<DateTime?> deletedAt = const Value.absent(),
               }) => DiaryEntriesCompanion(
                 id: id,
                 foodId: foodId,
@@ -2460,6 +2662,9 @@ class $$DiaryEntriesTableTableManager
                 loggedAt: loggedAt,
                 createdAt: createdAt,
                 syncPending: syncPending,
+                remoteId: remoteId,
+                updatedAt: updatedAt,
+                deletedAt: deletedAt,
               ),
           createCompanionCallback:
               ({
@@ -2481,6 +2686,9 @@ class $$DiaryEntriesTableTableManager
                 required DateTime loggedAt,
                 Value<DateTime> createdAt = const Value.absent(),
                 Value<bool> syncPending = const Value.absent(),
+                Value<String?> remoteId = const Value.absent(),
+                Value<DateTime?> updatedAt = const Value.absent(),
+                Value<DateTime?> deletedAt = const Value.absent(),
               }) => DiaryEntriesCompanion.insert(
                 id: id,
                 foodId: foodId,
@@ -2500,6 +2708,9 @@ class $$DiaryEntriesTableTableManager
                 loggedAt: loggedAt,
                 createdAt: createdAt,
                 syncPending: syncPending,
+                remoteId: remoteId,
+                updatedAt: updatedAt,
+                deletedAt: deletedAt,
               ),
           withReferenceMapper: (p0) => p0
               .map((e) => (e.readTable(table), BaseReferences(db, table, e)))

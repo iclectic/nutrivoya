@@ -1443,4 +1443,26 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get mySubmissionsEmpty =>
       'لا إرسالات بعد. أضف منتجًا ناقصًا من البحث أو الباركود أو الإعدادات.';
+
+  @override
+  String get authContinueOffline => 'المتابعة بدون حساب';
+
+  @override
+  String get authOfflineNote =>
+      'تبقى بياناتك على هذا الجهاز فقط. الحسابات والمزامنة متاحة عندما يتصل Nutrivoya بالخادم.';
+
+  @override
+  String get settingsSyncNow => 'زامن الآن';
+
+  @override
+  String settingsSyncPending(int count) {
+    return '$count تغييرات بانتظار المزامنة';
+  }
+
+  @override
+  String get settingsSyncDone => 'تمت مزامنة المفكرة';
+
+  @override
+  String get settingsSyncUnavailable =>
+      'المزامنة غير متاحة — البيانات مخزّنة على هذا الجهاز';
 }

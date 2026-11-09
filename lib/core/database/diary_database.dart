@@ -5,6 +5,7 @@ import 'package:drift/native.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 
+import '../utils/uuid.dart';
 import 'diary_entries_table.dart';
 import 'tracking_tables.dart';
 
@@ -14,6 +15,7 @@ part 'diary_database.g.dart';
 ///
 /// Stores diary entries plus advanced-tracking tables (weight, body
 /// measurements, water) so logging works without internet.
+/// Diary rows carry `syncPending` / `remoteId` for Supabase sync.
 @DriftDatabase(tables: [
   DiaryEntries,
   WeightEntries,
@@ -25,7 +27,7 @@ class DiaryDatabase extends _$DiaryDatabase {
   DiaryDatabase.forTesting(super.e);
 
   @override
-  int get schemaVersion => 2;
+  int get schemaVersion => 3;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -37,6 +39,22 @@ class DiaryDatabase extends _$DiaryDatabase {
             await m.createTable(weightEntries);
             await m.createTable(bodyMeasurements);
             await m.createTable(waterLogs);
+          }
+          if (from < 3) {
+            await m.addColumn(diaryEntries, diaryEntries.remoteId);
+            await m.addColumn(diaryEntries, diaryEntries.updatedAt);
+            await m.addColumn(diaryEntries, diaryEntries.deletedAt);
+            final rows = await select(diaryEntries).get();
+            for (final row in rows) {
+              await (update(diaryEntries)..where((t) => t.id.equals(row.id)))
+                  .write(
+                DiaryEntriesCompanion(
+                  remoteId: Value(generateUuidV4()),
+                  updatedAt: Value(row.createdAt),
+                  syncPending: const Value(true),
+                ),
+              );
+            }
           }
         },
       );

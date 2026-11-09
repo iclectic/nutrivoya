@@ -1473,4 +1473,26 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get mySubmissionsEmpty =>
       'Aún no hay envíos. Añade un producto que falte desde búsqueda, código de barras o Ajustes.';
+
+  @override
+  String get authContinueOffline => 'Continuar sin cuenta';
+
+  @override
+  String get authOfflineNote =>
+      'Tus datos se quedan solo en este dispositivo. Las cuentas y la sincronización están disponibles cuando Nutrivoya esté conectado a su backend.';
+
+  @override
+  String get settingsSyncNow => 'Sincronizar ahora';
+
+  @override
+  String settingsSyncPending(int count) {
+    return '$count cambios pendientes de sincronizar';
+  }
+
+  @override
+  String get settingsSyncDone => 'Diario sincronizado';
+
+  @override
+  String get settingsSyncUnavailable =>
+      'Sincronización no disponible — los datos se guardan en este dispositivo';
 }

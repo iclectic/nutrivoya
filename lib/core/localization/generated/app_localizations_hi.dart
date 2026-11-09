@@ -1456,4 +1456,26 @@ class AppLocalizationsHi extends AppLocalizations {
   @override
   String get mySubmissionsEmpty =>
       'अभी कोई सबमिशन नहीं। खोज, बारकोड या सेटिंग्स से गायब उत्पाद जोड़ें।';
+
+  @override
+  String get authContinueOffline => 'बिना खाते जारी रखें';
+
+  @override
+  String get authOfflineNote =>
+      'आपका डेटा केवल इस डिवाइस पर रहता है। खाते और सिंक तब उपलब्ध हैं जब Nutrivoya बैकएंड से जुड़ा हो।';
+
+  @override
+  String get settingsSyncNow => 'अभी सिंक करें';
+
+  @override
+  String settingsSyncPending(int count) {
+    return '$count बदलाव सिंक की प्रतीक्षा में';
+  }
+
+  @override
+  String get settingsSyncDone => 'डायरी सिंक हो गई';
+
+  @override
+  String get settingsSyncUnavailable =>
+      'सिंक उपलब्ध नहीं — डेटा इस डिवाइस पर संग्रहीत है';
 }

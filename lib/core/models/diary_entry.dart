@@ -31,6 +31,8 @@ class DiaryEntry {
     this.sourceName,
     required this.loggedAt,
     this.syncPending = false,
+    this.remoteId,
+    this.updatedAt,
   });
 
   final int? id;
@@ -55,6 +57,12 @@ class DiaryEntry {
   final String? sourceName;
   final DateTime loggedAt;
   final bool syncPending;
+
+  /// UUID shared with the backend row; null until first persisted.
+  final String? remoteId;
+
+  /// Last local modification time.
+  final DateTime? updatedAt;
 
   /// Build a DiaryEntry from a Food + portion/grams selection.
   factory DiaryEntry.fromFood({
@@ -117,6 +125,8 @@ class DiaryEntry {
     String? sourceName,
     DateTime? loggedAt,
     bool? syncPending,
+    String? remoteId,
+    DateTime? updatedAt,
   }) {
     return DiaryEntry(
       id: id ?? this.id,
@@ -136,6 +146,8 @@ class DiaryEntry {
       sourceName: sourceName ?? this.sourceName,
       loggedAt: loggedAt ?? this.loggedAt,
       syncPending: syncPending ?? this.syncPending,
+      remoteId: remoteId ?? this.remoteId,
+      updatedAt: updatedAt ?? this.updatedAt,
     );
   }
 
@@ -159,7 +171,9 @@ class DiaryEntry {
           confidence == other.confidence &&
           sourceName == other.sourceName &&
           loggedAt == other.loggedAt &&
-          syncPending == other.syncPending;
+          syncPending == other.syncPending &&
+          remoteId == other.remoteId &&
+          updatedAt == other.updatedAt;
 
   @override
   int get hashCode => Object.hash(
@@ -180,6 +194,8 @@ class DiaryEntry {
         sourceName,
         loggedAt,
         syncPending,
+        remoteId,
+        updatedAt,
       );
 }
 

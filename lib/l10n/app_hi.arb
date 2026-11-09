@@ -793,5 +793,18 @@
   "addProductStatusPublished": "व्यक्तिगत लाइब्रेरी में (समीक्षा लंबित)",
   "addProductStatusWithdrawn": "वापस लिया",
   "mySubmissionsTitle": "मेरे सबमिशन",
-  "mySubmissionsEmpty": "अभी कोई सबमिशन नहीं। खोज, बारकोड या सेटिंग्स से गायब उत्पाद जोड़ें।"
+  "mySubmissionsEmpty": "अभी कोई सबमिशन नहीं। खोज, बारकोड या सेटिंग्स से गायब उत्पाद जोड़ें।",
+  "authContinueOffline": "बिना खाते जारी रखें",
+  "authOfflineNote": "आपका डेटा केवल इस डिवाइस पर रहता है। खाते और सिंक तब उपलब्ध हैं जब Nutrivoya बैकएंड से जुड़ा हो।",
+  "settingsSyncNow": "अभी सिंक करें",
+  "settingsSyncPending": "{count} बदलाव सिंक की प्रतीक्षा में",
+  "@settingsSyncPending": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsSyncDone": "डायरी सिंक हो गई",
+  "settingsSyncUnavailable": "सिंक उपलब्ध नहीं — डेटा इस डिवाइस पर संग्रहीत है"
 }

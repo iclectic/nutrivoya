@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/errors/app_error.dart';
+import '../../core/storage/local_preferences.dart';
 import 'auth_repository.dart';
 
 /// UI-facing auth state.
@@ -33,13 +34,25 @@ class AuthFailure extends AuthState {
 }
 
 class AuthController extends StateNotifier<AuthState> {
-  AuthController(this._repo) : super(const AuthInitial()) {
+  AuthController(this._repo, [this._prefs]) : super(const AuthInitial()) {
     _bootstrap();
   }
 
   final AuthRepository _repo;
+  final LocalPreferences? _prefs;
+
+  /// User id used for on-device-only mode (no account, no sync).
+  static const localUserId = 'local';
+  static const _keyLocalMode = 'nutrivoya.localMode';
+
+  bool get _localMode =>
+      !_repo.isConfigured && _prefs?.getString(_keyLocalMode) == 'true';
 
   void _bootstrap() {
+    if (_localMode) {
+      state = const Authenticated(localUserId, null);
+      return;
+    }
     if (_repo.currentUserId != null) {
       state = Authenticated(_repo.currentUserId!, _repo.currentUserEmail);
     } else {
@@ -78,7 +91,15 @@ class AuthController extends StateNotifier<AuthState> {
     }
   }
 
+  /// Uses Nutrivoya on this device only when no backend is configured.
+  Future<void> continueWithoutAccount() async {
+    if (_repo.isConfigured) return;
+    await _prefs?.setString(_keyLocalMode, 'true');
+    state = const Authenticated(localUserId, null);
+  }
+
   Future<void> signOut() async {
+    await _prefs?.remove(_keyLocalMode);
     try {
       await _repo.signOut();
     } catch (e) {
@@ -98,5 +119,8 @@ final authRepositoryProvider = Provider<AuthRepository>((ref) {
 
 final authControllerProvider =
     StateNotifierProvider<AuthController, AuthState>(
-  (ref) => AuthController(ref.watch(authRepositoryProvider)),
+  (ref) => AuthController(
+    ref.watch(authRepositoryProvider),
+    ref.watch(localPreferencesSyncProvider),
+  ),
 );

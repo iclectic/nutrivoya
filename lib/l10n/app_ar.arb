@@ -793,5 +793,18 @@
   "addProductStatusPublished": "في المكتبة الشخصية (بانتظار المراجعة)",
   "addProductStatusWithdrawn": "مسحوب",
   "mySubmissionsTitle": "إرسالاتي",
-  "mySubmissionsEmpty": "لا إرسالات بعد. أضف منتجًا ناقصًا من البحث أو الباركود أو الإعدادات."
+  "mySubmissionsEmpty": "لا إرسالات بعد. أضف منتجًا ناقصًا من البحث أو الباركود أو الإعدادات.",
+  "authContinueOffline": "المتابعة بدون حساب",
+  "authOfflineNote": "تبقى بياناتك على هذا الجهاز فقط. الحسابات والمزامنة متاحة عندما يتصل Nutrivoya بالخادم.",
+  "settingsSyncNow": "زامن الآن",
+  "settingsSyncPending": "{count} تغييرات بانتظار المزامنة",
+  "@settingsSyncPending": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsSyncDone": "تمت مزامنة المفكرة",
+  "settingsSyncUnavailable": "المزامنة غير متاحة — البيانات مخزّنة على هذا الجهاز"
 }
