@@ -358,5 +358,238 @@
   "barcodeInvalid": "ਇਹ ਠੀਕ ਬਾਰਕੋਡ ਨਹੀਂ ਲੱਗਦਾ। 8–14 ਅੰਕ ਵਰਤੋ।",
   "barcodeNetworkError": "ਪੈਕੇਜਡ-ਭੋਜਨ ਡੇਟਾਬੇਸ ਤੱਕ ਨਹੀਂ ਪਹੁੰਚ ਸਕੇ। ਕਨੈਕਸ਼ਨ ਚੈੱਕ ਕਰੋ ਅਤੇ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
   "barcodeTryAgain": "ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
-  "barcodeCrowdsourcedNote": "ਪੈਕੇਜਡ-ਭੋਜਨ ਡੇਟਾ Open Food Facts ਤੋਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਅਧੂਰਾ ਜਾਂ ਕਮਿਊਨਿਟੀ-ਯੋਗਦਾਨ ਹੋ ਸਕਦਾ ਹੈ। ਲੌਗ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਹਿੱਸੇ ਦਾ ਆਕਾਰ ਤਸਦੀਕ ਕਰੋ।"
+  "barcodeCrowdsourcedNote": "ਪੈਕੇਜਡ-ਭੋਜਨ ਡੇਟਾ Open Food Facts ਤੋਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਅਧੂਰਾ ਜਾਂ ਕਮਿਊਨਿਟੀ-ਯੋਗਦਾਨ ਹੋ ਸਕਦਾ ਹੈ। ਲੌਗ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਹਿੱਸੇ ਦਾ ਆਕਾਰ ਤਸਦੀਕ ਕਰੋ।",
+  "assistantTitle": "ਨਿਊਟਰੀਵੋਯਾ ਤੋਂ ਪੁੱਛੋ",
+  "assistantIntro": "ਆਪਣੇ ਭੋਜਨ, ਸੱਭਿਆਚਾਰਕ ਮੁੱਖ ਖਾਣ-ਪੀਣ, ਪ੍ਰੋਟੀਨ ਜਾਂ ਭੁੱਖ ਬਾਰੇ ਪੁੱਛੋ — ਜਵਾਬ ਤੁਹਾਡੀ ਡਾਇਰੀ, ਟੀਚਿਆਂ ਅਤੇ ਭੋਜਨ ਡੇਟਾਬੇਸ ਤੋਂ ਆਉਂਦੇ ਹਨ। ਕੋਈ ਅੰਕ ਘੜੇ ਨਹੀਂ ਜਾਂਦੇ।",
+  "assistantWellnessDisclaimer": "ਨਿਊਟਰੀਵੋਯਾ ਆਮ ਤੰਦਰੁਸਤੀ ਮਾਰਗਦਰਸ਼ਨ ਦਿੰਦਾ ਹੈ, ਡਾਕਟਰੀ ਸਲਾਹ ਨਹੀਂ।",
+  "assistantMedicalDisclaimer": "ਇਹ ਡਾਕਟਰੀ ਜਾਂ ਉੱਚ-ਖਤਰੇ ਵਾਲਾ ਵਿਸ਼ਾ ਲੱਗਦਾ ਹੈ। ਯੋਗ ਸਿਹਤ ਪੇਸ਼ੇਵਰ ਨਾਲ ਗੱਲ ਕਰੋ। ਨਿਊਟਰੀਵੋਯਾ ਨਿਦਾਨ, ਇਲਾਜ ਜਾਂ ਨੁਸਖ਼ਾ ਨਹੀਂ ਦੇ ਸਕਦਾ।",
+  "assistantTryAsking": "ਇਹ ਪੁੱਛ ਕੇ ਵੇਖੋ",
+  "assistantSuggestions": "ਸੁਝਾਅ",
+  "assistantSources": "ਸਰੋਤ",
+  "assistantInputHint": "ਚੌਲ, ਪ੍ਰੋਟੀਨ, ਸੰਤੁਲਨ ਬਾਰੇ ਪੁੱਛੋ…",
+  "assistantSend": "ਭੇਜੋ",
+  "assistantClear": "ਚੈਟ ਸਾਫ਼ ਕਰੋ",
+  "assistantPromptRice": "ਭਾਰ ਘਟਾਉਂਦਿਆਂ ਕੀ ਮੈਂ ਚੌਲ ਖਾ ਸਕਦਾ/ਸਕਦੀ ਹਾਂ?",
+  "assistantPromptBalance": "ਅੱਜ ਦੇ ਭੋਜਨ ਨੂੰ ਕਿਵੇਂ ਸੰਤੁਲਿਤ ਕਰਾਂ?",
+  "assistantPromptProtein": "ਜਾਣੀ-ਪਛਾਣੀ ਖੁਰਾਕ ਨਾਲ ਪ੍ਰੋਟੀਨ ਕਿਵੇਂ ਵਧਾਵਾਂ?",
+  "assistantPromptHunger": "ਕੈਲੋਰੀ ਟੀਚੇ ਕੋਲ ਵੀ ਭੁੱਖ ਕਿਉਂ ਲੱਗਦੀ ਹੈ?",
+  "assistantPromptRoti": "ਰੋਟੀ ਵਿੱਚ ਕਿੰਨੀਆਂ ਕੈਲੋਰੀਆਂ?",
+  "assistantHeadlineCultural": "ਹਾਂ — {staple} ਤੁਹਾਡੇ ਟੀਚਿਆਂ ਵਿੱਚ ਫਿੱਟ ਹੋ ਸਕਦਾ ਹੈ",
+  "@assistantHeadlineCultural": {
+    "placeholders": {
+      "staple": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantHeadlineBalance": "ਅੱਜ ਦੇ ਭੋਜਨ ਦਾ ਸੰਤੁਲਨ",
+  "assistantHeadlineProtein": "ਜਾਣੀ-ਪਛਾਣੀ ਖੁਰਾਕ ਨਾਲ ਪ੍ਰੋਟੀਨ ਵਧਾਉਣਾ",
+  "assistantHeadlineHunger": "ਕੈਲੋਰੀ ਟੀਚੇ ਕੋਲ ਭੁੱਖ",
+  "assistantHeadlineLookupFound": "{foodName} ਦਾ ਪੋਸ਼ਣ",
+  "@assistantHeadlineLookupFound": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantHeadlineLookupMissing": "“{foodName}” ਲਈ ਕੋਈ ਮੇਲ ਨਹੀਂ",
+  "@assistantHeadlineLookupMissing": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantHeadlineSubstitute": "ਬਦਲਣ ਤੋਂ ਪਹਿਲਾਂ ਸੋਧੋ",
+  "assistantHeadlineMedical": "ਪੇਸ਼ੇਵਰ ਮਾਰਗਦਰਸ਼ਨ ਲਵੋ",
+  "assistantHeadlineUnknown": "ਕਿਰਪਾ ਕਰਕੇ ਸਵਾਲ ਹੋਰ ਸਪਸ਼ਟ ਕਰੋ",
+  "assistantBodyCultural": "{staple} {cuisine} ਖਾਣ-ਪੀਣ ਦਾ ਆਮ ਹਿੱਸਾ ਹੈ। ਇਸ ਨੂੰ ਛੱਡਣ ਦੀ ਲੋੜ ਨਹੀਂ — ਹਿੱਸੇ ਅਤੇ ਜੋੜ ਆਪਣੇ ਟੀਚੇ ਅਨੁਸਾਰ ਬਦਲੋ।",
+  "@assistantBodyCultural": {
+    "placeholders": {
+      "staple": {
+        "type": "String"
+      },
+      "cuisine": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyCulturalWithData": "{staple} ਤੁਹਾਡੇ ਪੈਟਰਨ ਵਿੱਚ ਰਹਿ ਸਕਦਾ ਹੈ। ਡੇਟਾਬੇਸ ਅਨੁਸਾਰ, {foodName} ({portionName}) ਲਗਭਗ {kcal} ਕਿਲੋਕੈਲੋਰੀ ਹੈ ({sourceName})। ਪੂਰੀ ਤਰ੍ਹਾਂ ਹਟਾਉਣ ਦੀ ਬਜਾਏ ਛੋਟਾ ਹਿੱਸਾ ਲਓ ਜਾਂ ਸਬਜ਼ੀਆਂ ਤੇ ਪ੍ਰੋਟੀਨ ਨਾਲ ਜੋੜੋ।",
+  "@assistantBodyCulturalWithData": {
+    "placeholders": {
+      "staple": {
+        "type": "String"
+      },
+      "foodName": {
+        "type": "String"
+      },
+      "portionName": {
+        "type": "String"
+      },
+      "kcal": {
+        "type": "int"
+      },
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyBalanceWithTargets": "ਅੱਜ ਤੁਸੀਂ {entryCount} ਐਂਟਰੀਆਂ ਵਿੱਚ {calorieTarget} ਵਿੱਚੋਂ {caloriesConsumed} ਕਿਲੋਕੈਲੋਰੀ ਅਤੇ {proteinTarget} ਵਿੱਚੋਂ {proteinConsumed} ਗ੍ਰਾ ਪ੍ਰੋਟੀਨ ਦਰਜ ਕੀਤਾ। ਜਾਣੀ-ਪਛਾਣੀ ਖੁਰਾਕ ਅਤੇ ਛੋਟੇ ਬਦਲਾਅ ਵਰਤੋ — ਭੋਜਨ ਨੂੰ ਨੈਤਿਕ ਨਾ ਬਣਾਓ।",
+  "@assistantBodyBalanceWithTargets": {
+    "placeholders": {
+      "caloriesConsumed": {
+        "type": "int"
+      },
+      "calorieTarget": {
+        "type": "int"
+      },
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "proteinTarget": {
+        "type": "int"
+      },
+      "entryCount": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantBodyBalanceNoTargets": "ਅੱਜ ਤੁਸੀਂ {entryCount} ਐਂਟਰੀਆਂ ਵਿੱਚ {caloriesConsumed} ਕਿਲੋਕੈਲੋਰੀ ਅਤੇ {proteinConsumed} ਗ੍ਰਾ ਪ੍ਰੋਟੀਨ ਦਰਜ ਕੀਤਾ। ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਟੀਚੇ ਸੈੱਟ ਕਰੋ, ਜਾਂ ਜਾਣੀ-ਪਛਾਣੀ ਖੁਰਾਕ ਦਰਜ ਕਰਦੇ ਰਹੋ।",
+  "@assistantBodyBalanceNoTargets": {
+    "placeholders": {
+      "caloriesConsumed": {
+        "type": "int"
+      },
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "entryCount": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantBodyProteinWithTargets": "ਅੱਜ ਤੁਸੀਂ {proteinTarget} ਵਿੱਚੋਂ {proteinConsumed} ਗ੍ਰਾ ਪ੍ਰੋਟੀਨ ਦਰਜ ਕੀਤਾ ({proteinGap} ਗ੍ਰਾ ਬਾਕੀ)। {cuisine} ਮੁੱਖ ਭੋਜਨ ਰੱਖੋ ਅਤੇ ਪ੍ਰੋਟੀਨ ਵਾਲਾ ਸਾਥ ਜੋੜੋ।",
+  "@assistantBodyProteinWithTargets": {
+    "placeholders": {
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "proteinTarget": {
+        "type": "int"
+      },
+      "proteinGap": {
+        "type": "int"
+      },
+      "cuisine": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyProtein": "ਅੱਜ ਤੁਸੀਂ {proteinConsumed} ਗ੍ਰਾ ਪ੍ਰੋਟੀਨ ਦਰਜ ਕੀਤਾ। ਭੋਜਨ ਬਦਲਣ ਦੀ ਬਜਾਏ ਜਾਣੇ-ਪਛਾਣੇ {cuisine} ਜੋੜਾਂ ਨਾਲ ਵਧਾਓ।",
+  "@assistantBodyProtein": {
+    "placeholders": {
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "cuisine": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyHungerWithTargets": "ਤੁਸੀਂ {calorieTarget} ਵਿੱਚੋਂ {caloriesConsumed} ਕਿਲੋਕੈਲੋਰੀ ਤੇ ਹੋ, {proteinConsumed} ਗ੍ਰਾ ਪ੍ਰੋਟੀਨ ਅਤੇ {fibreConsumed} ਗ੍ਰਾ ਫਾਈਬਰ ਦਰਜ। ਭੁੱਖ ਪ੍ਰੋਟੀਨ, ਫਾਈਬਰ, ਸਮਾਂ ਜਾਂ ਪਾਣੀ ਨਾਲ ਜੁੜੀ ਹੋ ਸਕਦੀ ਹੈ — ਨੈਤਿਕ ਅਸਫਲਤਾ ਨਹੀਂ।",
+  "@assistantBodyHungerWithTargets": {
+    "placeholders": {
+      "caloriesConsumed": {
+        "type": "int"
+      },
+      "calorieTarget": {
+        "type": "int"
+      },
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "fibreConsumed": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantBodyHunger": "ਤੁਸੀਂ ਅੱਜ {caloriesConsumed} ਕਿਲੋਕੈਲੋਰੀ, {proteinConsumed} ਗ੍ਰਾ ਪ੍ਰੋਟੀਨ ਅਤੇ {fibreConsumed} ਗ੍ਰਾ ਫਾਈਬਰ ਦਰਜ ਕੀਤਾ। ਪ੍ਰੋਟੀਨ, ਫਾਈਬਰ ਅਤੇ ਹੌਲੀ ਖਾਣ ਨਾਲ ਭੁੱਖ ਅਕਸਰ ਬਿਹਤਰ ਹੁੰਦੀ ਹੈ।",
+  "@assistantBodyHunger": {
+    "placeholders": {
+      "caloriesConsumed": {
+        "type": "int"
+      },
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "fibreConsumed": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantBodyLookupFound": "{foodName} · {portionName}: ≈ {kcal} ਕਿਲੋਕੈਲੋਰੀ ਅਤੇ {proteinG} ਗ੍ਰਾ ਪ੍ਰੋਟੀਨ। ਸਰੋਤ: {sourceName}। ਭਰੋਸਾ: {confidence}।",
+  "@assistantBodyLookupFound": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      },
+      "portionName": {
+        "type": "String"
+      },
+      "kcal": {
+        "type": "int"
+      },
+      "proteinG": {
+        "type": "int"
+      },
+      "sourceName": {
+        "type": "String"
+      },
+      "confidence": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyLookupNoNutrition": "{foodName} {sourceName} ਵਿੱਚ ਮਿਲਿਆ, ਪਰ ਭਰੋਸੇਯੋਗ ਕੈਲੋਰੀ ਡੇਟਾ ਉਪਲਬਧ ਨਹੀਂ। ਨਿਊਟਰੀਵੋਯਾ ਅੰਕ ਨਹੀਂ ਘੜੇਗਾ।",
+  "@assistantBodyLookupNoNutrition": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      },
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyLookupMissing": "“{foodName}” ਨਾਲ ਕੋਈ ਢਾਂਚਾਗਤ ਭੋਜਨ ਨਹੀਂ ਮਿਲਿਆ। ਹੋਰ ਨਾਮ, ਬਾਰਕੋਡ ਜਾਂ ਨਿੱਜੀ ਰੈਸਿਪੀ ਅਜ਼ਮਾਓ — ਕੈਲੋਰੀਆਂ ਅਨੁਮਾਨ ਨਹੀਂ ਲਗਾਈਆਂ ਜਾਣਗੀਆਂ।",
+  "@assistantBodyLookupMissing": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodySubstitute": "ਪਹਿਲਾਂ ਹਿੱਸਾ ਬਦਲੋ, ਸਬਜ਼ੀਆਂ ਜੋੜੋ, ਜਾਂ ਪ੍ਰੋਟੀਨ ਨਾਲ ਜੋੜੋ। ਬਦਲਣਾ ਚੋਣਵੀਂ ਹੈ — ਸੋਧ ਅਕਸਰ ਸੱਭਿਆਚਾਰਕ ਭੋਜਨ ਬਚਾਈ ਰੱਖਦੀ ਹੈ।",
+  "assistantBodyMedical": "ਨਿਊਟਰੀਵੋਯਾ ਨਿਦਾਨ, ਦਵਾਈਆਂ, ਗਰਭ ਅਵਸਥਾ ਦੀਆਂ ਉਲਝਣਾਂ, ਖਾਣ ਦੀਆਂ ਬਿਮਾਰੀਆਂ ਜਾਂ ਹੋਰ ਕਲੀਨੀਕਲ ਹਾਲਾਤਾਂ ਬਾਰੇ ਸਲਾਹ ਨਹੀਂ ਦੇ ਸਕਦਾ। ਯੋਗ ਪੇਸ਼ੇਵਰ ਨਾਲ ਸਲਾਹ ਕਰੋ।",
+  "assistantBodyUnknown": "ਇਹੋ ਜਿਹੇ ਸਵਾਲ ਪੁੱਛੋ: “ਕੀ ਮੈਂ ਚੌਲ ਖਾ ਸਕਦਾ/ਸਕਦੀ ਹਾਂ?”, “ਪ੍ਰੋਟੀਨ ਕਿਵੇਂ ਵਧਾਵਾਂ?”, “ਰੋਟੀ ਵਿੱਚ ਕਿੰਨੀਆਂ ਕੈਲੋਰੀਆਂ?”, ਜਾਂ “ਭੁੱਖ ਕਿਉਂ ਲੱਗਦੀ ਹੈ?”",
+  "assistantTipAskRice": "ਪੁੱਛੋ ਕਿ ਕੀ ਸੱਭਿਆਚਾਰਕ ਮੁੱਖ ਭੋਜਨ ਤੁਹਾਡੇ ਟੀਚਿਆਂ ਵਿੱਚ ਫਿੱਟ ਹੋ ਸਕਦਾ ਹੈ",
+  "assistantTipAskBalance": "ਪੁੱਛੋ ਕਿ ਅੱਜ ਦੇ ਭੋਜਨ ਤੁਹਾਡੇ ਟੀਚਿਆਂ ਨਾਲ ਕਿਵੇਂ ਮੇਲ ਖਾਂਦੇ ਹਨ",
+  "assistantTipAskProtein": "ਪੁੱਛੋ ਕਿ ਜਾਣੀ-ਪਛਾਣੀ ਖੁਰਾਕ ਨਾਲ ਪ੍ਰੋਟੀਨ ਕਿਵੇਂ ਵਧਾਈਏ",
+  "assistantTipAskFoodLookup": "ਡੇਟਾਬੇਸ ਦੇ ਭੋਜਨ ਲਈ “calories in …” ਪੁੱਛੋ",
+  "assistantTipSeekProfessional": "ਡਾਕਟਰ, ਡਾਇਟੀਸ਼ੀਅਨ ਜਾਂ ਯੋਗ ਕਲੀਨੀਸ਼ੀਅਨ ਨਾਲ ਸੰਪਰਕ ਕਰੋ",
+  "assistantTipFoodNotFound": "ਹੋਰ ਸਪੈਲਿੰਗ, ਉਪਨਾਮ ਜਾਂ ਬਾਰਕੋਡ ਸਕੈਨ ਅਜ਼ਮਾਓ",
+  "assistantTipNutritionUnavailable": "ਪੋਸ਼ਣ ਡੇਟਾ ਉਪਲਬਧ ਨਹੀਂ — ਕੋਈ ਘੜੀਆਂ ਕੈਲੋਰੀਆਂ ਨਹੀਂ",
+  "assistantTipVerifyPortion": "ਲੌਗ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਹਿੱਸਾ ਪੁਸ਼ਟੀ ਕਰੋ",
+  "assistantTipNoMoralFood": "ਕੋਈ ਭੋਜਨ ਖੁਦ ਚੰਗਾ ਜਾਂ ਮਾੜਾ ਨਹੀਂ — ਸੰਦਰਭ ਮਾਇਨੇ ਰੱਖਦਾ ਹੈ",
+  "assistantTipHungerProteinFibre": "ਪ੍ਰੋਟੀਨ ਅਤੇ ਫਾਈਬਰ ਚੈੱਕ ਕਰੋ — ਦੋਵੇਂ ਭਰਪੂਰਤਾ ਵਿੱਚ ਮਦਦ ਕਰਦੇ ਹਨ",
+  "assistantTipHungerPace": "ਥੋੜ੍ਹਾ ਹੌਲੀ ਖਾਓ ਅਤੇ ਸਬਜ਼ੀਆਂ ਸ਼ਾਮਲ ਕਰੋ",
+  "assistantTipProteinPairDal": "ਅਨਾਜ ਨਾਲ ਦਾਲ, ਫਲੀਆਂ ਜਾਂ ਮਸੂਰ ਜੋੜੋ",
+  "assistantTipProteinPairYoghurt": "ਦਹੀਂ, ਪਨੀਰ ਜਾਂ ਗਾੜ੍ਹਾ ਡੇਅਰੀ ਨਾਲ ਜੋੜੋ",
+  "assistantTipProteinPairEgg": "ਆਪਣੀ ਰਸੋਈ ਅਨੁਸਾਰ ਆਂਡਾ, ਮੱਛੀ, ਟੋਫੂ ਜਾਂ ਲੀਨ ਮੀਟ ਜੋੜੋ",
+  "assistantTipModifyNotReplace": "ਪਸੰਦੀਦਾ ਭੋਜਨ ਬਦਲਣ ਤੋਂ ਪਹਿਲਾਂ ਉਸ ਨੂੰ ਸੋਧੋ",
+  "assistantTipModifyPortion": "ਪਹਿਲਾਂ ਮੁੱਖ ਭੋਜਨ ਦਾ ਛੋਟਾ ਹਿੱਸਾ ਅਜ਼ਮਾਓ",
+  "assistantTipAddVegetables": "ਮਾਤਰਾ ਅਤੇ ਫਾਈਬਰ ਲਈ ਸਬਜ਼ੀਆਂ ਜਾਂ ਸਲਾਦ ਜੋੜੋ",
+  "assistantTipAddProteinSide": "ਮੁੱਖ ਭੋਜਨ ਹਟਾਉਣ ਦੀ ਬਜਾਏ ਪ੍ਰੋਟੀਨ ਵਾਲਾ ਸਾਥ ਜੋੜੋ",
+  "assistantTipLogSomething": "ਅਸਲ ਪੈਟਰਨ ਲਈ ਕੋਈ ਭੋਜਨ ਦਰਜ ਕਰੋ"
 }

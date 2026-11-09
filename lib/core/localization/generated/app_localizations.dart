@@ -1581,6 +1581,385 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Packaged-food data comes from Open Food Facts and may be incomplete or crowdsourced. Always verify the serving size before logging.'**
   String get barcodeCrowdsourcedNote;
+
+  /// No description provided for @assistantTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask Nutrivoya'**
+  String get assistantTitle;
+
+  /// No description provided for @assistantIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask about your meals, cultural staples, protein, or hunger — answers use your diary, targets, and food database. Numbers are never invented.'**
+  String get assistantIntro;
+
+  /// No description provided for @assistantWellnessDisclaimer.
+  ///
+  /// In en, this message translates to:
+  /// **'Nutrivoya offers general wellness guidance, not medical advice.'**
+  String get assistantWellnessDisclaimer;
+
+  /// No description provided for @assistantMedicalDisclaimer.
+  ///
+  /// In en, this message translates to:
+  /// **'This sounds like a medical or high-risk topic. Please speak with a qualified health professional. Nutrivoya cannot diagnose, treat, or prescribe.'**
+  String get assistantMedicalDisclaimer;
+
+  /// No description provided for @assistantTryAsking.
+  ///
+  /// In en, this message translates to:
+  /// **'Try asking'**
+  String get assistantTryAsking;
+
+  /// No description provided for @assistantSuggestions.
+  ///
+  /// In en, this message translates to:
+  /// **'Suggestions'**
+  String get assistantSuggestions;
+
+  /// No description provided for @assistantSources.
+  ///
+  /// In en, this message translates to:
+  /// **'Sources'**
+  String get assistantSources;
+
+  /// No description provided for @assistantInputHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask about rice, protein, balance…'**
+  String get assistantInputHint;
+
+  /// No description provided for @assistantSend.
+  ///
+  /// In en, this message translates to:
+  /// **'Send'**
+  String get assistantSend;
+
+  /// No description provided for @assistantClear.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear chat'**
+  String get assistantClear;
+
+  /// No description provided for @assistantPromptRice.
+  ///
+  /// In en, this message translates to:
+  /// **'Can I still eat rice while losing weight?'**
+  String get assistantPromptRice;
+
+  /// No description provided for @assistantPromptBalance.
+  ///
+  /// In en, this message translates to:
+  /// **'How can I balance today\'s meals?'**
+  String get assistantPromptBalance;
+
+  /// No description provided for @assistantPromptProtein.
+  ///
+  /// In en, this message translates to:
+  /// **'How can I raise protein with familiar foods?'**
+  String get assistantPromptProtein;
+
+  /// No description provided for @assistantPromptHunger.
+  ///
+  /// In en, this message translates to:
+  /// **'Why am I still hungry near my calorie target?'**
+  String get assistantPromptHunger;
+
+  /// No description provided for @assistantPromptRoti.
+  ///
+  /// In en, this message translates to:
+  /// **'How many calories in roti?'**
+  String get assistantPromptRoti;
+
+  /// No description provided for @assistantHeadlineCultural.
+  ///
+  /// In en, this message translates to:
+  /// **'Yes — {staple} can fit your goals'**
+  String assistantHeadlineCultural(String staple);
+
+  /// No description provided for @assistantHeadlineBalance.
+  ///
+  /// In en, this message translates to:
+  /// **'Today\'s meal balance'**
+  String get assistantHeadlineBalance;
+
+  /// No description provided for @assistantHeadlineProtein.
+  ///
+  /// In en, this message translates to:
+  /// **'Raising protein with familiar foods'**
+  String get assistantHeadlineProtein;
+
+  /// No description provided for @assistantHeadlineHunger.
+  ///
+  /// In en, this message translates to:
+  /// **'Hunger near your calorie target'**
+  String get assistantHeadlineHunger;
+
+  /// No description provided for @assistantHeadlineLookupFound.
+  ///
+  /// In en, this message translates to:
+  /// **'Nutrition for {foodName}'**
+  String assistantHeadlineLookupFound(String foodName);
+
+  /// No description provided for @assistantHeadlineLookupMissing.
+  ///
+  /// In en, this message translates to:
+  /// **'No match for “{foodName}”'**
+  String assistantHeadlineLookupMissing(String foodName);
+
+  /// No description provided for @assistantHeadlineSubstitute.
+  ///
+  /// In en, this message translates to:
+  /// **'Modify before you replace'**
+  String get assistantHeadlineSubstitute;
+
+  /// No description provided for @assistantHeadlineMedical.
+  ///
+  /// In en, this message translates to:
+  /// **'Please seek professional guidance'**
+  String get assistantHeadlineMedical;
+
+  /// No description provided for @assistantHeadlineUnknown.
+  ///
+  /// In en, this message translates to:
+  /// **'I need a clearer question'**
+  String get assistantHeadlineUnknown;
+
+  /// No description provided for @assistantBodyCultural.
+  ///
+  /// In en, this message translates to:
+  /// **'{staple} is a normal part of {cuisine} eating. You do not need to abandon it — adjust portions and pairings to match your goal.'**
+  String assistantBodyCultural(String staple, String cuisine);
+
+  /// No description provided for @assistantBodyCulturalWithData.
+  ///
+  /// In en, this message translates to:
+  /// **'{staple} can stay in your pattern. From the food database, {foodName} ({portionName}) is about {kcal} kcal ({sourceName}). Prefer a smaller portion or add vegetables and a protein side rather than cutting the staple entirely.'**
+  String assistantBodyCulturalWithData(
+    String staple,
+    String foodName,
+    String portionName,
+    int kcal,
+    String sourceName,
+  );
+
+  /// No description provided for @assistantBodyBalanceWithTargets.
+  ///
+  /// In en, this message translates to:
+  /// **'Today you have logged {caloriesConsumed} of {calorieTarget} kcal and {proteinConsumed} of {proteinTarget} g protein across {entryCount} entries. Use familiar foods and small adjustments — not food moralising.'**
+  String assistantBodyBalanceWithTargets(
+    int caloriesConsumed,
+    int calorieTarget,
+    int proteinConsumed,
+    int proteinTarget,
+    int entryCount,
+  );
+
+  /// No description provided for @assistantBodyBalanceNoTargets.
+  ///
+  /// In en, this message translates to:
+  /// **'Today you have logged {caloriesConsumed} kcal and {proteinConsumed} g protein across {entryCount} entries. Set goals in Settings for clearer targets, or keep logging familiar meals.'**
+  String assistantBodyBalanceNoTargets(
+    int caloriesConsumed,
+    int proteinConsumed,
+    int entryCount,
+  );
+
+  /// No description provided for @assistantBodyProteinWithTargets.
+  ///
+  /// In en, this message translates to:
+  /// **'You have logged {proteinConsumed} of {proteinTarget} g protein today ({proteinGap} g to go). Keep {cuisine} staples and add protein-rich sides.'**
+  String assistantBodyProteinWithTargets(
+    int proteinConsumed,
+    int proteinTarget,
+    int proteinGap,
+    String cuisine,
+  );
+
+  /// No description provided for @assistantBodyProtein.
+  ///
+  /// In en, this message translates to:
+  /// **'You have logged {proteinConsumed} g protein today. Raise it with familiar {cuisine} pairings rather than replacing your usual meals.'**
+  String assistantBodyProtein(int proteinConsumed, String cuisine);
+
+  /// No description provided for @assistantBodyHungerWithTargets.
+  ///
+  /// In en, this message translates to:
+  /// **'You are at {caloriesConsumed} of {calorieTarget} kcal, with {proteinConsumed} g protein and {fibreConsumed} g fibre logged. Hunger can reflect protein, fibre, meal timing, or water — not a moral failure.'**
+  String assistantBodyHungerWithTargets(
+    int caloriesConsumed,
+    int calorieTarget,
+    int proteinConsumed,
+    int fibreConsumed,
+  );
+
+  /// No description provided for @assistantBodyHunger.
+  ///
+  /// In en, this message translates to:
+  /// **'You have logged {caloriesConsumed} kcal, {proteinConsumed} g protein and {fibreConsumed} g fibre today. Hunger often improves with protein, fibre, and slower eating — not by labelling foods as bad.'**
+  String assistantBodyHunger(
+    int caloriesConsumed,
+    int proteinConsumed,
+    int fibreConsumed,
+  );
+
+  /// No description provided for @assistantBodyLookupFound.
+  ///
+  /// In en, this message translates to:
+  /// **'{foodName} · {portionName}: ≈ {kcal} kcal and {proteinG} g protein. Source: {sourceName}. Confidence: {confidence}.'**
+  String assistantBodyLookupFound(
+    String foodName,
+    String portionName,
+    int kcal,
+    int proteinG,
+    String sourceName,
+    String confidence,
+  );
+
+  /// No description provided for @assistantBodyLookupNoNutrition.
+  ///
+  /// In en, this message translates to:
+  /// **'{foodName} was found in {sourceName}, but reliable calorie data is unavailable. Nutrivoya will not invent a number.'**
+  String assistantBodyLookupNoNutrition(String foodName, String sourceName);
+
+  /// No description provided for @assistantBodyLookupMissing.
+  ///
+  /// In en, this message translates to:
+  /// **'No structured food matched “{foodName}”. Try another name, a barcode, or add a personal recipe — calories will not be guessed.'**
+  String assistantBodyLookupMissing(String foodName);
+
+  /// No description provided for @assistantBodySubstitute.
+  ///
+  /// In en, this message translates to:
+  /// **'Start by changing portion size, adding vegetables, or pairing a protein side with the food you already eat. Replacement is optional — modification usually keeps cultural meals intact.'**
+  String get assistantBodySubstitute;
+
+  /// No description provided for @assistantBodyMedical.
+  ///
+  /// In en, this message translates to:
+  /// **'Nutrivoya cannot advise on diagnosis, medications, pregnancy complications, eating disorders, or other clinical situations. Please consult an appropriate professional.'**
+  String get assistantBodyMedical;
+
+  /// No description provided for @assistantBodyUnknown.
+  ///
+  /// In en, this message translates to:
+  /// **'Try questions like “Can I still eat rice?”, “How do I raise protein?”, “How many calories in roti?”, or “Why am I still hungry?”'**
+  String get assistantBodyUnknown;
+
+  /// No description provided for @assistantTipAskRice.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask whether a cultural staple can fit your goals'**
+  String get assistantTipAskRice;
+
+  /// No description provided for @assistantTipAskBalance.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask how today\'s logged meals look against your targets'**
+  String get assistantTipAskBalance;
+
+  /// No description provided for @assistantTipAskProtein.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask how to raise protein with familiar foods'**
+  String get assistantTipAskProtein;
+
+  /// No description provided for @assistantTipAskFoodLookup.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask “calories in …” for a food in the database'**
+  String get assistantTipAskFoodLookup;
+
+  /// No description provided for @assistantTipSeekProfessional.
+  ///
+  /// In en, this message translates to:
+  /// **'Contact a doctor, dietitian, or other qualified clinician'**
+  String get assistantTipSeekProfessional;
+
+  /// No description provided for @assistantTipFoodNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'Try a different spelling, alias, or barcode scan'**
+  String get assistantTipFoodNotFound;
+
+  /// No description provided for @assistantTipNutritionUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Nutrition data unavailable — no invented calories'**
+  String get assistantTipNutritionUnavailable;
+
+  /// No description provided for @assistantTipVerifyPortion.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm the portion matches what you ate before logging'**
+  String get assistantTipVerifyPortion;
+
+  /// No description provided for @assistantTipNoMoralFood.
+  ///
+  /// In en, this message translates to:
+  /// **'No food is inherently good or bad — context and pattern matter'**
+  String get assistantTipNoMoralFood;
+
+  /// No description provided for @assistantTipHungerProteinFibre.
+  ///
+  /// In en, this message translates to:
+  /// **'Check protein and fibre — both support fullness'**
+  String get assistantTipHungerProteinFibre;
+
+  /// No description provided for @assistantTipHungerPace.
+  ///
+  /// In en, this message translates to:
+  /// **'Eat a little slower and include volume foods like vegetables'**
+  String get assistantTipHungerPace;
+
+  /// No description provided for @assistantTipProteinPairDal.
+  ///
+  /// In en, this message translates to:
+  /// **'Pair grains with dal, beans, or lentils'**
+  String get assistantTipProteinPairDal;
+
+  /// No description provided for @assistantTipProteinPairYoghurt.
+  ///
+  /// In en, this message translates to:
+  /// **'Add yoghurt, paneer, or strained dairy on the side'**
+  String get assistantTipProteinPairYoghurt;
+
+  /// No description provided for @assistantTipProteinPairEgg.
+  ///
+  /// In en, this message translates to:
+  /// **'Add egg, fish, tofu, or lean meat when it fits your cuisine'**
+  String get assistantTipProteinPairEgg;
+
+  /// No description provided for @assistantTipModifyNotReplace.
+  ///
+  /// In en, this message translates to:
+  /// **'Modify the meal you already like before replacing it'**
+  String get assistantTipModifyNotReplace;
+
+  /// No description provided for @assistantTipModifyPortion.
+  ///
+  /// In en, this message translates to:
+  /// **'Try a smaller serving of the staple first'**
+  String get assistantTipModifyPortion;
+
+  /// No description provided for @assistantTipAddVegetables.
+  ///
+  /// In en, this message translates to:
+  /// **'Add vegetables or salad for volume and fibre'**
+  String get assistantTipAddVegetables;
+
+  /// No description provided for @assistantTipAddProteinSide.
+  ///
+  /// In en, this message translates to:
+  /// **'Add a protein-rich side rather than cutting the staple'**
+  String get assistantTipAddProteinSide;
+
+  /// No description provided for @assistantTipLogSomething.
+  ///
+  /// In en, this message translates to:
+  /// **'Log a meal so balance advice can use your real pattern'**
+  String get assistantTipLogSomething;
 }
 
 class _AppLocalizationsDelegate

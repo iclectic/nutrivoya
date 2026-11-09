@@ -11,10 +11,30 @@ Western packaged foods, and to evaluate food by its actual nutritional
 composition, preparation, portion and dietary context — never by cultural
 stereotype.
 
-This repository currently contains **Milestones 1–8**:
+This repository currently contains **Milestones 1–9**:
 Foundation, Food Data Core, Food Logging, Calorie & Macro Targets,
 Cultural Food Intelligence (seed expansion), Recipe Builder,
-Multilingual Product, and Barcode Products.
+Multilingual Product, Barcode Products, and Nutrition Assistant.
+
+## Status — Milestone 9 (Nutrition Assistant)
+
+Milestone 9 adds **Ask Nutrivoya**: a rule-based nutrition assistant that
+answers from diary totals, personal targets, familiar cuisines, and the
+structured food repository. It never invents calorie values and never
+moralises foods.
+
+### What is included in Milestone 9
+
+- `NutritionAssistantService` with intents for cultural staples, meal
+  balance, protein, hunger, calorie lookup, substitution, and medical
+  redirect
+- Structured `AssistantAnswer` facts + tip keys + citations (UI localises)
+- Food lookup wired through `FoodRepository` only — no LLM calorie source
+- Ask Nutrivoya screen with starter prompts, sources, and wellness /
+  medical disclaimers
+- Settings entry + `/assistant` route
+- Localised assistant copy for en / fr / es / hi / pa / ar
+- Unit tests for intent routing and reply formatting
 
 ## Status — Milestone 8 (Barcode Products)
 
@@ -230,11 +250,11 @@ scanning, photo recognition or AI features — those arrive in later milestones.
 
 ### What remains intentionally out of scope
 
-- AI nutrition assistant (Milestone 9)
 - Weight / water / body measurements / favourites system (Milestone 10)
 - Photo recognition (Milestone 11)
 - User-contributed “Add Product” publish workflow (submission + review)
 - Supabase diary sync (entries are flagged `syncPending`)
+- Full LLM chatbot (Ask Nutrivoya is structured / rule-based)
 
 ## Project structure
 
@@ -266,6 +286,9 @@ lib/
 │   ├── dashboard/          # Today screen (live totals)
 │   ├── profile/            # Profile repo, controller, screen
 │   ├── goals/              # Goals shell
+│   ├── barcode/            # Barcode scanner + packaged lookup
+│   ├── recipes/            # Personal recipe builder
+│   ├── assistant/          # Ask Nutrivoya (rule-based guidance)
 │   └── settings/           # Settings (theme, language, account, about)
 ├── l10n/                   # ARB source files
 └── shared/
@@ -367,6 +390,5 @@ guidance. Aggressive weight-loss targets are not enabled in pregnancy.
 
 ## Next milestone
 
-**Milestone 9 — Nutrition Assistant:** Ask Nutrivoya explanations and
-cultural meal balancing using structured food/diary/target context —
-never as a calorie database.
+**Milestone 10 — Advanced Tracking:** weight trends, body measurements,
+water logging, favourites, frequent foods, and meal templates.

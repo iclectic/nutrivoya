@@ -826,4 +826,270 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get barcodeCrowdsourcedNote =>
       'Los datos de alimentos envasados provienen de Open Food Facts y pueden estar incompletos o ser colaborativos. Verifica siempre el tamaño de la porción antes de registrar.';
+
+  @override
+  String get assistantTitle => 'Pregunta a Nutrivoya';
+
+  @override
+  String get assistantIntro =>
+      'Pregunta sobre tus comidas, alimentos culturales, proteínas o hambre: las respuestas usan tu diario, objetivos y base de alimentos. Nunca se inventan cifras.';
+
+  @override
+  String get assistantWellnessDisclaimer =>
+      'Nutrivoya ofrece orientación general de bienestar, no consejo médico.';
+
+  @override
+  String get assistantMedicalDisclaimer =>
+      'Esto parece un tema médico o de alto riesgo. Habla con un profesional de la salud cualificado. Nutrivoya no diagnostica, trata ni prescribe.';
+
+  @override
+  String get assistantTryAsking => 'Prueba a preguntar';
+
+  @override
+  String get assistantSuggestions => 'Sugerencias';
+
+  @override
+  String get assistantSources => 'Fuentes';
+
+  @override
+  String get assistantInputHint =>
+      'Pregunta sobre arroz, proteína, equilibrio…';
+
+  @override
+  String get assistantSend => 'Enviar';
+
+  @override
+  String get assistantClear => 'Borrar chat';
+
+  @override
+  String get assistantPromptRice =>
+      '¿Puedo seguir comiendo arroz mientras bajo de peso?';
+
+  @override
+  String get assistantPromptBalance => '¿Cómo equilibro las comidas de hoy?';
+
+  @override
+  String get assistantPromptProtein =>
+      '¿Cómo subo la proteína con alimentos familiares?';
+
+  @override
+  String get assistantPromptHunger =>
+      '¿Por qué sigo con hambre cerca de mi objetivo de calorías?';
+
+  @override
+  String get assistantPromptRoti => '¿Cuántas calorías tiene el roti?';
+
+  @override
+  String assistantHeadlineCultural(String staple) {
+    return 'Sí — $staple puede encajar en tus objetivos';
+  }
+
+  @override
+  String get assistantHeadlineBalance => 'Equilibrio de las comidas de hoy';
+
+  @override
+  String get assistantHeadlineProtein =>
+      'Subir proteína con alimentos familiares';
+
+  @override
+  String get assistantHeadlineHunger => 'Hambre cerca de tu objetivo calórico';
+
+  @override
+  String assistantHeadlineLookupFound(String foodName) {
+    return 'Nutrición de $foodName';
+  }
+
+  @override
+  String assistantHeadlineLookupMissing(String foodName) {
+    return 'Sin coincidencia para “$foodName”';
+  }
+
+  @override
+  String get assistantHeadlineSubstitute => 'Modifica antes de sustituir';
+
+  @override
+  String get assistantHeadlineMedical => 'Busca orientación profesional';
+
+  @override
+  String get assistantHeadlineUnknown => 'Necesito una pregunta más clara';
+
+  @override
+  String assistantBodyCultural(String staple, String cuisine) {
+    return '$staple forma parte habitual de la comida $cuisine. No hace falta abandonarlo: ajusta porciones y acompañamientos según tu objetivo.';
+  }
+
+  @override
+  String assistantBodyCulturalWithData(
+    String staple,
+    String foodName,
+    String portionName,
+    int kcal,
+    String sourceName,
+  ) {
+    return '$staple puede quedarse en tu patrón. Según la base, $foodName ($portionName) tiene unas $kcal kcal ($sourceName). Prefiere una porción menor o añade verduras y una fuente de proteína en lugar de eliminar el alimento.';
+  }
+
+  @override
+  String assistantBodyBalanceWithTargets(
+    int caloriesConsumed,
+    int calorieTarget,
+    int proteinConsumed,
+    int proteinTarget,
+    int entryCount,
+  ) {
+    return 'Hoy has registrado $caloriesConsumed de $calorieTarget kcal y $proteinConsumed de $proteinTarget g de proteína en $entryCount entradas. Usa alimentos familiares y ajustes pequeños — sin moralizar.';
+  }
+
+  @override
+  String assistantBodyBalanceNoTargets(
+    int caloriesConsumed,
+    int proteinConsumed,
+    int entryCount,
+  ) {
+    return 'Hoy has registrado $caloriesConsumed kcal y $proteinConsumed g de proteína en $entryCount entradas. Define objetivos en Ajustes para más claridad, o sigue registrando comidas familiares.';
+  }
+
+  @override
+  String assistantBodyProteinWithTargets(
+    int proteinConsumed,
+    int proteinTarget,
+    int proteinGap,
+    String cuisine,
+  ) {
+    return 'Has registrado $proteinConsumed de $proteinTarget g de proteína hoy (faltan $proteinGap g). Mantén los alimentos $cuisine y añade acompañamientos ricos en proteína.';
+  }
+
+  @override
+  String assistantBodyProtein(int proteinConsumed, String cuisine) {
+    return 'Has registrado $proteinConsumed g de proteína hoy. Súbela con acompañamientos $cuisine familiares en lugar de sustituir tus comidas.';
+  }
+
+  @override
+  String assistantBodyHungerWithTargets(
+    int caloriesConsumed,
+    int calorieTarget,
+    int proteinConsumed,
+    int fibreConsumed,
+  ) {
+    return 'Estás en $caloriesConsumed de $calorieTarget kcal, con $proteinConsumed g de proteína y $fibreConsumed g de fibra. El hambre puede deberse a proteína, fibra, ritmo de comida o agua — no a un fallo moral.';
+  }
+
+  @override
+  String assistantBodyHunger(
+    int caloriesConsumed,
+    int proteinConsumed,
+    int fibreConsumed,
+  ) {
+    return 'Has registrado $caloriesConsumed kcal, $proteinConsumed g de proteína y $fibreConsumed g de fibra. El hambre suele mejorar con proteína, fibra y comer más despacio — no etiquetando alimentos como malos.';
+  }
+
+  @override
+  String assistantBodyLookupFound(
+    String foodName,
+    String portionName,
+    int kcal,
+    int proteinG,
+    String sourceName,
+    String confidence,
+  ) {
+    return '$foodName · $portionName: ≈ $kcal kcal y $proteinG g de proteína. Fuente: $sourceName. Confianza: $confidence.';
+  }
+
+  @override
+  String assistantBodyLookupNoNutrition(String foodName, String sourceName) {
+    return '$foodName se encontró en $sourceName, pero no hay datos calóricos fiables. Nutrivoya no inventará un número.';
+  }
+
+  @override
+  String assistantBodyLookupMissing(String foodName) {
+    return 'Ningún alimento estructurado coincide con “$foodName”. Prueba otro nombre, un código de barras o una receta personal — no se adivinarán las calorías.';
+  }
+
+  @override
+  String get assistantBodySubstitute =>
+      'Empieza cambiando el tamaño de la porción, añadiendo verduras o acompañando con proteína. Sustituir es opcional: modificar suele conservar las comidas culturales.';
+
+  @override
+  String get assistantBodyMedical =>
+      'Nutrivoya no puede aconsejar sobre diagnóstico, medicamentos, complicaciones del embarazo, trastornos alimentarios u otras situaciones clínicas. Consulta a un profesional adecuado.';
+
+  @override
+  String get assistantBodyUnknown =>
+      'Prueba preguntas como “¿Puedo seguir comiendo arroz?”, “¿Cómo subo la proteína?”, “¿Cuántas calorías tiene el roti?” o “¿Por qué sigo con hambre?”';
+
+  @override
+  String get assistantTipAskRice =>
+      'Pregunta si un alimento cultural encaja en tus objetivos';
+
+  @override
+  String get assistantTipAskBalance =>
+      'Pregunta cómo se ven las comidas de hoy frente a tus objetivos';
+
+  @override
+  String get assistantTipAskProtein =>
+      'Pregunta cómo subir proteína con alimentos familiares';
+
+  @override
+  String get assistantTipAskFoodLookup =>
+      'Pregunta “calorías en …” para un alimento de la base';
+
+  @override
+  String get assistantTipSeekProfessional =>
+      'Contacta con un médico, dietista u otro clínico cualificado';
+
+  @override
+  String get assistantTipFoodNotFound =>
+      'Prueba otra ortografía, un alias o escanear el código de barras';
+
+  @override
+  String get assistantTipNutritionUnavailable =>
+      'Datos nutricionales no disponibles — sin calorías inventadas';
+
+  @override
+  String get assistantTipVerifyPortion =>
+      'Confirma que la porción coincide con lo que comiste';
+
+  @override
+  String get assistantTipNoMoralFood =>
+      'Ningún alimento es bueno o malo por sí solo — importa el contexto';
+
+  @override
+  String get assistantTipHungerProteinFibre =>
+      'Revisa proteína y fibra: ambas ayudan a la saciedad';
+
+  @override
+  String get assistantTipHungerPace =>
+      'Come un poco más despacio e incluye verduras para volumen';
+
+  @override
+  String get assistantTipProteinPairDal =>
+      'Combina cereales con dal, legumbres o lentejas';
+
+  @override
+  String get assistantTipProteinPairYoghurt =>
+      'Añade yogur, paneer o lácteo colado';
+
+  @override
+  String get assistantTipProteinPairEgg =>
+      'Añade huevo, pescado, tofu o carne magra según tu cocina';
+
+  @override
+  String get assistantTipModifyNotReplace =>
+      'Modifica la comida que ya te gusta antes de sustituirla';
+
+  @override
+  String get assistantTipModifyPortion =>
+      'Prueba primero una porción más pequeña del alimento base';
+
+  @override
+  String get assistantTipAddVegetables =>
+      'Añade verduras o ensalada para volumen y fibra';
+
+  @override
+  String get assistantTipAddProteinSide =>
+      'Añade un acompañamiento proteico en lugar de eliminar el alimento base';
+
+  @override
+  String get assistantTipLogSomething =>
+      'Registra una comida para que el consejo use tu patrón real';
 }

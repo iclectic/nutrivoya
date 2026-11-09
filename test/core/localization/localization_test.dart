@@ -39,6 +39,7 @@ void main() {
         expect(l10n.authLoginButton, isNotEmpty);
         expect(l10n.dashboardCalories, isNotEmpty);
         expect(l10n.recipesTitle, isNotEmpty);
+        expect(l10n.assistantTitle, isNotEmpty);
         expect(l10n.goalsEstimateDisclaimer, isNotEmpty);
 
         // Locale-specific smoke checks — not English fallbacks for key locales.

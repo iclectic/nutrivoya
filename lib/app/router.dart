@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../features/assistant/assistant_screen.dart';
 import '../features/auth/auth_controller.dart';
 import '../features/auth/auth_form_screen.dart';
 import '../features/auth/reset_password_screen.dart';
@@ -93,6 +94,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/barcode',
         builder: (context, state) => const BarcodeScannerScreen(),
+      ),
+      GoRoute(
+        path: '/assistant',
+        builder: (context, state) => const AssistantScreen(),
       ),
       GoRoute(
         path: '/goals',

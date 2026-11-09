@@ -817,4 +817,267 @@ class AppLocalizationsHi extends AppLocalizations {
   @override
   String get barcodeCrowdsourcedNote =>
       'पैकेज्ड-भोजन डेटा Open Food Facts से आता है और अधूरा या समुदाय-योगदानित हो सकता है। लॉग करने से पहले हिस्सा आकार सत्यापित करें।';
+
+  @override
+  String get assistantTitle => 'न्यूट्रीवोया से पूछें';
+
+  @override
+  String get assistantIntro =>
+      'अपने भोजन, सांस्कृतिक मुख्य खाद्य, प्रोटीन या भूख के बारे में पूछें — जवाब आपकी डायरी, लक्ष्य और खाद्य डेटाबेस से आते हैं। कोई संख्या गढ़ी नहीं जाती।';
+
+  @override
+  String get assistantWellnessDisclaimer =>
+      'न्यूट्रीवोया सामान्य स्वास्थ्य मार्गदर्शन देता है, चिकित्सकीय सलाह नहीं।';
+
+  @override
+  String get assistantMedicalDisclaimer =>
+      'यह चिकित्सकीय या उच्च-जोखिम विषय लगता है। योग्य स्वास्थ्य पेशेवर से बात करें। न्यूट्रीवोया निदान, उपचार या नुस्खा नहीं दे सकता।';
+
+  @override
+  String get assistantTryAsking => 'यह पूछकर देखें';
+
+  @override
+  String get assistantSuggestions => 'सुझाव';
+
+  @override
+  String get assistantSources => 'स्रोत';
+
+  @override
+  String get assistantInputHint => 'चावल, प्रोटीन, संतुलन के बारे में पूछें…';
+
+  @override
+  String get assistantSend => 'भेजें';
+
+  @override
+  String get assistantClear => 'चैट साफ़ करें';
+
+  @override
+  String get assistantPromptRice =>
+      'वजन घटते समय क्या मैं चावल खा सकता/सकती हूँ?';
+
+  @override
+  String get assistantPromptBalance => 'आज के भोजन को कैसे संतुलित करूँ?';
+
+  @override
+  String get assistantPromptProtein => 'परिचित भोजन से प्रोटीन कैसे बढ़ाऊँ?';
+
+  @override
+  String get assistantPromptHunger =>
+      'कैलोरी लक्ष्य के पास भी भूख क्यों लगती है?';
+
+  @override
+  String get assistantPromptRoti => 'रोटी में कितनी कैलोरी?';
+
+  @override
+  String assistantHeadlineCultural(String staple) {
+    return 'हाँ — $staple आपके लक्ष्यों में फिट हो सकता है';
+  }
+
+  @override
+  String get assistantHeadlineBalance => 'आज के भोजन का संतुलन';
+
+  @override
+  String get assistantHeadlineProtein => 'परिचित भोजन से प्रोटीन बढ़ाना';
+
+  @override
+  String get assistantHeadlineHunger => 'कैलोरी लक्ष्य के पास भूख';
+
+  @override
+  String assistantHeadlineLookupFound(String foodName) {
+    return '$foodName का पोषण';
+  }
+
+  @override
+  String assistantHeadlineLookupMissing(String foodName) {
+    return '“$foodName” का मिलान नहीं';
+  }
+
+  @override
+  String get assistantHeadlineSubstitute => 'बदलने से पहले संशोधित करें';
+
+  @override
+  String get assistantHeadlineMedical => 'पेशेवर मार्गदर्शन लें';
+
+  @override
+  String get assistantHeadlineUnknown => 'कृपया प्रश्न और स्पष्ट करें';
+
+  @override
+  String assistantBodyCultural(String staple, String cuisine) {
+    return '$staple $cuisine भोजन का सामान्य हिस्सा है। इसे छोड़ने की ज़रूरत नहीं — हिस्से और संयोजन अपने लक्ष्य के अनुसार समायोजित करें।';
+  }
+
+  @override
+  String assistantBodyCulturalWithData(
+    String staple,
+    String foodName,
+    String portionName,
+    int kcal,
+    String sourceName,
+  ) {
+    return '$staple आपके पैटर्न में रह सकता है। डेटाबेस के अनुसार, $foodName ($portionName) लगभग $kcal किलोकलोरी है ($sourceName)। मुख्य भोजन पूरी तरह हटाने के बजाय छोटा हिस्सा लें या सब्ज़ियाँ व प्रोटीन साथ जोड़ें।';
+  }
+
+  @override
+  String assistantBodyBalanceWithTargets(
+    int caloriesConsumed,
+    int calorieTarget,
+    int proteinConsumed,
+    int proteinTarget,
+    int entryCount,
+  ) {
+    return 'आज आपने $entryCount प्रविष्टियों में $calorieTarget में से $caloriesConsumed किलोकलोरी और $proteinTarget में से $proteinConsumed ग्रा प्रोटीन दर्ज किया। परिचित भोजन और छोटे बदलाव अपनाएँ — भोजन को नैतिक न बनाएँ।';
+  }
+
+  @override
+  String assistantBodyBalanceNoTargets(
+    int caloriesConsumed,
+    int proteinConsumed,
+    int entryCount,
+  ) {
+    return 'आज आपने $entryCount प्रविष्टियों में $caloriesConsumed किलोकलोरी और $proteinConsumed ग्रा प्रोटीन दर्ज किया। स्पष्ट लक्ष्यों के लिए सेटिंग्स में लक्ष्य सेट करें, या परिचित भोजन दर्ज करते रहें।';
+  }
+
+  @override
+  String assistantBodyProteinWithTargets(
+    int proteinConsumed,
+    int proteinTarget,
+    int proteinGap,
+    String cuisine,
+  ) {
+    return 'आज आपने $proteinTarget में से $proteinConsumed ग्रा प्रोटीन दर्ज किया ($proteinGap ग्रा बाकी)। $cuisine मुख्य भोजन रखें और प्रोटीन युक्त साथ जोड़ें।';
+  }
+
+  @override
+  String assistantBodyProtein(int proteinConsumed, String cuisine) {
+    return 'आज आपने $proteinConsumed ग्रा प्रोटीन दर्ज किया। भोजन बदलने के बजाय परिचित $cuisine संयोजन से बढ़ाएँ।';
+  }
+
+  @override
+  String assistantBodyHungerWithTargets(
+    int caloriesConsumed,
+    int calorieTarget,
+    int proteinConsumed,
+    int fibreConsumed,
+  ) {
+    return 'आप $calorieTarget में से $caloriesConsumed किलोकलोरी पर हैं, $proteinConsumed ग्रा प्रोटीन और $fibreConsumed ग्रा फाइबर दर्ज। भूख प्रोटीन, फाइबर, समय या पानी से जुड़ी हो सकती है — नैतिक विफलता नहीं।';
+  }
+
+  @override
+  String assistantBodyHunger(
+    int caloriesConsumed,
+    int proteinConsumed,
+    int fibreConsumed,
+  ) {
+    return 'आपने आज $caloriesConsumed किलोकलोरी, $proteinConsumed ग्रा प्रोटीन और $fibreConsumed ग्रा फाइबर दर्ज किया। प्रोटीन, फाइबर और धीमी गति अक्सर भूख सुधारती है — भोजन को बुरा बताने से नहीं।';
+  }
+
+  @override
+  String assistantBodyLookupFound(
+    String foodName,
+    String portionName,
+    int kcal,
+    int proteinG,
+    String sourceName,
+    String confidence,
+  ) {
+    return '$foodName · $portionName: ≈ $kcal किलोकलोरी और $proteinG ग्रा प्रोटीन। स्रोत: $sourceName। विश्वसनीयता: $confidence।';
+  }
+
+  @override
+  String assistantBodyLookupNoNutrition(String foodName, String sourceName) {
+    return '$foodName $sourceName में मिला, पर विश्वसनीय कैलोरी डेटा उपलब्ध नहीं। न्यूट्रीवोया संख्या गढ़ेगा नहीं।';
+  }
+
+  @override
+  String assistantBodyLookupMissing(String foodName) {
+    return '“$foodName” से कोई संरचित भोजन नहीं मिला। दूसरा नाम, बारकोड या व्यक्तिगत रेसिपी आज़माएँ — कैलोरी का अनुमान नहीं लगाया जाएगा।';
+  }
+
+  @override
+  String get assistantBodySubstitute =>
+      'पहले हिस्सा बदलें, सब्ज़ियाँ जोड़ें, या प्रोटीन साथ दें। बदलना वैकल्पिक है — संशोधन अक्सर सांस्कृतिक भोजन बचाए रखता है।';
+
+  @override
+  String get assistantBodyMedical =>
+      'न्यूट्रीवोया निदान, दवा, गर्भावस्था जटिलताओं, खाने संबंधी विकारों या अन्य चिकित्सकीय स्थितियों पर सलाह नहीं दे सकता। उपयुक्त पेशेवर से सलाह लें।';
+
+  @override
+  String get assistantBodyUnknown =>
+      'इन जैसे प्रश्न पूछें: “क्या मैं चावल खा सकता/सकती हूँ?”, “प्रोटीन कैसे बढ़ाऊँ?”, “रोटी में कितनी कैलोरी?”, या “भूख क्यों लगती है?”';
+
+  @override
+  String get assistantTipAskRice =>
+      'पूछें कि सांस्कृतिक मुख्य भोजन आपके लक्ष्यों में फिट हो सकता है या नहीं';
+
+  @override
+  String get assistantTipAskBalance =>
+      'पूछें कि आज के भोजन आपके लक्ष्यों से कैसे मेल खाते हैं';
+
+  @override
+  String get assistantTipAskProtein =>
+      'पूछें कि परिचित भोजन से प्रोटीन कैसे बढ़ाएँ';
+
+  @override
+  String get assistantTipAskFoodLookup =>
+      'डेटाबेस के भोजन के लिए “calories in …” पूछें';
+
+  @override
+  String get assistantTipSeekProfessional =>
+      'डॉक्टर, आहार विशेषज्ञ या योग्य चिकित्सक से संपर्क करें';
+
+  @override
+  String get assistantTipFoodNotFound =>
+      'दूसरी वर्तनी, उपनाम या बारकोड स्कैन आज़माएँ';
+
+  @override
+  String get assistantTipNutritionUnavailable =>
+      'पोषण डेटा उपलब्ध नहीं — कोई गढ़ी कैलोरी नहीं';
+
+  @override
+  String get assistantTipVerifyPortion =>
+      'लॉग करने से पहले पुष्टि करें कि हिस्सा सही है';
+
+  @override
+  String get assistantTipNoMoralFood =>
+      'कोई भोजन स्वयं अच्छा या बुरा नहीं — संदर्भ मायने रखता है';
+
+  @override
+  String get assistantTipHungerProteinFibre =>
+      'प्रोटीन और फाइबर जाँचें — दोनों तृप्ति में मदद करते हैं';
+
+  @override
+  String get assistantTipHungerPace =>
+      'थोड़ा धीरे खाएँ और सब्ज़ियाँ शामिल करें';
+
+  @override
+  String get assistantTipProteinPairDal =>
+      'अनाज के साथ दाल, फलियाँ या मसूर जोड़ें';
+
+  @override
+  String get assistantTipProteinPairYoghurt =>
+      'दही, पनीर या गाढ़ा डेयरी साथ जोड़ें';
+
+  @override
+  String get assistantTipProteinPairEgg =>
+      'अपनी रसोई के अनुसार अंडा, मछली, टोफू या दुबला मांस जोड़ें';
+
+  @override
+  String get assistantTipModifyNotReplace =>
+      'पसंदीदा भोजन बदलने से पहले उसे संशोधित करें';
+
+  @override
+  String get assistantTipModifyPortion =>
+      'पहले मुख्य भोजन का छोटा हिस्सा आज़माएँ';
+
+  @override
+  String get assistantTipAddVegetables =>
+      'मात्रा और फाइबर के लिए सब्ज़ियाँ या सलाद जोड़ें';
+
+  @override
+  String get assistantTipAddProteinSide =>
+      'मुख्य भोजन हटाने के बजाय प्रोटीन युक्त साथ जोड़ें';
+
+  @override
+  String get assistantTipLogSomething =>
+      'वास्तविक पैटर्न के लिए कोई भोजन दर्ज करें';
 }

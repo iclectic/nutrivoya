@@ -358,5 +358,238 @@
   "barcodeInvalid": "Eso no parece un código de barras válido. Usa de 8 a 14 dígitos.",
   "barcodeNetworkError": "No se pudo alcanzar la base de alimentos envasados. Comprueba tu conexión e inténtalo de nuevo.",
   "barcodeTryAgain": "Intentar de nuevo",
-  "barcodeCrowdsourcedNote": "Los datos de alimentos envasados provienen de Open Food Facts y pueden estar incompletos o ser colaborativos. Verifica siempre el tamaño de la porción antes de registrar."
+  "barcodeCrowdsourcedNote": "Los datos de alimentos envasados provienen de Open Food Facts y pueden estar incompletos o ser colaborativos. Verifica siempre el tamaño de la porción antes de registrar.",
+  "assistantTitle": "Pregunta a Nutrivoya",
+  "assistantIntro": "Pregunta sobre tus comidas, alimentos culturales, proteínas o hambre: las respuestas usan tu diario, objetivos y base de alimentos. Nunca se inventan cifras.",
+  "assistantWellnessDisclaimer": "Nutrivoya ofrece orientación general de bienestar, no consejo médico.",
+  "assistantMedicalDisclaimer": "Esto parece un tema médico o de alto riesgo. Habla con un profesional de la salud cualificado. Nutrivoya no diagnostica, trata ni prescribe.",
+  "assistantTryAsking": "Prueba a preguntar",
+  "assistantSuggestions": "Sugerencias",
+  "assistantSources": "Fuentes",
+  "assistantInputHint": "Pregunta sobre arroz, proteína, equilibrio…",
+  "assistantSend": "Enviar",
+  "assistantClear": "Borrar chat",
+  "assistantPromptRice": "¿Puedo seguir comiendo arroz mientras bajo de peso?",
+  "assistantPromptBalance": "¿Cómo equilibro las comidas de hoy?",
+  "assistantPromptProtein": "¿Cómo subo la proteína con alimentos familiares?",
+  "assistantPromptHunger": "¿Por qué sigo con hambre cerca de mi objetivo de calorías?",
+  "assistantPromptRoti": "¿Cuántas calorías tiene el roti?",
+  "assistantHeadlineCultural": "Sí — {staple} puede encajar en tus objetivos",
+  "@assistantHeadlineCultural": {
+    "placeholders": {
+      "staple": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantHeadlineBalance": "Equilibrio de las comidas de hoy",
+  "assistantHeadlineProtein": "Subir proteína con alimentos familiares",
+  "assistantHeadlineHunger": "Hambre cerca de tu objetivo calórico",
+  "assistantHeadlineLookupFound": "Nutrición de {foodName}",
+  "@assistantHeadlineLookupFound": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantHeadlineLookupMissing": "Sin coincidencia para “{foodName}”",
+  "@assistantHeadlineLookupMissing": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantHeadlineSubstitute": "Modifica antes de sustituir",
+  "assistantHeadlineMedical": "Busca orientación profesional",
+  "assistantHeadlineUnknown": "Necesito una pregunta más clara",
+  "assistantBodyCultural": "{staple} forma parte habitual de la comida {cuisine}. No hace falta abandonarlo: ajusta porciones y acompañamientos según tu objetivo.",
+  "@assistantBodyCultural": {
+    "placeholders": {
+      "staple": {
+        "type": "String"
+      },
+      "cuisine": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyCulturalWithData": "{staple} puede quedarse en tu patrón. Según la base, {foodName} ({portionName}) tiene unas {kcal} kcal ({sourceName}). Prefiere una porción menor o añade verduras y una fuente de proteína en lugar de eliminar el alimento.",
+  "@assistantBodyCulturalWithData": {
+    "placeholders": {
+      "staple": {
+        "type": "String"
+      },
+      "foodName": {
+        "type": "String"
+      },
+      "portionName": {
+        "type": "String"
+      },
+      "kcal": {
+        "type": "int"
+      },
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyBalanceWithTargets": "Hoy has registrado {caloriesConsumed} de {calorieTarget} kcal y {proteinConsumed} de {proteinTarget} g de proteína en {entryCount} entradas. Usa alimentos familiares y ajustes pequeños — sin moralizar.",
+  "@assistantBodyBalanceWithTargets": {
+    "placeholders": {
+      "caloriesConsumed": {
+        "type": "int"
+      },
+      "calorieTarget": {
+        "type": "int"
+      },
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "proteinTarget": {
+        "type": "int"
+      },
+      "entryCount": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantBodyBalanceNoTargets": "Hoy has registrado {caloriesConsumed} kcal y {proteinConsumed} g de proteína en {entryCount} entradas. Define objetivos en Ajustes para más claridad, o sigue registrando comidas familiares.",
+  "@assistantBodyBalanceNoTargets": {
+    "placeholders": {
+      "caloriesConsumed": {
+        "type": "int"
+      },
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "entryCount": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantBodyProteinWithTargets": "Has registrado {proteinConsumed} de {proteinTarget} g de proteína hoy (faltan {proteinGap} g). Mantén los alimentos {cuisine} y añade acompañamientos ricos en proteína.",
+  "@assistantBodyProteinWithTargets": {
+    "placeholders": {
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "proteinTarget": {
+        "type": "int"
+      },
+      "proteinGap": {
+        "type": "int"
+      },
+      "cuisine": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyProtein": "Has registrado {proteinConsumed} g de proteína hoy. Súbela con acompañamientos {cuisine} familiares en lugar de sustituir tus comidas.",
+  "@assistantBodyProtein": {
+    "placeholders": {
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "cuisine": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyHungerWithTargets": "Estás en {caloriesConsumed} de {calorieTarget} kcal, con {proteinConsumed} g de proteína y {fibreConsumed} g de fibra. El hambre puede deberse a proteína, fibra, ritmo de comida o agua — no a un fallo moral.",
+  "@assistantBodyHungerWithTargets": {
+    "placeholders": {
+      "caloriesConsumed": {
+        "type": "int"
+      },
+      "calorieTarget": {
+        "type": "int"
+      },
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "fibreConsumed": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantBodyHunger": "Has registrado {caloriesConsumed} kcal, {proteinConsumed} g de proteína y {fibreConsumed} g de fibra. El hambre suele mejorar con proteína, fibra y comer más despacio — no etiquetando alimentos como malos.",
+  "@assistantBodyHunger": {
+    "placeholders": {
+      "caloriesConsumed": {
+        "type": "int"
+      },
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "fibreConsumed": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantBodyLookupFound": "{foodName} · {portionName}: ≈ {kcal} kcal y {proteinG} g de proteína. Fuente: {sourceName}. Confianza: {confidence}.",
+  "@assistantBodyLookupFound": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      },
+      "portionName": {
+        "type": "String"
+      },
+      "kcal": {
+        "type": "int"
+      },
+      "proteinG": {
+        "type": "int"
+      },
+      "sourceName": {
+        "type": "String"
+      },
+      "confidence": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyLookupNoNutrition": "{foodName} se encontró en {sourceName}, pero no hay datos calóricos fiables. Nutrivoya no inventará un número.",
+  "@assistantBodyLookupNoNutrition": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      },
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyLookupMissing": "Ningún alimento estructurado coincide con “{foodName}”. Prueba otro nombre, un código de barras o una receta personal — no se adivinarán las calorías.",
+  "@assistantBodyLookupMissing": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodySubstitute": "Empieza cambiando el tamaño de la porción, añadiendo verduras o acompañando con proteína. Sustituir es opcional: modificar suele conservar las comidas culturales.",
+  "assistantBodyMedical": "Nutrivoya no puede aconsejar sobre diagnóstico, medicamentos, complicaciones del embarazo, trastornos alimentarios u otras situaciones clínicas. Consulta a un profesional adecuado.",
+  "assistantBodyUnknown": "Prueba preguntas como “¿Puedo seguir comiendo arroz?”, “¿Cómo subo la proteína?”, “¿Cuántas calorías tiene el roti?” o “¿Por qué sigo con hambre?”",
+  "assistantTipAskRice": "Pregunta si un alimento cultural encaja en tus objetivos",
+  "assistantTipAskBalance": "Pregunta cómo se ven las comidas de hoy frente a tus objetivos",
+  "assistantTipAskProtein": "Pregunta cómo subir proteína con alimentos familiares",
+  "assistantTipAskFoodLookup": "Pregunta “calorías en …” para un alimento de la base",
+  "assistantTipSeekProfessional": "Contacta con un médico, dietista u otro clínico cualificado",
+  "assistantTipFoodNotFound": "Prueba otra ortografía, un alias o escanear el código de barras",
+  "assistantTipNutritionUnavailable": "Datos nutricionales no disponibles — sin calorías inventadas",
+  "assistantTipVerifyPortion": "Confirma que la porción coincide con lo que comiste",
+  "assistantTipNoMoralFood": "Ningún alimento es bueno o malo por sí solo — importa el contexto",
+  "assistantTipHungerProteinFibre": "Revisa proteína y fibra: ambas ayudan a la saciedad",
+  "assistantTipHungerPace": "Come un poco más despacio e incluye verduras para volumen",
+  "assistantTipProteinPairDal": "Combina cereales con dal, legumbres o lentejas",
+  "assistantTipProteinPairYoghurt": "Añade yogur, paneer o lácteo colado",
+  "assistantTipProteinPairEgg": "Añade huevo, pescado, tofu o carne magra según tu cocina",
+  "assistantTipModifyNotReplace": "Modifica la comida que ya te gusta antes de sustituirla",
+  "assistantTipModifyPortion": "Prueba primero una porción más pequeña del alimento base",
+  "assistantTipAddVegetables": "Añade verduras o ensalada para volumen y fibra",
+  "assistantTipAddProteinSide": "Añade un acompañamiento proteico en lugar de eliminar el alimento base",
+  "assistantTipLogSomething": "Registra una comida para que el consejo use tu patrón real"
 }

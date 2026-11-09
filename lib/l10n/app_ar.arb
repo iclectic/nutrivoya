@@ -358,5 +358,238 @@
   "barcodeInvalid": "هذا لا يبدو رمزًا شريطيًا صالحًا. استخدم من 8 إلى 14 رقمًا.",
   "barcodeNetworkError": "تعذّر الوصول إلى قاعدة الأطعمة المعلّبة. تحقق من اتصالك وحاول مجددًا.",
   "barcodeTryAgain": "حاول مجددًا",
-  "barcodeCrowdsourcedNote": "بيانات الأطعمة المعلّبة تأتي من Open Food Facts وقد تكون غير مكتملة أو تعاونية. تحقق دائمًا من حجم الحصة قبل التسجيل."
+  "barcodeCrowdsourcedNote": "بيانات الأطعمة المعلّبة تأتي من Open Food Facts وقد تكون غير مكتملة أو تعاونية. تحقق دائمًا من حجم الحصة قبل التسجيل.",
+  "assistantTitle": "اسأل نوتريڤويا",
+  "assistantIntro": "اسأل عن وجباتك أو الأطعمة الثقافية أو البروتين أو الجوع — تعتمد الإجابات على يومياتك وأهدافك وقاعدة الأطعمة. لا تُختلق أي أرقام.",
+  "assistantWellnessDisclaimer": "تقدم نوتريڤويا إرشادات عافية عامة وليست نصيحة طبية.",
+  "assistantMedicalDisclaimer": "يبدو هذا موضوعًا طبيًا أو عالي المخاطر. تحدّث إلى مختص صحي مؤهل. لا تستطيع نوتريڤويا التشخيص أو العلاج أو الوصفات.",
+  "assistantTryAsking": "جرّب أن تسأل",
+  "assistantSuggestions": "اقتراحات",
+  "assistantSources": "المصادر",
+  "assistantInputHint": "اسأل عن الأرز أو البروتين أو التوازن…",
+  "assistantSend": "إرسال",
+  "assistantClear": "مسح المحادثة",
+  "assistantPromptRice": "هل يمكنني الاستمرار في أكل الأرز أثناء خسارة الوزن؟",
+  "assistantPromptBalance": "كيف أوازن وجبات اليوم؟",
+  "assistantPromptProtein": "كيف أرفع البروتين بأطعمة مألوفة؟",
+  "assistantPromptHunger": "لماذا ما زلت جائعًا قرب هدف السعرات؟",
+  "assistantPromptRoti": "كم سعرة في الروتي؟",
+  "assistantHeadlineCultural": "نعم — يمكن أن يناسب {staple} أهدافك",
+  "@assistantHeadlineCultural": {
+    "placeholders": {
+      "staple": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantHeadlineBalance": "توازن وجبات اليوم",
+  "assistantHeadlineProtein": "رفع البروتين بأطعمة مألوفة",
+  "assistantHeadlineHunger": "الجوع قرب هدف السعرات",
+  "assistantHeadlineLookupFound": "تغذية {foodName}",
+  "@assistantHeadlineLookupFound": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantHeadlineLookupMissing": "لا تطابق لـ «{foodName}»",
+  "@assistantHeadlineLookupMissing": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantHeadlineSubstitute": "عدّل قبل أن تستبدل",
+  "assistantHeadlineMedical": "اطلب توجيهًا مهنيًا",
+  "assistantHeadlineUnknown": "أحتاج سؤالًا أوضح",
+  "assistantBodyCultural": "{staple} جزء معتاد من أكل {cuisine}. لست مضطرًا للتخلي عنه — اضبط الحصص والمرافقات وفق هدفك.",
+  "@assistantBodyCultural": {
+    "placeholders": {
+      "staple": {
+        "type": "String"
+      },
+      "cuisine": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyCulturalWithData": "يمكن أن يبقى {staple} في نمطك. وفق قاعدة الأطعمة، {foodName} ({portionName}) حوالي {kcal} سعرة ({sourceName}). فضّل حصة أصغر أو أضف خضارًا ومصدر بروتين بدل حذف الطعام الأساسي تمامًا.",
+  "@assistantBodyCulturalWithData": {
+    "placeholders": {
+      "staple": {
+        "type": "String"
+      },
+      "foodName": {
+        "type": "String"
+      },
+      "portionName": {
+        "type": "String"
+      },
+      "kcal": {
+        "type": "int"
+      },
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyBalanceWithTargets": "سجّلت اليوم {caloriesConsumed} من {calorieTarget} سعرة و{proteinConsumed} من {proteinTarget} غ بروتين عبر {entryCount} إدخالات. استخدم أطعمة مألوفة وتعديلات صغيرة — دون أحكام أخلاقية على الطعام.",
+  "@assistantBodyBalanceWithTargets": {
+    "placeholders": {
+      "caloriesConsumed": {
+        "type": "int"
+      },
+      "calorieTarget": {
+        "type": "int"
+      },
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "proteinTarget": {
+        "type": "int"
+      },
+      "entryCount": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantBodyBalanceNoTargets": "سجّلت اليوم {caloriesConsumed} سعرة و{proteinConsumed} غ بروتين عبر {entryCount} إدخالات. حدّد أهدافًا في الإعدادات لمزيد من الوضوح، أو واصل تسجيل الوجبات المألوفة.",
+  "@assistantBodyBalanceNoTargets": {
+    "placeholders": {
+      "caloriesConsumed": {
+        "type": "int"
+      },
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "entryCount": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantBodyProteinWithTargets": "سجّلت {proteinConsumed} من {proteinTarget} غ بروتين اليوم (يتبقى {proteinGap} غ). أبقِ أساسيات {cuisine} وأضف مرافقات غنية بالبروتين.",
+  "@assistantBodyProteinWithTargets": {
+    "placeholders": {
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "proteinTarget": {
+        "type": "int"
+      },
+      "proteinGap": {
+        "type": "int"
+      },
+      "cuisine": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyProtein": "سجّلت {proteinConsumed} غ بروتين اليوم. ارفعه بمرافقات {cuisine} مألوفة بدل استبدال وجباتك.",
+  "@assistantBodyProtein": {
+    "placeholders": {
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "cuisine": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyHungerWithTargets": "أنت عند {caloriesConsumed} من {calorieTarget} سعرة، مع {proteinConsumed} غ بروتين و{fibreConsumed} غ ألياف. قد يرتبط الجوع بالبروتين أو الألياف أو التوقيت أو الماء — وليس بفشل أخلاقي.",
+  "@assistantBodyHungerWithTargets": {
+    "placeholders": {
+      "caloriesConsumed": {
+        "type": "int"
+      },
+      "calorieTarget": {
+        "type": "int"
+      },
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "fibreConsumed": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantBodyHunger": "سجّلت {caloriesConsumed} سعرة و{proteinConsumed} غ بروتين و{fibreConsumed} غ ألياف اليوم. غالبًا يتحسن الجوع بالبروتين والألياف وتناول أبطأ — لا بتصنيف الأطعمة كسيئة.",
+  "@assistantBodyHunger": {
+    "placeholders": {
+      "caloriesConsumed": {
+        "type": "int"
+      },
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "fibreConsumed": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantBodyLookupFound": "{foodName} · {portionName}: ≈ {kcal} سعرة و{proteinG} غ بروتين. المصدر: {sourceName}. الثقة: {confidence}.",
+  "@assistantBodyLookupFound": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      },
+      "portionName": {
+        "type": "String"
+      },
+      "kcal": {
+        "type": "int"
+      },
+      "proteinG": {
+        "type": "int"
+      },
+      "sourceName": {
+        "type": "String"
+      },
+      "confidence": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyLookupNoNutrition": "وُجد {foodName} في {sourceName}، لكن لا تتوفر بيانات سعرات موثوقة. لن تختلق نوتريڤويا رقمًا.",
+  "@assistantBodyLookupNoNutrition": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      },
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyLookupMissing": "لا طعام منظم يطابق «{foodName}». جرّب اسمًا آخر أو باركودًا أو وصفة شخصية — لن تُخمَّن السعرات.",
+  "@assistantBodyLookupMissing": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodySubstitute": "ابدأ بتغيير حجم الحصة أو إضافة خضار أو مرافقة بروتين مع الطعام الذي تأكله أصلًا. الاستبدال اختياري — التعديل يحافظ غالبًا على الوجبات الثقافية.",
+  "assistantBodyMedical": "لا تستطيع نوتريڤويا تقديم مشورة حول التشخيص أو الأدوية أو مضاعفات الحمل أو اضطرابات الأكل أو حالات سريرية أخرى. راجع مختصًا مناسبًا.",
+  "assistantBodyUnknown": "جرّب أسئلة مثل «هل يمكنني أكل الأرز؟» أو «كيف أرفع البروتين؟» أو «كم سعرة في الروتي؟» أو «لماذا ما زلت جائعًا؟»",
+  "assistantTipAskRice": "اسأل إن كان طعام ثقافي أساسي يناسب أهدافك",
+  "assistantTipAskBalance": "اسأل كيف تبدو وجبات اليوم مقابل أهدافك",
+  "assistantTipAskProtein": "اسأل كيف ترفع البروتين بأطعمة مألوفة",
+  "assistantTipAskFoodLookup": "اسأل «calories in …» لطعام في القاعدة",
+  "assistantTipSeekProfessional": "تواصل مع طبيب أو اختصاصي تغذية أو مختص مؤهل",
+  "assistantTipFoodNotFound": "جرّب تهجئة أخرى أو اسمًا بديلًا أو مسح باركود",
+  "assistantTipNutritionUnavailable": "بيانات التغذية غير متاحة — بلا سعرات مختلقة",
+  "assistantTipVerifyPortion": "أكد أن الحصة تطابق ما أكلت قبل التسجيل",
+  "assistantTipNoMoralFood": "لا طعام جيد أو سيئ بذاته — السياق والنمط هما المهمان",
+  "assistantTipHungerProteinFibre": "تحقق من البروتين والألياف — كلاهما يدعم الشبع",
+  "assistantTipHungerPace": "كُل أبطأ قليلًا وأضف خضارًا للحجم",
+  "assistantTipProteinPairDal": "اربط الحبوب بالدال أو الفاصوليا أو العدس",
+  "assistantTipProteinPairYoghurt": "أضف لبنًا أو بانير أو منتجات ألبان مصفاة",
+  "assistantTipProteinPairEgg": "أضف بيضًا أو سمكًا أو توفو أو لحمًا قليل الدهن وفق مطبخك",
+  "assistantTipModifyNotReplace": "عدّل الوجبة التي تحبها قبل استبدالها",
+  "assistantTipModifyPortion": "جرّب أولًا حصة أصغر من الطعام الأساسي",
+  "assistantTipAddVegetables": "أضف خضارًا أو سلطة للحجم والألياف",
+  "assistantTipAddProteinSide": "أضف مرافقة بروتين بدل حذف الطعام الأساسي",
+  "assistantTipLogSomething": "سجّل وجبة حتى يستخدم النصح نمطك الحقيقي"
 }
