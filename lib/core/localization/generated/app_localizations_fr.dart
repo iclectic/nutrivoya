@@ -1677,4 +1677,26 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get catalogPublishNeedVerified =>
       'Seules les soumissions vérifiées peuvent être publiées';
+
+  @override
+  String get settingsOnDevicePhotoAssist => 'Aide photo sur l\'appareil';
+
+  @override
+  String get settingsOnDevicePhotoAssistNote =>
+      'Associe votre description au vocabulaire alimentaire sur cet appareil, puis consulte la nutrition structurée. N\'invente jamais de calories à partir de l\'image.';
+
+  @override
+  String get photoOnDeviceAssistNote =>
+      'Aide sur l\'appareil activée : votre description est associée au vocabulaire alimentaire, puis recherchée dans la base. Les pixels seuls n\'inventent ni aliments ni calories.';
+
+  @override
+  String get photoReasonRecognizer =>
+      'Correspondance vocabulaire sur l\'appareil';
+
+  @override
+  String get photoReasonCuisineToken =>
+      'Correspondance vocabulaire cuisine familière';
+
+  @override
+  String get photoReasonSearchMatch => 'Correspondance recherche description';
 }

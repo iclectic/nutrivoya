@@ -878,5 +878,11 @@
     "catalogVerifiedBadge": "Verified submission",
     "catalogPublishAction": "Publish to catalog",
     "catalogPublishDone": "Published to the public catalog",
-    "catalogPublishNeedVerified": "Only verified submissions can be published"
+    "catalogPublishNeedVerified": "Only verified submissions can be published",
+  "settingsOnDevicePhotoAssist": "ਡਿਵਾਈਸ ਉੱਤੇ ਫੋਟੋ ਸਹਾਇਤਾ",
+  "settingsOnDevicePhotoAssistNote": "ਤੁਹਾਡੇ ਵੇਰਵੇ ਨੂੰ ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਭੋਜਨ ਸ਼ਬਦਾਵਲੀ ਨਾਲ ਮਿਲਾਉਂਦਾ ਹੈ, ਫਿਰ ਢਾਂਚਾਗਤ ਪੋਸ਼ਣ ਖੋਜਦਾ ਹੈ। ਚਿੱਤਰ ਤੋਂ ਕੈਲੋਰੀ ਨਹੀਂ ਬਣਾਉਂਦਾ।",
+  "photoOnDeviceAssistNote": "ਡਿਵਾਈਸ ਸਹਾਇਤਾ ਚਾਲੂ ਹੈ: ਤੁਹਾਡਾ ਵੇਰਵਾ ਭੋਜਨ ਸ਼ਬਦਾਵਲੀ ਨਾਲ ਮਿਲਾਇਆ ਜਾਂਦਾ ਹੈ, ਫਿਰ ਡਾਟਾਬੇਸ ਵਿੱਚ ਖੋਜਿਆ ਜਾਂਦਾ ਹੈ। ਸਿਰਫ਼ ਪਿਕਸਲ ਤੋਂ ਭੋਜਨ ਜਾਂ ਕੈਲੋਰੀ ਨਹੀਂ ਬਣਦੇ।",
+  "photoReasonRecognizer": "ਡਿਵਾਈਸ ਸ਼ਬਦਾਵਲੀ ਮੇਲ",
+  "photoReasonCuisineToken": "ਜਾਣੀ-ਪਛਾਣੀ ਪਕਵਾਨ ਸ਼ਬਦਾਵਲੀ ਮੇਲ",
+  "photoReasonSearchMatch": "ਵੇਰਵਾ ਖੋਜ ਮੇਲ"
 }

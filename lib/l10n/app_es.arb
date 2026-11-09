@@ -878,5 +878,11 @@
     "catalogVerifiedBadge": "Envío verificado",
     "catalogPublishAction": "Publicar en el catálogo",
     "catalogPublishDone": "Publicado en el catálogo público",
-    "catalogPublishNeedVerified": "Solo se pueden publicar envíos verificados"
+    "catalogPublishNeedVerified": "Solo se pueden publicar envíos verificados",
+  "settingsOnDevicePhotoAssist": "Asistencia fotográfica en el dispositivo",
+  "settingsOnDevicePhotoAssistNote": "Empareja tu descripción con el vocabulario de alimentos en este dispositivo y luego consulta nutrición estructurada. Nunca inventa calorías a partir de la imagen.",
+  "photoOnDeviceAssistNote": "Asistencia en el dispositivo activa: tu descripción se compara con el vocabulario de alimentos y luego se busca en la base. Los píxeles solos nunca inventan alimentos ni calorías.",
+  "photoReasonRecognizer": "Coincidencia de vocabulario en el dispositivo",
+  "photoReasonCuisineToken": "Coincidencia de vocabulario de cocina familiar",
+  "photoReasonSearchMatch": "Coincidencia de búsqueda por descripción"
 }

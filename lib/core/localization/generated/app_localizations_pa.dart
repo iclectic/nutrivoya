@@ -1647,4 +1647,24 @@ class AppLocalizationsPa extends AppLocalizations {
   @override
   String get catalogPublishNeedVerified =>
       'Only verified submissions can be published';
+
+  @override
+  String get settingsOnDevicePhotoAssist => 'ਡਿਵਾਈਸ ਉੱਤੇ ਫੋਟੋ ਸਹਾਇਤਾ';
+
+  @override
+  String get settingsOnDevicePhotoAssistNote =>
+      'ਤੁਹਾਡੇ ਵੇਰਵੇ ਨੂੰ ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਭੋਜਨ ਸ਼ਬਦਾਵਲੀ ਨਾਲ ਮਿਲਾਉਂਦਾ ਹੈ, ਫਿਰ ਢਾਂਚਾਗਤ ਪੋਸ਼ਣ ਖੋਜਦਾ ਹੈ। ਚਿੱਤਰ ਤੋਂ ਕੈਲੋਰੀ ਨਹੀਂ ਬਣਾਉਂਦਾ।';
+
+  @override
+  String get photoOnDeviceAssistNote =>
+      'ਡਿਵਾਈਸ ਸਹਾਇਤਾ ਚਾਲੂ ਹੈ: ਤੁਹਾਡਾ ਵੇਰਵਾ ਭੋਜਨ ਸ਼ਬਦਾਵਲੀ ਨਾਲ ਮਿਲਾਇਆ ਜਾਂਦਾ ਹੈ, ਫਿਰ ਡਾਟਾਬੇਸ ਵਿੱਚ ਖੋਜਿਆ ਜਾਂਦਾ ਹੈ। ਸਿਰਫ਼ ਪਿਕਸਲ ਤੋਂ ਭੋਜਨ ਜਾਂ ਕੈਲੋਰੀ ਨਹੀਂ ਬਣਦੇ।';
+
+  @override
+  String get photoReasonRecognizer => 'ਡਿਵਾਈਸ ਸ਼ਬਦਾਵਲੀ ਮੇਲ';
+
+  @override
+  String get photoReasonCuisineToken => 'ਜਾਣੀ-ਪਛਾਣੀ ਪਕਵਾਨ ਸ਼ਬਦਾਵਲੀ ਮੇਲ';
+
+  @override
+  String get photoReasonSearchMatch => 'ਵੇਰਵਾ ਖੋਜ ਮੇਲ';
 }

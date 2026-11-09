@@ -4,6 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:nutrivoya/core/models/food.dart';
 import 'package:nutrivoya/core/models/photo_recognition.dart';
 import 'package:nutrivoya/core/services/food_photo_recognizer.dart';
+import 'package:nutrivoya/core/services/on_device_food_label_model.dart';
 import 'package:nutrivoya/features/food/data/local_food_dataset.dart';
 
 void main() {
@@ -76,6 +77,43 @@ void main() {
         PhotoSuggestionSource.recognizerQuery,
       );
       expect(suggestions.first.isCertain, isFalse);
+    });
+  });
+
+  group('OnDeviceAssistedPhotoRecognizer', () {
+    test('token lookup stays uncertain and never invents kcal', () async {
+      final assisted = OnDeviceAssistedPhotoRecognizer(
+        labelModel: const VocabularyOnDeviceFoodLabelModel(
+          defaultVocabulary: ['roti', 'dal'],
+        ),
+        vocabulary: const ['roti', 'dal'],
+      );
+      final suggestions = await assisted.suggest(
+        imageBytes: bytes,
+        description: 'roti with dal',
+        foodLookup: lookup,
+      );
+      expect(suggestions, isNotEmpty);
+      expect(suggestions.every((s) => s.isCertain == false), isTrue);
+      expect(
+        suggestions.any((s) => s.source == PhotoSuggestionSource.recognizerQuery),
+        isTrue,
+      );
+      expect(suggestions.first.food.nutrientsPer100g, isNotEmpty);
+    });
+
+    test('without description yields empty rather than fabricating', () async {
+      final assisted = OnDeviceAssistedPhotoRecognizer(
+        labelModel: const VocabularyOnDeviceFoodLabelModel(
+          defaultVocabulary: ['roti'],
+        ),
+        vocabulary: const ['roti'],
+      );
+      final suggestions = await assisted.suggest(
+        imageBytes: bytes,
+        foodLookup: lookup,
+      );
+      expect(suggestions, isEmpty);
     });
   });
 }

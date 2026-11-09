@@ -878,5 +878,11 @@
     "catalogVerifiedBadge": "Verified submission",
     "catalogPublishAction": "Publish to catalog",
     "catalogPublishDone": "Published to the public catalog",
-    "catalogPublishNeedVerified": "Only verified submissions can be published"
+    "catalogPublishNeedVerified": "Only verified submissions can be published",
+  "settingsOnDevicePhotoAssist": "مساعدة الصور على الجهاز",
+  "settingsOnDevicePhotoAssistNote": "يطابق وصفك مع مفردات الطعام على هذا الجهاز ثم يبحث عن تغذية منظمة. لا يخترع سعرات من الصورة أبدًا.",
+  "photoOnDeviceAssistNote": "المساعدة على الجهاز مفعّلة: يُطابق وصفك مع مفردات الطعام ثم يُبحث في قاعدة البيانات. البكسلات وحدها لا تخترع أطعمة أو سعرات.",
+  "photoReasonRecognizer": "مطابقة مفردات على الجهاز",
+  "photoReasonCuisineToken": "مطابقة مفردات مطبخ مألوف",
+  "photoReasonSearchMatch": "مطابقة بحث الوصف"
 }

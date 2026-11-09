@@ -4,12 +4,54 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/models/photo_recognition.dart';
 import '../../core/services/food_photo_recognizer.dart';
+import '../../core/services/on_device_food_label_model.dart';
 import '../../core/services/portion_estimation_service.dart';
+import '../../core/storage/local_preferences.dart';
+import '../food/data/local_food_dataset.dart';
 import '../food/food_providers.dart';
 import '../profile/profile_controller.dart';
 
+const onDevicePhotoAssistKey = 'nutrivoya.onDevicePhotoAssist';
+
+/// When true (default), photo suggest uses on-device vocabulary tokens → lookup.
+final onDevicePhotoAssistProvider =
+    StateNotifierProvider<OnDevicePhotoAssistController, bool>((ref) {
+  return OnDevicePhotoAssistController(ref.watch(localPreferencesSyncProvider));
+});
+
+class OnDevicePhotoAssistController extends StateNotifier<bool> {
+  OnDevicePhotoAssistController(this._prefs)
+      : super(_prefs.getString(onDevicePhotoAssistKey) != 'false');
+
+  final LocalPreferences _prefs;
+
+  Future<void> setEnabled(bool enabled) async {
+    await _prefs.setString(onDevicePhotoAssistKey, enabled ? 'true' : 'false');
+    state = enabled;
+  }
+}
+
+final foodVocabularyProvider = Provider<List<String>>((ref) {
+  return foodVocabularyFrom(LocalFoodDataset.all());
+});
+
+final onDeviceFoodLabelModelProvider = Provider<OnDeviceFoodLabelModel>((ref) {
+  final foods = LocalFoodDataset.all();
+  final vocabulary = ref.watch(foodVocabularyProvider);
+  final vocabularyModel = VocabularyOnDeviceFoodLabelModel(
+    defaultVocabulary: vocabulary,
+  );
+  final hybrid = HybridOnDeviceFoodLabelModel(vocabularyModel: vocabularyModel);
+  return CuisineBiasedOnDeviceFoodLabelModel(inner: hybrid, foods: foods);
+});
+
 final foodPhotoRecognizerProvider = Provider<FoodPhotoRecognizer>((ref) {
-  return const SearchAssistedPhotoRecognizer();
+  final assist = ref.watch(onDevicePhotoAssistProvider);
+  if (!assist) return const SearchAssistedPhotoRecognizer();
+  return OnDeviceAssistedPhotoRecognizer(
+    labelModel: ref.watch(onDeviceFoodLabelModelProvider),
+    vocabulary: ref.watch(foodVocabularyProvider),
+  );
 });
 
 final portionEstimationServiceProvider =
@@ -102,6 +144,8 @@ class PhotoSessionController extends StateNotifier<PhotoSessionState> {
       return;
     }
     final description = state.description.trim();
+    // Vocabulary / hybrid models still need a description; without one they
+    // emit no tokens. Fail fast with a clear message instead of a silent miss.
     if (description.isEmpty) {
       state = state.copyWith(errorKey: 'photoErrorNeedDescription');
       return;
