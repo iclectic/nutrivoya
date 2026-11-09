@@ -69,6 +69,37 @@ void main() {
       expect(entry.sourceName, 'Nutrivoya curated');
     });
 
+    test('scales iron when present and leaves other micros null', () {
+      final food = _testFood().copyWith(
+        nutrientsPer100g: {
+          ..._testFood().nutrientsPer100g,
+          NutrientCode.ironMg: const NutrientAmount(
+            code: NutrientCode.ironMg,
+            amountPer100g: 2.5,
+          ),
+        },
+      );
+      final entry = DiaryEntry.fromFood(
+        food: food,
+        mealType: MealType.lunch,
+        grams: 100,
+      );
+      expect(entry.ironMg, closeTo(2.5, 0.01));
+      expect(entry.calciumMg, isNull);
+      expect(entry.sodiumMg, isNull);
+    });
+
+    test('DailyTotals keeps unavailable micros as null', () {
+      final entry = DiaryEntry.fromFood(
+        food: _testFood(),
+        mealType: MealType.breakfast,
+        grams: 40,
+      );
+      final totals = DailyTotals.fromEntries([entry]);
+      expect(totals.ironMg, isNull);
+      expect(totals.caloriesKcal, greaterThan(0));
+    });
+
     test('null nutrients stay null in the entry', () {
       final food = _testFood().copyWith(
         nutrientsPer100g: {

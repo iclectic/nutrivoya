@@ -836,5 +836,47 @@
   },
   "reviewQueueNoEnergy": "Énergie indisponible",
   "settingsReviewerMode": "Mode réviseur",
-  "settingsReviewerModeNote": "Autoriser l'approbation ou le rejet des soumissions en attente sur cet appareil."
+  "settingsReviewerModeNote": "Autoriser l'approbation ou le rejet des soumissions en attente sur cet appareil.",
+  "dashboardMicrosTitle": "Micronutriments du jour",
+    "dashboardMicrosNote": "Shown only when logged foods include measured values. Missing nutrients stay indisponible — never invented.",
+    "dashboardMicroUnavailable": "indisponible",
+    "culturalSuggestionsTitle": "Idées de cuisine familière",
+    "culturalSuggestionsIntro": "Ideas from your food database that fit familiar cuisines and today's diary. Nutrition always comes from structured records.",
+    "culturalSuggestionsEmpty": "Add familiar cuisines in your profile, or log a meal, to see ideas from the food database.",
+    "culturalSuggestionsKcalPer100g": "{kcal} kcal / 100 g",
+    "@culturalSuggestionsKcalPer100g": {
+      "placeholders": {
+        "kcal": {
+          "type": "int"
+        }
+      }
+    },
+    "culturalSuggestionsKcalUnavailable": "Energy indisponible",
+    "culturalSuggestReasonFamiliarCuisine": "Cuisine familière",
+    "culturalSuggestReasonProteinFamiliar": "Protein-rich familiar food",
+    "culturalSuggestReasonProtein": "Higher protein option",
+    "culturalSuggestReasonFibreFamiliar": "Fibre-rich familiar food",
+    "culturalSuggestReasonFibre": "Higher fibre option",
+    "culturalSuggestReasonExplore": "Depuis la base alimentaire",
+    "educationTitle": "Éducation nutritionnelle",
+    "educationIntro": "Short guidance that respects cultural foods. Tips never invent calorie numbers for specific dishes.",
+    "educationTipPortionsTitle": "Portion first, ban rarely",
+    "educationTipPortionsBody": "Changing portion size or pairing a staple with vegetables and protein usually works better than removing a cultural food entirely.",
+    "educationTipStaplesTitle": "Staples are not automatically unhealthy",
+    "educationTipStaplesBody": "Rice, roti, yam, plantain, injera and similar staples can fit many goals when portions and overall patterns are considered.",
+    "educationTipPairProteinTitle": "Pair for balance",
+    "educationTipPairProteinBody": "If a meal is mostly starch, adding a familiar protein side or legumes can improve balance without abandoning the dish you enjoy.",
+    "educationTipFibreTitle": "Fibre from familiar plants",
+    "educationTipFibreBody": "Beans, lentils, vegetables and whole grains already common in many cuisines are practical fibre sources — check the food database for measured values.",
+    "educationTipMissingDataTitle": "Missing data stays missing",
+    "educationTipMissingDataBody": "When Nutrivoya lacks a nutrient value, it shows indisponible. The app will not invent calories or micros to fill gaps.",
+    "educationTipProvenanceTitle": "Provenance matters",
+    "educationTipProvenanceBody": "User-submitted foods stay labeled until verified. Verified still means user-submitted provenance — not an authoritative lab dataset.",
+    "catalogTitle": "Catalogue alimentaire public",
+    "catalogIntro": "Verified user-contributed foods shared for others to search. Values are never invented at publish time.",
+    "catalogEmpty": "No verified foods published yet. Approve a submission, then publish it from My submissions.",
+    "catalogVerifiedBadge": "Soumission vérifiée",
+    "catalogPublishAction": "Publier au catalogue",
+    "catalogPublishDone": "Publié dans le catalogue public",
+    "catalogPublishNeedVerified": "Seules les soumissions vérifiées peuvent être publiées"
 }

@@ -6,6 +6,9 @@ import '../features/add_product/add_product_screen.dart';
 import '../features/add_product/my_submissions_screen.dart';
 import '../features/add_product/review_queue_screen.dart';
 import '../features/assistant/assistant_screen.dart';
+import '../features/catalog/public_catalog_screen.dart';
+import '../features/cultural/cultural_suggestions_screen.dart';
+import '../features/education/education_screen.dart';
 import '../features/auth/auth_controller.dart';
 import '../features/auth/auth_form_screen.dart';
 import '../features/auth/reset_password_screen.dart';
@@ -140,6 +143,18 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/review-queue',
         builder: (context, state) => const ReviewQueueScreen(),
+      ),
+      GoRoute(
+        path: '/cultural-suggestions',
+        builder: (context, state) => const CulturalSuggestionsScreen(),
+      ),
+      GoRoute(
+        path: '/education',
+        builder: (context, state) => const EducationScreen(),
+      ),
+      GoRoute(
+        path: '/catalog',
+        builder: (context, state) => const PublicCatalogScreen(),
       ),
       GoRoute(
         path: '/assistant',

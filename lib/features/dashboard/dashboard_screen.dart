@@ -71,6 +71,12 @@ class DashboardScreen extends ConsumerWidget {
                 l10n: l10n,
               ),
             ),
+            const SizedBox(height: 12),
+            totalsAsync.when(
+              loading: () => const SizedBox.shrink(),
+              error: (_, _) => const SizedBox.shrink(),
+              data: (totals) => _MicroSection(totals: totals, l10n: l10n),
+            ),
             if (targets?.isEstimate == true) ...[
               const SizedBox(height: 8),
               Text(
@@ -286,6 +292,52 @@ class _MacroRow extends StatelessWidget {
                 ),
               ))
           .toList(),
+    );
+  }
+}
+
+class _MicroSection extends StatelessWidget {
+  const _MicroSection({required this.totals, required this.l10n});
+  final DailyTotals totals;
+  final AppLocalizations l10n;
+
+  @override
+  Widget build(BuildContext context) {
+    final items = [
+      (l10n.nutrientIronMg, totals.ironMg, 'mg'),
+      (l10n.nutrientCalciumMg, totals.calciumMg, 'mg'),
+      (l10n.nutrientPotassiumMg, totals.potassiumMg, 'mg'),
+      (l10n.nutrientSodiumMg, totals.sodiumMg, 'mg'),
+      (l10n.nutrientVitaminCMg, totals.vitaminCMg, 'mg'),
+    ];
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(l10n.dashboardMicrosTitle,
+            style: Theme.of(context).textTheme.titleSmall),
+        const SizedBox(height: 4),
+        Text(
+          l10n.dashboardMicrosNote,
+          style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                color: Theme.of(context).colorScheme.onSurfaceVariant,
+              ),
+        ),
+        const SizedBox(height: 8),
+        Wrap(
+          spacing: 8,
+          runSpacing: 8,
+          children: [
+            for (final item in items)
+              Chip(
+                label: Text(
+                  item.$2 == null
+                      ? '${item.$1}: ${l10n.dashboardMicroUnavailable}'
+                      : '${item.$1}: ${item.$2!.toStringAsFixed(1)} ${item.$3}',
+                ),
+              ),
+          ],
+        ),
+      ],
     );
   }
 }

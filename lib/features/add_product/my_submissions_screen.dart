@@ -47,14 +47,38 @@ class MySubmissionsScreen extends ConsumerWidget {
                     child: ListTile(
                       title: Text(s.name),
                       subtitle: Text(_statusLabel(l10n, s.status)),
-                      trailing: s.status.isInPersonalLibrary
-                          ? IconButton(
+                      trailing: Wrap(
+                        spacing: 4,
+                        children: [
+                          if (s.status == ProductSubmissionStatus.verified)
+                            IconButton(
+                              tooltip: l10n.catalogPublishAction,
+                              icon: const Icon(Icons.public),
+                              onPressed: () async {
+                                final ok = await ref
+                                    .read(addProductControllerProvider.notifier)
+                                    .publishToCatalog(s.id);
+                                if (!context.mounted) return;
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text(
+                                      ok
+                                          ? l10n.catalogPublishDone
+                                          : l10n.catalogPublishNeedVerified,
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                          if (s.status.isInPersonalLibrary)
+                            IconButton(
                               icon: const Icon(Icons.open_in_new),
                               onPressed: () => context.push(
                                 '/food/${Uri.encodeComponent(s.publishedFoodId)}',
                               ),
-                            )
-                          : null,
+                            ),
+                        ],
+                      ),
                       onLongPress: () async {
                         await ref
                             .read(addProductControllerProvider.notifier)
