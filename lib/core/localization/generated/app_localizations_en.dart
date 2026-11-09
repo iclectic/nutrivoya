@@ -1463,4 +1463,26 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get mySubmissionsEmpty =>
       'No submissions yet. Add a missing product from search, barcode, or Settings.';
+
+  @override
+  String get authContinueOffline => 'Continue without an account';
+
+  @override
+  String get authOfflineNote =>
+      'Your data stays on this device only. Accounts and sync are available when Nutrivoya is connected to its backend.';
+
+  @override
+  String get settingsSyncNow => 'Sync now';
+
+  @override
+  String settingsSyncPending(int count) {
+    return '$count changes waiting to sync';
+  }
+
+  @override
+  String get settingsSyncDone => 'Diary synced';
+
+  @override
+  String get settingsSyncUnavailable =>
+      'Sync unavailable — data is stored on this device';
 }

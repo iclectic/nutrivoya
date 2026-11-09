@@ -793,5 +793,18 @@
   "addProductStatusPublished": "En biblioteca personal (revisión pendiente)",
   "addProductStatusWithdrawn": "Retirado",
   "mySubmissionsTitle": "Mis envíos",
-  "mySubmissionsEmpty": "Aún no hay envíos. Añade un producto que falte desde búsqueda, código de barras o Ajustes."
+  "mySubmissionsEmpty": "Aún no hay envíos. Añade un producto que falte desde búsqueda, código de barras o Ajustes.",
+  "authContinueOffline": "Continuar sin cuenta",
+  "authOfflineNote": "Tus datos se quedan solo en este dispositivo. Las cuentas y la sincronización están disponibles cuando Nutrivoya esté conectado a su backend.",
+  "settingsSyncNow": "Sincronizar ahora",
+  "settingsSyncPending": "{count} cambios pendientes de sincronizar",
+  "@settingsSyncPending": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsSyncDone": "Diario sincronizado",
+  "settingsSyncUnavailable": "Sincronización no disponible — los datos se guardan en este dispositivo"
 }

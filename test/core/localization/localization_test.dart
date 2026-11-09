@@ -45,6 +45,8 @@ void main() {
         expect(l10n.photoTitle, isNotEmpty);
         expect(l10n.addProductTitle, isNotEmpty);
         expect(l10n.mySubmissionsTitle, isNotEmpty);
+        expect(l10n.settingsSyncNow, isNotEmpty);
+        expect(l10n.authContinueOffline, isNotEmpty);
         expect(l10n.goalsEstimateDisclaimer, isNotEmpty);
 
         // Locale-specific smoke checks — not English fallbacks for key locales.

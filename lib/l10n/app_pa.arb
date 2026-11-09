@@ -793,5 +793,18 @@
   "addProductStatusPublished": "ਨਿੱਜੀ ਲਾਇਬ੍ਰੇਰੀ ਵਿੱਚ (ਸਮੀਖਿਆ ਲੰਬਿਤ)",
   "addProductStatusWithdrawn": "ਵਾਪਸ ਲਿਆ",
   "mySubmissionsTitle": "ਮੇਰੇ ਸਬਮਿਸ਼ਨ",
-  "mySubmissionsEmpty": "ਹਾਲੇ ਕੋਈ ਸਬਮਿਸ਼ਨ ਨਹੀਂ। ਖੋਜ, ਬਾਰਕੋਡ ਜਾਂ ਸੈਟਿੰਗਾਂ ਤੋਂ ਗਾਇਬ ਉਤਪਾਦ ਜੋੜੋ।"
+  "mySubmissionsEmpty": "ਹਾਲੇ ਕੋਈ ਸਬਮਿਸ਼ਨ ਨਹੀਂ। ਖੋਜ, ਬਾਰਕੋਡ ਜਾਂ ਸੈਟਿੰਗਾਂ ਤੋਂ ਗਾਇਬ ਉਤਪਾਦ ਜੋੜੋ।",
+  "authContinueOffline": "ਬਿਨਾਂ ਖਾਤੇ ਜਾਰੀ ਰੱਖੋ",
+  "authOfflineNote": "ਤੁਹਾਡਾ ਡੇਟਾ ਸਿਰਫ਼ ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਰਹਿੰਦਾ ਹੈ। ਖਾਤੇ ਅਤੇ ਸਿੰਕ ਉਦੋਂ ਉਪਲਬਧ ਹਨ ਜਦੋਂ Nutrivoya ਬੈਕਐਂਡ ਨਾਲ ਜੁੜਿਆ ਹੋਵੇ।",
+  "settingsSyncNow": "ਹੁਣ ਸਿੰਕ ਕਰੋ",
+  "settingsSyncPending": "{count} ਬਦਲਾਅ ਸਿੰਕ ਦੀ ਉਡੀਕ ਵਿੱਚ",
+  "@settingsSyncPending": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsSyncDone": "ਡਾਇਰੀ ਸਿੰਕ ਹੋ ਗਈ",
+  "settingsSyncUnavailable": "ਸਿੰਕ ਉਪਲਬਧ ਨਹੀਂ — ਡੇਟਾ ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਸੰਭਾਲਿਆ ਹੈ"
 }

@@ -11,11 +11,23 @@ Western packaged foods, and to evaluate food by its actual nutritional
 composition, preparation, portion and dietary context — never by cultural
 stereotype.
 
-This repository currently contains **Milestones 1–12**:
+This repository currently contains **Milestones 1–13**:
 Foundation, Food Data Core, Food Logging, Calorie & Macro Targets,
 Cultural Food Intelligence (seed expansion), Recipe Builder,
 Multilingual Product, Barcode Products, Nutrition Assistant,
-Advanced Tracking, Photo Recognition, and User-Contributed Add Product.
+Advanced Tracking, Photo Recognition, User-Contributed Add Product,
+and Supabase Diary Sync.
+
+## Status — Milestone 13 (Diary Sync)
+
+Milestone 13 adds offline-first two-way diary sync with Supabase:
+
+- Drift schema v3: `remoteId`, `updatedAt`, `deletedAt` on diary rows
+- Soft deletes until pushed; last-write-wins against unsynced local edits
+- `DiarySyncService` push then pull; no-op when unsigned / unconfigured
+- Settings “Sync now”; auto-sync on sign-in
+- “Continue without an account” local-only mode when Supabase is absent
+- SQL migration with RLS: `supabase/migrations/0001_diary_entries.sql`
 
 ## Status — Milestone 12 (Add Product)
 
@@ -213,7 +225,7 @@ calorie and macro totals, and a full diary screen with edit/delete.
 - All diary entries are stored locally in SQLite (drift).
 - Food data is snapshotted at log time so the diary is accurate even if the
   underlying food data changes later.
-- New entries are flagged `syncPending = true` for a future Supabase sync
+- New entries are flagged `syncPending = true` and sync via Milestone 13
   layer.
 - The diary works fully offline; no network is required to log, edit, or
   view entries.
@@ -293,7 +305,6 @@ scanning, photo recognition or AI features — those arrive in later milestones.
 ### What remains intentionally out of scope
 
 - Remote review / community publish of user submissions (local personal library only)
-- Supabase diary sync (entries are flagged `syncPending`)
 - Full LLM chatbot (Ask Nutrivoya is structured / rule-based)
 - Photo calorie detection (vision never invents kcal)
 - Wearables / social / grocery delivery
@@ -323,7 +334,7 @@ lib/
 │   ├── food/               # Food repository, search service, data adapters
 │   ├── food_search/        # Search screen
 │   ├── food_details/       # Details screen + portion selector
-│   ├── diary/              # Diary repository, providers, screen
+│   ├── diary/              # Diary repository, providers, sync, screen
 │   ├── onboarding/         # Multi-step onboarding
 │   ├── dashboard/          # Today screen (live totals)
 │   ├── profile/            # Profile repo, controller, screen
@@ -418,7 +429,7 @@ Localization uses Flutter's official `gen-l10n` tooling.
   implementation and an unconfigured fallback, keeping auth logic out of
   widgets and swappable later.
 - **Offline-first intent:** user profile and preferences are persisted locally
-  via `SharedPreferences`. Diary sync arrives in Milestone 3.
+  via `SharedPreferences`. Diary sync uses Supabase when configured.
 - **Domain models** are immutable value types with stable `id` strings for
   storage and `l10nKey` mappings for the UI.
 - **Safety & respect:** the goal enum never forces weight loss; physiological
@@ -435,7 +446,7 @@ guidance. Aggressive weight-loss targets are not enabled in pregnancy.
 
 ## Next milestone
 
-Core milestones 1–12 from the original plan are implemented. Remaining
-product work includes Supabase diary sync, remote review of user
-submissions, and deeper on-device recognition models — always with user
-confirmation and structured nutrition lookup.
+Core milestones 1–13 from the original plan are implemented. Remaining
+product work includes remote review of user submissions and deeper
+on-device recognition models — always with user confirmation and
+structured nutrition lookup.

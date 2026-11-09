@@ -792,5 +792,18 @@
   "addProductStatusPublished": "In personal library (pending review)",
   "addProductStatusWithdrawn": "Withdrawn",
   "mySubmissionsTitle": "My submissions",
-  "mySubmissionsEmpty": "No submissions yet. Add a missing product from search, barcode, or Settings."
+  "mySubmissionsEmpty": "No submissions yet. Add a missing product from search, barcode, or Settings.",
+  "authContinueOffline": "Continue without an account",
+  "authOfflineNote": "Your data stays on this device only. Accounts and sync are available when Nutrivoya is connected to its backend.",
+  "settingsSyncNow": "Sync now",
+  "settingsSyncPending": "{count} changes waiting to sync",
+  "@settingsSyncPending": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsSyncDone": "Diary synced",
+  "settingsSyncUnavailable": "Sync unavailable — data is stored on this device"
 }

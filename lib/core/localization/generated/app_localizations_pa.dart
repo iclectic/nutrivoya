@@ -1448,4 +1448,26 @@ class AppLocalizationsPa extends AppLocalizations {
   @override
   String get mySubmissionsEmpty =>
       'ਹਾਲੇ ਕੋਈ ਸਬਮਿਸ਼ਨ ਨਹੀਂ। ਖੋਜ, ਬਾਰਕੋਡ ਜਾਂ ਸੈਟਿੰਗਾਂ ਤੋਂ ਗਾਇਬ ਉਤਪਾਦ ਜੋੜੋ।';
+
+  @override
+  String get authContinueOffline => 'ਬਿਨਾਂ ਖਾਤੇ ਜਾਰੀ ਰੱਖੋ';
+
+  @override
+  String get authOfflineNote =>
+      'ਤੁਹਾਡਾ ਡੇਟਾ ਸਿਰਫ਼ ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਰਹਿੰਦਾ ਹੈ। ਖਾਤੇ ਅਤੇ ਸਿੰਕ ਉਦੋਂ ਉਪਲਬਧ ਹਨ ਜਦੋਂ Nutrivoya ਬੈਕਐਂਡ ਨਾਲ ਜੁੜਿਆ ਹੋਵੇ।';
+
+  @override
+  String get settingsSyncNow => 'ਹੁਣ ਸਿੰਕ ਕਰੋ';
+
+  @override
+  String settingsSyncPending(int count) {
+    return '$count ਬਦਲਾਅ ਸਿੰਕ ਦੀ ਉਡੀਕ ਵਿੱਚ';
+  }
+
+  @override
+  String get settingsSyncDone => 'ਡਾਇਰੀ ਸਿੰਕ ਹੋ ਗਈ';
+
+  @override
+  String get settingsSyncUnavailable =>
+      'ਸਿੰਕ ਉਪਲਬਧ ਨਹੀਂ — ਡੇਟਾ ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਸੰਭਾਲਿਆ ਹੈ';
 }
