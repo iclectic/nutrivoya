@@ -49,6 +49,10 @@ void main() {
         expect(l10n.authContinueOffline, isNotEmpty);
         expect(l10n.reviewQueueTitle, isNotEmpty);
         expect(l10n.settingsReviewerMode, isNotEmpty);
+        expect(l10n.dashboardMicrosTitle, isNotEmpty);
+        expect(l10n.culturalSuggestionsTitle, isNotEmpty);
+        expect(l10n.educationTitle, isNotEmpty);
+        expect(l10n.catalogTitle, isNotEmpty);
         expect(l10n.goalsEstimateDisclaimer, isNotEmpty);
 
         // Locale-specific smoke checks — not English fallbacks for key locales.

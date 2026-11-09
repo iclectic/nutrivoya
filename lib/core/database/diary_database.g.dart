@@ -148,6 +148,59 @@ class $DiaryEntriesTable extends DiaryEntries
     type: DriftSqlType.double,
     requiredDuringInsert: false,
   );
+  static const VerificationMeta _sodiumMgMeta = const VerificationMeta(
+    'sodiumMg',
+  );
+  @override
+  late final GeneratedColumn<double> sodiumMg = GeneratedColumn<double>(
+    'sodium_mg',
+    aliasedName,
+    true,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _ironMgMeta = const VerificationMeta('ironMg');
+  @override
+  late final GeneratedColumn<double> ironMg = GeneratedColumn<double>(
+    'iron_mg',
+    aliasedName,
+    true,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _calciumMgMeta = const VerificationMeta(
+    'calciumMg',
+  );
+  @override
+  late final GeneratedColumn<double> calciumMg = GeneratedColumn<double>(
+    'calcium_mg',
+    aliasedName,
+    true,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _potassiumMgMeta = const VerificationMeta(
+    'potassiumMg',
+  );
+  @override
+  late final GeneratedColumn<double> potassiumMg = GeneratedColumn<double>(
+    'potassium_mg',
+    aliasedName,
+    true,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _vitaminCMgMeta = const VerificationMeta(
+    'vitaminCMg',
+  );
+  @override
+  late final GeneratedColumn<double> vitaminCMg = GeneratedColumn<double>(
+    'vitamin_c_mg',
+    aliasedName,
+    true,
+    type: DriftSqlType.double,
+    requiredDuringInsert: false,
+  );
   static const VerificationMeta _confidenceMeta = const VerificationMeta(
     'confidence',
   );
@@ -258,6 +311,11 @@ class $DiaryEntriesTable extends DiaryEntries
     carbohydrateG,
     fatG,
     fibreG,
+    sodiumMg,
+    ironMg,
+    calciumMg,
+    potassiumMg,
+    vitaminCMg,
     confidence,
     sourceName,
     loggedAt,
@@ -376,6 +434,42 @@ class $DiaryEntriesTable extends DiaryEntries
         fibreG.isAcceptableOrUnknown(data['fibre_g']!, _fibreGMeta),
       );
     }
+    if (data.containsKey('sodium_mg')) {
+      context.handle(
+        _sodiumMgMeta,
+        sodiumMg.isAcceptableOrUnknown(data['sodium_mg']!, _sodiumMgMeta),
+      );
+    }
+    if (data.containsKey('iron_mg')) {
+      context.handle(
+        _ironMgMeta,
+        ironMg.isAcceptableOrUnknown(data['iron_mg']!, _ironMgMeta),
+      );
+    }
+    if (data.containsKey('calcium_mg')) {
+      context.handle(
+        _calciumMgMeta,
+        calciumMg.isAcceptableOrUnknown(data['calcium_mg']!, _calciumMgMeta),
+      );
+    }
+    if (data.containsKey('potassium_mg')) {
+      context.handle(
+        _potassiumMgMeta,
+        potassiumMg.isAcceptableOrUnknown(
+          data['potassium_mg']!,
+          _potassiumMgMeta,
+        ),
+      );
+    }
+    if (data.containsKey('vitamin_c_mg')) {
+      context.handle(
+        _vitaminCMgMeta,
+        vitaminCMg.isAcceptableOrUnknown(
+          data['vitamin_c_mg']!,
+          _vitaminCMgMeta,
+        ),
+      );
+    }
     if (data.containsKey('confidence')) {
       context.handle(
         _confidenceMeta,
@@ -490,6 +584,26 @@ class $DiaryEntriesTable extends DiaryEntries
         DriftSqlType.double,
         data['${effectivePrefix}fibre_g'],
       ),
+      sodiumMg: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}sodium_mg'],
+      ),
+      ironMg: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}iron_mg'],
+      ),
+      calciumMg: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}calcium_mg'],
+      ),
+      potassiumMg: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}potassium_mg'],
+      ),
+      vitaminCMg: attachedDatabase.typeMapping.read(
+        DriftSqlType.double,
+        data['${effectivePrefix}vitamin_c_mg'],
+      ),
       confidence: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
         data['${effectivePrefix}confidence'],
@@ -545,6 +659,13 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
   final double? carbohydrateG;
   final double? fatG;
   final double? fibreG;
+
+  /// Optional micronutrients (schema v4). Null = unavailable — never invent.
+  final double? sodiumMg;
+  final double? ironMg;
+  final double? calciumMg;
+  final double? potassiumMg;
+  final double? vitaminCMg;
   final String confidence;
   final String? sourceName;
   final DateTime loggedAt;
@@ -573,6 +694,11 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
     this.carbohydrateG,
     this.fatG,
     this.fibreG,
+    this.sodiumMg,
+    this.ironMg,
+    this.calciumMg,
+    this.potassiumMg,
+    this.vitaminCMg,
     required this.confidence,
     this.sourceName,
     required this.loggedAt,
@@ -609,6 +735,21 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
     }
     if (!nullToAbsent || fibreG != null) {
       map['fibre_g'] = Variable<double>(fibreG);
+    }
+    if (!nullToAbsent || sodiumMg != null) {
+      map['sodium_mg'] = Variable<double>(sodiumMg);
+    }
+    if (!nullToAbsent || ironMg != null) {
+      map['iron_mg'] = Variable<double>(ironMg);
+    }
+    if (!nullToAbsent || calciumMg != null) {
+      map['calcium_mg'] = Variable<double>(calciumMg);
+    }
+    if (!nullToAbsent || potassiumMg != null) {
+      map['potassium_mg'] = Variable<double>(potassiumMg);
+    }
+    if (!nullToAbsent || vitaminCMg != null) {
+      map['vitamin_c_mg'] = Variable<double>(vitaminCMg);
     }
     map['confidence'] = Variable<String>(confidence);
     if (!nullToAbsent || sourceName != null) {
@@ -654,6 +795,21 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
       fibreG: fibreG == null && nullToAbsent
           ? const Value.absent()
           : Value(fibreG),
+      sodiumMg: sodiumMg == null && nullToAbsent
+          ? const Value.absent()
+          : Value(sodiumMg),
+      ironMg: ironMg == null && nullToAbsent
+          ? const Value.absent()
+          : Value(ironMg),
+      calciumMg: calciumMg == null && nullToAbsent
+          ? const Value.absent()
+          : Value(calciumMg),
+      potassiumMg: potassiumMg == null && nullToAbsent
+          ? const Value.absent()
+          : Value(potassiumMg),
+      vitaminCMg: vitaminCMg == null && nullToAbsent
+          ? const Value.absent()
+          : Value(vitaminCMg),
       confidence: Value(confidence),
       sourceName: sourceName == null && nullToAbsent
           ? const Value.absent()
@@ -692,6 +848,11 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
       carbohydrateG: serializer.fromJson<double?>(json['carbohydrateG']),
       fatG: serializer.fromJson<double?>(json['fatG']),
       fibreG: serializer.fromJson<double?>(json['fibreG']),
+      sodiumMg: serializer.fromJson<double?>(json['sodiumMg']),
+      ironMg: serializer.fromJson<double?>(json['ironMg']),
+      calciumMg: serializer.fromJson<double?>(json['calciumMg']),
+      potassiumMg: serializer.fromJson<double?>(json['potassiumMg']),
+      vitaminCMg: serializer.fromJson<double?>(json['vitaminCMg']),
       confidence: serializer.fromJson<String>(json['confidence']),
       sourceName: serializer.fromJson<String?>(json['sourceName']),
       loggedAt: serializer.fromJson<DateTime>(json['loggedAt']),
@@ -719,6 +880,11 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
       'carbohydrateG': serializer.toJson<double?>(carbohydrateG),
       'fatG': serializer.toJson<double?>(fatG),
       'fibreG': serializer.toJson<double?>(fibreG),
+      'sodiumMg': serializer.toJson<double?>(sodiumMg),
+      'ironMg': serializer.toJson<double?>(ironMg),
+      'calciumMg': serializer.toJson<double?>(calciumMg),
+      'potassiumMg': serializer.toJson<double?>(potassiumMg),
+      'vitaminCMg': serializer.toJson<double?>(vitaminCMg),
       'confidence': serializer.toJson<String>(confidence),
       'sourceName': serializer.toJson<String?>(sourceName),
       'loggedAt': serializer.toJson<DateTime>(loggedAt),
@@ -744,6 +910,11 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
     Value<double?> carbohydrateG = const Value.absent(),
     Value<double?> fatG = const Value.absent(),
     Value<double?> fibreG = const Value.absent(),
+    Value<double?> sodiumMg = const Value.absent(),
+    Value<double?> ironMg = const Value.absent(),
+    Value<double?> calciumMg = const Value.absent(),
+    Value<double?> potassiumMg = const Value.absent(),
+    Value<double?> vitaminCMg = const Value.absent(),
     String? confidence,
     Value<String?> sourceName = const Value.absent(),
     DateTime? loggedAt,
@@ -768,6 +939,11 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
         : this.carbohydrateG,
     fatG: fatG.present ? fatG.value : this.fatG,
     fibreG: fibreG.present ? fibreG.value : this.fibreG,
+    sodiumMg: sodiumMg.present ? sodiumMg.value : this.sodiumMg,
+    ironMg: ironMg.present ? ironMg.value : this.ironMg,
+    calciumMg: calciumMg.present ? calciumMg.value : this.calciumMg,
+    potassiumMg: potassiumMg.present ? potassiumMg.value : this.potassiumMg,
+    vitaminCMg: vitaminCMg.present ? vitaminCMg.value : this.vitaminCMg,
     confidence: confidence ?? this.confidence,
     sourceName: sourceName.present ? sourceName.value : this.sourceName,
     loggedAt: loggedAt ?? this.loggedAt,
@@ -800,6 +976,15 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
           : this.carbohydrateG,
       fatG: data.fatG.present ? data.fatG.value : this.fatG,
       fibreG: data.fibreG.present ? data.fibreG.value : this.fibreG,
+      sodiumMg: data.sodiumMg.present ? data.sodiumMg.value : this.sodiumMg,
+      ironMg: data.ironMg.present ? data.ironMg.value : this.ironMg,
+      calciumMg: data.calciumMg.present ? data.calciumMg.value : this.calciumMg,
+      potassiumMg: data.potassiumMg.present
+          ? data.potassiumMg.value
+          : this.potassiumMg,
+      vitaminCMg: data.vitaminCMg.present
+          ? data.vitaminCMg.value
+          : this.vitaminCMg,
       confidence: data.confidence.present
           ? data.confidence.value
           : this.confidence,
@@ -833,6 +1018,11 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
           ..write('carbohydrateG: $carbohydrateG, ')
           ..write('fatG: $fatG, ')
           ..write('fibreG: $fibreG, ')
+          ..write('sodiumMg: $sodiumMg, ')
+          ..write('ironMg: $ironMg, ')
+          ..write('calciumMg: $calciumMg, ')
+          ..write('potassiumMg: $potassiumMg, ')
+          ..write('vitaminCMg: $vitaminCMg, ')
           ..write('confidence: $confidence, ')
           ..write('sourceName: $sourceName, ')
           ..write('loggedAt: $loggedAt, ')
@@ -860,6 +1050,11 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
     carbohydrateG,
     fatG,
     fibreG,
+    sodiumMg,
+    ironMg,
+    calciumMg,
+    potassiumMg,
+    vitaminCMg,
     confidence,
     sourceName,
     loggedAt,
@@ -886,6 +1081,11 @@ class DiaryEntryRow extends DataClass implements Insertable<DiaryEntryRow> {
           other.carbohydrateG == this.carbohydrateG &&
           other.fatG == this.fatG &&
           other.fibreG == this.fibreG &&
+          other.sodiumMg == this.sodiumMg &&
+          other.ironMg == this.ironMg &&
+          other.calciumMg == this.calciumMg &&
+          other.potassiumMg == this.potassiumMg &&
+          other.vitaminCMg == this.vitaminCMg &&
           other.confidence == this.confidence &&
           other.sourceName == this.sourceName &&
           other.loggedAt == this.loggedAt &&
@@ -910,6 +1110,11 @@ class DiaryEntriesCompanion extends UpdateCompanion<DiaryEntryRow> {
   final Value<double?> carbohydrateG;
   final Value<double?> fatG;
   final Value<double?> fibreG;
+  final Value<double?> sodiumMg;
+  final Value<double?> ironMg;
+  final Value<double?> calciumMg;
+  final Value<double?> potassiumMg;
+  final Value<double?> vitaminCMg;
   final Value<String> confidence;
   final Value<String?> sourceName;
   final Value<DateTime> loggedAt;
@@ -932,6 +1137,11 @@ class DiaryEntriesCompanion extends UpdateCompanion<DiaryEntryRow> {
     this.carbohydrateG = const Value.absent(),
     this.fatG = const Value.absent(),
     this.fibreG = const Value.absent(),
+    this.sodiumMg = const Value.absent(),
+    this.ironMg = const Value.absent(),
+    this.calciumMg = const Value.absent(),
+    this.potassiumMg = const Value.absent(),
+    this.vitaminCMg = const Value.absent(),
     this.confidence = const Value.absent(),
     this.sourceName = const Value.absent(),
     this.loggedAt = const Value.absent(),
@@ -955,6 +1165,11 @@ class DiaryEntriesCompanion extends UpdateCompanion<DiaryEntryRow> {
     this.carbohydrateG = const Value.absent(),
     this.fatG = const Value.absent(),
     this.fibreG = const Value.absent(),
+    this.sodiumMg = const Value.absent(),
+    this.ironMg = const Value.absent(),
+    this.calciumMg = const Value.absent(),
+    this.potassiumMg = const Value.absent(),
+    this.vitaminCMg = const Value.absent(),
     this.confidence = const Value.absent(),
     this.sourceName = const Value.absent(),
     required DateTime loggedAt,
@@ -983,6 +1198,11 @@ class DiaryEntriesCompanion extends UpdateCompanion<DiaryEntryRow> {
     Expression<double>? carbohydrateG,
     Expression<double>? fatG,
     Expression<double>? fibreG,
+    Expression<double>? sodiumMg,
+    Expression<double>? ironMg,
+    Expression<double>? calciumMg,
+    Expression<double>? potassiumMg,
+    Expression<double>? vitaminCMg,
     Expression<String>? confidence,
     Expression<String>? sourceName,
     Expression<DateTime>? loggedAt,
@@ -1006,6 +1226,11 @@ class DiaryEntriesCompanion extends UpdateCompanion<DiaryEntryRow> {
       if (carbohydrateG != null) 'carbohydrate_g': carbohydrateG,
       if (fatG != null) 'fat_g': fatG,
       if (fibreG != null) 'fibre_g': fibreG,
+      if (sodiumMg != null) 'sodium_mg': sodiumMg,
+      if (ironMg != null) 'iron_mg': ironMg,
+      if (calciumMg != null) 'calcium_mg': calciumMg,
+      if (potassiumMg != null) 'potassium_mg': potassiumMg,
+      if (vitaminCMg != null) 'vitamin_c_mg': vitaminCMg,
       if (confidence != null) 'confidence': confidence,
       if (sourceName != null) 'source_name': sourceName,
       if (loggedAt != null) 'logged_at': loggedAt,
@@ -1031,6 +1256,11 @@ class DiaryEntriesCompanion extends UpdateCompanion<DiaryEntryRow> {
     Value<double?>? carbohydrateG,
     Value<double?>? fatG,
     Value<double?>? fibreG,
+    Value<double?>? sodiumMg,
+    Value<double?>? ironMg,
+    Value<double?>? calciumMg,
+    Value<double?>? potassiumMg,
+    Value<double?>? vitaminCMg,
     Value<String>? confidence,
     Value<String?>? sourceName,
     Value<DateTime>? loggedAt,
@@ -1054,6 +1284,11 @@ class DiaryEntriesCompanion extends UpdateCompanion<DiaryEntryRow> {
       carbohydrateG: carbohydrateG ?? this.carbohydrateG,
       fatG: fatG ?? this.fatG,
       fibreG: fibreG ?? this.fibreG,
+      sodiumMg: sodiumMg ?? this.sodiumMg,
+      ironMg: ironMg ?? this.ironMg,
+      calciumMg: calciumMg ?? this.calciumMg,
+      potassiumMg: potassiumMg ?? this.potassiumMg,
+      vitaminCMg: vitaminCMg ?? this.vitaminCMg,
       confidence: confidence ?? this.confidence,
       sourceName: sourceName ?? this.sourceName,
       loggedAt: loggedAt ?? this.loggedAt,
@@ -1107,6 +1342,21 @@ class DiaryEntriesCompanion extends UpdateCompanion<DiaryEntryRow> {
     if (fibreG.present) {
       map['fibre_g'] = Variable<double>(fibreG.value);
     }
+    if (sodiumMg.present) {
+      map['sodium_mg'] = Variable<double>(sodiumMg.value);
+    }
+    if (ironMg.present) {
+      map['iron_mg'] = Variable<double>(ironMg.value);
+    }
+    if (calciumMg.present) {
+      map['calcium_mg'] = Variable<double>(calciumMg.value);
+    }
+    if (potassiumMg.present) {
+      map['potassium_mg'] = Variable<double>(potassiumMg.value);
+    }
+    if (vitaminCMg.present) {
+      map['vitamin_c_mg'] = Variable<double>(vitaminCMg.value);
+    }
     if (confidence.present) {
       map['confidence'] = Variable<String>(confidence.value);
     }
@@ -1150,6 +1400,11 @@ class DiaryEntriesCompanion extends UpdateCompanion<DiaryEntryRow> {
           ..write('carbohydrateG: $carbohydrateG, ')
           ..write('fatG: $fatG, ')
           ..write('fibreG: $fibreG, ')
+          ..write('sodiumMg: $sodiumMg, ')
+          ..write('ironMg: $ironMg, ')
+          ..write('calciumMg: $calciumMg, ')
+          ..write('potassiumMg: $potassiumMg, ')
+          ..write('vitaminCMg: $vitaminCMg, ')
           ..write('confidence: $confidence, ')
           ..write('sourceName: $sourceName, ')
           ..write('loggedAt: $loggedAt, ')
@@ -2240,6 +2495,11 @@ typedef $$DiaryEntriesTableCreateCompanionBuilder =
       Value<double?> carbohydrateG,
       Value<double?> fatG,
       Value<double?> fibreG,
+      Value<double?> sodiumMg,
+      Value<double?> ironMg,
+      Value<double?> calciumMg,
+      Value<double?> potassiumMg,
+      Value<double?> vitaminCMg,
       Value<String> confidence,
       Value<String?> sourceName,
       required DateTime loggedAt,
@@ -2264,6 +2524,11 @@ typedef $$DiaryEntriesTableUpdateCompanionBuilder =
       Value<double?> carbohydrateG,
       Value<double?> fatG,
       Value<double?> fibreG,
+      Value<double?> sodiumMg,
+      Value<double?> ironMg,
+      Value<double?> calciumMg,
+      Value<double?> potassiumMg,
+      Value<double?> vitaminCMg,
       Value<String> confidence,
       Value<String?> sourceName,
       Value<DateTime> loggedAt,
@@ -2345,6 +2610,31 @@ class $$DiaryEntriesTableFilterComposer
 
   ColumnFilters<double> get fibreG => $composableBuilder(
     column: $table.fibreG,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get sodiumMg => $composableBuilder(
+    column: $table.sodiumMg,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get ironMg => $composableBuilder(
+    column: $table.ironMg,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get calciumMg => $composableBuilder(
+    column: $table.calciumMg,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get potassiumMg => $composableBuilder(
+    column: $table.potassiumMg,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<double> get vitaminCMg => $composableBuilder(
+    column: $table.vitaminCMg,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -2463,6 +2753,31 @@ class $$DiaryEntriesTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<double> get sodiumMg => $composableBuilder(
+    column: $table.sodiumMg,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<double> get ironMg => $composableBuilder(
+    column: $table.ironMg,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<double> get calciumMg => $composableBuilder(
+    column: $table.calciumMg,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<double> get potassiumMg => $composableBuilder(
+    column: $table.potassiumMg,
+    builder: (column) => ColumnOrderings(column),
+  );
+
+  ColumnOrderings<double> get vitaminCMg => $composableBuilder(
+    column: $table.vitaminCMg,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<String> get confidence => $composableBuilder(
     column: $table.confidence,
     builder: (column) => ColumnOrderings(column),
@@ -2560,6 +2875,25 @@ class $$DiaryEntriesTableAnnotationComposer
   GeneratedColumn<double> get fibreG =>
       $composableBuilder(column: $table.fibreG, builder: (column) => column);
 
+  GeneratedColumn<double> get sodiumMg =>
+      $composableBuilder(column: $table.sodiumMg, builder: (column) => column);
+
+  GeneratedColumn<double> get ironMg =>
+      $composableBuilder(column: $table.ironMg, builder: (column) => column);
+
+  GeneratedColumn<double> get calciumMg =>
+      $composableBuilder(column: $table.calciumMg, builder: (column) => column);
+
+  GeneratedColumn<double> get potassiumMg => $composableBuilder(
+    column: $table.potassiumMg,
+    builder: (column) => column,
+  );
+
+  GeneratedColumn<double> get vitaminCMg => $composableBuilder(
+    column: $table.vitaminCMg,
+    builder: (column) => column,
+  );
+
   GeneratedColumn<String> get confidence => $composableBuilder(
     column: $table.confidence,
     builder: (column) => column,
@@ -2635,6 +2969,11 @@ class $$DiaryEntriesTableTableManager
                 Value<double?> carbohydrateG = const Value.absent(),
                 Value<double?> fatG = const Value.absent(),
                 Value<double?> fibreG = const Value.absent(),
+                Value<double?> sodiumMg = const Value.absent(),
+                Value<double?> ironMg = const Value.absent(),
+                Value<double?> calciumMg = const Value.absent(),
+                Value<double?> potassiumMg = const Value.absent(),
+                Value<double?> vitaminCMg = const Value.absent(),
                 Value<String> confidence = const Value.absent(),
                 Value<String?> sourceName = const Value.absent(),
                 Value<DateTime> loggedAt = const Value.absent(),
@@ -2657,6 +2996,11 @@ class $$DiaryEntriesTableTableManager
                 carbohydrateG: carbohydrateG,
                 fatG: fatG,
                 fibreG: fibreG,
+                sodiumMg: sodiumMg,
+                ironMg: ironMg,
+                calciumMg: calciumMg,
+                potassiumMg: potassiumMg,
+                vitaminCMg: vitaminCMg,
                 confidence: confidence,
                 sourceName: sourceName,
                 loggedAt: loggedAt,
@@ -2681,6 +3025,11 @@ class $$DiaryEntriesTableTableManager
                 Value<double?> carbohydrateG = const Value.absent(),
                 Value<double?> fatG = const Value.absent(),
                 Value<double?> fibreG = const Value.absent(),
+                Value<double?> sodiumMg = const Value.absent(),
+                Value<double?> ironMg = const Value.absent(),
+                Value<double?> calciumMg = const Value.absent(),
+                Value<double?> potassiumMg = const Value.absent(),
+                Value<double?> vitaminCMg = const Value.absent(),
                 Value<String> confidence = const Value.absent(),
                 Value<String?> sourceName = const Value.absent(),
                 required DateTime loggedAt,
@@ -2703,6 +3052,11 @@ class $$DiaryEntriesTableTableManager
                 carbohydrateG: carbohydrateG,
                 fatG: fatG,
                 fibreG: fibreG,
+                sodiumMg: sodiumMg,
+                ironMg: ironMg,
+                calciumMg: calciumMg,
+                potassiumMg: potassiumMg,
+                vitaminCMg: vitaminCMg,
                 confidence: confidence,
                 sourceName: sourceName,
                 loggedAt: loggedAt,

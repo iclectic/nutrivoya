@@ -27,7 +27,7 @@ class DiaryDatabase extends _$DiaryDatabase {
   DiaryDatabase.forTesting(super.e);
 
   @override
-  int get schemaVersion => 3;
+  int get schemaVersion => 4;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -55,6 +55,13 @@ class DiaryDatabase extends _$DiaryDatabase {
                 ),
               );
             }
+          }
+          if (from < 4) {
+            await m.addColumn(diaryEntries, diaryEntries.sodiumMg);
+            await m.addColumn(diaryEntries, diaryEntries.ironMg);
+            await m.addColumn(diaryEntries, diaryEntries.calciumMg);
+            await m.addColumn(diaryEntries, diaryEntries.potassiumMg);
+            await m.addColumn(diaryEntries, diaryEntries.vitaminCMg);
           }
         },
       );

@@ -122,6 +122,24 @@ class SettingsScreen extends ConsumerWidget {
               onTap: () => context.push('/review-queue'),
             ),
             ListTile(
+              leading: const Icon(Icons.restaurant_menu_outlined),
+              title: Text(l10n.culturalSuggestionsTitle),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => context.push('/cultural-suggestions'),
+            ),
+            ListTile(
+              leading: const Icon(Icons.menu_book_outlined),
+              title: Text(l10n.educationTitle),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => context.push('/education'),
+            ),
+            ListTile(
+              leading: const Icon(Icons.public),
+              title: Text(l10n.catalogTitle),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => context.push('/catalog'),
+            ),
+            ListTile(
               leading: const Icon(Icons.person_outline),
               title: Text(l10n.settingsProfile),
               trailing: const Icon(Icons.chevron_right),

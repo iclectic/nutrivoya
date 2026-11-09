@@ -1555,4 +1555,126 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get settingsReviewerModeNote =>
       'Autoriser l\'approbation ou le rejet des soumissions en attente sur cet appareil.';
+
+  @override
+  String get dashboardMicrosTitle => 'Micronutriments du jour';
+
+  @override
+  String get dashboardMicrosNote =>
+      'Shown only when logged foods include measured values. Missing nutrients stay indisponible — never invented.';
+
+  @override
+  String get dashboardMicroUnavailable => 'indisponible';
+
+  @override
+  String get culturalSuggestionsTitle => 'Idées de cuisine familière';
+
+  @override
+  String get culturalSuggestionsIntro =>
+      'Ideas from your food database that fit familiar cuisines and today\'s diary. Nutrition always comes from structured records.';
+
+  @override
+  String get culturalSuggestionsEmpty =>
+      'Add familiar cuisines in your profile, or log a meal, to see ideas from the food database.';
+
+  @override
+  String culturalSuggestionsKcalPer100g(int kcal) {
+    return '$kcal kcal / 100 g';
+  }
+
+  @override
+  String get culturalSuggestionsKcalUnavailable => 'Energy indisponible';
+
+  @override
+  String get culturalSuggestReasonFamiliarCuisine => 'Cuisine familière';
+
+  @override
+  String get culturalSuggestReasonProteinFamiliar =>
+      'Protein-rich familiar food';
+
+  @override
+  String get culturalSuggestReasonProtein => 'Higher protein option';
+
+  @override
+  String get culturalSuggestReasonFibreFamiliar => 'Fibre-rich familiar food';
+
+  @override
+  String get culturalSuggestReasonFibre => 'Higher fibre option';
+
+  @override
+  String get culturalSuggestReasonExplore => 'Depuis la base alimentaire';
+
+  @override
+  String get educationTitle => 'Éducation nutritionnelle';
+
+  @override
+  String get educationIntro =>
+      'Short guidance that respects cultural foods. Tips never invent calorie numbers for specific dishes.';
+
+  @override
+  String get educationTipPortionsTitle => 'Portion first, ban rarely';
+
+  @override
+  String get educationTipPortionsBody =>
+      'Changing portion size or pairing a staple with vegetables and protein usually works better than removing a cultural food entirely.';
+
+  @override
+  String get educationTipStaplesTitle =>
+      'Staples are not automatically unhealthy';
+
+  @override
+  String get educationTipStaplesBody =>
+      'Rice, roti, yam, plantain, injera and similar staples can fit many goals when portions and overall patterns are considered.';
+
+  @override
+  String get educationTipPairProteinTitle => 'Pair for balance';
+
+  @override
+  String get educationTipPairProteinBody =>
+      'If a meal is mostly starch, adding a familiar protein side or legumes can improve balance without abandoning the dish you enjoy.';
+
+  @override
+  String get educationTipFibreTitle => 'Fibre from familiar plants';
+
+  @override
+  String get educationTipFibreBody =>
+      'Beans, lentils, vegetables and whole grains already common in many cuisines are practical fibre sources — check the food database for measured values.';
+
+  @override
+  String get educationTipMissingDataTitle => 'Missing data stays missing';
+
+  @override
+  String get educationTipMissingDataBody =>
+      'When Nutrivoya lacks a nutrient value, it shows indisponible. The app will not invent calories or micros to fill gaps.';
+
+  @override
+  String get educationTipProvenanceTitle => 'Provenance matters';
+
+  @override
+  String get educationTipProvenanceBody =>
+      'User-submitted foods stay labeled until verified. Verified still means user-submitted provenance — not an authoritative lab dataset.';
+
+  @override
+  String get catalogTitle => 'Catalogue alimentaire public';
+
+  @override
+  String get catalogIntro =>
+      'Verified user-contributed foods shared for others to search. Values are never invented at publish time.';
+
+  @override
+  String get catalogEmpty =>
+      'No verified foods published yet. Approve a submission, then publish it from My submissions.';
+
+  @override
+  String get catalogVerifiedBadge => 'Soumission vérifiée';
+
+  @override
+  String get catalogPublishAction => 'Publier au catalogue';
+
+  @override
+  String get catalogPublishDone => 'Publié dans le catalogue public';
+
+  @override
+  String get catalogPublishNeedVerified =>
+      'Seules les soumissions vérifiées peuvent être publiées';
 }

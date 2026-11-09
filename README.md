@@ -11,12 +11,29 @@ Western packaged foods, and to evaluate food by its actual nutritional
 composition, preparation, portion and dietary context — never by cultural
 stereotype.
 
-This repository currently contains **Milestones 1–14**:
-Foundation, Food Data Core, Food Logging, Calorie & Macro Targets,
-Cultural Food Intelligence (seed expansion), Recipe Builder,
-Multilingual Product, Barcode Products, Nutrition Assistant,
-Advanced Tracking, Photo Recognition, User-Contributed Add Product,
-Supabase Diary Sync, and Submission Review.
+This repository currently contains **Milestones 1–17**:
+Foundation through Submission Review, plus Micronutrient Tracking,
+Cultural Meal Suggestions, and Nutrition Education / Public Catalog.
+
+## Status — Milestone 17 (Nutrition Education & Public Catalog)
+
+- Structured education tips (no invented dish calories)
+- Public catalog for **verified** user submissions only
+- Publish from My submissions; browse under Settings → Public food catalog
+- SQL: `supabase/migrations/0004_public_food_catalog.sql`
+
+## Status — Milestone 16 (Cultural Meal Suggestions)
+
+- Cuisine-aware ideas from the structured food database
+- Prefers familiar cuisines and complementary protein/fibre when today's
+  diary is light — never invents nutrition
+- Settings → Familiar cuisine ideas
+
+## Status — Milestone 15 (Micronutrient Tracking)
+
+- Diary snapshots iron, calcium, potassium, sodium, vitamin C when present
+- Dashboard shows daily micros; missing values stay **unavailable**
+- Drift schema v4 + `0003_diary_micronutrients.sql`
 
 ## Status — Milestone 14 (Submission Review)
 
@@ -316,7 +333,7 @@ scanning, photo recognition or AI features — those arrive in later milestones.
 
 ### What remains intentionally out of scope
 
-- Multi-reviewer community moderation roles / public catalog publish
+- Multi-admin community moderation roles / lab-grade public datasets
 - Full LLM chatbot (Ask Nutrivoya is structured / rule-based)
 - Photo calorie detection (vision never invents kcal)
 - Wearables / social / grocery delivery
@@ -458,7 +475,7 @@ guidance. Aggressive weight-loss targets are not enabled in pregnancy.
 
 ## Next milestone
 
-Core milestones 1–14 from the original plan are implemented. Remaining
-product work includes deeper on-device recognition models and optional
-public catalog publish — always with user confirmation and structured
-nutrition lookup.
+Core milestones 1–17 are implemented against the original plan’s major
+features. Remaining stretch work includes deeper on-device recognition
+models and store-readiness polish — always with user confirmation and
+structured nutrition lookup.

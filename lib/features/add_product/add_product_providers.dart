@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/models/food.dart';
 import '../../core/models/product_submission.dart';
 import '../../core/services/product_submission_validator.dart';
+import '../catalog/public_catalog_repository.dart';
 import 'product_submission_repository.dart';
 import 'submission_review_service.dart';
 
@@ -128,6 +129,14 @@ class AddProductController extends Notifier {
   Future<void> setReviewerMode(bool enabled) async {
     await _review.setReviewerMode(enabled);
     _bump();
+  }
+
+  /// Publish a verified submission into the shared catalog.
+  Future<bool> publishToCatalog(String id) async {
+    final ok = await ref
+        .read(catalogPublishControllerProvider)
+        .publishVerified(id);
+    return ok;
   }
 }
 

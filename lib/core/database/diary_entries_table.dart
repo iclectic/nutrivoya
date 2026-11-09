@@ -20,6 +20,12 @@ class DiaryEntries extends Table {
   RealColumn get carbohydrateG => real().nullable()();
   RealColumn get fatG => real().nullable()();
   RealColumn get fibreG => real().nullable()();
+  /// Optional micronutrients (schema v4). Null = unavailable — never invent.
+  RealColumn get sodiumMg => real().nullable()();
+  RealColumn get ironMg => real().nullable()();
+  RealColumn get calciumMg => real().nullable()();
+  RealColumn get potassiumMg => real().nullable()();
+  RealColumn get vitaminCMg => real().nullable()();
   TextColumn get confidence => text().withDefault(const Constant('unknown'))();
   TextColumn get sourceName => text().nullable()();
   DateTimeColumn get loggedAt => dateTime()();

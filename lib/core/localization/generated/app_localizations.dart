@@ -2728,6 +2728,216 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Allow approving or rejecting pending product submissions on this device.'**
   String get settingsReviewerModeNote;
+
+  /// No description provided for @dashboardMicrosTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Micronutrients today'**
+  String get dashboardMicrosTitle;
+
+  /// No description provided for @dashboardMicrosNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Shown only when logged foods include measured values. Missing nutrients stay unavailable — never invented.'**
+  String get dashboardMicrosNote;
+
+  /// No description provided for @dashboardMicroUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'unavailable'**
+  String get dashboardMicroUnavailable;
+
+  /// No description provided for @culturalSuggestionsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Familiar cuisine ideas'**
+  String get culturalSuggestionsTitle;
+
+  /// No description provided for @culturalSuggestionsIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Ideas from your food database that fit familiar cuisines and today\'s diary. Nutrition always comes from structured records.'**
+  String get culturalSuggestionsIntro;
+
+  /// No description provided for @culturalSuggestionsEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Add familiar cuisines in your profile, or log a meal, to see ideas from the food database.'**
+  String get culturalSuggestionsEmpty;
+
+  /// No description provided for @culturalSuggestionsKcalPer100g.
+  ///
+  /// In en, this message translates to:
+  /// **'{kcal} kcal / 100 g'**
+  String culturalSuggestionsKcalPer100g(int kcal);
+
+  /// No description provided for @culturalSuggestionsKcalUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Energy unavailable'**
+  String get culturalSuggestionsKcalUnavailable;
+
+  /// No description provided for @culturalSuggestReasonFamiliarCuisine.
+  ///
+  /// In en, this message translates to:
+  /// **'Familiar cuisine'**
+  String get culturalSuggestReasonFamiliarCuisine;
+
+  /// No description provided for @culturalSuggestReasonProteinFamiliar.
+  ///
+  /// In en, this message translates to:
+  /// **'Protein-rich familiar food'**
+  String get culturalSuggestReasonProteinFamiliar;
+
+  /// No description provided for @culturalSuggestReasonProtein.
+  ///
+  /// In en, this message translates to:
+  /// **'Higher protein option'**
+  String get culturalSuggestReasonProtein;
+
+  /// No description provided for @culturalSuggestReasonFibreFamiliar.
+  ///
+  /// In en, this message translates to:
+  /// **'Fibre-rich familiar food'**
+  String get culturalSuggestReasonFibreFamiliar;
+
+  /// No description provided for @culturalSuggestReasonFibre.
+  ///
+  /// In en, this message translates to:
+  /// **'Higher fibre option'**
+  String get culturalSuggestReasonFibre;
+
+  /// No description provided for @culturalSuggestReasonExplore.
+  ///
+  /// In en, this message translates to:
+  /// **'From the food database'**
+  String get culturalSuggestReasonExplore;
+
+  /// No description provided for @educationTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Nutrition education'**
+  String get educationTitle;
+
+  /// No description provided for @educationIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Short guidance that respects cultural foods. Tips never invent calorie numbers for specific dishes.'**
+  String get educationIntro;
+
+  /// No description provided for @educationTipPortionsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Portion first, ban rarely'**
+  String get educationTipPortionsTitle;
+
+  /// No description provided for @educationTipPortionsBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Changing portion size or pairing a staple with vegetables and protein usually works better than removing a cultural food entirely.'**
+  String get educationTipPortionsBody;
+
+  /// No description provided for @educationTipStaplesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Staples are not automatically unhealthy'**
+  String get educationTipStaplesTitle;
+
+  /// No description provided for @educationTipStaplesBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Rice, roti, yam, plantain, injera and similar staples can fit many goals when portions and overall patterns are considered.'**
+  String get educationTipStaplesBody;
+
+  /// No description provided for @educationTipPairProteinTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Pair for balance'**
+  String get educationTipPairProteinTitle;
+
+  /// No description provided for @educationTipPairProteinBody.
+  ///
+  /// In en, this message translates to:
+  /// **'If a meal is mostly starch, adding a familiar protein side or legumes can improve balance without abandoning the dish you enjoy.'**
+  String get educationTipPairProteinBody;
+
+  /// No description provided for @educationTipFibreTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Fibre from familiar plants'**
+  String get educationTipFibreTitle;
+
+  /// No description provided for @educationTipFibreBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Beans, lentils, vegetables and whole grains already common in many cuisines are practical fibre sources — check the food database for measured values.'**
+  String get educationTipFibreBody;
+
+  /// No description provided for @educationTipMissingDataTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Missing data stays missing'**
+  String get educationTipMissingDataTitle;
+
+  /// No description provided for @educationTipMissingDataBody.
+  ///
+  /// In en, this message translates to:
+  /// **'When Nutrivoya lacks a nutrient value, it shows unavailable. The app will not invent calories or micros to fill gaps.'**
+  String get educationTipMissingDataBody;
+
+  /// No description provided for @educationTipProvenanceTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Provenance matters'**
+  String get educationTipProvenanceTitle;
+
+  /// No description provided for @educationTipProvenanceBody.
+  ///
+  /// In en, this message translates to:
+  /// **'User-submitted foods stay labeled until verified. Verified still means user-submitted provenance — not an authoritative lab dataset.'**
+  String get educationTipProvenanceBody;
+
+  /// No description provided for @catalogTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Public food catalog'**
+  String get catalogTitle;
+
+  /// No description provided for @catalogIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Verified user-contributed foods shared for others to search. Values are never invented at publish time.'**
+  String get catalogIntro;
+
+  /// No description provided for @catalogEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No verified foods published yet. Approve a submission, then publish it from My submissions.'**
+  String get catalogEmpty;
+
+  /// No description provided for @catalogVerifiedBadge.
+  ///
+  /// In en, this message translates to:
+  /// **'Verified submission'**
+  String get catalogVerifiedBadge;
+
+  /// No description provided for @catalogPublishAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Publish to catalog'**
+  String get catalogPublishAction;
+
+  /// No description provided for @catalogPublishDone.
+  ///
+  /// In en, this message translates to:
+  /// **'Published to the public catalog'**
+  String get catalogPublishDone;
+
+  /// No description provided for @catalogPublishNeedVerified.
+  ///
+  /// In en, this message translates to:
+  /// **'Only verified submissions can be published'**
+  String get catalogPublishNeedVerified;
 }
 
 class _AppLocalizationsDelegate
