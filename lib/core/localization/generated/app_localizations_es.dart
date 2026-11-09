@@ -1255,4 +1255,87 @@ class AppLocalizationsEs extends AppLocalizations {
   String templatesItemSummary(int count, int kcal) {
     return '$count elementos · ≈ $kcal kcal';
   }
+
+  @override
+  String get photoTitle => 'Comida con foto';
+
+  @override
+  String get photoIntro =>
+      'Fotografía una comida, describe lo que ves y confirma un alimento de la base. La nutrición siempre viene de datos estructurados — nunca solo de la imagen.';
+
+  @override
+  String get photoUncertaintyDisclaimer =>
+      'Las sugerencias por foto son inciertas. Confirma siempre el alimento y la porción antes de registrar. Las estimaciones de visión nunca se tratan como certezas.';
+
+  @override
+  String get photoTakePhoto => 'Tomar foto';
+
+  @override
+  String get photoChooseGallery => 'Elegir de la galería';
+
+  @override
+  String get photoRetake => 'Elegir otra foto';
+
+  @override
+  String get photoClear => 'Borrar foto';
+
+  @override
+  String get photoDescriptionLabel => '¿Qué ves?';
+
+  @override
+  String get photoDescriptionHint =>
+      'p. ej. roti y dal, arroz jollof, bowl de pho';
+
+  @override
+  String get photoSuggestFoods => 'Sugerir alimentos';
+
+  @override
+  String get photoSuggestionsTitle => 'Posibles coincidencias';
+
+  @override
+  String get photoSuggestionsNote =>
+      'Vienen de tu descripción buscada en la base — no de calorías inventadas a partir de la foto.';
+
+  @override
+  String get photoConfidenceUncertain => 'Coincidencia incierta — confirma';
+
+  @override
+  String get photoConfidenceLow => 'Coincidencia débil — revisa con cuidado';
+
+  @override
+  String get photoPortionTitle => 'Estimar porción';
+
+  @override
+  String get photoPortionNote =>
+      'La porción de la foto es solo una estimación. Ajústala antes de registrar.';
+
+  @override
+  String get photoConfirmOpenFood => 'Confirmar y abrir alimento';
+
+  @override
+  String get photoConfirmNote =>
+      'Luego verificarás la ración en la ficha del alimento. El registro usa solo nutrición estructurada.';
+
+  @override
+  String get photoDetailsEstimateNote =>
+      'La porción se sugirió desde una foto y es incierta — verifica los gramos antes de registrar.';
+
+  @override
+  String get photoSearchSubtitle =>
+      'Fotografía una comida y confirma un alimento de la base.';
+
+  @override
+  String get photoErrorNoImage => 'Añade primero una foto.';
+
+  @override
+  String get photoErrorNeedDescription =>
+      'Describe lo que ves para buscar en la base. La app no inventa alimentos solo con píxeles.';
+
+  @override
+  String get photoErrorNoMatches =>
+      'Ningún alimento estructurado coincidió. Prueba otro nombre o busca manualmente.';
+
+  @override
+  String get photoErrorFailed =>
+      'No se pudo usar esa foto. Inténtalo de nuevo o elige otra imagen.';
 }

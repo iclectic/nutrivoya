@@ -1229,4 +1229,85 @@ class AppLocalizationsAr extends AppLocalizations {
   String templatesItemSummary(int count, int kcal) {
     return '$count عناصر · ≈ $kcal سعرة';
   }
+
+  @override
+  String get photoTitle => 'وجبة بالصورة';
+
+  @override
+  String get photoIntro =>
+      'صوّر وجبة، صف ما تراه، ثم أكّد طعامًا من القاعدة. التغذية دائمًا من بيانات منظمة — لا من الصورة وحدها.';
+
+  @override
+  String get photoUncertaintyDisclaimer =>
+      'اقتراحات الصورة غير مؤكدة. أكّد الطعام والحصة دائمًا قبل التسجيل. تقديرات الرؤية لا تُعامل أبدًا كيقينكيد.';
+
+  @override
+  String get photoTakePhoto => 'التقاط صورة';
+
+  @override
+  String get photoChooseGallery => 'اختيار من المعرض';
+
+  @override
+  String get photoRetake => 'اختيار صورة أخرى';
+
+  @override
+  String get photoClear => 'مسح الصورة';
+
+  @override
+  String get photoDescriptionLabel => 'ماذا ترى؟';
+
+  @override
+  String get photoDescriptionHint => 'مثل روتي ودال، أرز جولوف، وعاء فو';
+
+  @override
+  String get photoSuggestFoods => 'اقتراح أطعمة';
+
+  @override
+  String get photoSuggestionsTitle => 'تطابقات محتملة';
+
+  @override
+  String get photoSuggestionsNote =>
+      'من وصفك المبحوث في القاعدة — بلا سعرات مختلقة من الصورة.';
+
+  @override
+  String get photoConfidenceUncertain => 'تطابق غير مؤكد — أكّد';
+
+  @override
+  String get photoConfidenceLow => 'تطابق ضعيف — راجع بعناية';
+
+  @override
+  String get photoPortionTitle => 'تقدير الحصة';
+
+  @override
+  String get photoPortionNote =>
+      'الحصة من الصورة تقدير فقط. عدّلها قبل التسجيل.';
+
+  @override
+  String get photoConfirmOpenFood => 'تأكيد وفتح الطعام';
+
+  @override
+  String get photoConfirmNote =>
+      'ستتحقق من حجم الحصة في شاشة التفاصيل. التسجيل يستخدم التغذية المنظمة فقط.';
+
+  @override
+  String get photoDetailsEstimateNote =>
+      'اقترحت الحصة من صورة وهي غير مؤكدة — تحقق من الغرامات قبل التسجيل.';
+
+  @override
+  String get photoSearchSubtitle => 'صوّر وجبة ثم أكّد طعامًا من القاعدة.';
+
+  @override
+  String get photoErrorNoImage => 'أضف صورة أولًا.';
+
+  @override
+  String get photoErrorNeedDescription =>
+      'صف ما تراه للبحث في القاعدة. لن تختلق التطبيق أطعمة من البكسلات وحدها.';
+
+  @override
+  String get photoErrorNoMatches =>
+      'لا طعام منظم طابق الوصف. جرّب اسمًا آخر أو ابحث يدويًا.';
+
+  @override
+  String get photoErrorFailed =>
+      'تعذّر استخدام تلك الصورة. أعد المحاولة أو اختر صورة أخرى.';
 }

@@ -1241,4 +1241,85 @@ class AppLocalizationsHi extends AppLocalizations {
   String templatesItemSummary(int count, int kcal) {
     return '$count आइटम · ≈ $kcal किलोकलोरी';
   }
+
+  @override
+  String get photoTitle => 'फ़ोटो से भोजन';
+
+  @override
+  String get photoIntro =>
+      'भोजन की फ़ोटो लें, जो दिखे लिखें, फिर डेटाबेस से भोजन पुष्टि करें। पोषण हमेशा संरचित डेटा से आता है — केवल छवि से नहीं।';
+
+  @override
+  String get photoUncertaintyDisclaimer =>
+      'फ़ोटो सुझाव अनिश्चित हैं। लॉग से पहले भोजन और हिस्सा हमेशा पुष्टि करें। विज़न अनुमान कभी निश्चित नहीं माने जाते।';
+
+  @override
+  String get photoTakePhoto => 'फ़ोटो लें';
+
+  @override
+  String get photoChooseGallery => 'गैलरी से चुनें';
+
+  @override
+  String get photoRetake => 'दूसरी फ़ोटो चुनें';
+
+  @override
+  String get photoClear => 'फ़ोटो हटाएँ';
+
+  @override
+  String get photoDescriptionLabel => 'आप क्या देख रहे हैं?';
+
+  @override
+  String get photoDescriptionHint => 'जैसे रोटी और दाल, जollof चावल';
+
+  @override
+  String get photoSuggestFoods => 'भोजन सुझाएँ';
+
+  @override
+  String get photoSuggestionsTitle => 'संभावित मिलान';
+
+  @override
+  String get photoSuggestionsNote =>
+      'ये आपके विवरण की खोज से हैं — फ़ोटो से गढ़ी कैलोरी नहीं।';
+
+  @override
+  String get photoConfidenceUncertain => 'अनिश्चित मिलान — पुष्टि करें';
+
+  @override
+  String get photoConfidenceLow => 'कमज़ोर मिलान — ध्यान से जाँचें';
+
+  @override
+  String get photoPortionTitle => 'हिस्सा अनुमानित करें';
+
+  @override
+  String get photoPortionNote =>
+      'फ़ोटो से हिस्सा केवल अनुमान है। लॉग से पहले समायोजित करें।';
+
+  @override
+  String get photoConfirmOpenFood => 'पुष्टि करें और भोजन खोलें';
+
+  @override
+  String get photoConfirmNote =>
+      'अगले स्क्रीन पर सर्विंग जाँचें। लॉग केवल संरचित पोषण उपयोग करता है।';
+
+  @override
+  String get photoDetailsEstimateNote =>
+      'हिस्सा फ़ोटो से सुझाया गया और अनिश्चित है — लॉग से पहले ग्राम जाँचें।';
+
+  @override
+  String get photoSearchSubtitle =>
+      'भोजन की फ़ोटो लें, फिर डेटाबेस से पुष्टि करें।';
+
+  @override
+  String get photoErrorNoImage => 'पहले फ़ोटो जोड़ें।';
+
+  @override
+  String get photoErrorNeedDescription =>
+      'खोज के लिए वर्णन लिखें। ऐप केवल पिक्सेल से भोजन नहीं गढ़ेगा।';
+
+  @override
+  String get photoErrorNoMatches =>
+      'कोई संरचित भोजन नहीं मिला। दूसरा नाम आज़माएँ।';
+
+  @override
+  String get photoErrorFailed => 'वह फ़ोटो उपयोग नहीं हो सकी। फिर कोशिश करें।';
 }

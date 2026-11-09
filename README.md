@@ -11,11 +11,27 @@ Western packaged foods, and to evaluate food by its actual nutritional
 composition, preparation, portion and dietary context — never by cultural
 stereotype.
 
-This repository currently contains **Milestones 1–10**:
+This repository currently contains **Milestones 1–11**:
 Foundation, Food Data Core, Food Logging, Calorie & Macro Targets,
 Cultural Food Intelligence (seed expansion), Recipe Builder,
-Multilingual Product, Barcode Products, Nutrition Assistant, and
-Advanced Tracking.
+Multilingual Product, Barcode Products, Nutrition Assistant,
+Advanced Tracking, and Photo Recognition.
+
+## Status — Milestone 11 (Photo Recognition)
+
+Milestone 11 adds a photo-assisted logging flow that **never** treats
+computer-vision estimates as certain and **never** invents calories from
+pixels:
+
+- Capture or pick a meal photo (`image_picker`)
+- User describes what they see → structured `FoodRepository` search
+- Uncertain / low-confidence suggestions only
+- Portion estimate from cultural servings — user must confirm
+- Hand-off to food details for final verify + log
+
+Pluggable `FoodPhotoRecognizer` (default: description-assisted search).
+A future on-device model can emit query tokens; nutrition still comes
+only from structured food records.
 
 ## Status — Milestone 10 (Advanced Tracking)
 
@@ -264,10 +280,10 @@ scanning, photo recognition or AI features — those arrive in later milestones.
 
 ### What remains intentionally out of scope
 
-- Photo recognition (Milestone 11)
 - User-contributed “Add Product” publish workflow (submission + review)
 - Supabase diary sync (entries are flagged `syncPending`)
 - Full LLM chatbot (Ask Nutrivoya is structured / rule-based)
+- Photo calorie detection (vision never invents kcal)
 - Wearables / social / grocery delivery
 
 ## Project structure
@@ -304,6 +320,7 @@ lib/
 │   ├── recipes/            # Personal recipe builder
 │   ├── assistant/          # Ask Nutrivoya (rule-based guidance)
 │   ├── tracking/           # Progress, favourites, templates, water
+│   ├── photo/              # Photo-assisted food suggestions
 │   └── settings/           # Settings (theme, language, account, about)
 ├── l10n/                   # ARB source files
 └── shared/
@@ -405,6 +422,7 @@ guidance. Aggressive weight-loss targets are not enabled in pregnancy.
 
 ## Next milestone
 
-**Milestone 11 — Photo Recognition:** camera food suggestions with
-portion estimation, user confirmation, then structured food lookup —
-never treat vision estimates as certain.
+Core milestones 1–11 from the original plan are implemented. Remaining
+product work includes diary sync, user-contributed products, and deeper
+on-device recognition models — always with user confirmation and
+structured nutrition lookup.

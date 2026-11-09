@@ -730,5 +730,29 @@
         "type": "int"
       }
     }
-  }
+  },
+  "photoTitle": "وجبة بالصورة",
+  "photoIntro": "صوّر وجبة، صف ما تراه، ثم أكّد طعامًا من القاعدة. التغذية دائمًا من بيانات منظمة — لا من الصورة وحدها.",
+  "photoUncertaintyDisclaimer": "اقتراحات الصورة غير مؤكدة. أكّد الطعام والحصة دائمًا قبل التسجيل. تقديرات الرؤية لا تُعامل أبدًا كيقينكيد.",
+  "photoTakePhoto": "التقاط صورة",
+  "photoChooseGallery": "اختيار من المعرض",
+  "photoRetake": "اختيار صورة أخرى",
+  "photoClear": "مسح الصورة",
+  "photoDescriptionLabel": "ماذا ترى؟",
+  "photoDescriptionHint": "مثل روتي ودال، أرز جولوف، وعاء فو",
+  "photoSuggestFoods": "اقتراح أطعمة",
+  "photoSuggestionsTitle": "تطابقات محتملة",
+  "photoSuggestionsNote": "من وصفك المبحوث في القاعدة — بلا سعرات مختلقة من الصورة.",
+  "photoConfidenceUncertain": "تطابق غير مؤكد — أكّد",
+  "photoConfidenceLow": "تطابق ضعيف — راجع بعناية",
+  "photoPortionTitle": "تقدير الحصة",
+  "photoPortionNote": "الحصة من الصورة تقدير فقط. عدّلها قبل التسجيل.",
+  "photoConfirmOpenFood": "تأكيد وفتح الطعام",
+  "photoConfirmNote": "ستتحقق من حجم الحصة في شاشة التفاصيل. التسجيل يستخدم التغذية المنظمة فقط.",
+  "photoDetailsEstimateNote": "اقترحت الحصة من صورة وهي غير مؤكدة — تحقق من الغرامات قبل التسجيل.",
+  "photoSearchSubtitle": "صوّر وجبة ثم أكّد طعامًا من القاعدة.",
+  "photoErrorNoImage": "أضف صورة أولًا.",
+  "photoErrorNeedDescription": "صف ما تراه للبحث في القاعدة. لن تختلق التطبيق أطعمة من البكسلات وحدها.",
+  "photoErrorNoMatches": "لا طعام منظم طابق الوصف. جرّب اسمًا آخر أو ابحث يدويًا.",
+  "photoErrorFailed": "تعذّر استخدام تلك الصورة. أعد المحاولة أو اختر صورة أخرى."
 }

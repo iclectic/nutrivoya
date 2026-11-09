@@ -730,5 +730,29 @@
         "type": "int"
       }
     }
-  }
+  },
+  "photoTitle": "ਫੋਟੋ ਨਾਲ ਭੋਜਨ",
+  "photoIntro": "ਭੋਜਨ ਦੀ ਫੋਟੋ ਲਓ, ਜੋ ਵੇਖਦੇ ਹੋ ਲਿਖੋ, ਫਿਰ ਡੇਟਾਬੇਸ ਤੋਂ ਭੋਜਨ ਪੁਸ਼ਟੀ ਕਰੋ। ਪੋਸ਼ਣ ਹਮੇਸ਼ਾ ਢਾਂਚਾਗਤ ਡੇਟਾ ਤੋਂ ਆਉਂਦਾ ਹੈ।",
+  "photoUncertaintyDisclaimer": "ਫੋਟੋ ਸੁਝਾਅ ਅਨਿਸ਼ਚਿਤ ਹਨ। ਲੌਗ ਤੋਂ ਪਹਿਲਾਂ ਭੋਜਨ ਅਤੇ ਹਿੱਸਾ ਪੁਸ਼ਟੀ ਕਰੋ। ਵਿਜ਼ਨ ਅਨੁਮਾਨ ਕਦੇ ਨਿਸ਼ਚਿਤ ਨਹੀਂ।",
+  "photoTakePhoto": "ਫੋਟੋ ਲਓ",
+  "photoChooseGallery": "ਗੈਲਰੀ ਤੋਂ ਚੁਣੋ",
+  "photoRetake": "ਹੋਰ ਫੋਟੋ ਚੁਣੋ",
+  "photoClear": "ਫੋਟੋ ਹਟਾਓ",
+  "photoDescriptionLabel": "ਤੁਸੀਂ ਕੀ ਵੇਖ ਰਹੇ ਹੋ?",
+  "photoDescriptionHint": "ਜਿਵੇਂ ਰੋਟੀ ਅਤੇ ਦਾਲ, ਜੋਲੋਫ਼ ਚੌਲ",
+  "photoSuggestFoods": "ਭੋਜਨ ਸੁਝਾਓ",
+  "photoSuggestionsTitle": "ਸੰਭਾਵਿਤ ਮੇਲ",
+  "photoSuggestionsNote": "ਇਹ ਤੁਹਾਡੇ ਵਰਣਨ ਦੀ ਖੋਜ ਤੋਂ ਹਨ — ਫੋਟੋ ਤੋਂ ਘੜੀਆਂ ਕੈਲੋਰੀਆਂ ਨਹੀਂ।",
+  "photoConfidenceUncertain": "ਅਨਿਸ਼ਚਿਤ ਮੇਲ — ਪੁਸ਼ਟੀ ਕਰੋ",
+  "photoConfidenceLow": "ਕਮਜ਼ੋਰ ਮੇਲ — ਧਿਆਨ ਨਾਲ ਚੈੱਕ ਕਰੋ",
+  "photoPortionTitle": "ਹਿੱਸਾ ਅਨੁਮਾਨਿਤ ਕਰੋ",
+  "photoPortionNote": "ਫੋਟੋ ਤੋਂ ਹਿੱਸਾ ਸਿਰਫ਼ ਅਨੁਮਾਨ ਹੈ। ਲੌਗ ਤੋਂ ਪਹਿਲਾਂ ਬਦਲੋ।",
+  "photoConfirmOpenFood": "ਪੁਸ਼ਟੀ ਕਰੋ ਅਤੇ ਭੋਜਨ ਖੋਲ੍ਹੋ",
+  "photoConfirmNote": "ਅਗਲੀ ਸਕਰੀਨ 'ਤੇ ਸਰਵਿੰਗ ਚੈੱਕ ਕਰੋ। ਲੌਗ ਸਿਰਫ਼ ਢਾਂਚਾਗਤ ਪੋਸ਼ਣ ਵਰਤਦਾ ਹੈ।",
+  "photoDetailsEstimateNote": "ਹਿੱਸਾ ਫੋਟੋ ਤੋਂ ਸੁਝਾਇਆ ਗਿਆ ਅਤੇ ਅਨਿਸ਼ਚਿਤ ਹੈ — ਲੌਗ ਤੋਂ ਪਹਿਲਾਂ ਗ੍ਰਾਮ ਚੈੱਕ ਕਰੋ।",
+  "photoSearchSubtitle": "ਭੋਜਨ ਦੀ ਫੋਟੋ ਲਓ, ਫਿਰ ਡੇਟਾਬੇਸ ਤੋਂ ਪੁਸ਼ਟੀ ਕਰੋ।",
+  "photoErrorNoImage": "ਪਹਿਲਾਂ ਫੋਟੋ ਜੋੜੋ।",
+  "photoErrorNeedDescription": "ਖੋਜ ਲਈ ਵਰਣਨ ਲਿਖੋ। ਐਪ ਸਿਰਫ਼ ਪਿਕਸਲ ਤੋਂ ਭੋਜਨ ਨਹੀਂ ਘੜੇਗੀ।",
+  "photoErrorNoMatches": "ਕੋਈ ਢਾਂਚਾਗਤ ਭੋਜਨ ਨਹੀਂ ਮਿਲਿਆ। ਹੋਰ ਨਾਮ ਅਜ਼ਮਾਓ।",
+  "photoErrorFailed": "ਉਹ ਫੋਟੋ ਵਰਤੀ ਨਹੀਂ ਜਾ ਸਕੀ। ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 }

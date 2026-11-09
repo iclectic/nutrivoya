@@ -730,5 +730,29 @@
         "type": "int"
       }
     }
-  }
+  },
+  "photoTitle": "Comida con foto",
+  "photoIntro": "Fotografía una comida, describe lo que ves y confirma un alimento de la base. La nutrición siempre viene de datos estructurados — nunca solo de la imagen.",
+  "photoUncertaintyDisclaimer": "Las sugerencias por foto son inciertas. Confirma siempre el alimento y la porción antes de registrar. Las estimaciones de visión nunca se tratan como certezas.",
+  "photoTakePhoto": "Tomar foto",
+  "photoChooseGallery": "Elegir de la galería",
+  "photoRetake": "Elegir otra foto",
+  "photoClear": "Borrar foto",
+  "photoDescriptionLabel": "¿Qué ves?",
+  "photoDescriptionHint": "p. ej. roti y dal, arroz jollof, bowl de pho",
+  "photoSuggestFoods": "Sugerir alimentos",
+  "photoSuggestionsTitle": "Posibles coincidencias",
+  "photoSuggestionsNote": "Vienen de tu descripción buscada en la base — no de calorías inventadas a partir de la foto.",
+  "photoConfidenceUncertain": "Coincidencia incierta — confirma",
+  "photoConfidenceLow": "Coincidencia débil — revisa con cuidado",
+  "photoPortionTitle": "Estimar porción",
+  "photoPortionNote": "La porción de la foto es solo una estimación. Ajústala antes de registrar.",
+  "photoConfirmOpenFood": "Confirmar y abrir alimento",
+  "photoConfirmNote": "Luego verificarás la ración en la ficha del alimento. El registro usa solo nutrición estructurada.",
+  "photoDetailsEstimateNote": "La porción se sugirió desde una foto y es incierta — verifica los gramos antes de registrar.",
+  "photoSearchSubtitle": "Fotografía una comida y confirma un alimento de la base.",
+  "photoErrorNoImage": "Añade primero una foto.",
+  "photoErrorNeedDescription": "Describe lo que ves para buscar en la base. La app no inventa alimentos solo con píxeles.",
+  "photoErrorNoMatches": "Ningún alimento estructurado coincidió. Prueba otro nombre o busca manualmente.",
+  "photoErrorFailed": "No se pudo usar esa foto. Inténtalo de nuevo o elige otra imagen."
 }

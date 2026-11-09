@@ -41,6 +41,11 @@ class _FoodSearchScreenState extends ConsumerState<FoodSearchScreen> {
         title: Text(l10n.searchTitle),
         actions: [
           IconButton(
+            tooltip: l10n.photoTitle,
+            icon: const Icon(Icons.photo_camera_outlined),
+            onPressed: () => context.push('/photo'),
+          ),
+          IconButton(
             tooltip: l10n.barcodeTitle,
             icon: const Icon(Icons.qr_code_scanner),
             onPressed: () => context.push('/barcode'),
@@ -105,6 +110,13 @@ class _FoodSearchScreenState extends ConsumerState<FoodSearchScreen> {
       children: [
         EmptyState(icon: Icons.search, title: l10n.searchEmpty),
         const SizedBox(height: 16),
+        ListTile(
+          leading: const Icon(Icons.photo_camera_outlined),
+          title: Text(l10n.photoTitle),
+          subtitle: Text(l10n.photoSearchSubtitle),
+          trailing: const Icon(Icons.chevron_right),
+          onTap: () => context.push('/photo'),
+        ),
         ListTile(
           leading: const Icon(Icons.qr_code_scanner),
           title: Text(l10n.barcodeTitle),

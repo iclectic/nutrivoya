@@ -11,10 +11,14 @@ class PortionSelector extends StatefulWidget {
     super.key,
     required this.food,
     required this.onChanged,
+    this.initialGrams,
   });
 
   final Food food;
   final ValueChanged<PortionSelection> onChanged;
+
+  /// Optional starting grams (e.g. photo estimate). Still user-editable.
+  final double? initialGrams;
 
   @override
   State<PortionSelector> createState() => _PortionSelectorState();
@@ -46,6 +50,23 @@ class _PortionSelectorState extends State<PortionSelector> {
   }
 
   void _initSelection() {
+    final initial = widget.initialGrams;
+    if (initial != null && initial > 0) {
+      // Prefer matching a named portion; otherwise use custom grams.
+      final matchIndex = widget.food.portions.indexWhere(
+        (p) => (p.grams - initial).abs() < 0.5,
+      );
+      if (matchIndex >= 0) {
+        _selectedPortionIndex = matchIndex;
+        _grams = widget.food.portions[matchIndex].grams;
+        _customGrams = false;
+      } else {
+        _grams = initial;
+        _customGrams = true;
+      }
+      WidgetsBinding.instance.addPostFrameCallback((_) => _emit());
+      return;
+    }
     if (widget.food.portions.isNotEmpty) {
       _grams = widget.food.portions.first.grams;
     } else {

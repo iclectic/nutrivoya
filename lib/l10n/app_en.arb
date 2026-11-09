@@ -8,7 +8,6 @@
   "@appTagline": {
     "description": "Welcome screen tagline"
   },
-
   "commonCancel": "Cancel",
   "commonContinue": "Continue",
   "commonSave": "Save",
@@ -21,12 +20,10 @@
   "commonRetry": "Retry",
   "commonError": "Something went wrong",
   "commonClose": "Close",
-
   "navDashboard": "Today",
   "navDiary": "Diary",
   "navSearch": "Search",
   "navSettings": "Settings",
-
   "authLoginTitle": "Welcome back",
   "authLoginSubtitle": "Sign in to continue tracking your nutrition.",
   "authSignupTitle": "Create your account",
@@ -43,7 +40,6 @@
   "authErrorEmailInUse": "An account already exists for this email.",
   "authErrorWeakPassword": "Please choose a stronger password.",
   "authErrorGeneric": "Authentication failed. Please try again.",
-
   "onboardingWelcomeTitle": "Welcome to Nutrivoya",
   "onboardingWelcomeBody": "Nutrition that works with your food, your culture and your life.",
   "onboardingGoalTitle": "What would you like Nutrivoya to help with?",
@@ -79,25 +75,36 @@
   "onboardingSummaryMaintenance": "Estimated maintenance: {kcal} kcal/day",
   "@onboardingSummaryMaintenance": {
     "placeholders": {
-      "kcal": {"type": "int"}
+      "kcal": {
+        "type": "int"
+      }
     }
   },
   "onboardingSummaryTarget": "Suggested daily target: {kcal} kcal",
   "@onboardingSummaryTarget": {
     "placeholders": {
-      "kcal": {"type": "int"}
+      "kcal": {
+        "type": "int"
+      }
     }
   },
   "onboardingSummaryMacros": "Protein {protein} g · Carbs {carbs} g · Fat {fat} g · Fibre {fibre} g",
   "@onboardingSummaryMacros": {
     "placeholders": {
-      "protein": {"type": "int"},
-      "carbs": {"type": "int"},
-      "fat": {"type": "int"},
-      "fibre": {"type": "int"}
+      "protein": {
+        "type": "int"
+      },
+      "carbs": {
+        "type": "int"
+      },
+      "fat": {
+        "type": "int"
+      },
+      "fibre": {
+        "type": "int"
+      }
     }
   },
-
   "dashboardGreetingMorning": "Good morning",
   "dashboardGreetingAfternoon": "Good afternoon",
   "dashboardGreetingEvening": "Good evening",
@@ -114,23 +121,30 @@
   "dashboardCaloriesOf": "{consumed} / {target} kcal",
   "@dashboardCaloriesOf": {
     "placeholders": {
-      "consumed": {"type": "int"},
-      "target": {"type": "int"}
+      "consumed": {
+        "type": "int"
+      },
+      "target": {
+        "type": "int"
+      }
     }
   },
   "dashboardCaloriesRemaining": "{kcal} kcal remaining",
   "@dashboardCaloriesRemaining": {
     "placeholders": {
-      "kcal": {"type": "int"}
+      "kcal": {
+        "type": "int"
+      }
     }
   },
   "dashboardCaloriesOver": "{kcal} kcal over target",
   "@dashboardCaloriesOver": {
     "placeholders": {
-      "kcal": {"type": "int"}
+      "kcal": {
+        "type": "int"
+      }
     }
   },
-
   "diaryTitle": "Diary",
   "diaryMealBreakfast": "Breakfast",
   "diaryMealLunch": "Lunch",
@@ -138,7 +152,6 @@
   "diaryMealSnacks": "Snacks",
   "diaryEmpty": "No entries yet.",
   "diaryAddToMeal": "Add food",
-
   "searchTitle": "Search",
   "searchHint": "What did you eat?",
   "searchEmpty": "Search for foods like roti, jollof rice, dal or mango.",
@@ -147,7 +160,6 @@
   "searchFrequent": "Frequent",
   "searchFavourites": "Favourites",
   "searchMyRecipes": "My recipes",
-
   "settingsTitle": "Settings",
   "settingsAppearance": "Appearance",
   "settingsTheme": "Theme",
@@ -168,13 +180,11 @@
   "settingsProfile": "Profile",
   "settingsGoals": "Goals",
   "settingsComingSoon": "Coming soon",
-
   "profileTitle": "Profile",
   "profileGoal": "Goal",
   "profileActivity": "Activity level",
   "profileCuisines": "Familiar cuisines",
   "profileEdit": "Edit profile",
-
   "goalsTitle": "Nutrition goals",
   "goalsNotSet": "Not set yet",
   "goalsCalorieTarget": "Calorie target",
@@ -187,7 +197,6 @@
   "goalsNeedProfile": "Complete onboarding to see personalized targets.",
   "goalsEstimateDisclaimer": "Calculated expenditure is an estimate. Your actual needs may vary.",
   "goalsRefineOverTime": "We can refine this estimate over time using your weight trend.",
-
   "energyNoteEstimateDisclaimer": "Calculated expenditure is an estimate. Your actual needs may vary.",
   "energyNotePhysiologicalUnspecified": "Without a physiological calculation input, we averaged standard equations. Confidence is lower.",
   "energyNoteAgeOutsideAdultRange": "Energy equations are less reliable outside typical adult ages. Consider professional guidance.",
@@ -195,7 +204,6 @@
   "energyNoteDeficitCapped": "We limited the calorie deficit to a safer rate. Crash dieting is not supported.",
   "energyNoteFloorApplied": "Your target was raised to a minimum energy intake for safety.",
   "energyNoteTrackOnly": "You chose to track food only. The numbers below are maintenance estimates for reference.",
-
   "confidenceLabel": "Estimate confidence",
   "confidenceHigh": "High",
   "confidenceHighNote": "Official food-composition data",
@@ -204,14 +212,12 @@
   "confidenceEstimated": "Estimated",
   "confidenceEstimatedNote": "Based on common ingredients and portion size",
   "confidenceUnknown": "Unknown",
-
   "sourceLabel": "Source",
   "sourceAuthoritative": "Authoritative food-composition dataset",
   "sourcePackaged": "Packaged-food database",
   "sourceNutrivoyaCurated": "Nutrivoya curated dataset",
   "sourceRecipeEstimated": "Recipe-based estimate",
   "sourceUserSubmitted": "User-submitted",
-
   "portionLabel": "Portion",
   "portionSmall": "Small",
   "portionMedium": "Medium",
@@ -219,7 +225,6 @@
   "portionGrams": "Grams",
   "portionQuantity": "Quantity",
   "portionCustom": "Custom grams",
-
   "nutrientEnergyKcal": "Calories",
   "nutrientProteinG": "Protein",
   "nutrientCarbohydrateG": "Carbohydrates",
@@ -238,7 +243,6 @@
   "nutrientVitaminDUg": "Vitamin D",
   "nutrientVitaminB12Ug": "Vitamin B12",
   "nutrientFolateUg": "Folate",
-
   "foodDetailsTitle": "Food details",
   "foodDetailsAddToMeal": "Add to meal",
   "foodDetailsPerPortion": "per portion",
@@ -252,21 +256,25 @@
   "foodDetailsCuisine": "Cuisine",
   "foodDetailsRegion": "Region",
   "foodDetailsAliases": "Also known as",
-
   "searchResultsCount": "{count, plural, =0{No results} =1{1 result} other{{count} results}}",
   "@searchResultsCount": {
     "placeholders": {
-      "count": {"type": "int"}
+      "count": {
+        "type": "int"
+      }
     }
   },
   "searchTryExample": "Try: roti, jollof rice, dal, mango",
-
   "diaryAddToMealTitle": "Add to which meal?",
   "diaryEntryAdded": "{food} added to {meal}",
   "@diaryEntryAdded": {
     "placeholders": {
-      "food": {"type": "String"},
-      "meal": {"type": "String"}
+      "food": {
+        "type": "String"
+      },
+      "meal": {
+        "type": "String"
+      }
     }
   },
   "diaryEntryDeleted": "Entry deleted",
@@ -285,10 +293,11 @@
   "diaryEntryCalories": "{kcal} kcal",
   "@diaryEntryCalories": {
     "placeholders": {
-      "kcal": {"type": "int"}
+      "kcal": {
+        "type": "int"
+      }
     }
   },
-
   "recipesTitle": "My recipes",
   "recipesCreate": "Create recipe",
   "recipesEdit": "Edit recipe",
@@ -306,26 +315,31 @@
   "recipesWholeRecipeKcal": "Whole recipe: ≈ {kcal} kcal",
   "@recipesWholeRecipeKcal": {
     "placeholders": {
-      "kcal": {"type": "int"}
+      "kcal": {
+        "type": "int"
+      }
     }
   },
   "recipesPerServingKcal": "≈ {kcal} kcal per serving",
   "@recipesPerServingKcal": {
     "placeholders": {
-      "kcal": {"type": "int"}
+      "kcal": {
+        "type": "int"
+      }
     }
   },
   "recipesServingsCount": "{count, plural, =1{1 serving} other{{count} servings}}",
   "@recipesServingsCount": {
     "placeholders": {
-      "count": {"type": "int"}
+      "count": {
+        "type": "int"
+      }
     }
   },
   "recipesPerServingShort": "serving",
   "recipesCalculationNote": "Calculated from your ingredients and quantities. Preparation and yield can change the values.",
   "recipesDeleteTitle": "Delete recipe?",
   "recipesDeleteBody": "This removes the recipe from your personal collection. Diary entries already logged are not affected.",
-
   "barcodeTitle": "Scan barcode",
   "barcodeHint": "Point your camera at a packaged-food barcode, or enter the number manually.",
   "barcodeManualLabel": "Barcode number",
@@ -336,14 +350,15 @@
   "barcodeNotFoundBody": "No packaged food matched barcode {barcode}. You can try again or add the food another way.",
   "@barcodeNotFoundBody": {
     "placeholders": {
-      "barcode": {"type": "String"}
+      "barcode": {
+        "type": "String"
+      }
     }
   },
   "barcodeInvalid": "That does not look like a valid barcode. Use 8–14 digits.",
   "barcodeNetworkError": "Could not reach the packaged-food database. Check your connection and try again.",
   "barcodeTryAgain": "Try again",
   "barcodeCrowdsourcedNote": "Packaged-food data comes from Open Food Facts and may be incomplete or crowdsourced. Always verify the serving size before logging.",
-
   "assistantTitle": "Ask Nutrivoya",
   "assistantIntro": "Ask about your meals, cultural staples, protein, or hunger — answers use your diary, targets, and food database. Numbers are never invented.",
   "assistantWellnessDisclaimer": "Nutrivoya offers general wellness guidance, not medical advice.",
@@ -362,7 +377,9 @@
   "assistantHeadlineCultural": "Yes — {staple} can fit your goals",
   "@assistantHeadlineCultural": {
     "placeholders": {
-      "staple": {"type": "String"}
+      "staple": {
+        "type": "String"
+      }
     }
   },
   "assistantHeadlineBalance": "Today's meal balance",
@@ -371,13 +388,17 @@
   "assistantHeadlineLookupFound": "Nutrition for {foodName}",
   "@assistantHeadlineLookupFound": {
     "placeholders": {
-      "foodName": {"type": "String"}
+      "foodName": {
+        "type": "String"
+      }
     }
   },
   "assistantHeadlineLookupMissing": "No match for “{foodName}”",
   "@assistantHeadlineLookupMissing": {
     "placeholders": {
-      "foodName": {"type": "String"}
+      "foodName": {
+        "type": "String"
+      }
     }
   },
   "assistantHeadlineSubstitute": "Modify before you replace",
@@ -386,93 +407,167 @@
   "assistantBodyCultural": "{staple} is a normal part of {cuisine} eating. You do not need to abandon it — adjust portions and pairings to match your goal.",
   "@assistantBodyCultural": {
     "placeholders": {
-      "staple": {"type": "String"},
-      "cuisine": {"type": "String"}
+      "staple": {
+        "type": "String"
+      },
+      "cuisine": {
+        "type": "String"
+      }
     }
   },
   "assistantBodyCulturalWithData": "{staple} can stay in your pattern. From the food database, {foodName} ({portionName}) is about {kcal} kcal ({sourceName}). Prefer a smaller portion or add vegetables and a protein side rather than cutting the staple entirely.",
   "@assistantBodyCulturalWithData": {
     "placeholders": {
-      "staple": {"type": "String"},
-      "foodName": {"type": "String"},
-      "portionName": {"type": "String"},
-      "kcal": {"type": "int"},
-      "sourceName": {"type": "String"}
+      "staple": {
+        "type": "String"
+      },
+      "foodName": {
+        "type": "String"
+      },
+      "portionName": {
+        "type": "String"
+      },
+      "kcal": {
+        "type": "int"
+      },
+      "sourceName": {
+        "type": "String"
+      }
     }
   },
   "assistantBodyBalanceWithTargets": "Today you have logged {caloriesConsumed} of {calorieTarget} kcal and {proteinConsumed} of {proteinTarget} g protein across {entryCount} entries. Use familiar foods and small adjustments — not food moralising.",
   "@assistantBodyBalanceWithTargets": {
     "placeholders": {
-      "caloriesConsumed": {"type": "int"},
-      "calorieTarget": {"type": "int"},
-      "proteinConsumed": {"type": "int"},
-      "proteinTarget": {"type": "int"},
-      "entryCount": {"type": "int"}
+      "caloriesConsumed": {
+        "type": "int"
+      },
+      "calorieTarget": {
+        "type": "int"
+      },
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "proteinTarget": {
+        "type": "int"
+      },
+      "entryCount": {
+        "type": "int"
+      }
     }
   },
   "assistantBodyBalanceNoTargets": "Today you have logged {caloriesConsumed} kcal and {proteinConsumed} g protein across {entryCount} entries. Set goals in Settings for clearer targets, or keep logging familiar meals.",
   "@assistantBodyBalanceNoTargets": {
     "placeholders": {
-      "caloriesConsumed": {"type": "int"},
-      "proteinConsumed": {"type": "int"},
-      "entryCount": {"type": "int"}
+      "caloriesConsumed": {
+        "type": "int"
+      },
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "entryCount": {
+        "type": "int"
+      }
     }
   },
   "assistantBodyProteinWithTargets": "You have logged {proteinConsumed} of {proteinTarget} g protein today ({proteinGap} g to go). Keep {cuisine} staples and add protein-rich sides.",
   "@assistantBodyProteinWithTargets": {
     "placeholders": {
-      "proteinConsumed": {"type": "int"},
-      "proteinTarget": {"type": "int"},
-      "proteinGap": {"type": "int"},
-      "cuisine": {"type": "String"}
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "proteinTarget": {
+        "type": "int"
+      },
+      "proteinGap": {
+        "type": "int"
+      },
+      "cuisine": {
+        "type": "String"
+      }
     }
   },
   "assistantBodyProtein": "You have logged {proteinConsumed} g protein today. Raise it with familiar {cuisine} pairings rather than replacing your usual meals.",
   "@assistantBodyProtein": {
     "placeholders": {
-      "proteinConsumed": {"type": "int"},
-      "cuisine": {"type": "String"}
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "cuisine": {
+        "type": "String"
+      }
     }
   },
   "assistantBodyHungerWithTargets": "You are at {caloriesConsumed} of {calorieTarget} kcal, with {proteinConsumed} g protein and {fibreConsumed} g fibre logged. Hunger can reflect protein, fibre, meal timing, or water — not a moral failure.",
   "@assistantBodyHungerWithTargets": {
     "placeholders": {
-      "caloriesConsumed": {"type": "int"},
-      "calorieTarget": {"type": "int"},
-      "proteinConsumed": {"type": "int"},
-      "fibreConsumed": {"type": "int"}
+      "caloriesConsumed": {
+        "type": "int"
+      },
+      "calorieTarget": {
+        "type": "int"
+      },
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "fibreConsumed": {
+        "type": "int"
+      }
     }
   },
   "assistantBodyHunger": "You have logged {caloriesConsumed} kcal, {proteinConsumed} g protein and {fibreConsumed} g fibre today. Hunger often improves with protein, fibre, and slower eating — not by labelling foods as bad.",
   "@assistantBodyHunger": {
     "placeholders": {
-      "caloriesConsumed": {"type": "int"},
-      "proteinConsumed": {"type": "int"},
-      "fibreConsumed": {"type": "int"}
+      "caloriesConsumed": {
+        "type": "int"
+      },
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "fibreConsumed": {
+        "type": "int"
+      }
     }
   },
   "assistantBodyLookupFound": "{foodName} · {portionName}: ≈ {kcal} kcal and {proteinG} g protein. Source: {sourceName}. Confidence: {confidence}.",
   "@assistantBodyLookupFound": {
     "placeholders": {
-      "foodName": {"type": "String"},
-      "portionName": {"type": "String"},
-      "kcal": {"type": "int"},
-      "proteinG": {"type": "int"},
-      "sourceName": {"type": "String"},
-      "confidence": {"type": "String"}
+      "foodName": {
+        "type": "String"
+      },
+      "portionName": {
+        "type": "String"
+      },
+      "kcal": {
+        "type": "int"
+      },
+      "proteinG": {
+        "type": "int"
+      },
+      "sourceName": {
+        "type": "String"
+      },
+      "confidence": {
+        "type": "String"
+      }
     }
   },
   "assistantBodyLookupNoNutrition": "{foodName} was found in {sourceName}, but reliable calorie data is unavailable. Nutrivoya will not invent a number.",
   "@assistantBodyLookupNoNutrition": {
     "placeholders": {
-      "foodName": {"type": "String"},
-      "sourceName": {"type": "String"}
+      "foodName": {
+        "type": "String"
+      },
+      "sourceName": {
+        "type": "String"
+      }
     }
   },
   "assistantBodyLookupMissing": "No structured food matched “{foodName}”. Try another name, a barcode, or add a personal recipe — calories will not be guessed.",
   "@assistantBodyLookupMissing": {
     "placeholders": {
-      "foodName": {"type": "String"}
+      "foodName": {
+        "type": "String"
+      }
     }
   },
   "assistantBodySubstitute": "Start by changing portion size, adding vegetables, or pairing a protein side with the food you already eat. Replacement is optional — modification usually keeps cultural meals intact.",
@@ -497,21 +592,26 @@
   "assistantTipAddVegetables": "Add vegetables or salad for volume and fibre",
   "assistantTipAddProteinSide": "Add a protein-rich side rather than cutting the staple",
   "assistantTipLogSomething": "Log a meal so balance advice can use your real pattern",
-
   "progressTitle": "Progress",
   "progressIntro": "Track weight, water and measurements as calm trends — day-to-day changes are noise, not a verdict.",
   "progressWater": "Water today",
   "progressWaterTotal": "{total} ml of {goal} ml",
   "@progressWaterTotal": {
     "placeholders": {
-      "total": {"type": "int"},
-      "goal": {"type": "int"}
+      "total": {
+        "type": "int"
+      },
+      "goal": {
+        "type": "int"
+      }
     }
   },
   "progressWaterAdd": "+{ml} ml",
   "@progressWaterAdd": {
     "placeholders": {
-      "ml": {"type": "int"}
+      "ml": {
+        "type": "int"
+      }
     }
   },
   "progressWeight": "Weight",
@@ -520,7 +620,9 @@
   "progressWeightValue": "{kg} kg",
   "@progressWeightValue": {
     "placeholders": {
-      "kg": {"type": "String"}
+      "kg": {
+        "type": "String"
+      }
     }
   },
   "progressWeightEmpty": "No weight logs yet. Add a few over days to see a calm trend.",
@@ -530,21 +632,31 @@
   "progressTrendSteady": "Around {avg} kg — roughly steady over recent days.",
   "@progressTrendSteady": {
     "placeholders": {
-      "avg": {"type": "String"}
+      "avg": {
+        "type": "String"
+      }
     }
   },
   "progressTrendRising": "Around {avg} kg — gently rising (~{delta} kg/week). Focus on patterns, not one day.",
   "@progressTrendRising": {
     "placeholders": {
-      "avg": {"type": "String"},
-      "delta": {"type": "String"}
+      "avg": {
+        "type": "String"
+      },
+      "delta": {
+        "type": "String"
+      }
     }
   },
   "progressTrendFalling": "Around {avg} kg — gently falling (~{delta} kg/week). Focus on patterns, not one day.",
   "@progressTrendFalling": {
     "placeholders": {
-      "avg": {"type": "String"},
-      "delta": {"type": "String"}
+      "avg": {
+        "type": "String"
+      },
+      "delta": {
+        "type": "String"
+      }
     }
   },
   "progressMeasurements": "Body measurements",
@@ -556,30 +668,33 @@
   "progressWaist": "Waist {cm} cm",
   "@progressWaist": {
     "placeholders": {
-      "cm": {"type": "String"}
+      "cm": {
+        "type": "String"
+      }
     }
   },
   "progressHip": "Hip {cm} cm",
   "@progressHip": {
     "placeholders": {
-      "cm": {"type": "String"}
+      "cm": {
+        "type": "String"
+      }
     }
   },
   "progressMeasurementInvalid": "Enter at least one measurement.",
-
   "favouritesTitle": "Favourites",
   "favouritesAdd": "Add to favourites",
   "favouritesRemove": "Remove from favourites",
-
   "frequentFoodsTitle": "Frequent foods",
   "frequentFoodsEmpty": "Foods you log often will appear here.",
   "frequentFoodsCount": "Logged {count} times",
   "@frequentFoodsCount": {
     "placeholders": {
-      "count": {"type": "int"}
+      "count": {
+        "type": "int"
+      }
     }
   },
-
   "templatesTitle": "Meal templates",
   "templatesIntro": "Save a day's familiar meals and re-apply them later — useful for usual breakfasts and family patterns.",
   "templatesEmpty": "No templates yet. Log a day you like, then save it as a template.",
@@ -591,20 +706,52 @@
   "templatesApplied": "Added {count} items from the template",
   "@templatesApplied": {
     "placeholders": {
-      "count": {"type": "int"}
+      "count": {
+        "type": "int"
+      }
     }
   },
   "templatesTodayCount": "{count} diary entries available to save",
   "@templatesTodayCount": {
     "placeholders": {
-      "count": {"type": "int"}
+      "count": {
+        "type": "int"
+      }
     }
   },
   "templatesItemSummary": "{count} items · ≈ {kcal} kcal",
   "@templatesItemSummary": {
     "placeholders": {
-      "count": {"type": "int"},
-      "kcal": {"type": "int"}
+      "count": {
+        "type": "int"
+      },
+      "kcal": {
+        "type": "int"
+      }
     }
-  }
+  },
+  "photoTitle": "Photo meal",
+  "photoIntro": "Photograph a meal, describe what you see, then confirm a food from the database. Nutrition always comes from structured food data — never from the image alone.",
+  "photoUncertaintyDisclaimer": "Photo suggestions are uncertain. Always confirm the food and portion before logging. Computer vision estimates are never treated as certain.",
+  "photoTakePhoto": "Take photo",
+  "photoChooseGallery": "Choose from gallery",
+  "photoRetake": "Choose a different photo",
+  "photoClear": "Clear photo",
+  "photoDescriptionLabel": "What do you see?",
+  "photoDescriptionHint": "e.g. roti and dal, jollof rice, bowl of pho",
+  "photoSuggestFoods": "Suggest foods",
+  "photoSuggestionsTitle": "Possible matches",
+  "photoSuggestionsNote": "These come from your description searched in the food database — not invented calories from the photo.",
+  "photoConfidenceUncertain": "Uncertain match — confirm",
+  "photoConfidenceLow": "Weak match — check carefully",
+  "photoPortionTitle": "Estimate portion",
+  "photoPortionNote": "Portion from the photo is only an estimate. Adjust before logging.",
+  "photoConfirmOpenFood": "Confirm and open food",
+  "photoConfirmNote": "Next you will verify serving size on the food details screen. Logging uses structured nutrition only.",
+  "photoDetailsEstimateNote": "Portion was suggested from a meal photo and is uncertain — verify grams before logging.",
+  "photoSearchSubtitle": "Photograph a meal, then confirm a food from the database.",
+  "photoErrorNoImage": "Add a photo first.",
+  "photoErrorNeedDescription": "Describe what you see so Nutrivoya can search the food database. The app will not invent foods from pixels alone.",
+  "photoErrorNoMatches": "No structured foods matched that description. Try another name or search manually.",
+  "photoErrorFailed": "Could not use that photo. Try again or pick another image."
 }

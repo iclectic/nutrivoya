@@ -15,6 +15,7 @@ import '../features/profile/profile_controller.dart';
 import '../features/recipes/recipe_details_screen.dart';
 import '../features/recipes/recipe_editor_screen.dart';
 import '../features/recipes/recipes_screen.dart';
+import '../features/photo/photo_recognition_screen.dart';
 import '../features/tracking/meal_templates_screen.dart';
 import '../features/tracking/progress_screen.dart';
 import 'main_shell.dart';
@@ -89,13 +90,29 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(
         path: '/food/:id',
-        builder: (context, state) => FoodDetailsScreen(
-          foodId: Uri.decodeComponent(state.pathParameters['id']!),
-        ),
+        builder: (context, state) {
+          final extra = state.extra;
+          double? initialGrams;
+          var fromPhoto = false;
+          if (extra is Map) {
+            final g = extra['photoEstimatedGrams'];
+            if (g is num) initialGrams = g.toDouble();
+            fromPhoto = extra['photoEstimatedGrams'] != null;
+          }
+          return FoodDetailsScreen(
+            foodId: Uri.decodeComponent(state.pathParameters['id']!),
+            initialGrams: initialGrams,
+            fromPhotoEstimate: fromPhoto,
+          );
+        },
       ),
       GoRoute(
         path: '/barcode',
         builder: (context, state) => const BarcodeScannerScreen(),
+      ),
+      GoRoute(
+        path: '/photo',
+        builder: (context, state) => const PhotoRecognitionScreen(),
       ),
       GoRoute(
         path: '/assistant',
