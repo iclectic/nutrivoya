@@ -31,6 +31,18 @@ enum NutrientCode {
 
   /// Localization key for the nutrient's display name.
   String get l10nKey => 'nutrient${name[0].toUpperCase()}${name.substring(1)}';
+
+  /// Stable storage id.
+  String get id => name;
+}
+
+extension NutrientCodeX on NutrientCode {
+  static NutrientCode? fromId(String id) {
+    for (final code in NutrientCode.values) {
+      if (code.id == id) return code;
+    }
+    return null;
+  }
 }
 
 /// A single nutrient amount, stored per 100 g edible portion.

@@ -1,7 +1,7 @@
 /// A user's primary nutrition goal.
 ///
-/// Nutrivoya never forces weight loss. Goals drive target calculations later
-/// (Milestone 4) and are stored on the profile.
+/// Nutrivoya never forces weight loss. Goals drive target calculations in
+/// `EnergyRequirementService` and are stored on the profile.
 enum NutritionGoal {
   maintainWeight,
   loseWeight,

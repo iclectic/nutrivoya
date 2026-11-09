@@ -496,6 +496,24 @@ abstract class AppLocalizations {
   /// **'Personalized calorie and macro targets will be calculated in a later step.'**
   String get onboardingSummaryComingSoon;
 
+  /// No description provided for @onboardingSummaryMaintenance.
+  ///
+  /// In en, this message translates to:
+  /// **'Estimated maintenance: {kcal} kcal/day'**
+  String onboardingSummaryMaintenance(int kcal);
+
+  /// No description provided for @onboardingSummaryTarget.
+  ///
+  /// In en, this message translates to:
+  /// **'Suggested daily target: {kcal} kcal'**
+  String onboardingSummaryTarget(int kcal);
+
+  /// No description provided for @onboardingSummaryMacros.
+  ///
+  /// In en, this message translates to:
+  /// **'Protein {protein} g · Carbs {carbs} g · Fat {fat} g · Fibre {fibre} g'**
+  String onboardingSummaryMacros(int protein, int carbs, int fat, int fibre);
+
   /// No description provided for @dashboardGreetingMorning.
   ///
   /// In en, this message translates to:
@@ -574,6 +592,24 @@ abstract class AppLocalizations {
   /// **'Targets will be set up after onboarding.'**
   String get dashboardTargetsPlaceholder;
 
+  /// No description provided for @dashboardCaloriesOf.
+  ///
+  /// In en, this message translates to:
+  /// **'{consumed} / {target} kcal'**
+  String dashboardCaloriesOf(int consumed, int target);
+
+  /// No description provided for @dashboardCaloriesRemaining.
+  ///
+  /// In en, this message translates to:
+  /// **'{kcal} kcal remaining'**
+  String dashboardCaloriesRemaining(int kcal);
+
+  /// No description provided for @dashboardCaloriesOver.
+  ///
+  /// In en, this message translates to:
+  /// **'{kcal} kcal over target'**
+  String dashboardCaloriesOver(int kcal);
+
   /// No description provided for @diaryTitle.
   ///
   /// In en, this message translates to:
@@ -637,7 +673,7 @@ abstract class AppLocalizations {
   /// No description provided for @searchNoResults.
   ///
   /// In en, this message translates to:
-  /// **'No results yet. Food search will be available in a later milestone.'**
+  /// **'No matching foods found. Try another name, alias or spelling.'**
   String get searchNoResults;
 
   /// No description provided for @searchRecent.
@@ -855,6 +891,78 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Fibre target'**
   String get goalsFibreTarget;
+
+  /// No description provided for @goalsBmr.
+  ///
+  /// In en, this message translates to:
+  /// **'Estimated BMR'**
+  String get goalsBmr;
+
+  /// No description provided for @goalsTdee.
+  ///
+  /// In en, this message translates to:
+  /// **'Estimated maintenance (TDEE)'**
+  String get goalsTdee;
+
+  /// No description provided for @goalsNeedProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete onboarding to see personalized targets.'**
+  String get goalsNeedProfile;
+
+  /// No description provided for @goalsEstimateDisclaimer.
+  ///
+  /// In en, this message translates to:
+  /// **'Calculated expenditure is an estimate. Your actual needs may vary.'**
+  String get goalsEstimateDisclaimer;
+
+  /// No description provided for @goalsRefineOverTime.
+  ///
+  /// In en, this message translates to:
+  /// **'We can refine this estimate over time using your weight trend.'**
+  String get goalsRefineOverTime;
+
+  /// No description provided for @energyNoteEstimateDisclaimer.
+  ///
+  /// In en, this message translates to:
+  /// **'Calculated expenditure is an estimate. Your actual needs may vary.'**
+  String get energyNoteEstimateDisclaimer;
+
+  /// No description provided for @energyNotePhysiologicalUnspecified.
+  ///
+  /// In en, this message translates to:
+  /// **'Without a physiological calculation input, we averaged standard equations. Confidence is lower.'**
+  String get energyNotePhysiologicalUnspecified;
+
+  /// No description provided for @energyNoteAgeOutsideAdultRange.
+  ///
+  /// In en, this message translates to:
+  /// **'Energy equations are less reliable outside typical adult ages. Consider professional guidance.'**
+  String get energyNoteAgeOutsideAdultRange;
+
+  /// No description provided for @energyNoteLoseWhileLowWeight.
+  ///
+  /// In en, this message translates to:
+  /// **'Your profile suggests a low body weight. Aggressive weight loss is not recommended — please seek qualified support if needed.'**
+  String get energyNoteLoseWhileLowWeight;
+
+  /// No description provided for @energyNoteDeficitCapped.
+  ///
+  /// In en, this message translates to:
+  /// **'We limited the calorie deficit to a safer rate. Crash dieting is not supported.'**
+  String get energyNoteDeficitCapped;
+
+  /// No description provided for @energyNoteFloorApplied.
+  ///
+  /// In en, this message translates to:
+  /// **'Your target was raised to a minimum energy intake for safety.'**
+  String get energyNoteFloorApplied;
+
+  /// No description provided for @energyNoteTrackOnly.
+  ///
+  /// In en, this message translates to:
+  /// **'You chose to track food only. The numbers below are maintenance estimates for reference.'**
+  String get energyNoteTrackOnly;
 
   /// No description provided for @confidenceLabel.
   ///
@@ -1275,6 +1383,132 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{kcal} kcal'**
   String diaryEntryCalories(int kcal);
+
+  /// No description provided for @recipesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'My recipes'**
+  String get recipesTitle;
+
+  /// No description provided for @recipesCreate.
+  ///
+  /// In en, this message translates to:
+  /// **'Create recipe'**
+  String get recipesCreate;
+
+  /// No description provided for @recipesEdit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit recipe'**
+  String get recipesEdit;
+
+  /// No description provided for @recipesEmptyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No personal recipes yet'**
+  String get recipesEmptyTitle;
+
+  /// No description provided for @recipesEmptyBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Save family recipes like Mum\'s jollof or Grandma\'s dal so you can log the versions you actually cook.'**
+  String get recipesEmptyBody;
+
+  /// No description provided for @recipesNameLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Recipe name'**
+  String get recipesNameLabel;
+
+  /// No description provided for @recipesServingsLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Servings'**
+  String get recipesServingsLabel;
+
+  /// No description provided for @recipesYieldLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Total yield (g)'**
+  String get recipesYieldLabel;
+
+  /// No description provided for @recipesYieldHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Optional — defaults to ingredient sum'**
+  String get recipesYieldHint;
+
+  /// No description provided for @recipesIngredients.
+  ///
+  /// In en, this message translates to:
+  /// **'Ingredients'**
+  String get recipesIngredients;
+
+  /// No description provided for @recipesIngredientsEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Add ingredients to calculate nutrition.'**
+  String get recipesIngredientsEmpty;
+
+  /// No description provided for @recipesAddIngredient.
+  ///
+  /// In en, this message translates to:
+  /// **'Add ingredient'**
+  String get recipesAddIngredient;
+
+  /// No description provided for @recipesNotesLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Notes'**
+  String get recipesNotesLabel;
+
+  /// No description provided for @recipesCalculatedNutrition.
+  ///
+  /// In en, this message translates to:
+  /// **'Calculated nutrition'**
+  String get recipesCalculatedNutrition;
+
+  /// No description provided for @recipesWholeRecipeKcal.
+  ///
+  /// In en, this message translates to:
+  /// **'Whole recipe: ≈ {kcal} kcal'**
+  String recipesWholeRecipeKcal(int kcal);
+
+  /// No description provided for @recipesPerServingKcal.
+  ///
+  /// In en, this message translates to:
+  /// **'≈ {kcal} kcal per serving'**
+  String recipesPerServingKcal(int kcal);
+
+  /// No description provided for @recipesServingsCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 serving} other{{count} servings}}'**
+  String recipesServingsCount(int count);
+
+  /// No description provided for @recipesPerServingShort.
+  ///
+  /// In en, this message translates to:
+  /// **'serving'**
+  String get recipesPerServingShort;
+
+  /// No description provided for @recipesCalculationNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Calculated from your ingredients and quantities. Preparation and yield can change the values.'**
+  String get recipesCalculationNote;
+
+  /// No description provided for @recipesDeleteTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete recipe?'**
+  String get recipesDeleteTitle;
+
+  /// No description provided for @recipesDeleteBody.
+  ///
+  /// In en, this message translates to:
+  /// **'This removes the recipe from your personal collection. Diary entries already logged are not affected.'**
+  String get recipesDeleteBody;
 }
 
 class _AppLocalizationsDelegate
