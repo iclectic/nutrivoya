@@ -118,6 +118,18 @@ class SettingsScreen extends ConsumerWidget {
               onTap: () => context.push('/photo'),
             ),
             ListTile(
+              leading: const Icon(Icons.add_box_outlined),
+              title: Text(l10n.addProductTitle),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => context.push('/add-product'),
+            ),
+            ListTile(
+              leading: const Icon(Icons.inventory_2_outlined),
+              title: Text(l10n.mySubmissionsTitle),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => context.push('/submissions'),
+            ),
+            ListTile(
               leading: const Icon(Icons.playlist_add_check_outlined),
               title: Text(l10n.templatesTitle),
               trailing: const Icon(Icons.chevron_right),

@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/models/food.dart';
 import '../../core/models/food_search_result.dart';
 import '../../features/profile/profile_controller.dart';
+import '../add_product/add_product_providers.dart';
 import '../barcode/barcode_providers.dart';
 import 'data/usda_food_data_central_adapter.dart';
 import 'food_repository.dart';
@@ -17,11 +18,17 @@ final usdaAdapterProvider = Provider<UsdaFoodDataCentralAdapter>(
 );
 
 final foodRepositoryProvider = Provider<FoodRepository>(
-  (ref) => CompositeFoodRepository(
-    searchService: ref.watch(foodSearchServiceProvider),
-    usdaAdapter: ref.watch(usdaAdapterProvider),
-    packagedFoodRepository: ref.watch(packagedFoodRepositoryProvider),
-  ),
+  (ref) {
+    // Watch revision so search picks up newly published user foods.
+    ref.watch(productSubmissionsRevisionProvider);
+    final userFoods = ref.watch(publishedUserFoodsProvider);
+    return CompositeFoodRepository(
+      searchService: ref.watch(foodSearchServiceProvider),
+      usdaAdapter: ref.watch(usdaAdapterProvider),
+      packagedFoodRepository: ref.watch(packagedFoodRepositoryProvider),
+      userFoods: () => userFoods,
+    );
+  },
 );
 
 /// Current search query state.

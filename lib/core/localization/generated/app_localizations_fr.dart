@@ -1342,4 +1342,139 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get photoErrorFailed =>
       'Impossible d\'utiliser cette photo. Réessayez ou choisissez une autre image.';
+
+  @override
+  String get addProductTitle => 'Ajouter un produit';
+
+  @override
+  String get addProductIntro =>
+      'Soumettez un aliment ou produit emballé manquant pour votre bibliothèque personnelle. Les valeurs saisies ne sont jamais traitées comme officielles.';
+
+  @override
+  String get addProductProvenanceNote =>
+      'Laissez la nutrition vide si elle est inconnue. Nutrivoya n\'invente pas de calories ni de macros.';
+
+  @override
+  String get addProductNameLabel => 'Nom du produit ou de l\'aliment';
+
+  @override
+  String get addProductBrandLabel => 'Marque (facultatif)';
+
+  @override
+  String get addProductBarcodeLabel => 'Code-barres (facultatif)';
+
+  @override
+  String get addProductCuisineLabel => 'Cuisine ou région (facultatif)';
+
+  @override
+  String get addProductServingSection => 'Portion';
+
+  @override
+  String get addProductServingGramsLabel => 'Portion par défaut (grammes)';
+
+  @override
+  String get addProductPortionNameLabel => 'Nom de la portion (facultatif)';
+
+  @override
+  String get addProductNutritionSection => 'Nutrition pour 100 g (facultatif)';
+
+  @override
+  String get addProductNutritionHint =>
+      'Saisissez uniquement les valeurs connues d\'une étiquette ou d\'une source fiable. Laissez vide plutôt que d\'estimer.';
+
+  @override
+  String get addProductEnergyLabel => 'Énergie (kcal / 100 g)';
+
+  @override
+  String get addProductProteinLabel => 'Protéines (g / 100 g)';
+
+  @override
+  String get addProductCarbLabel => 'Glucides (g / 100 g)';
+
+  @override
+  String get addProductFatLabel => 'Lipides (g / 100 g)';
+
+  @override
+  String get addProductFibreLabel => 'Fibres (g / 100 g)';
+
+  @override
+  String get addProductNotesLabel => 'Notes (facultatif)';
+
+  @override
+  String get addProductSubmit => 'Enregistrer dans ma bibliothèque';
+
+  @override
+  String get addProductSubmitNote =>
+      'Enregistré comme soumission utilisateur en attente de revue. Visible uniquement dans votre recherche — pas comme nutrition vérifiée.';
+
+  @override
+  String get addProductPublished =>
+      'Enregistré dans votre bibliothèque personnelle (en attente de revue)';
+
+  @override
+  String get addProductErrorNameRequired =>
+      'Saisissez un nom de produit ou d\'aliment.';
+
+  @override
+  String get addProductErrorNameShort => 'Le nom est trop court.';
+
+  @override
+  String get addProductErrorServingInvalid =>
+      'La portion doit être entre 0 et 5000 grammes.';
+
+  @override
+  String get addProductErrorBarcodeInvalid =>
+      'Le code-barres doit contenir 8 à 14 chiffres.';
+
+  @override
+  String get addProductErrorEnergyInvalid =>
+      'L\'énergie doit être entre 0 et 950 kcal pour 100 g.';
+
+  @override
+  String get addProductErrorProteinInvalid =>
+      'Les protéines doivent être entre 0 et 1000 g pour 100 g.';
+
+  @override
+  String get addProductErrorCarbInvalid =>
+      'Les glucides doivent être entre 0 et 1000 g pour 100 g.';
+
+  @override
+  String get addProductErrorFatInvalid =>
+      'Les lipides doivent être entre 0 et 1000 g pour 100 g.';
+
+  @override
+  String get addProductErrorFibreInvalid =>
+      'Les fibres doivent être entre 0 et 1000 g pour 100 g.';
+
+  @override
+  String get addProductWarningNoNutrition =>
+      'Aucune nutrition saisie — l\'aliment restera indisponible jusqu\'à ce que vous ajoutiez des valeurs.';
+
+  @override
+  String get addProductWarningNoEnergy =>
+      'Énergie manquante — les macros seules n\'afficheront pas les calories.';
+
+  @override
+  String get addProductWarningMacrosHigh =>
+      'Protéines + glucides + lipides dépassent 110 g pour 100 g — vérifiez l\'étiquette.';
+
+  @override
+  String get addProductStatusDraft => 'Brouillon';
+
+  @override
+  String get addProductStatusPending => 'En attente de revue';
+
+  @override
+  String get addProductStatusPublished =>
+      'Dans la bibliothèque personnelle (en attente de revue)';
+
+  @override
+  String get addProductStatusWithdrawn => 'Retiré';
+
+  @override
+  String get mySubmissionsTitle => 'Mes soumissions';
+
+  @override
+  String get mySubmissionsEmpty =>
+      'Aucune soumission. Ajoutez un produit manquant depuis la recherche, le code-barres ou les Réglages.';
 }

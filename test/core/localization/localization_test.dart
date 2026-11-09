@@ -43,6 +43,8 @@ void main() {
         expect(l10n.progressTitle, isNotEmpty);
         expect(l10n.templatesTitle, isNotEmpty);
         expect(l10n.photoTitle, isNotEmpty);
+        expect(l10n.addProductTitle, isNotEmpty);
+        expect(l10n.mySubmissionsTitle, isNotEmpty);
         expect(l10n.goalsEstimateDisclaimer, isNotEmpty);
 
         // Locale-specific smoke checks — not English fallbacks for key locales.

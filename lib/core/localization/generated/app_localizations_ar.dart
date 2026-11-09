@@ -1310,4 +1310,137 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get photoErrorFailed =>
       'تعذّر استخدام تلك الصورة. أعد المحاولة أو اختر صورة أخرى.';
+
+  @override
+  String get addProductTitle => 'إضافة منتج';
+
+  @override
+  String get addProductIntro =>
+      'أرسل طعامًا أو منتجًا معلّبًا ناقصًا إلى مكتبتك الشخصية. القيم التي تدخلها لا تُعامل أبدًا كمراجع موثوقة.';
+
+  @override
+  String get addProductProvenanceNote =>
+      'اترك التغذية فارغة إن كانت مجهولة. لن تختلق Nutrivoya سعرات أو ماكرو.';
+
+  @override
+  String get addProductNameLabel => 'اسم المنتج أو الطعام';
+
+  @override
+  String get addProductBrandLabel => 'العلامة التجارية (اختياري)';
+
+  @override
+  String get addProductBarcodeLabel => 'الباركود (اختياري)';
+
+  @override
+  String get addProductCuisineLabel => 'المطبخ أو المنطقة (اختياري)';
+
+  @override
+  String get addProductServingSection => 'الحصة';
+
+  @override
+  String get addProductServingGramsLabel => 'الحصة الافتراضية (غرام)';
+
+  @override
+  String get addProductPortionNameLabel => 'اسم الحصة (اختياري)';
+
+  @override
+  String get addProductNutritionSection => 'التغذية لكل 100 غ (اختياري)';
+
+  @override
+  String get addProductNutritionHint =>
+      'أدخل فقط القيم المعروفة من ملصق أو مصدر موثوق. اترك الحقول فارغة بدل التخمين.';
+
+  @override
+  String get addProductEnergyLabel => 'الطاقة (سعرة / 100 غ)';
+
+  @override
+  String get addProductProteinLabel => 'البروتين (غ / 100 غ)';
+
+  @override
+  String get addProductCarbLabel => 'الكربوهيدرات (غ / 100 غ)';
+
+  @override
+  String get addProductFatLabel => 'الدهون (غ / 100 غ)';
+
+  @override
+  String get addProductFibreLabel => 'الألياف (غ / 100 غ)';
+
+  @override
+  String get addProductNotesLabel => 'ملاحظات (اختياري)';
+
+  @override
+  String get addProductSubmit => 'حفظ في مكتبتي';
+
+  @override
+  String get addProductSubmitNote =>
+      'يُحفظ كمقدَّم من المستخدم وبانتظار المراجعة. يظهر في بحثك فقط — وليس كتغذية موثّقة.';
+
+  @override
+  String get addProductPublished => 'حُفظ في مكتبتك الشخصية (بانتظار المراجعة)';
+
+  @override
+  String get addProductErrorNameRequired => 'أدخل اسم منتج أو طعام.';
+
+  @override
+  String get addProductErrorNameShort => 'الاسم قصير جدًا.';
+
+  @override
+  String get addProductErrorServingInvalid =>
+      'يجب أن تكون الحصة بين 0 و5000 غرام.';
+
+  @override
+  String get addProductErrorBarcodeInvalid =>
+      'يجب أن يكون الباركود من 8–14 رقمًا.';
+
+  @override
+  String get addProductErrorEnergyInvalid =>
+      'يجب أن تكون الطاقة بين 0 و950 سعرة لكل 100 غ.';
+
+  @override
+  String get addProductErrorProteinInvalid =>
+      'يجب أن يكون البروتين بين 0 و1000 غ لكل 100 غ.';
+
+  @override
+  String get addProductErrorCarbInvalid =>
+      'يجب أن تكون الكربوهيدرات بين 0 و1000 غ لكل 100 غ.';
+
+  @override
+  String get addProductErrorFatInvalid =>
+      'يجب أن تكون الدهون بين 0 و1000 غ لكل 100 غ.';
+
+  @override
+  String get addProductErrorFibreInvalid =>
+      'يجب أن تكون الألياف بين 0 و1000 غ لكل 100 غ.';
+
+  @override
+  String get addProductWarningNoNutrition =>
+      'لم تُدخل تغذية — سيظهر الطعام غير متاح حتى تضيف قيمًا.';
+
+  @override
+  String get addProductWarningNoEnergy =>
+      'الطاقة ناقصة — الماكرو وحده لن يعرض السعرات.';
+
+  @override
+  String get addProductWarningMacrosHigh =>
+      'البروتين + الكربوهيدرات + الدهون تتجاوز 110 غ لكل 100 غ — راجع الملصق.';
+
+  @override
+  String get addProductStatusDraft => 'مسودة';
+
+  @override
+  String get addProductStatusPending => 'بانتظار المراجعة';
+
+  @override
+  String get addProductStatusPublished =>
+      'في المكتبة الشخصية (بانتظار المراجعة)';
+
+  @override
+  String get addProductStatusWithdrawn => 'مسحوب';
+
+  @override
+  String get mySubmissionsTitle => 'إرسالاتي';
+
+  @override
+  String get mySubmissionsEmpty =>
+      'لا إرسالات بعد. أضف منتجًا ناقصًا من البحث أو الباركود أو الإعدادات.';
 }
