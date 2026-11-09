@@ -4,6 +4,7 @@ import '../../core/models/food.dart';
 import '../../core/models/food_search_result.dart';
 import '../../core/models/user_profile.dart';
 import 'data/local_food_dataset.dart';
+import 'data/packaged_food_repository.dart';
 import 'data/usda_food_data_central_adapter.dart';
 import 'food_search_service.dart';
 
@@ -21,20 +22,23 @@ abstract class FoodRepository {
   Future<Food?> getById(String id);
 }
 
-/// Composite repository: local curated dataset + optional USDA adapter.
+/// Composite repository: local curated + optional USDA + packaged (OFF).
 ///
-/// The local dataset always provides results offline. The USDA adapter is
-/// only queried when configured (API key present) and network is available;
-/// its failures never break the local experience.
+/// The local dataset always provides results offline. Remote adapters are
+/// only queried when available; their failures never break the local
+/// experience.
 class CompositeFoodRepository implements FoodRepository {
   CompositeFoodRepository({
     required FoodSearchService searchService,
     UsdaFoodDataCentralAdapter? usdaAdapter,
+    PackagedFoodRepository? packagedFoodRepository,
   })  : _searchService = searchService,
-        _usdaAdapter = usdaAdapter;
+        _usdaAdapter = usdaAdapter,
+        _packaged = packagedFoodRepository;
 
   final FoodSearchService _searchService;
   final UsdaFoodDataCentralAdapter? _usdaAdapter;
+  final PackagedFoodRepository? _packaged;
 
   @override
   Future<List<FoodSearchResult>> search(
@@ -52,19 +56,52 @@ class CompositeFoodRepository implements FoodRepository {
       }
     }
 
+    // Digit-only queries that look like barcodes hit packaged lookup and
+    // short-circuit: the resolved product is the result, not a text match.
+    if (_packaged != null && looksLikeBarcode(query.trim())) {
+      try {
+        final food = await _packaged.lookupBarcode(query.trim());
+        if (food != null) {
+          return [
+            FoodSearchResult(
+              food: food,
+              matchKind: SearchMatchKind.exactAlias,
+              matchedName: normalizeBarcode(query.trim()) ?? query.trim(),
+            ),
+          ];
+        }
+      } catch (e) {
+        if (kDebugMode) {
+          debugPrint('[FoodRepository] packaged barcode search failed: $e');
+        }
+      }
+    }
+
     final merged = [...local, ...remote];
     return _searchService.search(query, merged, profile: profile);
   }
 
   @override
   Future<Food?> getById(String id) async {
-    // Local ids have no prefix; USDA ids are prefixed with 'usda:'.
+    // Local ids have no prefix; USDA ids are prefixed with 'usda:';
+    // packaged (Open Food Facts) ids with 'off:'.
     if (id.startsWith('usda:')) {
       if (_usdaAdapter == null || !_usdaAdapter.isConfigured) return null;
       try {
         return await _usdaAdapter.getById(id.substring(5));
       } catch (e) {
         if (kDebugMode) debugPrint('[FoodRepository] USDA getById failed: $e');
+        return null;
+      }
+    }
+    if (id.startsWith('off:')) {
+      if (_packaged == null) return null;
+      try {
+        return await _packaged.lookupBarcode(id.substring(4));
+      } catch (e) {
+        if (kDebugMode) {
+          debugPrint('[FoodRepository] OFF getById failed: $e');
+        }
         return null;
       }
     }

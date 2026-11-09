@@ -778,4 +778,47 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get recipesDeleteBody =>
       'This removes the recipe from your personal collection. Diary entries already logged are not affected.';
+
+  @override
+  String get barcodeTitle => 'Scan barcode';
+
+  @override
+  String get barcodeHint =>
+      'Point your camera at a packaged-food barcode, or enter the number manually.';
+
+  @override
+  String get barcodeManualLabel => 'Barcode number';
+
+  @override
+  String get barcodeManualHint => 'e.g. 3017620422003';
+
+  @override
+  String get barcodeLookupButton => 'Look up product';
+
+  @override
+  String get barcodeCameraUnavailable =>
+      'Camera unavailable on this device. Enter the barcode manually instead.';
+
+  @override
+  String get barcodeNotFoundTitle => 'Product not found';
+
+  @override
+  String barcodeNotFoundBody(String barcode) {
+    return 'No packaged food matched barcode $barcode. You can try again or add the food another way.';
+  }
+
+  @override
+  String get barcodeInvalid =>
+      'That does not look like a valid barcode. Use 8–14 digits.';
+
+  @override
+  String get barcodeNetworkError =>
+      'Could not reach the packaged-food database. Check your connection and try again.';
+
+  @override
+  String get barcodeTryAgain => 'Try again';
+
+  @override
+  String get barcodeCrowdsourcedNote =>
+      'Packaged-food data comes from Open Food Facts and may be incomplete or crowdsourced. Always verify the serving size before logging.';
 }

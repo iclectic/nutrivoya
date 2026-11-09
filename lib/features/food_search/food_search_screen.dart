@@ -36,7 +36,16 @@ class _FoodSearchScreenState extends ConsumerState<FoodSearchScreen> {
     final resultsAsync = ref.watch(foodSearchResultsProvider);
 
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.searchTitle)),
+      appBar: AppBar(
+        title: Text(l10n.searchTitle),
+        actions: [
+          IconButton(
+            tooltip: l10n.barcodeTitle,
+            icon: const Icon(Icons.qr_code_scanner),
+            onPressed: () => context.push('/barcode'),
+          ),
+        ],
+      ),
       body: SafeArea(
         child: Column(
           children: [
@@ -93,6 +102,13 @@ class _FoodSearchScreenState extends ConsumerState<FoodSearchScreen> {
       children: [
         EmptyState(icon: Icons.search, title: l10n.searchEmpty),
         const SizedBox(height: 16),
+        ListTile(
+          leading: const Icon(Icons.qr_code_scanner),
+          title: Text(l10n.barcodeTitle),
+          subtitle: Text(l10n.barcodeHint),
+          trailing: const Icon(Icons.chevron_right),
+          onTap: () => context.push('/barcode'),
+        ),
         ListTile(
           leading: const Icon(Icons.menu_book_outlined),
           title: Text(l10n.searchMyRecipes),

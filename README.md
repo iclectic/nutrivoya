@@ -11,9 +11,30 @@ Western packaged foods, and to evaluate food by its actual nutritional
 composition, preparation, portion and dietary context — never by cultural
 stereotype.
 
-This repository currently contains **Milestones 1–6**:
-Foundation, Food Data Core, Food Logging, Calorie & Macro Targets,
-Cultural Food Intelligence (seed expansion), and Recipe Builder.
+This repository currently contains **Milestones 1–6** on `main`, with
+Milestone 7 (multilingual) and Milestone 8 (barcode) landing via PRs.
+
+## Status — Milestone 8 (Barcode Products)
+
+Milestone 8 adds packaged-food barcode lookup behind
+`PackagedFoodRepository`, with a real Open Food Facts adapter, camera
+scanning (plus manual entry), serving verification on the existing food
+details screen, and clear crowdsourced-data caveats.
+
+### What is included in Milestone 8
+
+- `PackagedFoodRepository` + barcode normalization helpers
+- `OpenFoodFactsAdapter` (dio) mapping OFF nutriments → per-100 g `Food`
+  with `FoodSourceType.packaged` and medium confidence
+- In-memory barcode cache; `off:{barcode}` food ids
+- `BarcodeScannerScreen` using `mobile_scanner` + manual barcode entry
+- Search entry points (app bar + suggestions list)
+- Composite food repository wires barcode digit queries and `off:` getById
+- Android CAMERA/INTERNET permissions; iOS `NSCameraUsageDescription`
+- Adapter and repository unit tests with a fake Dio adapter
+
+Crowdsourced OFF entries are never treated as authoritative. Users must
+verify serving size before logging.
 
 ## Status — Milestone 6 (Recipe Builder)
 
@@ -183,11 +204,10 @@ scanning, photo recognition or AI features — those arrive in later milestones.
 
 ### What remains intentionally out of scope
 
-- Barcode scanning (Milestone 8)
 - AI nutrition assistant (Milestone 9)
 - Weight / water / body measurements / favourites system (Milestone 10)
 - Photo recognition (Milestone 11)
-- Fully validated native translations (Milestone 7 — ARB placeholders remain)
+- User-contributed “Add Product” publish workflow (submission + review)
 - Supabase diary sync (entries are flagged `syncPending`)
 
 ## Project structure
@@ -321,6 +341,6 @@ guidance. Aggressive weight-loss targets are not enabled in pregnancy.
 
 ## Next milestone
 
-**Milestone 7 — Multilingual Product:** validated translations for the
-initial language set, expanded multilingual food aliases, and RTL layout
-verification for Arabic.
+**Milestone 9 — Nutrition Assistant:** Ask Nutrivoya explanations and
+cultural meal balancing using structured food/diary/target context —
+never as a calorie database.
