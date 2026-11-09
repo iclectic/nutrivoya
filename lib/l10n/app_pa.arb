@@ -339,5 +339,24 @@
   "recipesCalculationNote": "ਤੁਹਾਡੀ ਸਮੱਗਰੀ ਅਤੇ ਮਾਤਰਾਵਾਂ ਤੋਂ ਗਿਣਿਆ। ਤਿਆਰੀ ਅਤੇ ਉਪਜ ਮੁੱਲ ਬਦਲ ਸਕਦੀ ਹੈ।",
   "recipesDeleteTitle": "ਰੈਸਿਪੀ ਮਿਟਾਓ?",
   "recipesDeleteBody": "ਇਹ ਰੈਸਿਪੀ ਤੁਹਾਡੇ ਨਿੱਜੀ ਸੰਗ੍ਰਹਿ ਤੋਂ ਹਟਾ ਦੇਵੇਗਾ। ਪਹਿਲਾਂ ਤੋਂ ਲੌਗ ਡਾਇਰੀ ਐਂਟਰੀਆਂ ਪ੍ਰਭਾਵਿਤ ਨਹੀਂ ਹੋਣਗੀਆਂ।",
-  "@@comment": "Punjabi (Gurmukhi) UI strings for Nutrivoya MVP. Native review welcome for idiomatic polish."
+  "@@comment": "Punjabi (Gurmukhi) UI strings for Nutrivoya MVP. Native review welcome for idiomatic polish.",
+  "barcodeTitle": "ਬਾਰਕੋਡ ਸਕੈਨ ਕਰੋ",
+  "barcodeHint": "ਕੈਮਰਾ ਪੈਕੇਜਡ ਭੋਜਨ ਦੇ ਬਾਰਕੋਡ ਤੇ ਲਗਾਓ, ਜਾਂ ਨੰਬਰ ਖੁਦ ਦਰਜ ਕਰੋ।",
+  "barcodeManualLabel": "ਬਾਰਕੋਡ ਨੰਬਰ",
+  "barcodeManualHint": "ਜਿਵੇਂ 3017620422003",
+  "barcodeLookupButton": "ਉਤਪਾਦ ਖੋਜੋ",
+  "barcodeCameraUnavailable": "ਇਸ ਡਿਵਾਈਸ ਤੇ ਕੈਮਰਾ ਉਪਲਬਧ ਨਹੀਂ। ਬਾਰਕੋਡ ਖੁਦ ਦਰਜ ਕਰੋ।",
+  "barcodeNotFoundTitle": "ਉਤਪਾਦ ਨਹੀਂ ਮਿਲਿਆ",
+  "barcodeNotFoundBody": "ਬਾਰਕੋਡ {barcode} ਨਾਲ ਕੋਈ ਪੈਕੇਜਡ ਭੋਜਨ ਨਹੀਂ ਮਿਲਿਆ। ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਹੋਰ ਤਰੀਕੇ ਨਾਲ ਜੋੜੋ।",
+  "@barcodeNotFoundBody": {
+    "placeholders": {
+      "barcode": {
+        "type": "String"
+      }
+    }
+  },
+  "barcodeInvalid": "ਇਹ ਠੀਕ ਬਾਰਕੋਡ ਨਹੀਂ ਲੱਗਦਾ। 8–14 ਅੰਕ ਵਰਤੋ।",
+  "barcodeNetworkError": "ਪੈਕੇਜਡ-ਭੋਜਨ ਡੇਟਾਬੇਸ ਤੱਕ ਨਹੀਂ ਪਹੁੰਚ ਸਕੇ। ਕਨੈਕਸ਼ਨ ਚੈੱਕ ਕਰੋ ਅਤੇ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+  "barcodeTryAgain": "ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
+  "barcodeCrowdsourcedNote": "ਪੈਕੇਜਡ-ਭੋਜਨ ਡੇਟਾ Open Food Facts ਤੋਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਅਧੂਰਾ ਜਾਂ ਕਮਿਊਨਿਟੀ-ਯੋਗਦਾਨ ਹੋ ਸਕਦਾ ਹੈ। ਲੌਗ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਹਿੱਸੇ ਦਾ ਆਕਾਰ ਤਸਦੀਕ ਕਰੋ।"
 }

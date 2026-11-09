@@ -339,5 +339,24 @@
   "recipesCalculationNote": "Calculée à partir de vos ingrédients et quantités. La préparation et le rendement peuvent modifier les valeurs.",
   "recipesDeleteTitle": "Supprimer la recette ?",
   "recipesDeleteBody": "Cela retire la recette de votre collection personnelle. Les entrées déjà enregistrées dans le journal ne sont pas affectées.",
-  "@@comment": "French UI strings for Nutrivoya MVP. Native review welcome for idiomatic polish."
+  "@@comment": "French UI strings for Nutrivoya MVP. Native review welcome for idiomatic polish.",
+  "barcodeTitle": "Scanner un code-barres",
+  "barcodeHint": "Pointez la caméra vers un code-barres d'aliment emballé, ou saisissez le numéro manuellement.",
+  "barcodeManualLabel": "Numéro de code-barres",
+  "barcodeManualHint": "ex. 3017620422003",
+  "barcodeLookupButton": "Rechercher le produit",
+  "barcodeCameraUnavailable": "Caméra indisponible sur cet appareil. Saisissez le code-barres manuellement.",
+  "barcodeNotFoundTitle": "Produit introuvable",
+  "barcodeNotFoundBody": "Aucun aliment emballé ne correspond au code-barres {barcode}. Réessayez ou ajoutez l'aliment autrement.",
+  "@barcodeNotFoundBody": {
+    "placeholders": {
+      "barcode": {
+        "type": "String"
+      }
+    }
+  },
+  "barcodeInvalid": "Cela ne ressemble pas à un code-barres valide. Utilisez 8 à 14 chiffres.",
+  "barcodeNetworkError": "Impossible d'atteindre la base d'aliments emballés. Vérifiez votre connexion et réessayez.",
+  "barcodeTryAgain": "Réessayer",
+  "barcodeCrowdsourcedNote": "Les données d'aliments emballés proviennent d'Open Food Facts et peuvent être incomplètes ou collaboratives. Vérifiez toujours la taille de portion avant d'enregistrer."
 }

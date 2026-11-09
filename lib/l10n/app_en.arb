@@ -323,5 +323,23 @@
   "recipesPerServingShort": "serving",
   "recipesCalculationNote": "Calculated from your ingredients and quantities. Preparation and yield can change the values.",
   "recipesDeleteTitle": "Delete recipe?",
-  "recipesDeleteBody": "This removes the recipe from your personal collection. Diary entries already logged are not affected."
+  "recipesDeleteBody": "This removes the recipe from your personal collection. Diary entries already logged are not affected.",
+
+  "barcodeTitle": "Scan barcode",
+  "barcodeHint": "Point your camera at a packaged-food barcode, or enter the number manually.",
+  "barcodeManualLabel": "Barcode number",
+  "barcodeManualHint": "e.g. 3017620422003",
+  "barcodeLookupButton": "Look up product",
+  "barcodeCameraUnavailable": "Camera unavailable on this device. Enter the barcode manually instead.",
+  "barcodeNotFoundTitle": "Product not found",
+  "barcodeNotFoundBody": "No packaged food matched barcode {barcode}. You can try again or add the food another way.",
+  "@barcodeNotFoundBody": {
+    "placeholders": {
+      "barcode": {"type": "String"}
+    }
+  },
+  "barcodeInvalid": "That does not look like a valid barcode. Use 8–14 digits.",
+  "barcodeNetworkError": "Could not reach the packaged-food database. Check your connection and try again.",
+  "barcodeTryAgain": "Try again",
+  "barcodeCrowdsourcedNote": "Packaged-food data comes from Open Food Facts and may be incomplete or crowdsourced. Always verify the serving size before logging."
 }

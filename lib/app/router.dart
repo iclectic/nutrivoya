@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../features/auth/auth_controller.dart';
 import '../features/auth/auth_form_screen.dart';
 import '../features/auth/reset_password_screen.dart';
+import '../features/barcode/barcode_scanner_screen.dart';
 import '../features/food_details/food_details_screen.dart';
 import '../features/goals/goals_screen.dart';
 import '../features/onboarding/onboarding_screen.dart';
@@ -85,8 +86,13 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(
         path: '/food/:id',
-        builder: (context, state) =>
-            FoodDetailsScreen(foodId: state.pathParameters['id']!),
+        builder: (context, state) => FoodDetailsScreen(
+          foodId: Uri.decodeComponent(state.pathParameters['id']!),
+        ),
+      ),
+      GoRoute(
+        path: '/barcode',
+        builder: (context, state) => const BarcodeScannerScreen(),
       ),
       GoRoute(
         path: '/goals',

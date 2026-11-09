@@ -785,4 +785,47 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get recipesDeleteBody =>
       'Cela retire la recette de votre collection personnelle. Les entrées déjà enregistrées dans le journal ne sont pas affectées.';
+
+  @override
+  String get barcodeTitle => 'Scanner un code-barres';
+
+  @override
+  String get barcodeHint =>
+      'Pointez la caméra vers un code-barres d\'aliment emballé, ou saisissez le numéro manuellement.';
+
+  @override
+  String get barcodeManualLabel => 'Numéro de code-barres';
+
+  @override
+  String get barcodeManualHint => 'ex. 3017620422003';
+
+  @override
+  String get barcodeLookupButton => 'Rechercher le produit';
+
+  @override
+  String get barcodeCameraUnavailable =>
+      'Caméra indisponible sur cet appareil. Saisissez le code-barres manuellement.';
+
+  @override
+  String get barcodeNotFoundTitle => 'Produit introuvable';
+
+  @override
+  String barcodeNotFoundBody(String barcode) {
+    return 'Aucun aliment emballé ne correspond au code-barres $barcode. Réessayez ou ajoutez l\'aliment autrement.';
+  }
+
+  @override
+  String get barcodeInvalid =>
+      'Cela ne ressemble pas à un code-barres valide. Utilisez 8 à 14 chiffres.';
+
+  @override
+  String get barcodeNetworkError =>
+      'Impossible d\'atteindre la base d\'aliments emballés. Vérifiez votre connexion et réessayez.';
+
+  @override
+  String get barcodeTryAgain => 'Réessayer';
+
+  @override
+  String get barcodeCrowdsourcedNote =>
+      'Les données d\'aliments emballés proviennent d\'Open Food Facts et peuvent être incomplètes ou collaboratives. Vérifiez toujours la taille de portion avant d\'enregistrer.';
 }

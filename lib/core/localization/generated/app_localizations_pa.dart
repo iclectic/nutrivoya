@@ -772,4 +772,46 @@ class AppLocalizationsPa extends AppLocalizations {
   @override
   String get recipesDeleteBody =>
       'ਇਹ ਰੈਸਿਪੀ ਤੁਹਾਡੇ ਨਿੱਜੀ ਸੰਗ੍ਰਹਿ ਤੋਂ ਹਟਾ ਦੇਵੇਗਾ। ਪਹਿਲਾਂ ਤੋਂ ਲੌਗ ਡਾਇਰੀ ਐਂਟਰੀਆਂ ਪ੍ਰਭਾਵਿਤ ਨਹੀਂ ਹੋਣਗੀਆਂ।';
+
+  @override
+  String get barcodeTitle => 'ਬਾਰਕੋਡ ਸਕੈਨ ਕਰੋ';
+
+  @override
+  String get barcodeHint =>
+      'ਕੈਮਰਾ ਪੈਕੇਜਡ ਭੋਜਨ ਦੇ ਬਾਰਕੋਡ ਤੇ ਲਗਾਓ, ਜਾਂ ਨੰਬਰ ਖੁਦ ਦਰਜ ਕਰੋ।';
+
+  @override
+  String get barcodeManualLabel => 'ਬਾਰਕੋਡ ਨੰਬਰ';
+
+  @override
+  String get barcodeManualHint => 'ਜਿਵੇਂ 3017620422003';
+
+  @override
+  String get barcodeLookupButton => 'ਉਤਪਾਦ ਖੋਜੋ';
+
+  @override
+  String get barcodeCameraUnavailable =>
+      'ਇਸ ਡਿਵਾਈਸ ਤੇ ਕੈਮਰਾ ਉਪਲਬਧ ਨਹੀਂ। ਬਾਰਕੋਡ ਖੁਦ ਦਰਜ ਕਰੋ।';
+
+  @override
+  String get barcodeNotFoundTitle => 'ਉਤਪਾਦ ਨਹੀਂ ਮਿਲਿਆ';
+
+  @override
+  String barcodeNotFoundBody(String barcode) {
+    return 'ਬਾਰਕੋਡ $barcode ਨਾਲ ਕੋਈ ਪੈਕੇਜਡ ਭੋਜਨ ਨਹੀਂ ਮਿਲਿਆ। ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਹੋਰ ਤਰੀਕੇ ਨਾਲ ਜੋੜੋ।';
+  }
+
+  @override
+  String get barcodeInvalid => 'ਇਹ ਠੀਕ ਬਾਰਕੋਡ ਨਹੀਂ ਲੱਗਦਾ। 8–14 ਅੰਕ ਵਰਤੋ।';
+
+  @override
+  String get barcodeNetworkError =>
+      'ਪੈਕੇਜਡ-ਭੋਜਨ ਡੇਟਾਬੇਸ ਤੱਕ ਨਹੀਂ ਪਹੁੰਚ ਸਕੇ। ਕਨੈਕਸ਼ਨ ਚੈੱਕ ਕਰੋ ਅਤੇ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ।';
+
+  @override
+  String get barcodeTryAgain => 'ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ';
+
+  @override
+  String get barcodeCrowdsourcedNote =>
+      'ਪੈਕੇਜਡ-ਭੋਜਨ ਡੇਟਾ Open Food Facts ਤੋਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਅਧੂਰਾ ਜਾਂ ਕਮਿਊਨਿਟੀ-ਯੋਗਦਾਨ ਹੋ ਸਕਦਾ ਹੈ। ਲੌਗ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਹਿੱਸੇ ਦਾ ਆਕਾਰ ਤਸਦੀਕ ਕਰੋ।';
 }

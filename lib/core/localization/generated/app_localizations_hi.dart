@@ -774,4 +774,47 @@ class AppLocalizationsHi extends AppLocalizations {
   @override
   String get recipesDeleteBody =>
       'यह रेसिपी आपके निजी संग्रह से हटा देगा। पहले से लॉग डायरी प्रविष्टियाँ प्रभावित नहीं होंगी।';
+
+  @override
+  String get barcodeTitle => 'बारकोड स्कैन करें';
+
+  @override
+  String get barcodeHint =>
+      'कैमरा पैकेज्ड भोजन के बारकोड पर लगाएँ, या नंबर मैन्युअल दर्ज करें।';
+
+  @override
+  String get barcodeManualLabel => 'बारकोड नंबर';
+
+  @override
+  String get barcodeManualHint => 'जैसे 3017620422003';
+
+  @override
+  String get barcodeLookupButton => 'उत्पाद खोजें';
+
+  @override
+  String get barcodeCameraUnavailable =>
+      'इस डिवाइस पर कैमरा उपलब्ध नहीं। बारकोड मैन्युअल दर्ज करें।';
+
+  @override
+  String get barcodeNotFoundTitle => 'उत्पाद नहीं मिला';
+
+  @override
+  String barcodeNotFoundBody(String barcode) {
+    return 'बारकोड $barcode से कोई पैकेज्ड भोजन नहीं मिला। फिर कोशिश करें या अन्य तरीके से जोड़ें।';
+  }
+
+  @override
+  String get barcodeInvalid =>
+      'यह मान्य बारकोड नहीं लगता। 8–14 अंक उपयोग करें।';
+
+  @override
+  String get barcodeNetworkError =>
+      'पैकेज्ड-भोजन डेटाबेस तक नहीं पहुँच सके। कनेक्शन जाँचें और फिर कोशिश करें।';
+
+  @override
+  String get barcodeTryAgain => 'फिर कोशिश करें';
+
+  @override
+  String get barcodeCrowdsourcedNote =>
+      'पैकेज्ड-भोजन डेटा Open Food Facts से आता है और अधूरा या समुदाय-योगदानित हो सकता है। लॉग करने से पहले हिस्सा आकार सत्यापित करें।';
 }

@@ -770,4 +770,47 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get recipesDeleteBody =>
       'يزيل هذا الوصفة من مجموعتك الشخصية. إدخالات المذكرة المسجَّلة مسبقًا لن تتأثر.';
+
+  @override
+  String get barcodeTitle => 'مسح الرمز الشريطي';
+
+  @override
+  String get barcodeHint =>
+      'وجّه الكاميرا إلى رمز شريطي لطعام معلّب، أو أدخل الرقم يدويًا.';
+
+  @override
+  String get barcodeManualLabel => 'رقم الرمز الشريطي';
+
+  @override
+  String get barcodeManualHint => 'مثل 3017620422003';
+
+  @override
+  String get barcodeLookupButton => 'البحث عن المنتج';
+
+  @override
+  String get barcodeCameraUnavailable =>
+      'الكاميرا غير متاحة على هذا الجهاز. أدخل الرمز الشريطي يدويًا.';
+
+  @override
+  String get barcodeNotFoundTitle => 'المنتج غير موجود';
+
+  @override
+  String barcodeNotFoundBody(String barcode) {
+    return 'لم يُطابق أي طعام معلّب الرمز $barcode. يمكنك المحاولة مجددًا أو إضافة الطعام بطريقة أخرى.';
+  }
+
+  @override
+  String get barcodeInvalid =>
+      'هذا لا يبدو رمزًا شريطيًا صالحًا. استخدم من 8 إلى 14 رقمًا.';
+
+  @override
+  String get barcodeNetworkError =>
+      'تعذّر الوصول إلى قاعدة الأطعمة المعلّبة. تحقق من اتصالك وحاول مجددًا.';
+
+  @override
+  String get barcodeTryAgain => 'حاول مجددًا';
+
+  @override
+  String get barcodeCrowdsourcedNote =>
+      'بيانات الأطعمة المعلّبة تأتي من Open Food Facts وقد تكون غير مكتملة أو تعاونية. تحقق دائمًا من حجم الحصة قبل التسجيل.';
 }

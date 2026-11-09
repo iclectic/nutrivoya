@@ -783,4 +783,47 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get recipesDeleteBody =>
       'Esto elimina la receta de tu colección personal. Las entradas ya registradas en el diario no se ven afectadas.';
+
+  @override
+  String get barcodeTitle => 'Escanear código de barras';
+
+  @override
+  String get barcodeHint =>
+      'Apunta la cámara a un código de barras de un alimento envasado, o introduce el número manualmente.';
+
+  @override
+  String get barcodeManualLabel => 'Número de código de barras';
+
+  @override
+  String get barcodeManualHint => 'p. ej. 3017620422003';
+
+  @override
+  String get barcodeLookupButton => 'Buscar producto';
+
+  @override
+  String get barcodeCameraUnavailable =>
+      'Cámara no disponible en este dispositivo. Introduce el código de barras manualmente.';
+
+  @override
+  String get barcodeNotFoundTitle => 'Producto no encontrado';
+
+  @override
+  String barcodeNotFoundBody(String barcode) {
+    return 'Ningún alimento envasado coincidió con el código $barcode. Puedes intentarlo de nuevo o añadir el alimento de otra forma.';
+  }
+
+  @override
+  String get barcodeInvalid =>
+      'Eso no parece un código de barras válido. Usa de 8 a 14 dígitos.';
+
+  @override
+  String get barcodeNetworkError =>
+      'No se pudo alcanzar la base de alimentos envasados. Comprueba tu conexión e inténtalo de nuevo.';
+
+  @override
+  String get barcodeTryAgain => 'Intentar de nuevo';
+
+  @override
+  String get barcodeCrowdsourcedNote =>
+      'Los datos de alimentos envasados provienen de Open Food Facts y pueden estar incompletos o ser colaborativos. Verifica siempre el tamaño de la porción antes de registrar.';
 }

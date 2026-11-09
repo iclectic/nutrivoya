@@ -339,5 +339,24 @@
   "recipesCalculationNote": "محسوبة من مكوناتك وكمياتها. قد تغيّر طريقة التحضير والمردود القيم.",
   "recipesDeleteTitle": "حذف الوصفة؟",
   "recipesDeleteBody": "يزيل هذا الوصفة من مجموعتك الشخصية. إدخالات المذكرة المسجَّلة مسبقًا لن تتأثر.",
-  "@@comment": "Arabic UI strings for Nutrivoya MVP with RTL support. Native review welcome for idiomatic polish."
+  "@@comment": "Arabic UI strings for Nutrivoya MVP with RTL support. Native review welcome for idiomatic polish.",
+  "barcodeTitle": "مسح الرمز الشريطي",
+  "barcodeHint": "وجّه الكاميرا إلى رمز شريطي لطعام معلّب، أو أدخل الرقم يدويًا.",
+  "barcodeManualLabel": "رقم الرمز الشريطي",
+  "barcodeManualHint": "مثل 3017620422003",
+  "barcodeLookupButton": "البحث عن المنتج",
+  "barcodeCameraUnavailable": "الكاميرا غير متاحة على هذا الجهاز. أدخل الرمز الشريطي يدويًا.",
+  "barcodeNotFoundTitle": "المنتج غير موجود",
+  "barcodeNotFoundBody": "لم يُطابق أي طعام معلّب الرمز {barcode}. يمكنك المحاولة مجددًا أو إضافة الطعام بطريقة أخرى.",
+  "@barcodeNotFoundBody": {
+    "placeholders": {
+      "barcode": {
+        "type": "String"
+      }
+    }
+  },
+  "barcodeInvalid": "هذا لا يبدو رمزًا شريطيًا صالحًا. استخدم من 8 إلى 14 رقمًا.",
+  "barcodeNetworkError": "تعذّر الوصول إلى قاعدة الأطعمة المعلّبة. تحقق من اتصالك وحاول مجددًا.",
+  "barcodeTryAgain": "حاول مجددًا",
+  "barcodeCrowdsourcedNote": "بيانات الأطعمة المعلّبة تأتي من Open Food Facts وقد تكون غير مكتملة أو تعاونية. تحقق دائمًا من حجم الحصة قبل التسجيل."
 }

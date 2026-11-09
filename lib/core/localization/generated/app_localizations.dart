@@ -1509,6 +1509,78 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'This removes the recipe from your personal collection. Diary entries already logged are not affected.'**
   String get recipesDeleteBody;
+
+  /// No description provided for @barcodeTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan barcode'**
+  String get barcodeTitle;
+
+  /// No description provided for @barcodeHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Point your camera at a packaged-food barcode, or enter the number manually.'**
+  String get barcodeHint;
+
+  /// No description provided for @barcodeManualLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Barcode number'**
+  String get barcodeManualLabel;
+
+  /// No description provided for @barcodeManualHint.
+  ///
+  /// In en, this message translates to:
+  /// **'e.g. 3017620422003'**
+  String get barcodeManualHint;
+
+  /// No description provided for @barcodeLookupButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Look up product'**
+  String get barcodeLookupButton;
+
+  /// No description provided for @barcodeCameraUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Camera unavailable on this device. Enter the barcode manually instead.'**
+  String get barcodeCameraUnavailable;
+
+  /// No description provided for @barcodeNotFoundTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Product not found'**
+  String get barcodeNotFoundTitle;
+
+  /// No description provided for @barcodeNotFoundBody.
+  ///
+  /// In en, this message translates to:
+  /// **'No packaged food matched barcode {barcode}. You can try again or add the food another way.'**
+  String barcodeNotFoundBody(String barcode);
+
+  /// No description provided for @barcodeInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'That does not look like a valid barcode. Use 8–14 digits.'**
+  String get barcodeInvalid;
+
+  /// No description provided for @barcodeNetworkError.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not reach the packaged-food database. Check your connection and try again.'**
+  String get barcodeNetworkError;
+
+  /// No description provided for @barcodeTryAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Try again'**
+  String get barcodeTryAgain;
+
+  /// No description provided for @barcodeCrowdsourcedNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Packaged-food data comes from Open Food Facts and may be incomplete or crowdsourced. Always verify the serving size before logging.'**
+  String get barcodeCrowdsourcedNote;
 }
 
 class _AppLocalizationsDelegate
