@@ -5,6 +5,8 @@ import 'package:go_router/go_router.dart';
 import '../../core/localization/locale_controller.dart';
 import '../../core/storage/local_preferences.dart';
 import '../../core/storage/theme_controller.dart';
+import '../../features/add_product/add_product_providers.dart';
+import '../../features/add_product/submission_review_service.dart';
 import '../../features/auth/auth_controller.dart';
 import '../../features/diary/sync/diary_sync_service.dart';
 import '../../features/profile/profile_controller.dart';
@@ -98,10 +100,26 @@ class SettingsScreen extends ConsumerWidget {
               onTap: () async {
                 final messenger = ScaffoldMessenger.of(context);
                 await ref.read(diarySyncServiceProvider)?.syncSafely();
+                await ref.read(submissionReviewServiceProvider).syncSafely();
                 messenger.showSnackBar(
                   SnackBar(content: Text(l10n.settingsSyncDone)),
                 );
               },
+            ),
+            SwitchListTile(
+              secondary: const Icon(Icons.fact_check_outlined),
+              title: Text(l10n.settingsReviewerMode),
+              subtitle: Text(l10n.settingsReviewerModeNote),
+              value: ref.watch(reviewerModeProvider),
+              onChanged: (v) => ref
+                  .read(addProductControllerProvider.notifier)
+                  .setReviewerMode(v),
+            ),
+            ListTile(
+              leading: const Icon(Icons.rate_review_outlined),
+              title: Text(l10n.reviewQueueTitle),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => context.push('/review-queue'),
             ),
             ListTile(
               leading: const Icon(Icons.person_outline),

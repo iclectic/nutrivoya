@@ -1465,4 +1465,59 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get settingsSyncUnavailable =>
       'المزامنة غير متاحة — البيانات مخزّنة على هذا الجهاز';
+
+  @override
+  String get addProductStatusVerified => 'موثَّق من المراجع';
+
+  @override
+  String get addProductStatusRejected => 'مرفوض';
+
+  @override
+  String get reviewQueueTitle => 'قائمة المراجعة';
+
+  @override
+  String get reviewQueueEmpty => 'لا إرسالات بانتظار المراجعة.';
+
+  @override
+  String get reviewQueueNeedReviewerMode =>
+      'فعّل وضع المراجع في الإعدادات للموافقة أو الرفض. المراجعة لا تختلق تغذية.';
+
+  @override
+  String get reviewQueueProvenanceNote =>
+      'الموافقة تغيّر المصدر فقط — التغذية الناقصة تبقى غير متاحة.';
+
+  @override
+  String get reviewQueueOpenFood => 'فتح الطعام';
+
+  @override
+  String get reviewQueueApprove => 'موافقة';
+
+  @override
+  String get reviewQueueReject => 'رفض';
+
+  @override
+  String get reviewQueueApproved => 'وُسِم كموثَّق (مصدر المستخدم محفوظ)';
+
+  @override
+  String get reviewQueueRejected => 'رُفض الإرسال';
+
+  @override
+  String reviewQueueBarcode(String code) {
+    return 'باركود $code';
+  }
+
+  @override
+  String reviewQueueEnergy(int kcal) {
+    return '$kcal سعرة / 100 غ';
+  }
+
+  @override
+  String get reviewQueueNoEnergy => 'الطاقة غير متاحة';
+
+  @override
+  String get settingsReviewerMode => 'وضع المراجع';
+
+  @override
+  String get settingsReviewerModeNote =>
+      'السماح بالموافقة على الإرسالات المعلقة أو رفضها على هذا الجهاز.';
 }

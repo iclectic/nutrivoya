@@ -805,5 +805,35 @@
     }
   },
   "settingsSyncDone": "Diary synced",
-  "settingsSyncUnavailable": "Sync unavailable — data is stored on this device"
+  "settingsSyncUnavailable": "Sync unavailable — data is stored on this device",
+  "addProductStatusVerified": "Verified by reviewer",
+  "addProductStatusRejected": "Rejected",
+  "reviewQueueTitle": "Review queue",
+  "reviewQueueEmpty": "No submissions waiting for review.",
+  "reviewQueueNeedReviewerMode": "Turn on Reviewer mode in Settings to approve or reject submissions. Review never invents nutrition values.",
+  "reviewQueueProvenanceNote": "Approve only checks provenance — missing nutrition stays unavailable.",
+  "reviewQueueOpenFood": "Open food",
+  "reviewQueueApprove": "Approve",
+  "reviewQueueReject": "Reject",
+  "reviewQueueApproved": "Marked verified (user-submitted provenance kept)",
+  "reviewQueueRejected": "Submission rejected",
+  "reviewQueueBarcode": "Barcode {code}",
+  "@reviewQueueBarcode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewQueueEnergy": "{kcal} kcal / 100 g",
+  "@reviewQueueEnergy": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewQueueNoEnergy": "Energy unavailable",
+  "settingsReviewerMode": "Reviewer mode",
+  "settingsReviewerModeNote": "Allow approving or rejecting pending product submissions on this device."
 }

@@ -806,5 +806,35 @@
     }
   },
   "settingsSyncDone": "डायरी सिंक हो गई",
-  "settingsSyncUnavailable": "सिंक उपलब्ध नहीं — डेटा इस डिवाइस पर संग्रहीत है"
+  "settingsSyncUnavailable": "सिंक उपलब्ध नहीं — डेटा इस डिवाइस पर संग्रहीत है",
+  "addProductStatusVerified": "समीक्षक द्वारा सत्यापित",
+  "addProductStatusRejected": "अस्वीकृत",
+  "reviewQueueTitle": "समीक्षा कतार",
+  "reviewQueueEmpty": "समीक्षा की प्रतीक्षा में कोई सबमिशन नहीं।",
+  "reviewQueueNeedReviewerMode": "स्वीकृत/अस्वीकृत करने के लिए सेटिंग्स में समीक्षक मोड चालू करें। समीक्षा पोषण का आविष्कार नहीं करती।",
+  "reviewQueueProvenanceNote": "स्वीकृति केवल स्रोत स्थिति बदलती है — गायब पोषण अनुपलब्ध रहता है।",
+  "reviewQueueOpenFood": "भोजन खोलें",
+  "reviewQueueApprove": "स्वीकृत करें",
+  "reviewQueueReject": "अस्वीकृत करें",
+  "reviewQueueApproved": "सत्यापित चिह्नित (उपयोगकर्ता स्रोत बना रहा)",
+  "reviewQueueRejected": "सबमिशन अस्वीकृत",
+  "reviewQueueBarcode": "बारकोड {code}",
+  "@reviewQueueBarcode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewQueueEnergy": "{kcal} kcal / 100 ग",
+  "@reviewQueueEnergy": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewQueueNoEnergy": "ऊर्जा अनुपलब्ध",
+  "settingsReviewerMode": "समीक्षक मोड",
+  "settingsReviewerModeNote": "इस डिवाइस पर लंबित सबमिशन स्वीकृत या अस्वीकृत करने दें।"
 }

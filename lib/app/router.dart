@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../features/add_product/add_product_screen.dart';
 import '../features/add_product/my_submissions_screen.dart';
+import '../features/add_product/review_queue_screen.dart';
 import '../features/assistant/assistant_screen.dart';
 import '../features/auth/auth_controller.dart';
 import '../features/auth/auth_form_screen.dart';
@@ -135,6 +136,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/submissions',
         builder: (context, state) => const MySubmissionsScreen(),
+      ),
+      GoRoute(
+        path: '/review-queue',
+        builder: (context, state) => const ReviewQueueScreen(),
       ),
       GoRoute(
         path: '/assistant',

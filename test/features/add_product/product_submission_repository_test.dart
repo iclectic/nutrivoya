@@ -21,7 +21,7 @@ void main() {
   ProductSubmission submission({
     String id = 'sub_1',
     String name = 'Diaspora snack mix',
-    ProductSubmissionStatus status = ProductSubmissionStatus.publishedLocally,
+    ProductSubmissionStatus status = ProductSubmissionStatus.pendingReview,
     double? energy,
   }) {
     return ProductSubmission(
@@ -47,17 +47,40 @@ void main() {
       expect(repo.list(), isEmpty);
     });
 
-    test('publishedFoods only includes publishedLocally with userSubmitted',
+    test('publishedFoods includes pending and verified, not drafts/rejected',
         () async {
       await repo.save(submission(status: ProductSubmissionStatus.draft));
       await repo.save(
-        submission(id: 'sub_2', name: 'Published mix', energy: 180),
+        submission(
+          id: 'sub_2',
+          name: 'Pending mix',
+          energy: 180,
+          status: ProductSubmissionStatus.pendingReview,
+        ),
+      );
+      await repo.save(
+        submission(
+          id: 'sub_3',
+          name: 'Verified mix',
+          energy: 200,
+          status: ProductSubmissionStatus.verified,
+        ),
+      );
+      await repo.save(
+        submission(
+          id: 'sub_4',
+          name: 'Rejected mix',
+          status: ProductSubmissionStatus.rejected,
+        ),
       );
       final foods = repo.publishedFoods();
-      expect(foods, hasLength(1));
-      expect(foods.single.id, 'user:sub_2');
-      expect(foods.single.source.type, FoodSourceType.userSubmitted);
-      expect(foods.single.source.reviewStatus, ReviewStatus.pending);
+      expect(foods.map((f) => f.id), containsAll(['user:sub_2', 'user:sub_3']));
+      expect(foods.map((f) => f.id), isNot(contains('user:sub_4')));
+      final pending = foods.firstWhere((f) => f.id == 'user:sub_2');
+      expect(pending.source.type, FoodSourceType.userSubmitted);
+      expect(pending.source.reviewStatus, ReviewStatus.pending);
+      final verified = foods.firstWhere((f) => f.id == 'user:sub_3');
+      expect(verified.source.reviewStatus, ReviewStatus.verified);
     });
 
     test('publishedFoodById ignores drafts', () async {
@@ -67,8 +90,14 @@ void main() {
   });
 
   group('CompositeFoodRepository user foods', () {
-    test('search and getById include published user submissions', () async {
-      await repo.save(submission(id: 'sub_x', name: 'UniqueNutrivoyaSnack'));
+    test('search and getById include pending user submissions', () async {
+      await repo.save(
+        submission(
+          id: 'sub_x',
+          name: 'UniqueNutrivoyaSnack',
+          status: ProductSubmissionStatus.pendingReview,
+        ),
+      );
       final composite = CompositeFoodRepository(
         searchService: const FoodSearchService(),
         userFoods: () => repo.publishedFoods(),

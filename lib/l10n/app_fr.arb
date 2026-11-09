@@ -806,5 +806,35 @@
     }
   },
   "settingsSyncDone": "Journal synchronisé",
-  "settingsSyncUnavailable": "Synchronisation indisponible — données stockées sur cet appareil"
+  "settingsSyncUnavailable": "Synchronisation indisponible — données stockées sur cet appareil",
+  "addProductStatusVerified": "Vérifié par un réviseur",
+  "addProductStatusRejected": "Rejeté",
+  "reviewQueueTitle": "File de revue",
+  "reviewQueueEmpty": "Aucune soumission en attente de revue.",
+  "reviewQueueNeedReviewerMode": "Activez le mode réviseur dans les Réglages pour approuver ou rejeter. La revue n'invente jamais de nutrition.",
+  "reviewQueueProvenanceNote": "L'approbation ne change que la provenance — la nutrition manquante reste indisponible.",
+  "reviewQueueOpenFood": "Ouvrir l'aliment",
+  "reviewQueueApprove": "Approuver",
+  "reviewQueueReject": "Rejeter",
+  "reviewQueueApproved": "Marqué comme vérifié (provenance utilisateur conservée)",
+  "reviewQueueRejected": "Soumission rejetée",
+  "reviewQueueBarcode": "Code-barres {code}",
+  "@reviewQueueBarcode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewQueueEnergy": "{kcal} kcal / 100 g",
+  "@reviewQueueEnergy": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewQueueNoEnergy": "Énergie indisponible",
+  "settingsReviewerMode": "Mode réviseur",
+  "settingsReviewerModeNote": "Autoriser l'approbation ou le rejet des soumissions en attente sur cet appareil."
 }

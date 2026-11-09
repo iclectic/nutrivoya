@@ -1485,4 +1485,60 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get settingsSyncUnavailable =>
       'Sync unavailable — data is stored on this device';
+
+  @override
+  String get addProductStatusVerified => 'Verified by reviewer';
+
+  @override
+  String get addProductStatusRejected => 'Rejected';
+
+  @override
+  String get reviewQueueTitle => 'Review queue';
+
+  @override
+  String get reviewQueueEmpty => 'No submissions waiting for review.';
+
+  @override
+  String get reviewQueueNeedReviewerMode =>
+      'Turn on Reviewer mode in Settings to approve or reject submissions. Review never invents nutrition values.';
+
+  @override
+  String get reviewQueueProvenanceNote =>
+      'Approve only checks provenance — missing nutrition stays unavailable.';
+
+  @override
+  String get reviewQueueOpenFood => 'Open food';
+
+  @override
+  String get reviewQueueApprove => 'Approve';
+
+  @override
+  String get reviewQueueReject => 'Reject';
+
+  @override
+  String get reviewQueueApproved =>
+      'Marked verified (user-submitted provenance kept)';
+
+  @override
+  String get reviewQueueRejected => 'Submission rejected';
+
+  @override
+  String reviewQueueBarcode(String code) {
+    return 'Barcode $code';
+  }
+
+  @override
+  String reviewQueueEnergy(int kcal) {
+    return '$kcal kcal / 100 g';
+  }
+
+  @override
+  String get reviewQueueNoEnergy => 'Energy unavailable';
+
+  @override
+  String get settingsReviewerMode => 'Reviewer mode';
+
+  @override
+  String get settingsReviewerModeNote =>
+      'Allow approving or rejecting pending product submissions on this device.';
 }

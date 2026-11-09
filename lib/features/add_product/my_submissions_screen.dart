@@ -47,8 +47,7 @@ class MySubmissionsScreen extends ConsumerWidget {
                     child: ListTile(
                       title: Text(s.name),
                       subtitle: Text(_statusLabel(l10n, s.status)),
-                      trailing: s.status ==
-                              ProductSubmissionStatus.publishedLocally
+                      trailing: s.status.isInPersonalLibrary
                           ? IconButton(
                               icon: const Icon(Icons.open_in_new),
                               onPressed: () => context.push(
@@ -77,6 +76,10 @@ class MySubmissionsScreen extends ConsumerWidget {
         return l10n.addProductStatusPending;
       case ProductSubmissionStatus.publishedLocally:
         return l10n.addProductStatusPublished;
+      case ProductSubmissionStatus.verified:
+        return l10n.addProductStatusVerified;
+      case ProductSubmissionStatus.rejected:
+        return l10n.addProductStatusRejected;
       case ProductSubmissionStatus.withdrawn:
         return l10n.addProductStatusWithdrawn;
     }

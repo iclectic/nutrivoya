@@ -806,5 +806,35 @@
     }
   },
   "settingsSyncDone": "Diario sincronizado",
-  "settingsSyncUnavailable": "Sincronización no disponible — los datos se guardan en este dispositivo"
+  "settingsSyncUnavailable": "Sincronización no disponible — los datos se guardan en este dispositivo",
+  "addProductStatusVerified": "Verificado por revisor",
+  "addProductStatusRejected": "Rechazado",
+  "reviewQueueTitle": "Cola de revisión",
+  "reviewQueueEmpty": "No hay envíos pendientes de revisión.",
+  "reviewQueueNeedReviewerMode": "Activa el modo revisor en Ajustes para aprobar o rechazar. La revisión nunca inventa nutrición.",
+  "reviewQueueProvenanceNote": "Aprobar solo cambia la procedencia — la nutrición faltante sigue no disponible.",
+  "reviewQueueOpenFood": "Abrir alimento",
+  "reviewQueueApprove": "Aprobar",
+  "reviewQueueReject": "Rechazar",
+  "reviewQueueApproved": "Marcado como verificado (se mantiene procedencia de usuario)",
+  "reviewQueueRejected": "Envío rechazado",
+  "reviewQueueBarcode": "Código de barras {code}",
+  "@reviewQueueBarcode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewQueueEnergy": "{kcal} kcal / 100 g",
+  "@reviewQueueEnergy": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewQueueNoEnergy": "Energía no disponible",
+  "settingsReviewerMode": "Modo revisor",
+  "settingsReviewerModeNote": "Permitir aprobar o rechazar envíos pendientes en este dispositivo."
 }

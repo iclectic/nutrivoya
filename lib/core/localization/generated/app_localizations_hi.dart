@@ -1478,4 +1478,60 @@ class AppLocalizationsHi extends AppLocalizations {
   @override
   String get settingsSyncUnavailable =>
       'सिंक उपलब्ध नहीं — डेटा इस डिवाइस पर संग्रहीत है';
+
+  @override
+  String get addProductStatusVerified => 'समीक्षक द्वारा सत्यापित';
+
+  @override
+  String get addProductStatusRejected => 'अस्वीकृत';
+
+  @override
+  String get reviewQueueTitle => 'समीक्षा कतार';
+
+  @override
+  String get reviewQueueEmpty => 'समीक्षा की प्रतीक्षा में कोई सबमिशन नहीं।';
+
+  @override
+  String get reviewQueueNeedReviewerMode =>
+      'स्वीकृत/अस्वीकृत करने के लिए सेटिंग्स में समीक्षक मोड चालू करें। समीक्षा पोषण का आविष्कार नहीं करती।';
+
+  @override
+  String get reviewQueueProvenanceNote =>
+      'स्वीकृति केवल स्रोत स्थिति बदलती है — गायब पोषण अनुपलब्ध रहता है।';
+
+  @override
+  String get reviewQueueOpenFood => 'भोजन खोलें';
+
+  @override
+  String get reviewQueueApprove => 'स्वीकृत करें';
+
+  @override
+  String get reviewQueueReject => 'अस्वीकृत करें';
+
+  @override
+  String get reviewQueueApproved =>
+      'सत्यापित चिह्नित (उपयोगकर्ता स्रोत बना रहा)';
+
+  @override
+  String get reviewQueueRejected => 'सबमिशन अस्वीकृत';
+
+  @override
+  String reviewQueueBarcode(String code) {
+    return 'बारकोड $code';
+  }
+
+  @override
+  String reviewQueueEnergy(int kcal) {
+    return '$kcal kcal / 100 ग';
+  }
+
+  @override
+  String get reviewQueueNoEnergy => 'ऊर्जा अनुपलब्ध';
+
+  @override
+  String get settingsReviewerMode => 'समीक्षक मोड';
+
+  @override
+  String get settingsReviewerModeNote =>
+      'इस डिवाइस पर लंबित सबमिशन स्वीकृत या अस्वीकृत करने दें।';
 }

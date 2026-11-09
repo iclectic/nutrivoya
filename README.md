@@ -11,12 +11,24 @@ Western packaged foods, and to evaluate food by its actual nutritional
 composition, preparation, portion and dietary context — never by cultural
 stereotype.
 
-This repository currently contains **Milestones 1–13**:
+This repository currently contains **Milestones 1–14**:
 Foundation, Food Data Core, Food Logging, Calorie & Macro Targets,
 Cultural Food Intelligence (seed expansion), Recipe Builder,
 Multilingual Product, Barcode Products, Nutrition Assistant,
 Advanced Tracking, Photo Recognition, User-Contributed Add Product,
-and Supabase Diary Sync.
+Supabase Diary Sync, and Submission Review.
+
+## Status — Milestone 14 (Submission Review)
+
+Milestone 14 completes the user-contributed food workflow:
+
+Submitted → validation → reviewer verification → verified / rejected
+
+- Pending submissions stay in the personal library as `userSubmitted` + pending
+- Approve upgrades provenance to verified — **never invents nutrition**
+- Reject removes the food from searchable library
+- Optional Reviewer mode + Review queue in Settings
+- Offline-first sync to Supabase (`0002_product_submissions.sql`) when signed in
 
 ## Status — Milestone 13 (Diary Sync)
 
@@ -304,7 +316,7 @@ scanning, photo recognition or AI features — those arrive in later milestones.
 
 ### What remains intentionally out of scope
 
-- Remote review / community publish of user submissions (local personal library only)
+- Multi-reviewer community moderation roles / public catalog publish
 - Full LLM chatbot (Ask Nutrivoya is structured / rule-based)
 - Photo calorie detection (vision never invents kcal)
 - Wearables / social / grocery delivery
@@ -344,7 +356,7 @@ lib/
 │   ├── assistant/          # Ask Nutrivoya (rule-based guidance)
 │   ├── tracking/           # Progress, favourites, templates, water
 │   ├── photo/              # Photo-assisted food suggestions
-│   ├── add_product/        # User-contributed product submissions
+│   ├── add_product/        # User submissions, review queue, sync
 │   └── settings/           # Settings (theme, language, account, about)
 ├── l10n/                   # ARB source files
 └── shared/
@@ -446,7 +458,7 @@ guidance. Aggressive weight-loss targets are not enabled in pregnancy.
 
 ## Next milestone
 
-Core milestones 1–13 from the original plan are implemented. Remaining
-product work includes remote review of user submissions and deeper
-on-device recognition models — always with user confirmation and
-structured nutrition lookup.
+Core milestones 1–14 from the original plan are implemented. Remaining
+product work includes deeper on-device recognition models and optional
+public catalog publish — always with user confirmation and structured
+nutrition lookup.
