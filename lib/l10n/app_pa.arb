@@ -1,6 +1,343 @@
 {
   "@@locale": "pa",
-  "appName": "ਨਿਊਟ੍ਰਿਵੋਯਾ",
-  "appTagline": "ਅਜਿਹਾ ਪੋਸ਼ਣ ਜੋ ਤੁਹਾਡੇ ਖਾਣੇ, ਤੁਹਾਡੀ ਸਭਿਆਚਾਰ ਅਤੇ ਤੁਹਾਡੀ ਜ਼ਿੰਦਗੀ ਨਾਲ ਕੰਮ ਕਰਦਾ ਹੈ।",
-  "@@comment": "Placeholder Punjabi localization. Most strings fall back to English until validated by a native speaker."
+  "appName": "Nutrivoya",
+  "@appName": {
+    "description": "Application display name"
+  },
+  "appTagline": "ਪੋਸ਼ਣ ਜੋ ਤੁਹਾਡੇ ਖਾਣੇ, ਤੁਹਾਡੀ ਸੱਭਿਆਚਾਰ ਅਤੇ ਤੁਹਾਡੀ ਜ਼ਿੰਦਗੀ ਨਾਲ ਚੱਲਦਾ ਹੈ।",
+  "@appTagline": {
+    "description": "Welcome screen tagline"
+  },
+  "commonCancel": "ਰੱਦ ਕਰੋ",
+  "commonContinue": "ਜਾਰੀ ਰੱਖੋ",
+  "commonSave": "ਸੰਭਾਲੋ",
+  "commonSkip": "ਛੱਡੋ",
+  "commonBack": "ਪਿੱਛੇ",
+  "commonNext": "ਅੱਗੇ",
+  "commonGetStarted": "ਸ਼ੁਰੂ ਕਰੋ",
+  "commonLoading": "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…",
+  "commonRetry": "ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
+  "commonError": "ਕੁਝ ਗਲਤ ਹੋ ਗਿਆ",
+  "commonClose": "ਬੰਦ ਕਰੋ",
+  "navDashboard": "ਅੱਜ",
+  "navDiary": "ਡਾਇਰੀ",
+  "navSearch": "ਖੋਜੋ",
+  "navSettings": "ਸੈਟਿੰਗਾਂ",
+  "authLoginTitle": "ਵਾਪਸੀ ਤੇ ਸੁਆਗਤ ਹੈ",
+  "authLoginSubtitle": "ਆਪਣਾ ਪੋਸ਼ਣ ਟਰੈਕ ਜਾਰੀ ਰੱਖਣ ਲਈ ਸਾਈਨ ਇਨ ਕਰੋ।",
+  "authSignupTitle": "ਆਪਣਾ ਖਾਤਾ ਬਣਾਓ",
+  "authSignupSubtitle": "ਆਪਣੀ ਸੱਭਿਆਚਾਰਕ ਤੌਰ ਤੇ ਸਮਝਦਾਰ ਪੋਸ਼ਣ ਯਾਤਰਾ ਸ਼ੁਰੂ ਕਰੋ।",
+  "authEmailLabel": "ਈਮੇਲ",
+  "authPasswordLabel": "ਪਾਸਵਰਡ",
+  "authEmailHint": "you@example.com",
+  "authLoginButton": "ਸਾਈਨ ਇਨ",
+  "authSignupButton": "ਖਾਤਾ ਬਣਾਓ",
+  "authSwitchToSignup": "ਖਾਤਾ ਨਹੀਂ ਹੈ? ਸਾਈਨ ਅੱਪ ਕਰੋ",
+  "authSwitchToLogin": "ਪਹਿਲਾਂ ਤੋਂ ਖਾਤਾ ਹੈ? ਸਾਈਨ ਇਨ ਕਰੋ",
+  "authForgotPassword": "ਪਾਸਵਰਡ ਭੁੱਲ ਗਏ?",
+  "authErrorInvalidCredentials": "ਗਲਤ ਈਮੇਲ ਜਾਂ ਪਾਸਵਰਡ।",
+  "authErrorEmailInUse": "ਇਸ ਈਮੇਲ ਲਈ ਪਹਿਲਾਂ ਤੋਂ ਖਾਤਾ ਮੌਜੂਦ ਹੈ।",
+  "authErrorWeakPassword": "ਕਿਰਪਾ ਕਰਕੇ ਮਜ਼ਬੂਤ ਪਾਸਵਰਡ ਚੁਣੋ।",
+  "authErrorGeneric": "ਪ੍ਰਮਾਣੀਕਰਨ ਅਸਫਲ। ਕਿਰਪਾ ਕਰਕੇ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+  "onboardingWelcomeTitle": "Nutrivoya ਵਿੱਚ ਤੁਹਾਡਾ ਸੁਆਗਤ ਹੈ",
+  "onboardingWelcomeBody": "ਪੋਸ਼ਣ ਜੋ ਤੁਹਾਡੇ ਖਾਣੇ, ਤੁਹਾਡੀ ਸੱਭਿਆਚਾਰ ਅਤੇ ਤੁਹਾਡੀ ਜ਼ਿੰਦਗੀ ਨਾਲ ਚੱਲਦਾ ਹੈ।",
+  "onboardingGoalTitle": "ਤੁਸੀਂ ਚਾਹੁੰਦੇ ਹੋ ਕਿ Nutrivoya ਕਿਸ ਵਿੱਚ ਮਦਦ ਕਰੇ?",
+  "onboardingGoalMaintain": "ਆਪਣਾ ਭਾਰ ਬਣਾਈ ਰੱਖੋ",
+  "onboardingGoalLose": "ਭਾਰ ਘਟਾਓ",
+  "onboardingGoalGain": "ਭਾਰ ਵਧਾਓ",
+  "onboardingGoalBuildMuscle": "ਮਾਸਪੇਸ਼ੀਆਂ ਬਣਾਓ",
+  "onboardingGoalImprove": "ਆਪਣਾ ਪੋਸ਼ਣ ਸੁਧਾਰੋ",
+  "onboardingGoalTrack": "ਸਿਰਫ ਖਾਧਾ ਹੋਇਆ ਭੋਜਨ ਟਰੈਕ ਕਰੋ",
+  "onboardingProfileTitle": "ਆਪਣੇ ਬਾਰੇ ਦੱਸੋ",
+  "onboardingProfileSubtitle": "ਅਸੀਂ ਇਸਦਾ ਇਸਤੇਮਾਲ ਸਿਰਫ ਤੁਹਾਡੀਆਂ ਪੋਸ਼ਣ ਲੋੜਾਂ ਦਾ ਅੰਦਾਜ਼ਾ ਲਗਾਉਣ ਲਈ ਕਰਦੇ ਹਾਂ। ਬਾਅਦ ਵਿੱਚ ਬਦਲ ਸਕਦੇ ਹੋ।",
+  "onboardingAgeLabel": "ਉਮਰ",
+  "onboardingHeightLabel": "ਉਚਾਈ (ਸੈਮੀ)",
+  "onboardingWeightLabel": "ਭਾਰ (ਕਿਗ੍ਰਾ)",
+  "onboardingSexLabel": "ਸਰੀਰਕ ਗਣਨਾ ਇਨਪੁੱਟ",
+  "onboardingSexFemale": "ਔਰਤ",
+  "onboardingSexMale": "ਮਰਦ",
+  "onboardingSexPreferNotToSay": "ਦੱਸਣਾ ਨਹੀਂ ਚਾਹੁੰਦੇ",
+  "onboardingSexHelp": "ਸਿਰਫ ਊਰਜਾ ਲੋੜ ਸਮੀਕਰਣਾਂ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ। ਇਹ ਤੁਹਾਡੀ ਲਿੰਗ ਪਛਾਣ ਤੋਂ ਵੱਖ ਹੈ।",
+  "onboardingActivityLabel": "ਸਰਗਰਮੀ ਪੱਧਰ",
+  "onboardingActivitySedentary": "ਘੱਟ ਸਰਗਰਮ",
+  "onboardingActivityLight": "ਹਲਕੀ ਸਰਗਰਮੀ",
+  "onboardingActivityModerate": "ਦਰਮਿਆਨੀ ਸਰਗਰਮੀ",
+  "onboardingActivityActive": "ਬਹੁਤ ਸਰਗਰਮ",
+  "onboardingActivityExtra": "ਬਹੁਤ ਜ਼ਿਆਦਾ ਸਰਗਰਮ",
+  "onboardingCuisineTitle": "ਕਿਹੜੇ ਭੋਜਨ ਤੁਹਾਨੂੰ ਜਾਣੂ ਲੱਗਦੇ ਹਨ?",
+  "onboardingCuisineSubtitle": "ਵਿਕਲਪਿਕ। ਖੋਜ ਵਿੱਚ ਜਾਣੂ ਭੋਜਨ ਨੂੰ ਤਰਜੀਹ ਦੇਣ ਲਈ। ਤੁਸੀਂ ਛੱਡ ਸਕਦੇ ਹੋ।",
+  "onboardingLanguageTitle": "ਆਪਣੀ ਭਾਸ਼ਾ ਚੁਣੋ",
+  "onboardingLanguageSubtitle": "ਤੁਸੀਂ ਇਸ ਨੂੰ ਕਦੇ ਵੀ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਬਦਲ ਸਕਦੇ ਹੋ।",
+  "onboardingSummaryTitle": "ਤੁਹਾਡਾ ਅਨੁਮਾਨਿਤ ਪੋਸ਼ਣ ਟੀਚਾ",
+  "onboardingSummaryBody": "ਇਹ ਮਿਆਰੀ ਸਮੀਕਰਣਾਂ ਤੇ ਅਧਾਰਿਤ ਅਨੁਮਾਨ ਹੈ। ਤੁਹਾਡੀਆਂ ਅਸਲ ਲੋੜਾਂ ਵੱਖ ਹੋ ਸਕਦੀਆਂ ਹਨ, ਅਤੇ ਅਸੀਂ ਸਮੇਂ ਨਾਲ ਤੁਹਾਡੇ ਭਾਰ ਦੇ ਰੁਝਾਨ ਨਾਲ ਇਸ ਨੂੰ ਬਿਹਤਰ ਬਣਾ ਸਕਦੇ ਹਾਂ।",
+  "onboardingSummaryComingSoon": "ਨਿੱਜੀ ਕੈਲੋਰੀ ਅਤੇ ਮੈਕਰੋ ਟੀਚੇ ਬਾਅਦ ਵਾਲੇ ਕਦਮ ਵਿੱਚ ਗਿਣੇ ਜਾਣਗੇ।",
+  "onboardingSummaryMaintenance": "ਅਨੁਮਾਨਿਤ ਰੱਖ-ਰਖਾਅ: {kcal} ਕਿਲੋਕੈਲੋਰੀ/ਦਿਨ",
+  "@onboardingSummaryMaintenance": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingSummaryTarget": "ਸੁਝਾਇਆ ਰੋਜ਼ਾਨਾ ਟੀਚਾ: {kcal} ਕਿਲੋਕੈਲੋਰੀ",
+  "@onboardingSummaryTarget": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingSummaryMacros": "ਪ੍ਰੋਟੀਨ {protein} ਗ੍ਰਾ · ਕਾਰਬਸ {carbs} ਗ੍ਰਾ · ਚਰਬੀ {fat} ਗ੍ਰਾ · ਫਾਈਬਰ {fibre} ਗ੍ਰਾ",
+  "@onboardingSummaryMacros": {
+    "placeholders": {
+      "protein": {
+        "type": "int"
+      },
+      "carbs": {
+        "type": "int"
+      },
+      "fat": {
+        "type": "int"
+      },
+      "fibre": {
+        "type": "int"
+      }
+    }
+  },
+  "dashboardGreetingMorning": "ਸ਼ੁਭ ਸਵੇਰ",
+  "dashboardGreetingAfternoon": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ",
+  "dashboardGreetingEvening": "ਸ਼ੁਭ ਸ਼ਾਮ",
+  "dashboardToday": "ਅੱਜ",
+  "dashboardCalories": "ਕੈਲੋਰੀਆਂ",
+  "dashboardProtein": "ਪ੍ਰੋਟੀਨ",
+  "dashboardCarbs": "ਕਾਰਬੋਹਾਈਡਰੇਟ",
+  "dashboardFat": "ਚਰਬੀ",
+  "dashboardFibre": "ਫਾਈਬਰ",
+  "dashboardLogFood": "ਭੋਜਨ ਜੋੜੋ",
+  "dashboardEmptyTitle": "ਅਜੇ ਕੁਝ ਲੌਗ ਨਹੀਂ",
+  "dashboardEmptyBody": "ਆਪਣਾ ਦਿਨ ਟਰੈਕ ਕਰਨ ਲਈ ਕੋਈ ਭੋਜਨ ਖੋਜੋ।",
+  "dashboardTargetsPlaceholder": "ਆਨਬੋਰਡਿੰਗ ਤੋਂ ਬਾਅਦ ਟੀਚੇ ਸੈੱਟ ਹੋਣਗੇ।",
+  "dashboardCaloriesOf": "{consumed} / {target} ਕਿਲੋਕੈਲੋਰੀ",
+  "@dashboardCaloriesOf": {
+    "placeholders": {
+      "consumed": {
+        "type": "int"
+      },
+      "target": {
+        "type": "int"
+      }
+    }
+  },
+  "dashboardCaloriesRemaining": "{kcal} ਕਿਲੋਕੈਲੋਰੀ ਬਾਕੀ",
+  "@dashboardCaloriesRemaining": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "dashboardCaloriesOver": "ਟੀਚੇ ਤੋਂ {kcal} ਕਿਲੋਕੈਲੋਰੀ ਵੱਧ",
+  "@dashboardCaloriesOver": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "diaryTitle": "ਡਾਇਰੀ",
+  "diaryMealBreakfast": "ਨਾਸ਼ਤਾ",
+  "diaryMealLunch": "ਦੁਪਹਿਰ ਦਾ ਖਾਣਾ",
+  "diaryMealDinner": "ਰਾਤ ਦਾ ਖਾਣਾ",
+  "diaryMealSnacks": "ਸਨੈਕਸ",
+  "diaryEmpty": "ਅਜੇ ਕੋਈ ਐਂਟਰੀ ਨਹੀਂ।",
+  "diaryAddToMeal": "ਭੋਜਨ ਜੋੜੋ",
+  "searchTitle": "ਖੋਜੋ",
+  "searchHint": "ਤੁਸੀਂ ਕੀ ਖਾਧਾ?",
+  "searchEmpty": "ਰੋਟੀ, ਜੋਲੋਫ ਚੌਲ, ਦਾਲ ਜਾਂ ਅੰਬ ਵਰਗੇ ਭੋਜਨ ਖੋਜੋ।",
+  "searchNoResults": "ਕੋਈ ਮੇਲ ਨਹੀਂ ਮਿਲਿਆ। ਕੋਈ ਹੋਰ ਨਾਮ, ਉਪਨਾਮ ਜਾਂ ਸਪੈਲਿੰਗ ਅਜ਼ਮਾਓ।",
+  "searchRecent": "ਹਾਲੀਆ",
+  "searchFrequent": "ਅਕਸਰ",
+  "searchFavourites": "ਪਸੰਦੀਦਾ",
+  "searchMyRecipes": "ਮੇਰੀਆਂ ਰੈਸਿਪੀਆਂ",
+  "settingsTitle": "ਸੈਟਿੰਗਾਂ",
+  "settingsAppearance": "ਦਿੱਖ",
+  "settingsTheme": "ਥੀਮ",
+  "settingsThemeSystem": "ਸਿਸਟਮ",
+  "settingsThemeLight": "ਲਾਈਟ",
+  "settingsThemeDark": "ਡਾਰਕ",
+  "settingsLanguage": "ਭਾਸ਼ਾ",
+  "settingsLanguageEn": "English",
+  "settingsLanguageFr": "Français",
+  "settingsLanguageEs": "Español",
+  "settingsLanguageHi": "हिन्दी",
+  "settingsLanguagePa": "ਪੰਜਾਬੀ",
+  "settingsLanguageAr": "العربية",
+  "settingsAccount": "ਖਾਤਾ",
+  "settingsSignOut": "ਸਾਈਨ ਆਉਟ",
+  "settingsAbout": "Nutrivoya ਬਾਰੇ",
+  "settingsAboutBody": "Nutrivoya ਇੱਕ ਬਹੁਭਾਸ਼ੀ, ਸੱਭਿਆਚਾਰਕ ਤੌਰ ਤੇ ਸਮਝਦਾਰ ਪੋਸ਼ਣ ਅਤੇ ਕੈਲੋਰੀ-ਟਰੈਕਿੰਗ ਐਪ ਹੈ ਜੋ ਲੋਕਾਂ ਨੂੰ ਅਸਲ ਖਾਧੇ ਭੋਜਨ ਨੂੰ ਸਮਝਣ ਅਤੇ ਸੁਧਾਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦੀ ਹੈ — ਬਿਨਾਂ ਇਹ ਕਹੇ ਕਿ ਸਿਹਤ ਲਈ ਸੱਭਿਆਚਾਰ ਛੱਡਣਾ ਪਵੇਗਾ।",
+  "settingsProfile": "ਪ੍ਰੋਫਾਈਲ",
+  "settingsGoals": "ਟੀਚੇ",
+  "settingsComingSoon": "ਜਲਦੀ ਆ ਰਿਹਾ ਹੈ",
+  "profileTitle": "ਪ੍ਰੋਫਾਈਲ",
+  "profileGoal": "ਟੀਚਾ",
+  "profileActivity": "ਸਰਗਰਮੀ ਪੱਧਰ",
+  "profileCuisines": "ਜਾਣੂ ਪਕਵਾਨ",
+  "profileEdit": "ਪ੍ਰੋਫਾਈਲ ਸੋਧੋ",
+  "goalsTitle": "ਪੋਸ਼ਣ ਟੀਚੇ",
+  "goalsNotSet": "ਅਜੇ ਸੈੱਟ ਨਹੀਂ",
+  "goalsCalorieTarget": "ਕੈਲੋਰੀ ਟੀਚਾ",
+  "goalsProteinTarget": "ਪ੍ਰੋਟੀਨ ਟੀਚਾ",
+  "goalsCarbTarget": "ਕਾਰਬੋਹਾਈਡਰੇਟ ਟੀਚਾ",
+  "goalsFatTarget": "ਚਰਬੀ ਟੀਚਾ",
+  "goalsFibreTarget": "ਫਾਈਬਰ ਟੀਚਾ",
+  "goalsBmr": "ਅਨੁਮਾਨਿਤ BMR",
+  "goalsTdee": "ਅਨੁਮਾਨਿਤ ਰੱਖ-ਰਖਾਅ (TDEE)",
+  "goalsNeedProfile": "ਨਿੱਜੀ ਟੀਚੇ ਵੇਖਣ ਲਈ ਆਨਬੋਰਡਿੰਗ ਪੂਰੀ ਕਰੋ।",
+  "goalsEstimateDisclaimer": "ਗਿਣੀ ਗਈ ਊਰਜਾ ਖਪਤ ਇੱਕ ਅਨੁਮਾਨ ਹੈ। ਤੁਹਾਡੀਆਂ ਅਸਲ ਲੋੜਾਂ ਵੱਖ ਹੋ ਸਕਦੀਆਂ ਹਨ।",
+  "goalsRefineOverTime": "ਅਸੀਂ ਸਮੇਂ ਨਾਲ ਤੁਹਾਡੇ ਭਾਰ ਦੇ ਰੁਝਾਨ ਨਾਲ ਇਸ ਅਨੁਮਾਨ ਨੂੰ ਬਿਹਤਰ ਬਣਾ ਸਕਦੇ ਹਾਂ।",
+  "energyNoteEstimateDisclaimer": "ਗਿਣੀ ਗਈ ਊਰਜਾ ਖਪਤ ਇੱਕ ਅਨੁਮਾਨ ਹੈ। ਤੁਹਾਡੀਆਂ ਅਸਲ ਲੋੜਾਂ ਵੱਖ ਹੋ ਸਕਦੀਆਂ ਹਨ।",
+  "energyNotePhysiologicalUnspecified": "ਸਰੀਰਕ ਗਣਨਾ ਇਨਪੁੱਟ ਤੋਂ ਬਿਨਾਂ ਅਸੀਂ ਮਿਆਰੀ ਸਮੀਕਰਣਾਂ ਦਾ ਔਸਤ ਲਿਆ। ਭਰੋਸਾ ਘੱਟ ਹੈ।",
+  "energyNoteAgeOutsideAdultRange": "ਊਰਜਾ ਸਮੀਕਰਣ ਆਮ ਬਾਲਗ ਉਮਰ ਤੋਂ ਬਾਹਰ ਘੱਟ ਭਰੋਸੇਯੋਗ ਹੁੰਦੇ ਹਨ। ਪੇਸ਼ੇਵਰ ਸਲਾਹ ਤੇ ਵਿਚਾਰ ਕਰੋ।",
+  "energyNoteLoseWhileLowWeight": "ਤੁਹਾਡੀ ਪ੍ਰੋਫਾਈਲ ਘੱਟ ਸਰੀਰ ਭਾਰ ਦਾ ਸੰਕੇਤ ਦਿੰਦੀ ਹੈ। ਤੇਜ਼ ਭਾਰ ਘਟਾਉਣਾ ਸਿਫਾਰਸ਼ੀ ਨਹੀਂ — ਲੋੜ ਹੋਵੇ ਤਾਂ ਯੋਗ ਸਹਾਇਤਾ ਲਓ।",
+  "energyNoteDeficitCapped": "ਅਸੀਂ ਕੈਲੋਰੀ ਘਾਟੇ ਨੂੰ ਸੁਰੱਖਿਅਤ ਦਰ ਤੱਕ ਸੀਮਿਤ ਕੀਤਾ। ਸਖ਼ਤ ਡਾਈਟਿੰਗ ਸਮਰਥਿਤ ਨਹੀਂ।",
+  "energyNoteFloorApplied": "ਸੁਰੱਖਿਆ ਲਈ ਤੁਹਾਡਾ ਟੀਚਾ ਘੱਟੋ-ਘੱਟ ਊਰਜਾ ਸੇਵਨ ਤੱਕ ਵਧਾਇਆ ਗਿਆ।",
+  "energyNoteTrackOnly": "ਤੁਸੀਂ ਸਿਰਫ ਟਰੈਕ ਕਰਨਾ ਚੁਣਿਆ। ਹੇਠਾਂ ਦਿੱਤੀਆਂ ਗਿਣਤੀਆਂ ਹਵਾਲੇ ਲਈ ਰੱਖ-ਰਖਾਅ ਅਨੁਮਾਨ ਹਨ।",
+  "confidenceLabel": "ਅਨੁਮਾਨ ਦਾ ਭਰੋਸਾ",
+  "confidenceHigh": "ਉੱਚ",
+  "confidenceHighNote": "ਅਧਿਕਾਰਤ ਭੋਜਨ ਰਚਨਾ ਡੇਟਾ",
+  "confidenceMedium": "ਦਰਮਿਆਨਾ",
+  "confidenceMediumNote": "ਮਿਆਰੀ ਰੈਸਿਪੀ ਤੋਂ ਗਿਣਿਆ ਗਿਆ",
+  "confidenceEstimated": "ਅਨੁਮਾਨਿਤ",
+  "confidenceEstimatedNote": "ਆਮ ਸਮੱਗਰੀ ਅਤੇ ਹਿੱਸੇ ਦੇ ਆਕਾਰ ਤੇ ਅਧਾਰਿਤ",
+  "confidenceUnknown": "ਅਣਜਾਣ",
+  "sourceLabel": "ਸਰੋਤ",
+  "sourceAuthoritative": "ਅਧਿਕਾਰਤ ਭੋਜਨ ਰਚਨਾ ਡੇਟਾਸੈੱਟ",
+  "sourcePackaged": "ਪੈਕੇਜਡ ਭੋਜਨ ਡੇਟਾਬੇਸ",
+  "sourceNutrivoyaCurated": "Nutrivoya ਕਿਊਰੇਟਿਡ ਡੇਟਾਸੈੱਟ",
+  "sourceRecipeEstimated": "ਰੈਸਿਪੀ-ਅਧਾਰਿਤ ਅਨੁਮਾਨ",
+  "sourceUserSubmitted": "ਉਪਭੋਗਤਾ ਵੱਲੋਂ ਭੇਜਿਆ",
+  "portionLabel": "ਹਿੱਸਾ",
+  "portionSmall": "ਛੋਟਾ",
+  "portionMedium": "ਦਰਮਿਆਨਾ",
+  "portionLarge": "ਵੱਡਾ",
+  "portionGrams": "ਗ੍ਰਾਮ",
+  "portionQuantity": "ਮਾਤਰਾ",
+  "portionCustom": "ਕਸਟਮ ਗ੍ਰਾਮ",
+  "nutrientEnergyKcal": "ਕੈਲੋਰੀਆਂ",
+  "nutrientProteinG": "ਪ੍ਰੋਟੀਨ",
+  "nutrientCarbohydrateG": "ਕਾਰਬੋਹਾਈਡਰੇਟ",
+  "nutrientFatG": "ਚਰਬੀ",
+  "nutrientFibreG": "ਫਾਈਬਰ",
+  "nutrientSaturatedFatG": "ਸੰਤ੍ਰਿਪਤ ਚਰਬੀ",
+  "nutrientSugarG": "ਖੰਡ",
+  "nutrientSodiumMg": "ਸੋਡੀਅਮ",
+  "nutrientIronMg": "ਆਇਰਨ",
+  "nutrientCalciumMg": "ਕੈਲਸ਼ੀਅਮ",
+  "nutrientPotassiumMg": "ਪੋਟੈਸ਼ੀਅਮ",
+  "nutrientMagnesiumMg": "ਮੈਗਨੀਸ਼ੀਅਮ",
+  "nutrientZincMg": "ਜ਼ਿੰਕ",
+  "nutrientVitaminAUg": "ਵਿਟਾਮਿਨ A",
+  "nutrientVitaminCMg": "ਵਿਟਾਮਿਨ C",
+  "nutrientVitaminDUg": "ਵਿਟਾਮਿਨ D",
+  "nutrientVitaminB12Ug": "ਵਿਟਾਮਿਨ B12",
+  "nutrientFolateUg": "ਫੋਲੇਟ",
+  "foodDetailsTitle": "ਭੋਜਨ ਵੇਰਵੇ",
+  "foodDetailsAddToMeal": "ਭੋਜਨ ਵਿੱਚ ਜੋੜੋ",
+  "foodDetailsPerPortion": "ਪ੍ਰਤੀ ਹਿੱਸਾ",
+  "foodDetailsPer100g": "ਪ੍ਰਤੀ 100 ਗ੍ਰਾ",
+  "foodDetailsPreparationNote": "ਤਿਆਰੀ ਅਤੇ ਹਿੱਸੇ ਦਾ ਆਕਾਰ ਮੁੱਲ ਬਦਲ ਸਕਦਾ ਹੈ।",
+  "foodDetailsNoData": "ਪੋਸ਼ਣ ਡੇਟਾ ਉਪਲਬਧ ਨਹੀਂ",
+  "foodDetailsApprox": "≈",
+  "foodDetailsLoggingSoon": "ਭੋਜਨ ਲੌਗਿੰਗ ਅਗਲੇ ਪੜਾਅ ਵਿੱਚ ਆਵੇਗੀ।",
+  "foodDetailsMacros": "ਮੈਕਰੋਜ਼",
+  "foodDetailsMicronutrients": "ਮਾਈਕਰੋਨਿਊਟ੍ਰੀਐਂਟਸ",
+  "foodDetailsCuisine": "ਪਕਵਾਨ",
+  "foodDetailsRegion": "ਖੇਤਰ",
+  "foodDetailsAliases": "ਇਸ ਨੂੰ ਇਹ ਵੀ ਕਹਿੰਦੇ ਹਨ",
+  "searchResultsCount": "{count, plural, =0{ਕੋਈ ਨਤੀਜਾ ਨਹੀਂ} =1{1 ਨਤੀਜਾ} other{{count} ਨਤੀਜੇ}}",
+  "@searchResultsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "searchTryExample": "ਅਜ਼ਮਾਓ: ਰੋਟੀ, ਜੋਲੋਫ ਚੌਲ, ਦਾਲ, ਅੰਬ",
+  "diaryAddToMealTitle": "ਕਿਸ ਭੋਜਨ ਵਿੱਚ ਜੋੜਨਾ ਹੈ?",
+  "diaryEntryAdded": "{food} ਨੂੰ {meal} ਵਿੱਚ ਜੋੜਿਆ ਗਿਆ",
+  "@diaryEntryAdded": {
+    "placeholders": {
+      "food": {
+        "type": "String"
+      },
+      "meal": {
+        "type": "String"
+      }
+    }
+  },
+  "diaryEntryDeleted": "ਐਂਟਰੀ ਮਿਟਾਈ ਗਈ",
+  "diaryEntryUpdated": "ਐਂਟਰੀ ਅੱਪਡੇਟ ਹੋਈ",
+  "diaryEditEntry": "ਐਂਟਰੀ ਸੋਧੋ",
+  "diaryDeleteEntry": "ਐਂਟਰੀ ਮਿਟਾਓ",
+  "diaryConfirmDelete": "ਇਸ ਐਂਟਰੀ ਨੂੰ ਡਾਇਰੀ ਤੋਂ ਹਟਾਓ?",
+  "diaryConfirmDeleteYes": "ਹਟਾਓ",
+  "diaryGramsLabel": "ਗ੍ਰਾਮ",
+  "diaryQuantityLabel": "ਮਾਤਰਾ",
+  "diaryNoEntriesForMeal": "ਅਜੇ ਕੋਈ ਐਂਟਰੀ ਨਹੀਂ",
+  "diaryKcalShort": "ਕਿਲੋਕੈਲੋਰੀ",
+  "diarySelectDate": "ਤਾਰੀਖ ਚੁਣੋ",
+  "diaryToday": "ਅੱਜ",
+  "diaryYesterday": "ਕੱਲ੍ਹ",
+  "diaryEntryCalories": "{kcal} ਕਿਲੋਕੈਲੋਰੀ",
+  "@diaryEntryCalories": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "recipesTitle": "ਮੇਰੀਆਂ ਰੈਸਿਪੀਆਂ",
+  "recipesCreate": "ਰੈਸਿਪੀ ਬਣਾਓ",
+  "recipesEdit": "ਰੈਸਿਪੀ ਸੋਧੋ",
+  "recipesEmptyTitle": "ਅਜੇ ਕੋਈ ਨਿੱਜੀ ਰੈਸਿਪੀ ਨਹੀਂ",
+  "recipesEmptyBody": "ਮਾਂ ਦਾ ਜੋਲੋਫ ਜਾਂ ਦਾਦੀ ਦੀ ਦਾਲ ਵਰਗੀਆਂ ਪਰਿਵਾਰਕ ਰੈਸਿਪੀਆਂ ਸੰਭਾਲੋ ਤਾਂ ਜੋ ਤੁਸੀਂ ਉਹੀ ਰੂਪ ਲੌਗ ਕਰ ਸਕੋ ਜੋ ਤੁਸੀਂ ਅਸਲ ਵਿੱਚ ਬਣਾਉਂਦੇ ਹੋ।",
+  "recipesNameLabel": "ਰੈਸਿਪੀ ਦਾ ਨਾਮ",
+  "recipesServingsLabel": "ਸਰਵਿੰਗਾਂ",
+  "recipesYieldLabel": "ਕੁੱਲ ਮਾਤਰਾ (ਗ੍ਰਾ)",
+  "recipesYieldHint": "ਵਿਕਲਪਿਕ — ਡਿਫਾਲਟ ਸਮੱਗਰੀ ਦਾ ਜੋੜ",
+  "recipesIngredients": "ਸਮੱਗਰੀ",
+  "recipesIngredientsEmpty": "ਪੋਸ਼ਣ ਗਣਨਾ ਲਈ ਸਮੱਗਰੀ ਜੋੜੋ।",
+  "recipesAddIngredient": "ਸਮੱਗਰੀ ਜੋੜੋ",
+  "recipesNotesLabel": "ਨੋਟਸ",
+  "recipesCalculatedNutrition": "ਗਿਣਿਆ ਗਿਆ ਪੋਸ਼ਣ",
+  "recipesWholeRecipeKcal": "ਪੂਰੀ ਰੈਸਿਪੀ: ≈ {kcal} ਕਿਲੋਕੈਲੋਰੀ",
+  "@recipesWholeRecipeKcal": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "recipesPerServingKcal": "≈ {kcal} ਕਿਲੋਕੈਲੋਰੀ ਪ੍ਰਤੀ ਸਰਵਿੰਗ",
+  "@recipesPerServingKcal": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "recipesServingsCount": "{count, plural, =1{1 ਸਰਵਿੰਗ} other{{count} ਸਰਵਿੰਗਾਂ}}",
+  "@recipesServingsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "recipesPerServingShort": "ਸਰਵਿੰਗ",
+  "recipesCalculationNote": "ਤੁਹਾਡੀ ਸਮੱਗਰੀ ਅਤੇ ਮਾਤਰਾਵਾਂ ਤੋਂ ਗਿਣਿਆ। ਤਿਆਰੀ ਅਤੇ ਉਪਜ ਮੁੱਲ ਬਦਲ ਸਕਦੀ ਹੈ।",
+  "recipesDeleteTitle": "ਰੈਸਿਪੀ ਮਿਟਾਓ?",
+  "recipesDeleteBody": "ਇਹ ਰੈਸਿਪੀ ਤੁਹਾਡੇ ਨਿੱਜੀ ਸੰਗ੍ਰਹਿ ਤੋਂ ਹਟਾ ਦੇਵੇਗਾ। ਪਹਿਲਾਂ ਤੋਂ ਲੌਗ ਡਾਇਰੀ ਐਂਟਰੀਆਂ ਪ੍ਰਭਾਵਿਤ ਨਹੀਂ ਹੋਣਗੀਆਂ।",
+  "@@comment": "Punjabi (Gurmukhi) UI strings for Nutrivoya MVP. Native review welcome for idiomatic polish."
 }

@@ -10,8 +10,9 @@ import '../../core/models/user_profile.dart';
 ///   query -> normalize -> exact primary -> exact alias ->
 ///   cuisine-preferred -> prefix -> contains -> fuzzy fallback
 ///
-/// "Previously logged foods" ranking is Milestone 3 (no diary yet). For
-/// Milestone 2, ranking favours exact and cuisine matches.
+/// Ranking favours exact matches, aliases, and the user's cuisine
+/// preferences. Multilingual / script aliases are matched via
+/// [FoodName.normalize].
 class FoodSearchService {
   const FoodSearchService();
 

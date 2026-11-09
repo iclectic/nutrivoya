@@ -11,9 +11,34 @@ Western packaged foods, and to evaluate food by its actual nutritional
 composition, preparation, portion and dietary context — never by cultural
 stereotype.
 
-This repository currently contains **Milestones 1–6**:
+This repository currently contains **Milestones 1–7**:
 Foundation, Food Data Core, Food Logging, Calorie & Macro Targets,
-Cultural Food Intelligence (seed expansion), and Recipe Builder.
+Cultural Food Intelligence (seed expansion), Recipe Builder, and
+Multilingual Product.
+
+## Status — Milestone 7 (Multilingual Product)
+
+Milestone 7 fills validated UI translations for the MVP language set,
+expands multilingual / script food aliases, and hardens RTL behaviour
+for Arabic.
+
+### What is included in Milestone 7
+
+- Complete ARB translations for English, French, Spanish, Hindi,
+  Punjabi (Gurmukhi) and Arabic (no longer English fallback stubs)
+- Expanded food-name aliases across scripts (Devanagari, Gurmukhi,
+  Arabic) and Romance-language translations
+- `FoodName.normalize` keeps non-Latin scripts searchable and folds
+  Latin diacritics / combining marks
+- RTL-safe layout tweaks (`AlignmentDirectional`, `TextAlign.end`,
+  `EdgeInsetsDirectional`)
+- Widget tests asserting each locale loads real strings and Arabic
+  resolves to `TextDirection.rtl`
+- Search tests for Devanagari, Punjabi, Arabic and French aliases
+
+Translations are drafted for product use; native-speaker review remains
+welcome for idiomatic polish. Do not treat unreviewed machine tone as
+final brand voice.
 
 ## Status — Milestone 6 (Recipe Builder)
 
@@ -187,7 +212,6 @@ scanning, photo recognition or AI features — those arrive in later milestones.
 - AI nutrition assistant (Milestone 9)
 - Weight / water / body measurements / favourites system (Milestone 10)
 - Photo recognition (Milestone 11)
-- Fully validated native translations (Milestone 7 — ARB placeholders remain)
 - Supabase diary sync (entries are flagged `syncPending`)
 
 ## Project structure
@@ -290,9 +314,9 @@ Localization uses Flutter's official `gen-l10n` tooling.
   to `AppConfig.supportedLocaleCodes`, add the asset entry in `pubspec.yaml`,
   and run `flutter gen-l10n`.
 
-> Placeholder translations (fr, es, hi, pa, ar) are **not** considered
-> validated. Nutrivoya does not claim translation quality until a native
-> speaker has reviewed the strings. Missing keys fall back to English.
+> MVP locales (en, fr, es, hi, pa, ar) ship with complete ARB coverage.
+> Native-speaker review remains welcome for idiomatic polish; Nutrivoya
+> does not claim brand-perfect phrasing in every language until reviewed.
 
 ## Architecture notes
 
@@ -321,6 +345,6 @@ guidance. Aggressive weight-loss targets are not enabled in pregnancy.
 
 ## Next milestone
 
-**Milestone 7 — Multilingual Product:** validated translations for the
-initial language set, expanded multilingual food aliases, and RTL layout
-verification for Arabic.
+**Milestone 8 — Barcode Products:** camera barcode scanning, packaged
+food lookup (e.g. Open Food Facts behind `PackagedFoodRepository`),
+serving selection and nutrition verification.

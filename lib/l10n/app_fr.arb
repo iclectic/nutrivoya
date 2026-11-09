@@ -1,6 +1,343 @@
 {
   "@@locale": "fr",
   "appName": "Nutrivoya",
+  "@appName": {
+    "description": "Application display name"
+  },
   "appTagline": "Une nutrition qui s'adapte à votre alimentation, votre culture et votre vie.",
-  "@@comment": "Placeholder French localization. Most strings fall back to English until validated by a native speaker."
+  "@appTagline": {
+    "description": "Welcome screen tagline"
+  },
+  "commonCancel": "Annuler",
+  "commonContinue": "Continuer",
+  "commonSave": "Enregistrer",
+  "commonSkip": "Passer",
+  "commonBack": "Retour",
+  "commonNext": "Suivant",
+  "commonGetStarted": "Commencer",
+  "commonLoading": "Chargement…",
+  "commonRetry": "Réessayer",
+  "commonError": "Une erreur s'est produite",
+  "commonClose": "Fermer",
+  "navDashboard": "Aujourd'hui",
+  "navDiary": "Journal",
+  "navSearch": "Recherche",
+  "navSettings": "Réglages",
+  "authLoginTitle": "Bon retour",
+  "authLoginSubtitle": "Connectez-vous pour continuer à suivre votre nutrition.",
+  "authSignupTitle": "Créer votre compte",
+  "authSignupSubtitle": "Commencez votre parcours nutritionnel culturellement intelligent.",
+  "authEmailLabel": "E-mail",
+  "authPasswordLabel": "Mot de passe",
+  "authEmailHint": "vous@exemple.com",
+  "authLoginButton": "Se connecter",
+  "authSignupButton": "Créer un compte",
+  "authSwitchToSignup": "Pas encore de compte ? S'inscrire",
+  "authSwitchToLogin": "Déjà un compte ? Se connecter",
+  "authForgotPassword": "Mot de passe oublié ?",
+  "authErrorInvalidCredentials": "E-mail ou mot de passe invalide.",
+  "authErrorEmailInUse": "Un compte existe déjà pour cet e-mail.",
+  "authErrorWeakPassword": "Veuillez choisir un mot de passe plus fort.",
+  "authErrorGeneric": "Échec de l'authentification. Veuillez réessayer.",
+  "onboardingWelcomeTitle": "Bienvenue sur Nutrivoya",
+  "onboardingWelcomeBody": "Une nutrition qui s'adapte à votre alimentation, votre culture et votre vie.",
+  "onboardingGoalTitle": "En quoi souhaitez-vous que Nutrivoya vous aide ?",
+  "onboardingGoalMaintain": "Maintenir mon poids",
+  "onboardingGoalLose": "Perdre du poids",
+  "onboardingGoalGain": "Prendre du poids",
+  "onboardingGoalBuildMuscle": "Développer mes muscles",
+  "onboardingGoalImprove": "Améliorer ma nutrition",
+  "onboardingGoalTrack": "Suivre simplement ce que je mange",
+  "onboardingProfileTitle": "Parlez-nous de vous",
+  "onboardingProfileSubtitle": "Nous utilisons ces informations uniquement pour estimer vos besoins nutritionnels. Vous pourrez les modifier plus tard.",
+  "onboardingAgeLabel": "Âge",
+  "onboardingHeightLabel": "Taille (cm)",
+  "onboardingWeightLabel": "Poids (kg)",
+  "onboardingSexLabel": "Paramètre physiologique de calcul",
+  "onboardingSexFemale": "Féminin",
+  "onboardingSexMale": "Masculin",
+  "onboardingSexPreferNotToSay": "Préférer ne pas dire",
+  "onboardingSexHelp": "Utilisé uniquement pour les équations de besoins énergétiques. Ceci est distinct de votre identité de genre.",
+  "onboardingActivityLabel": "Niveau d'activité",
+  "onboardingActivitySedentary": "Sédentaire",
+  "onboardingActivityLight": "Légèrement actif",
+  "onboardingActivityModerate": "Modérément actif",
+  "onboardingActivityActive": "Très actif",
+  "onboardingActivityExtra": "Extrêmement actif",
+  "onboardingCuisineTitle": "Quels aliments vous sont familiers ?",
+  "onboardingCuisineSubtitle": "Facultatif. Nous utilisons cela pour prioriser les aliments familiers dans la recherche. Vous pouvez passer.",
+  "onboardingLanguageTitle": "Choisissez votre langue",
+  "onboardingLanguageSubtitle": "Vous pouvez changer cela à tout moment dans les réglages.",
+  "onboardingSummaryTitle": "Votre objectif nutritionnel estimé",
+  "onboardingSummaryBody": "Ceci est une estimation basée sur des équations standard. Vos besoins réels peuvent varier, et nous pourrons affiner cette estimation au fil du temps grâce à votre tendance de poids.",
+  "onboardingSummaryComingSoon": "Les objectifs caloriques et de macronutriments personnalisés seront calculés à une étape ultérieure.",
+  "onboardingSummaryMaintenance": "Entretien estimé : {kcal} kcal/jour",
+  "@onboardingSummaryMaintenance": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingSummaryTarget": "Objectif quotidien suggéré : {kcal} kcal",
+  "@onboardingSummaryTarget": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingSummaryMacros": "Protéines {protein} g · Glucides {carbs} g · Lipides {fat} g · Fibres {fibre} g",
+  "@onboardingSummaryMacros": {
+    "placeholders": {
+      "protein": {
+        "type": "int"
+      },
+      "carbs": {
+        "type": "int"
+      },
+      "fat": {
+        "type": "int"
+      },
+      "fibre": {
+        "type": "int"
+      }
+    }
+  },
+  "dashboardGreetingMorning": "Bonjour",
+  "dashboardGreetingAfternoon": "Bon après-midi",
+  "dashboardGreetingEvening": "Bonsoir",
+  "dashboardToday": "Aujourd'hui",
+  "dashboardCalories": "Calories",
+  "dashboardProtein": "Protéines",
+  "dashboardCarbs": "Glucides",
+  "dashboardFat": "Lipides",
+  "dashboardFibre": "Fibres",
+  "dashboardLogFood": "Enregistrer un aliment",
+  "dashboardEmptyTitle": "Rien d'enregistré pour l'instant",
+  "dashboardEmptyBody": "Recherchez un aliment pour commencer à suivre votre journée.",
+  "dashboardTargetsPlaceholder": "Les objectifs seront définis après l'onboarding.",
+  "dashboardCaloriesOf": "{consumed} / {target} kcal",
+  "@dashboardCaloriesOf": {
+    "placeholders": {
+      "consumed": {
+        "type": "int"
+      },
+      "target": {
+        "type": "int"
+      }
+    }
+  },
+  "dashboardCaloriesRemaining": "{kcal} kcal restantes",
+  "@dashboardCaloriesRemaining": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "dashboardCaloriesOver": "{kcal} kcal au-dessus de l'objectif",
+  "@dashboardCaloriesOver": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "diaryTitle": "Journal",
+  "diaryMealBreakfast": "Petit-déjeuner",
+  "diaryMealLunch": "Déjeuner",
+  "diaryMealDinner": "Dîner",
+  "diaryMealSnacks": "Collations",
+  "diaryEmpty": "Aucune entrée pour l'instant.",
+  "diaryAddToMeal": "Ajouter un aliment",
+  "searchTitle": "Recherche",
+  "searchHint": "Qu'avez-vous mangé ?",
+  "searchEmpty": "Recherchez des aliments comme roti, riz jollof, dal ou mangue.",
+  "searchNoResults": "Aucun aliment correspondant. Essayez un autre nom, alias ou orthographe.",
+  "searchRecent": "Récents",
+  "searchFrequent": "Fréquents",
+  "searchFavourites": "Favoris",
+  "searchMyRecipes": "Mes recettes",
+  "settingsTitle": "Réglages",
+  "settingsAppearance": "Apparence",
+  "settingsTheme": "Thème",
+  "settingsThemeSystem": "Système",
+  "settingsThemeLight": "Clair",
+  "settingsThemeDark": "Sombre",
+  "settingsLanguage": "Langue",
+  "settingsLanguageEn": "English",
+  "settingsLanguageFr": "Français",
+  "settingsLanguageEs": "Español",
+  "settingsLanguageHi": "हिन्दी",
+  "settingsLanguagePa": "ਪੰਜਾਬੀ",
+  "settingsLanguageAr": "العربية",
+  "settingsAccount": "Compte",
+  "settingsSignOut": "Se déconnecter",
+  "settingsAbout": "À propos de Nutrivoya",
+  "settingsAboutBody": "Nutrivoya est une application multilingue et culturellement intelligente de suivi nutritionnel et calorique qui aide les gens à comprendre et améliorer les aliments qu'ils mangent réellement — sans leur dire que la santé exige d'abandonner leur culture.",
+  "settingsProfile": "Profil",
+  "settingsGoals": "Objectifs",
+  "settingsComingSoon": "Bientôt disponible",
+  "profileTitle": "Profil",
+  "profileGoal": "Objectif",
+  "profileActivity": "Niveau d'activité",
+  "profileCuisines": "Cuisines familières",
+  "profileEdit": "Modifier le profil",
+  "goalsTitle": "Objectifs nutritionnels",
+  "goalsNotSet": "Pas encore défini",
+  "goalsCalorieTarget": "Objectif calorique",
+  "goalsProteinTarget": "Objectif protéines",
+  "goalsCarbTarget": "Objectif glucides",
+  "goalsFatTarget": "Objectif lipides",
+  "goalsFibreTarget": "Objectif fibres",
+  "goalsBmr": "BMR estimé",
+  "goalsTdee": "Entretien estimé (TDEE)",
+  "goalsNeedProfile": "Terminez l'onboarding pour voir des objectifs personnalisés.",
+  "goalsEstimateDisclaimer": "La dépense calculée est une estimation. Vos besoins réels peuvent varier.",
+  "goalsRefineOverTime": "Nous pourrons affiner cette estimation au fil du temps grâce à votre tendance de poids.",
+  "energyNoteEstimateDisclaimer": "La dépense calculée est une estimation. Vos besoins réels peuvent varier.",
+  "energyNotePhysiologicalUnspecified": "Sans paramètre physiologique, nous avons moyenné les équations standard. La confiance est plus faible.",
+  "energyNoteAgeOutsideAdultRange": "Les équations énergétiques sont moins fiables hors des âges adultes typiques. Envisagez un accompagnement professionnel.",
+  "energyNoteLoseWhileLowWeight": "Votre profil suggère un poids corporel bas. Une perte de poids agressive n'est pas recommandée — cherchez un soutien qualifié si besoin.",
+  "energyNoteDeficitCapped": "Nous avons limité le déficit calorique à un rythme plus sûr. Les régimes drastiques ne sont pas pris en charge.",
+  "energyNoteFloorApplied": "Votre objectif a été relevé à un apport énergétique minimum pour la sécurité.",
+  "energyNoteTrackOnly": "Vous avez choisi de suivre uniquement. Les chiffres ci-dessous sont des estimations d'entretien à titre indicatif.",
+  "confidenceLabel": "Confiance de l'estimation",
+  "confidenceHigh": "Élevée",
+  "confidenceHighNote": "Données officielles de composition des aliments",
+  "confidenceMedium": "Moyenne",
+  "confidenceMediumNote": "Calculée à partir d'une recette standardisée",
+  "confidenceEstimated": "Estimée",
+  "confidenceEstimatedNote": "Basée sur des ingrédients et une portion courants",
+  "confidenceUnknown": "Inconnue",
+  "sourceLabel": "Source",
+  "sourceAuthoritative": "Base de composition alimentaire officielle",
+  "sourcePackaged": "Base d'aliments emballés",
+  "sourceNutrivoyaCurated": "Jeu de données Nutrivoya",
+  "sourceRecipeEstimated": "Estimation basée sur une recette",
+  "sourceUserSubmitted": "Soumis par un utilisateur",
+  "portionLabel": "Portion",
+  "portionSmall": "Petite",
+  "portionMedium": "Moyenne",
+  "portionLarge": "Grande",
+  "portionGrams": "Grammes",
+  "portionQuantity": "Quantité",
+  "portionCustom": "Grammes personnalisés",
+  "nutrientEnergyKcal": "Calories",
+  "nutrientProteinG": "Protéines",
+  "nutrientCarbohydrateG": "Glucides",
+  "nutrientFatG": "Lipides",
+  "nutrientFibreG": "Fibres",
+  "nutrientSaturatedFatG": "Graisses saturées",
+  "nutrientSugarG": "Sucres",
+  "nutrientSodiumMg": "Sodium",
+  "nutrientIronMg": "Fer",
+  "nutrientCalciumMg": "Calcium",
+  "nutrientPotassiumMg": "Potassium",
+  "nutrientMagnesiumMg": "Magnésium",
+  "nutrientZincMg": "Zinc",
+  "nutrientVitaminAUg": "Vitamine A",
+  "nutrientVitaminCMg": "Vitamine C",
+  "nutrientVitaminDUg": "Vitamine D",
+  "nutrientVitaminB12Ug": "Vitamine B12",
+  "nutrientFolateUg": "Folate",
+  "foodDetailsTitle": "Détails de l'aliment",
+  "foodDetailsAddToMeal": "Ajouter au repas",
+  "foodDetailsPerPortion": "par portion",
+  "foodDetailsPer100g": "pour 100 g",
+  "foodDetailsPreparationNote": "La préparation et la taille de la portion peuvent modifier les valeurs.",
+  "foodDetailsNoData": "Données nutritionnelles indisponibles",
+  "foodDetailsApprox": "≈",
+  "foodDetailsLoggingSoon": "L'enregistrement des aliments arrive à la prochaine étape.",
+  "foodDetailsMacros": "Macros",
+  "foodDetailsMicronutrients": "Micronutriments",
+  "foodDetailsCuisine": "Cuisine",
+  "foodDetailsRegion": "Région",
+  "foodDetailsAliases": "Aussi connu sous",
+  "searchResultsCount": "{count, plural, =0{Aucun résultat} =1{1 résultat} other{{count} résultats}}",
+  "@searchResultsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "searchTryExample": "Essayez : roti, riz jollof, dal, mangue",
+  "diaryAddToMealTitle": "Ajouter à quel repas ?",
+  "diaryEntryAdded": "{food} ajouté à {meal}",
+  "@diaryEntryAdded": {
+    "placeholders": {
+      "food": {
+        "type": "String"
+      },
+      "meal": {
+        "type": "String"
+      }
+    }
+  },
+  "diaryEntryDeleted": "Entrée supprimée",
+  "diaryEntryUpdated": "Entrée mise à jour",
+  "diaryEditEntry": "Modifier l'entrée",
+  "diaryDeleteEntry": "Supprimer l'entrée",
+  "diaryConfirmDelete": "Retirer cette entrée de votre journal ?",
+  "diaryConfirmDeleteYes": "Retirer",
+  "diaryGramsLabel": "Grammes",
+  "diaryQuantityLabel": "Quantité",
+  "diaryNoEntriesForMeal": "Aucune entrée pour l'instant",
+  "diaryKcalShort": "kcal",
+  "diarySelectDate": "Choisir une date",
+  "diaryToday": "Aujourd'hui",
+  "diaryYesterday": "Hier",
+  "diaryEntryCalories": "{kcal} kcal",
+  "@diaryEntryCalories": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "recipesTitle": "Mes recettes",
+  "recipesCreate": "Créer une recette",
+  "recipesEdit": "Modifier la recette",
+  "recipesEmptyTitle": "Pas encore de recettes personnelles",
+  "recipesEmptyBody": "Enregistrez des recettes familiales comme le jollof de maman ou le dal de grand-mère pour suivre les versions que vous cuisinez vraiment.",
+  "recipesNameLabel": "Nom de la recette",
+  "recipesServingsLabel": "Portions",
+  "recipesYieldLabel": "Rendement total (g)",
+  "recipesYieldHint": "Facultatif — somme des ingrédients par défaut",
+  "recipesIngredients": "Ingrédients",
+  "recipesIngredientsEmpty": "Ajoutez des ingrédients pour calculer la nutrition.",
+  "recipesAddIngredient": "Ajouter un ingrédient",
+  "recipesNotesLabel": "Notes",
+  "recipesCalculatedNutrition": "Nutrition calculée",
+  "recipesWholeRecipeKcal": "Recette entière : ≈ {kcal} kcal",
+  "@recipesWholeRecipeKcal": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "recipesPerServingKcal": "≈ {kcal} kcal par portion",
+  "@recipesPerServingKcal": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "recipesServingsCount": "{count, plural, =1{1 portion} other{{count} portions}}",
+  "@recipesServingsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "recipesPerServingShort": "portion",
+  "recipesCalculationNote": "Calculée à partir de vos ingrédients et quantités. La préparation et le rendement peuvent modifier les valeurs.",
+  "recipesDeleteTitle": "Supprimer la recette ?",
+  "recipesDeleteBody": "Cela retire la recette de votre collection personnelle. Les entrées déjà enregistrées dans le journal ne sont pas affectées.",
+  "@@comment": "French UI strings for Nutrivoya MVP. Native review welcome for idiomatic polish."
 }
