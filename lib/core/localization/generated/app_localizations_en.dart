@@ -1247,4 +1247,87 @@ class AppLocalizationsEn extends AppLocalizations {
   String templatesItemSummary(int count, int kcal) {
     return '$count items · ≈ $kcal kcal';
   }
+
+  @override
+  String get photoTitle => 'Photo meal';
+
+  @override
+  String get photoIntro =>
+      'Photograph a meal, describe what you see, then confirm a food from the database. Nutrition always comes from structured food data — never from the image alone.';
+
+  @override
+  String get photoUncertaintyDisclaimer =>
+      'Photo suggestions are uncertain. Always confirm the food and portion before logging. Computer vision estimates are never treated as certain.';
+
+  @override
+  String get photoTakePhoto => 'Take photo';
+
+  @override
+  String get photoChooseGallery => 'Choose from gallery';
+
+  @override
+  String get photoRetake => 'Choose a different photo';
+
+  @override
+  String get photoClear => 'Clear photo';
+
+  @override
+  String get photoDescriptionLabel => 'What do you see?';
+
+  @override
+  String get photoDescriptionHint =>
+      'e.g. roti and dal, jollof rice, bowl of pho';
+
+  @override
+  String get photoSuggestFoods => 'Suggest foods';
+
+  @override
+  String get photoSuggestionsTitle => 'Possible matches';
+
+  @override
+  String get photoSuggestionsNote =>
+      'These come from your description searched in the food database — not invented calories from the photo.';
+
+  @override
+  String get photoConfidenceUncertain => 'Uncertain match — confirm';
+
+  @override
+  String get photoConfidenceLow => 'Weak match — check carefully';
+
+  @override
+  String get photoPortionTitle => 'Estimate portion';
+
+  @override
+  String get photoPortionNote =>
+      'Portion from the photo is only an estimate. Adjust before logging.';
+
+  @override
+  String get photoConfirmOpenFood => 'Confirm and open food';
+
+  @override
+  String get photoConfirmNote =>
+      'Next you will verify serving size on the food details screen. Logging uses structured nutrition only.';
+
+  @override
+  String get photoDetailsEstimateNote =>
+      'Portion was suggested from a meal photo and is uncertain — verify grams before logging.';
+
+  @override
+  String get photoSearchSubtitle =>
+      'Photograph a meal, then confirm a food from the database.';
+
+  @override
+  String get photoErrorNoImage => 'Add a photo first.';
+
+  @override
+  String get photoErrorNeedDescription =>
+      'Describe what you see so Nutrivoya can search the food database. The app will not invent foods from pixels alone.';
+
+  @override
+  String get photoErrorNoMatches =>
+      'No structured foods matched that description. Try another name or search manually.';
+
+  @override
+  String get photoErrorFailed =>
+      'Could not use that photo. Try again or pick another image.';
 }

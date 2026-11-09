@@ -20,18 +20,35 @@ import 'portion_selector.dart';
 /// Shows name, portion, ≈kcal, macros, fibre, confidence and source note.
 /// "Add to Meal" opens a meal-type picker and logs the entry to the diary.
 class FoodDetailsScreen extends ConsumerStatefulWidget {
-  const FoodDetailsScreen({super.key, required this.foodId});
+  const FoodDetailsScreen({
+    super.key,
+    required this.foodId,
+    this.initialGrams,
+    this.fromPhotoEstimate = false,
+  });
 
   final String foodId;
+
+  /// Optional grams prefilled from a photo portion estimate (still editable).
+  final double? initialGrams;
+
+  /// When true, show a reminder that photo estimates are uncertain.
+  final bool fromPhotoEstimate;
 
   @override
   ConsumerState<FoodDetailsScreen> createState() => _FoodDetailsScreenState();
 }
 
 class _FoodDetailsScreenState extends ConsumerState<FoodDetailsScreen> {
-  double _selectedGrams = 100;
+  late double _selectedGrams;
   FoodPortion? _selectedPortion;
   int _quantity = 1;
+
+  @override
+  void initState() {
+    super.initState();
+    _selectedGrams = widget.initialGrams ?? 100;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -79,6 +96,7 @@ class _FoodDetailsScreenState extends ConsumerState<FoodDetailsScreen> {
             grams: _selectedGrams,
             portion: _selectedPortion,
             quantity: _quantity,
+            fromPhotoEstimate: widget.fromPhotoEstimate,
             onSelectionChanged: (grams, portion, quantity) {
               setState(() {
                 _selectedGrams = grams;
@@ -100,12 +118,14 @@ class _FoodDetailsBody extends ConsumerWidget {
     required this.portion,
     required this.quantity,
     required this.onSelectionChanged,
+    this.fromPhotoEstimate = false,
   });
 
   final Food food;
   final double grams;
   final FoodPortion? portion;
   final int quantity;
+  final bool fromPhotoEstimate;
   final void Function(double grams, FoodPortion? portion, int quantity)
       onSelectionChanged;
 
@@ -120,9 +140,19 @@ class _FoodDetailsBody extends ConsumerWidget {
       padding: const EdgeInsets.all(16),
       children: [
         _Header(food: food, l10n: l10n),
+        if (fromPhotoEstimate) ...[
+          const SizedBox(height: 12),
+          Text(
+            l10n.photoDetailsEstimateNote,
+            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                  color: Theme.of(context).colorScheme.error,
+                ),
+          ),
+        ],
         const SizedBox(height: 16),
         PortionSelector(
           food: food,
+          initialGrams: fromPhotoEstimate ? grams : null,
           onChanged: (sel) =>
               onSelectionChanged(sel.grams, sel.portion, sel.quantity),
         ),

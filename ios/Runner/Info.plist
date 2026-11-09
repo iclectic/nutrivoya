@@ -5,7 +5,11 @@
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>Nutrivoya uses the camera to scan packaged-food barcodes so you can look up nutrition information.</string>
+	<string>Nutrivoya uses the camera to scan packaged-food barcodes and to photograph meals for food suggestions you must confirm before logging.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Nutrivoya can use a photo from your library so you can match it to a food in the database. Suggestions are uncertain and never invent calories.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Nutrivoya does not save meal photos to your library by default.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>

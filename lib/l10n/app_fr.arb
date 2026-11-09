@@ -730,5 +730,29 @@
         "type": "int"
       }
     }
-  }
+  },
+  "photoTitle": "Repas photo",
+  "photoIntro": "Photographiez un repas, décrivez ce que vous voyez, puis confirmez un aliment de la base. La nutrition vient toujours des données structurées — jamais de l'image seule.",
+  "photoUncertaintyDisclaimer": "Les suggestions photo sont incertaines. Confirmez toujours l'aliment et la portion avant d'enregistrer. Les estimations de vision ne sont jamais traitées comme certaines.",
+  "photoTakePhoto": "Prendre une photo",
+  "photoChooseGallery": "Choisir dans la galerie",
+  "photoRetake": "Choisir une autre photo",
+  "photoClear": "Effacer la photo",
+  "photoDescriptionLabel": "Que voyez-vous ?",
+  "photoDescriptionHint": "ex. roti et dal, riz jollof, bol de phở",
+  "photoSuggestFoods": "Suggérer des aliments",
+  "photoSuggestionsTitle": "Correspondances possibles",
+  "photoSuggestionsNote": "Issues de votre description recherchée dans la base — pas de calories inventées depuis la photo.",
+  "photoConfidenceUncertain": "Correspondance incertaine — confirmez",
+  "photoConfidenceLow": "Faible correspondance — vérifiez",
+  "photoPortionTitle": "Estimer la portion",
+  "photoPortionNote": "La portion issue de la photo n'est qu'une estimation. Ajustez avant d'enregistrer.",
+  "photoConfirmOpenFood": "Confirmer et ouvrir l'aliment",
+  "photoConfirmNote": "Vous vérifierez ensuite la portion sur l'écran détail. L'enregistrement utilise uniquement la nutrition structurée.",
+  "photoDetailsEstimateNote": "La portion a été suggérée depuis une photo et est incertaine — vérifiez les grammes avant d'enregistrer.",
+  "photoSearchSubtitle": "Photographiez un repas, puis confirmez un aliment de la base.",
+  "photoErrorNoImage": "Ajoutez d'abord une photo.",
+  "photoErrorNeedDescription": "Décrivez ce que vous voyez pour que Nutrivoya cherche dans la base. L'app n'invente pas d'aliments à partir des pixels.",
+  "photoErrorNoMatches": "Aucun aliment structuré ne correspond. Essayez un autre nom ou une recherche manuelle.",
+  "photoErrorFailed": "Impossible d'utiliser cette photo. Réessayez ou choisissez une autre image."
 }

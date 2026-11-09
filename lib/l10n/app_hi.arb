@@ -730,5 +730,29 @@
         "type": "int"
       }
     }
-  }
+  },
+  "photoTitle": "फ़ोटो से भोजन",
+  "photoIntro": "भोजन की फ़ोटो लें, जो दिखे लिखें, फिर डेटाबेस से भोजन पुष्टि करें। पोषण हमेशा संरचित डेटा से आता है — केवल छवि से नहीं।",
+  "photoUncertaintyDisclaimer": "फ़ोटो सुझाव अनिश्चित हैं। लॉग से पहले भोजन और हिस्सा हमेशा पुष्टि करें। विज़न अनुमान कभी निश्चित नहीं माने जाते।",
+  "photoTakePhoto": "फ़ोटो लें",
+  "photoChooseGallery": "गैलरी से चुनें",
+  "photoRetake": "दूसरी फ़ोटो चुनें",
+  "photoClear": "फ़ोटो हटाएँ",
+  "photoDescriptionLabel": "आप क्या देख रहे हैं?",
+  "photoDescriptionHint": "जैसे रोटी और दाल, जollof चावल",
+  "photoSuggestFoods": "भोजन सुझाएँ",
+  "photoSuggestionsTitle": "संभावित मिलान",
+  "photoSuggestionsNote": "ये आपके विवरण की खोज से हैं — फ़ोटो से गढ़ी कैलोरी नहीं।",
+  "photoConfidenceUncertain": "अनिश्चित मिलान — पुष्टि करें",
+  "photoConfidenceLow": "कमज़ोर मिलान — ध्यान से जाँचें",
+  "photoPortionTitle": "हिस्सा अनुमानित करें",
+  "photoPortionNote": "फ़ोटो से हिस्सा केवल अनुमान है। लॉग से पहले समायोजित करें।",
+  "photoConfirmOpenFood": "पुष्टि करें और भोजन खोलें",
+  "photoConfirmNote": "अगले स्क्रीन पर सर्विंग जाँचें। लॉग केवल संरचित पोषण उपयोग करता है।",
+  "photoDetailsEstimateNote": "हिस्सा फ़ोटो से सुझाया गया और अनिश्चित है — लॉग से पहले ग्राम जाँचें।",
+  "photoSearchSubtitle": "भोजन की फ़ोटो लें, फिर डेटाबेस से पुष्टि करें।",
+  "photoErrorNoImage": "पहले फ़ोटो जोड़ें।",
+  "photoErrorNeedDescription": "खोज के लिए वर्णन लिखें। ऐप केवल पिक्सेल से भोजन नहीं गढ़ेगा।",
+  "photoErrorNoMatches": "कोई संरचित भोजन नहीं मिला। दूसरा नाम आज़माएँ।",
+  "photoErrorFailed": "वह फ़ोटो उपयोग नहीं हो सकी। फिर कोशिश करें।"
 }

@@ -1259,4 +1259,87 @@ class AppLocalizationsFr extends AppLocalizations {
   String templatesItemSummary(int count, int kcal) {
     return '$count éléments · ≈ $kcal kcal';
   }
+
+  @override
+  String get photoTitle => 'Repas photo';
+
+  @override
+  String get photoIntro =>
+      'Photographiez un repas, décrivez ce que vous voyez, puis confirmez un aliment de la base. La nutrition vient toujours des données structurées — jamais de l\'image seule.';
+
+  @override
+  String get photoUncertaintyDisclaimer =>
+      'Les suggestions photo sont incertaines. Confirmez toujours l\'aliment et la portion avant d\'enregistrer. Les estimations de vision ne sont jamais traitées comme certaines.';
+
+  @override
+  String get photoTakePhoto => 'Prendre une photo';
+
+  @override
+  String get photoChooseGallery => 'Choisir dans la galerie';
+
+  @override
+  String get photoRetake => 'Choisir une autre photo';
+
+  @override
+  String get photoClear => 'Effacer la photo';
+
+  @override
+  String get photoDescriptionLabel => 'Que voyez-vous ?';
+
+  @override
+  String get photoDescriptionHint => 'ex. roti et dal, riz jollof, bol de phở';
+
+  @override
+  String get photoSuggestFoods => 'Suggérer des aliments';
+
+  @override
+  String get photoSuggestionsTitle => 'Correspondances possibles';
+
+  @override
+  String get photoSuggestionsNote =>
+      'Issues de votre description recherchée dans la base — pas de calories inventées depuis la photo.';
+
+  @override
+  String get photoConfidenceUncertain =>
+      'Correspondance incertaine — confirmez';
+
+  @override
+  String get photoConfidenceLow => 'Faible correspondance — vérifiez';
+
+  @override
+  String get photoPortionTitle => 'Estimer la portion';
+
+  @override
+  String get photoPortionNote =>
+      'La portion issue de la photo n\'est qu\'une estimation. Ajustez avant d\'enregistrer.';
+
+  @override
+  String get photoConfirmOpenFood => 'Confirmer et ouvrir l\'aliment';
+
+  @override
+  String get photoConfirmNote =>
+      'Vous vérifierez ensuite la portion sur l\'écran détail. L\'enregistrement utilise uniquement la nutrition structurée.';
+
+  @override
+  String get photoDetailsEstimateNote =>
+      'La portion a été suggérée depuis une photo et est incertaine — vérifiez les grammes avant d\'enregistrer.';
+
+  @override
+  String get photoSearchSubtitle =>
+      'Photographiez un repas, puis confirmez un aliment de la base.';
+
+  @override
+  String get photoErrorNoImage => 'Ajoutez d\'abord une photo.';
+
+  @override
+  String get photoErrorNeedDescription =>
+      'Décrivez ce que vous voyez pour que Nutrivoya cherche dans la base. L\'app n\'invente pas d\'aliments à partir des pixels.';
+
+  @override
+  String get photoErrorNoMatches =>
+      'Aucun aliment structuré ne correspond. Essayez un autre nom ou une recherche manuelle.';
+
+  @override
+  String get photoErrorFailed =>
+      'Impossible d\'utiliser cette photo. Réessayez ou choisissez une autre image.';
 }

@@ -112,6 +112,12 @@ class SettingsScreen extends ConsumerWidget {
               onTap: () => context.push('/progress'),
             ),
             ListTile(
+              leading: const Icon(Icons.photo_camera_outlined),
+              title: Text(l10n.photoTitle),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => context.push('/photo'),
+            ),
+            ListTile(
               leading: const Icon(Icons.playlist_add_check_outlined),
               title: Text(l10n.templatesTitle),
               trailing: const Icon(Icons.chevron_right),

@@ -1234,4 +1234,85 @@ class AppLocalizationsPa extends AppLocalizations {
   String templatesItemSummary(int count, int kcal) {
     return '$count ਆਈਟਮਾਂ · ≈ $kcal ਕਿਲੋਕੈਲੋਰੀ';
   }
+
+  @override
+  String get photoTitle => 'ਫੋਟੋ ਨਾਲ ਭੋਜਨ';
+
+  @override
+  String get photoIntro =>
+      'ਭੋਜਨ ਦੀ ਫੋਟੋ ਲਓ, ਜੋ ਵੇਖਦੇ ਹੋ ਲਿਖੋ, ਫਿਰ ਡੇਟਾਬੇਸ ਤੋਂ ਭੋਜਨ ਪੁਸ਼ਟੀ ਕਰੋ। ਪੋਸ਼ਣ ਹਮੇਸ਼ਾ ਢਾਂਚਾਗਤ ਡੇਟਾ ਤੋਂ ਆਉਂਦਾ ਹੈ।';
+
+  @override
+  String get photoUncertaintyDisclaimer =>
+      'ਫੋਟੋ ਸੁਝਾਅ ਅਨਿਸ਼ਚਿਤ ਹਨ। ਲੌਗ ਤੋਂ ਪਹਿਲਾਂ ਭੋਜਨ ਅਤੇ ਹਿੱਸਾ ਪੁਸ਼ਟੀ ਕਰੋ। ਵਿਜ਼ਨ ਅਨੁਮਾਨ ਕਦੇ ਨਿਸ਼ਚਿਤ ਨਹੀਂ।';
+
+  @override
+  String get photoTakePhoto => 'ਫੋਟੋ ਲਓ';
+
+  @override
+  String get photoChooseGallery => 'ਗੈਲਰੀ ਤੋਂ ਚੁਣੋ';
+
+  @override
+  String get photoRetake => 'ਹੋਰ ਫੋਟੋ ਚੁਣੋ';
+
+  @override
+  String get photoClear => 'ਫੋਟੋ ਹਟਾਓ';
+
+  @override
+  String get photoDescriptionLabel => 'ਤੁਸੀਂ ਕੀ ਵੇਖ ਰਹੇ ਹੋ?';
+
+  @override
+  String get photoDescriptionHint => 'ਜਿਵੇਂ ਰੋਟੀ ਅਤੇ ਦਾਲ, ਜੋਲੋਫ਼ ਚੌਲ';
+
+  @override
+  String get photoSuggestFoods => 'ਭੋਜਨ ਸੁਝਾਓ';
+
+  @override
+  String get photoSuggestionsTitle => 'ਸੰਭਾਵਿਤ ਮੇਲ';
+
+  @override
+  String get photoSuggestionsNote =>
+      'ਇਹ ਤੁਹਾਡੇ ਵਰਣਨ ਦੀ ਖੋਜ ਤੋਂ ਹਨ — ਫੋਟੋ ਤੋਂ ਘੜੀਆਂ ਕੈਲੋਰੀਆਂ ਨਹੀਂ।';
+
+  @override
+  String get photoConfidenceUncertain => 'ਅਨਿਸ਼ਚਿਤ ਮੇਲ — ਪੁਸ਼ਟੀ ਕਰੋ';
+
+  @override
+  String get photoConfidenceLow => 'ਕਮਜ਼ੋਰ ਮੇਲ — ਧਿਆਨ ਨਾਲ ਚੈੱਕ ਕਰੋ';
+
+  @override
+  String get photoPortionTitle => 'ਹਿੱਸਾ ਅਨੁਮਾਨਿਤ ਕਰੋ';
+
+  @override
+  String get photoPortionNote =>
+      'ਫੋਟੋ ਤੋਂ ਹਿੱਸਾ ਸਿਰਫ਼ ਅਨੁਮਾਨ ਹੈ। ਲੌਗ ਤੋਂ ਪਹਿਲਾਂ ਬਦਲੋ।';
+
+  @override
+  String get photoConfirmOpenFood => 'ਪੁਸ਼ਟੀ ਕਰੋ ਅਤੇ ਭੋਜਨ ਖੋਲ੍ਹੋ';
+
+  @override
+  String get photoConfirmNote =>
+      'ਅਗਲੀ ਸਕਰੀਨ \'ਤੇ ਸਰਵਿੰਗ ਚੈੱਕ ਕਰੋ। ਲੌਗ ਸਿਰਫ਼ ਢਾਂਚਾਗਤ ਪੋਸ਼ਣ ਵਰਤਦਾ ਹੈ।';
+
+  @override
+  String get photoDetailsEstimateNote =>
+      'ਹਿੱਸਾ ਫੋਟੋ ਤੋਂ ਸੁਝਾਇਆ ਗਿਆ ਅਤੇ ਅਨਿਸ਼ਚਿਤ ਹੈ — ਲੌਗ ਤੋਂ ਪਹਿਲਾਂ ਗ੍ਰਾਮ ਚੈੱਕ ਕਰੋ।';
+
+  @override
+  String get photoSearchSubtitle =>
+      'ਭੋਜਨ ਦੀ ਫੋਟੋ ਲਓ, ਫਿਰ ਡੇਟਾਬੇਸ ਤੋਂ ਪੁਸ਼ਟੀ ਕਰੋ।';
+
+  @override
+  String get photoErrorNoImage => 'ਪਹਿਲਾਂ ਫੋਟੋ ਜੋੜੋ।';
+
+  @override
+  String get photoErrorNeedDescription =>
+      'ਖੋਜ ਲਈ ਵਰਣਨ ਲਿਖੋ। ਐਪ ਸਿਰਫ਼ ਪਿਕਸਲ ਤੋਂ ਭੋਜਨ ਨਹੀਂ ਘੜੇਗੀ।';
+
+  @override
+  String get photoErrorNoMatches =>
+      'ਕੋਈ ਢਾਂਚਾਗਤ ਭੋਜਨ ਨਹੀਂ ਮਿਲਿਆ। ਹੋਰ ਨਾਮ ਅਜ਼ਮਾਓ।';
+
+  @override
+  String get photoErrorFailed => 'ਉਹ ਫੋਟੋ ਵਰਤੀ ਨਹੀਂ ਜਾ ਸਕੀ। ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।';
 }

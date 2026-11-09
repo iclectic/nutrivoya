@@ -2218,6 +2218,150 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{count} items · ≈ {kcal} kcal'**
   String templatesItemSummary(int count, int kcal);
+
+  /// No description provided for @photoTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Photo meal'**
+  String get photoTitle;
+
+  /// No description provided for @photoIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Photograph a meal, describe what you see, then confirm a food from the database. Nutrition always comes from structured food data — never from the image alone.'**
+  String get photoIntro;
+
+  /// No description provided for @photoUncertaintyDisclaimer.
+  ///
+  /// In en, this message translates to:
+  /// **'Photo suggestions are uncertain. Always confirm the food and portion before logging. Computer vision estimates are never treated as certain.'**
+  String get photoUncertaintyDisclaimer;
+
+  /// No description provided for @photoTakePhoto.
+  ///
+  /// In en, this message translates to:
+  /// **'Take photo'**
+  String get photoTakePhoto;
+
+  /// No description provided for @photoChooseGallery.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose from gallery'**
+  String get photoChooseGallery;
+
+  /// No description provided for @photoRetake.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a different photo'**
+  String get photoRetake;
+
+  /// No description provided for @photoClear.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear photo'**
+  String get photoClear;
+
+  /// No description provided for @photoDescriptionLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'What do you see?'**
+  String get photoDescriptionLabel;
+
+  /// No description provided for @photoDescriptionHint.
+  ///
+  /// In en, this message translates to:
+  /// **'e.g. roti and dal, jollof rice, bowl of pho'**
+  String get photoDescriptionHint;
+
+  /// No description provided for @photoSuggestFoods.
+  ///
+  /// In en, this message translates to:
+  /// **'Suggest foods'**
+  String get photoSuggestFoods;
+
+  /// No description provided for @photoSuggestionsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Possible matches'**
+  String get photoSuggestionsTitle;
+
+  /// No description provided for @photoSuggestionsNote.
+  ///
+  /// In en, this message translates to:
+  /// **'These come from your description searched in the food database — not invented calories from the photo.'**
+  String get photoSuggestionsNote;
+
+  /// No description provided for @photoConfidenceUncertain.
+  ///
+  /// In en, this message translates to:
+  /// **'Uncertain match — confirm'**
+  String get photoConfidenceUncertain;
+
+  /// No description provided for @photoConfidenceLow.
+  ///
+  /// In en, this message translates to:
+  /// **'Weak match — check carefully'**
+  String get photoConfidenceLow;
+
+  /// No description provided for @photoPortionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Estimate portion'**
+  String get photoPortionTitle;
+
+  /// No description provided for @photoPortionNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Portion from the photo is only an estimate. Adjust before logging.'**
+  String get photoPortionNote;
+
+  /// No description provided for @photoConfirmOpenFood.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm and open food'**
+  String get photoConfirmOpenFood;
+
+  /// No description provided for @photoConfirmNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Next you will verify serving size on the food details screen. Logging uses structured nutrition only.'**
+  String get photoConfirmNote;
+
+  /// No description provided for @photoDetailsEstimateNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Portion was suggested from a meal photo and is uncertain — verify grams before logging.'**
+  String get photoDetailsEstimateNote;
+
+  /// No description provided for @photoSearchSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Photograph a meal, then confirm a food from the database.'**
+  String get photoSearchSubtitle;
+
+  /// No description provided for @photoErrorNoImage.
+  ///
+  /// In en, this message translates to:
+  /// **'Add a photo first.'**
+  String get photoErrorNoImage;
+
+  /// No description provided for @photoErrorNeedDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Describe what you see so Nutrivoya can search the food database. The app will not invent foods from pixels alone.'**
+  String get photoErrorNeedDescription;
+
+  /// No description provided for @photoErrorNoMatches.
+  ///
+  /// In en, this message translates to:
+  /// **'No structured foods matched that description. Try another name or search manually.'**
+  String get photoErrorNoMatches;
+
+  /// No description provided for @photoErrorFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not use that photo. Try again or pick another image.'**
+  String get photoErrorFailed;
 }
 
 class _AppLocalizationsDelegate
