@@ -106,6 +106,18 @@ class SettingsScreen extends ConsumerWidget {
               onTap: () => context.push('/assistant'),
             ),
             ListTile(
+              leading: const Icon(Icons.show_chart),
+              title: Text(l10n.progressTitle),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => context.push('/progress'),
+            ),
+            ListTile(
+              leading: const Icon(Icons.playlist_add_check_outlined),
+              title: Text(l10n.templatesTitle),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => context.push('/templates'),
+            ),
+            ListTile(
               leading: const Icon(Icons.menu_book_outlined),
               title: Text(l10n.recipesTitle),
               trailing: const Icon(Icons.chevron_right),

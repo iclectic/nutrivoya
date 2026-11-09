@@ -591,5 +591,144 @@
   "assistantTipModifyPortion": "Essayez d'abord une plus petite portion de l'aliment de base",
   "assistantTipAddVegetables": "Ajoutez des légumes ou une salade pour le volume et les fibres",
   "assistantTipAddProteinSide": "Ajoutez un accompagnement protéiné plutôt que de supprimer l'aliment",
-  "assistantTipLogSomething": "Enregistrez un repas pour que les conseils utilisent votre vrai schéma"
+  "assistantTipLogSomething": "Enregistrez un repas pour que les conseils utilisent votre vrai schéma",
+  "commonDelete": "Supprimer",
+  "progressTitle": "Progression",
+  "progressIntro": "Suivez le poids, l'eau et les mensurations comme des tendances calmes — les variations quotidiennes sont du bruit, pas un verdict.",
+  "progressWater": "Eau aujourd'hui",
+  "progressWaterTotal": "{total} ml sur {goal} ml",
+  "progressWaterAdd": "+{ml} ml",
+  "progressWeight": "Poids",
+  "progressLogWeight": "Enregistrer le poids",
+  "progressWeightKgLabel": "Poids (kg)",
+  "progressWeightValue": "{kg} kg",
+  "progressWeightEmpty": "Aucun poids enregistré. Ajoutez-en quelques-uns sur plusieurs jours pour voir une tendance calme.",
+  "progressWeightInvalid": "Entrez un poids plausible entre 20 et 400 kg.",
+  "progressTrendNote": "Les tendances utilisent une moyenne sur plusieurs jours. Les variations d'un jour sont normales et non jugées.",
+  "progressTrendInsufficient": "Enregistrez le poids sur quelques jours de plus pour estimer une tendance hebdomadaire.",
+  "progressTrendSteady": "Environ {avg} kg — plutôt stable ces derniers jours.",
+  "progressTrendRising": "Environ {avg} kg — légère hausse (~{delta} kg/semaine). Regardez le motif, pas un seul jour.",
+  "progressTrendFalling": "Environ {avg} kg — légère baisse (~{delta} kg/semaine). Regardez le motif, pas un seul jour.",
+  "progressMeasurements": "Mensurations",
+  "progressMeasurementsNote": "Tour de taille et de hanches optionnels (cm). Non utilisés pour les objectifs caloriques.",
+  "progressMeasurementsEmpty": "Aucune mensuration enregistrée.",
+  "progressLogMeasurement": "Enregistrer une mensuration",
+  "progressWaistLabel": "Taille (cm)",
+  "progressHipLabel": "Hanches (cm)",
+  "progressWaist": "Taille {cm} cm",
+  "progressHip": "Hanches {cm} cm",
+  "progressMeasurementInvalid": "Entrez au moins une mensuration.",
+  "favouritesTitle": "Favoris",
+  "favouritesAdd": "Ajouter aux favoris",
+  "favouritesRemove": "Retirer des favoris",
+  "frequentFoodsTitle": "Aliments fréquents",
+  "frequentFoodsEmpty": "Les aliments que vous enregistrez souvent apparaîtront ici.",
+  "frequentFoodsCount": "Enregistré {count} fois",
+  "templatesTitle": "Modèles de repas",
+  "templatesIntro": "Enregistrez les repas familiers d'une journée et réappliquez-les plus tard — utile pour les petits-déjeuners habituels.",
+  "templatesEmpty": "Aucun modèle. Enregistrez une journée qui vous plaît, puis sauvegardez-la.",
+  "templatesSaveFromToday": "Enregistrer à partir d'aujourd'hui",
+  "templatesNameLabel": "Nom du modèle",
+  "templatesNeedEntries": "Enregistrez des aliments aujourd'hui avant de créer un modèle.",
+  "templatesSaved": "Modèle enregistré",
+  "templatesApply": "Appliquer à aujourd'hui",
+  "templatesApplied": "{count} éléments ajoutés depuis le modèle",
+  "templatesTodayCount": "{count} entrées du journal disponibles",
+  "templatesItemSummary": "{count} éléments · ≈ {kcal} kcal",
+  "@progressWaterTotal": {
+    "placeholders": {
+      "total": {
+        "type": "int"
+      },
+      "goal": {
+        "type": "int"
+      }
+    }
+  },
+  "@progressWaterAdd": {
+    "placeholders": {
+      "ml": {
+        "type": "int"
+      }
+    }
+  },
+  "@progressWeightValue": {
+    "placeholders": {
+      "kg": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressTrendSteady": {
+    "placeholders": {
+      "avg": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressTrendRising": {
+    "placeholders": {
+      "avg": {
+        "type": "String"
+      },
+      "delta": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressTrendFalling": {
+    "placeholders": {
+      "avg": {
+        "type": "String"
+      },
+      "delta": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressWaist": {
+    "placeholders": {
+      "cm": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressHip": {
+    "placeholders": {
+      "cm": {
+        "type": "String"
+      }
+    }
+  },
+  "@frequentFoodsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@templatesApplied": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@templatesTodayCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@templatesItemSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "kcal": {
+        "type": "int"
+      }
+    }
+  }
 }

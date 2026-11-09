@@ -591,5 +591,144 @@
   "assistantTipModifyPortion": "جرّب أولًا حصة أصغر من الطعام الأساسي",
   "assistantTipAddVegetables": "أضف خضارًا أو سلطة للحجم والألياف",
   "assistantTipAddProteinSide": "أضف مرافقة بروتين بدل حذف الطعام الأساسي",
-  "assistantTipLogSomething": "سجّل وجبة حتى يستخدم النصح نمطك الحقيقي"
+  "assistantTipLogSomething": "سجّل وجبة حتى يستخدم النصح نمطك الحقيقي",
+  "commonDelete": "حذف",
+  "progressTitle": "التقدم",
+  "progressIntro": "تتبّع الوزن والماء والقياسات كاتجاهات هادئة — تغيرات اليوم الواحد ضوضاء وليست حكمًا.",
+  "progressWater": "الماء اليوم",
+  "progressWaterTotal": "{total} مل من {goal} مل",
+  "progressWaterAdd": "+{ml} مل",
+  "progressWeight": "الوزن",
+  "progressLogWeight": "تسجيل الوزن",
+  "progressWeightKgLabel": "الوزن (كغ)",
+  "progressWeightValue": "{kg} كغ",
+  "progressWeightEmpty": "لا سجلات وزن بعد. أضف بعضها على أيام لرؤية اتجاه هادئ.",
+  "progressWeightInvalid": "أدخل وزنًا معقولًا بين 20 و400 كغ.",
+  "progressTrendNote": "تعتمد الاتجاهات على متوسط عدة أيام. تغيّر يوم واحد متوقع وغير محكوم عليه.",
+  "progressTrendInsufficient": "سجّل الوزن لعدة أيام إضافية لتقدير اتجاه أسبوعي.",
+  "progressTrendSteady": "حوالي {avg} كغ — مستقر تقريبًا في الأيام الأخيرة.",
+  "progressTrendRising": "حوالي {avg} كغ — ارتفاع لطيف (~{delta} كغ/أسبوع). انظر للنمط لا ليوم واحد.",
+  "progressTrendFalling": "حوالي {avg} كغ — انخفاض لطيف (~{delta} كغ/أسبوع). انظر للنمط لا ليوم واحد.",
+  "progressMeasurements": "قياسات الجسم",
+  "progressMeasurementsNote": "خصر وورك اختياريان بالسنتيمتر. لا تُستخدم لأهداف السعرات.",
+  "progressMeasurementsEmpty": "لا قياسات مسجّلة بعد.",
+  "progressLogMeasurement": "تسجيل قياس",
+  "progressWaistLabel": "الخصر (سم)",
+  "progressHipLabel": "الورك (سم)",
+  "progressWaist": "الخصر {cm} سم",
+  "progressHip": "الورك {cm} سم",
+  "progressMeasurementInvalid": "أدخل قياسًا واحدًا على الأقل.",
+  "favouritesTitle": "المفضّلة",
+  "favouritesAdd": "إضافة إلى المفضلة",
+  "favouritesRemove": "إزالة من المفضلة",
+  "frequentFoodsTitle": "أطعمة متكررة",
+  "frequentFoodsEmpty": "ستظهر هنا الأطعمة التي تسجّلها كثيرًا.",
+  "frequentFoodsCount": "سُجّل {count} مرات",
+  "templatesTitle": "قوالب الوجبات",
+  "templatesIntro": "احفظ وجبات يوم مألوفة وأعد تطبيقها لاحقًا — مفيد لفطور معتاد.",
+  "templatesEmpty": "لا قوالب بعد. سجّل يومًا يعجبك ثم احفظه.",
+  "templatesSaveFromToday": "حفظ من اليوم",
+  "templatesNameLabel": "اسم القالب",
+  "templatesNeedEntries": "سجّل بعض الأطعمة اليوم قبل حفظ قالب.",
+  "templatesSaved": "تم حفظ القالب",
+  "templatesApply": "تطبيق على اليوم",
+  "templatesApplied": "أُضيفت {count} عناصر من القالب",
+  "templatesTodayCount": "{count} إدخالات يومية متاحة للحفظ",
+  "templatesItemSummary": "{count} عناصر · ≈ {kcal} سعرة",
+  "@progressWaterTotal": {
+    "placeholders": {
+      "total": {
+        "type": "int"
+      },
+      "goal": {
+        "type": "int"
+      }
+    }
+  },
+  "@progressWaterAdd": {
+    "placeholders": {
+      "ml": {
+        "type": "int"
+      }
+    }
+  },
+  "@progressWeightValue": {
+    "placeholders": {
+      "kg": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressTrendSteady": {
+    "placeholders": {
+      "avg": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressTrendRising": {
+    "placeholders": {
+      "avg": {
+        "type": "String"
+      },
+      "delta": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressTrendFalling": {
+    "placeholders": {
+      "avg": {
+        "type": "String"
+      },
+      "delta": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressWaist": {
+    "placeholders": {
+      "cm": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressHip": {
+    "placeholders": {
+      "cm": {
+        "type": "String"
+      }
+    }
+  },
+  "@frequentFoodsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@templatesApplied": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@templatesTodayCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@templatesItemSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "kcal": {
+        "type": "int"
+      }
+    }
+  }
 }

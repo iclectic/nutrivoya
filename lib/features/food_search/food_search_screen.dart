@@ -7,6 +7,7 @@ import '../../shared/extensions/app_localizations_x.dart';
 import '../../shared/widgets/empty_state.dart';
 import '../diary/diary_providers.dart';
 import '../food/food_providers.dart';
+import '../tracking/tracking_providers.dart';
 
 /// Food search screen.
 ///
@@ -97,6 +98,8 @@ class _FoodSearchScreenState extends ConsumerState<FoodSearchScreen> {
 
   Widget _suggestions(AppLocalizations l10n) {
     final recentAsync = ref.watch(recentFoodsProvider);
+    final favourites = ref.watch(favouritesProvider);
+    final frequentAsync = ref.watch(frequentFoodsProvider);
     return ListView(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       children: [
@@ -114,6 +117,63 @@ class _FoodSearchScreenState extends ConsumerState<FoodSearchScreen> {
           title: Text(l10n.searchMyRecipes),
           trailing: const Icon(Icons.chevron_right),
           onTap: () => context.push('/recipes'),
+        ),
+        ListTile(
+          leading: const Icon(Icons.playlist_add_check_outlined),
+          title: Text(l10n.templatesTitle),
+          trailing: const Icon(Icons.chevron_right),
+          onTap: () => context.push('/templates'),
+        ),
+        if (favourites.isNotEmpty) ...[
+          const SizedBox(height: 8),
+          Text(
+            l10n.favouritesTitle,
+            style: Theme.of(context).textTheme.titleSmall,
+          ),
+          ...favourites.take(6).map(
+                (f) => ListTile(
+                  contentPadding: EdgeInsets.zero,
+                  leading: const Icon(Icons.star_outline),
+                  title: Text(f.foodName),
+                  onTap: () => context.push('/food/${f.foodId}'),
+                ),
+              ),
+        ],
+        const SizedBox(height: 8),
+        Text(
+          l10n.frequentFoodsTitle,
+          style: Theme.of(context).textTheme.titleSmall,
+        ),
+        frequentAsync.when(
+          loading: () => const SizedBox.shrink(),
+          error: (_, _) => const SizedBox.shrink(),
+          data: (frequent) {
+            if (frequent.isEmpty) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: Text(
+                  l10n.frequentFoodsEmpty,
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        color: Theme.of(context).colorScheme.onSurfaceVariant,
+                      ),
+                ),
+              );
+            }
+            return Column(
+              children: frequent
+                  .take(6)
+                  .map(
+                    (f) => ListTile(
+                      contentPadding: EdgeInsets.zero,
+                      leading: const Icon(Icons.local_fire_department_outlined),
+                      title: Text(f.foodName),
+                      subtitle: Text(l10n.frequentFoodsCount(f.logCount)),
+                      onTap: () => context.push('/food/${f.foodId}'),
+                    ),
+                  )
+                  .toList(),
+            );
+          },
         ),
         const SizedBox(height: 8),
         Text(l10n.searchRecent, style: Theme.of(context).textTheme.titleSmall),
@@ -135,7 +195,6 @@ class _FoodSearchScreenState extends ConsumerState<FoodSearchScreen> {
                 ),
               );
             }
-            // Deduplicate by foodId, keep first (most recent).
             final seen = <String>{};
             final unique = recent.where((e) => seen.add(e.foodId)).toList();
             return Column(

@@ -591,5 +591,144 @@
   "assistantTipModifyPortion": "Prueba primero una porción más pequeña del alimento base",
   "assistantTipAddVegetables": "Añade verduras o ensalada para volumen y fibra",
   "assistantTipAddProteinSide": "Añade un acompañamiento proteico en lugar de eliminar el alimento base",
-  "assistantTipLogSomething": "Registra una comida para que el consejo use tu patrón real"
+  "assistantTipLogSomething": "Registra una comida para que el consejo use tu patrón real",
+  "commonDelete": "Eliminar",
+  "progressTitle": "Progreso",
+  "progressIntro": "Registra peso, agua y medidas como tendencias tranquilas: los cambios diarios son ruido, no un veredicto.",
+  "progressWater": "Agua hoy",
+  "progressWaterTotal": "{total} ml de {goal} ml",
+  "progressWaterAdd": "+{ml} ml",
+  "progressWeight": "Peso",
+  "progressLogWeight": "Registrar peso",
+  "progressWeightKgLabel": "Peso (kg)",
+  "progressWeightValue": "{kg} kg",
+  "progressWeightEmpty": "Aún no hay registros de peso. Añade unos cuantos en varios días para ver una tendencia calmada.",
+  "progressWeightInvalid": "Introduce un peso plausible entre 20 y 400 kg.",
+  "progressTrendNote": "Las tendencias usan un promedio de varios días. Los cambios de un solo día son normales y no se juzgan.",
+  "progressTrendInsufficient": "Registra el peso unos días más para estimar una tendencia semanal.",
+  "progressTrendSteady": "Alrededor de {avg} kg — bastante estable estos días.",
+  "progressTrendRising": "Alrededor de {avg} kg — subiendo con suavidad (~{delta} kg/semana). Mira el patrón, no un solo día.",
+  "progressTrendFalling": "Alrededor de {avg} kg — bajando con suavidad (~{delta} kg/semana). Mira el patrón, no un solo día.",
+  "progressMeasurements": "Medidas corporales",
+  "progressMeasurementsNote": "Cintura y cadera opcionales en cm. No se usan para objetivos calóricos.",
+  "progressMeasurementsEmpty": "Aún no hay medidas registradas.",
+  "progressLogMeasurement": "Registrar medida",
+  "progressWaistLabel": "Cintura (cm)",
+  "progressHipLabel": "Cadera (cm)",
+  "progressWaist": "Cintura {cm} cm",
+  "progressHip": "Cadera {cm} cm",
+  "progressMeasurementInvalid": "Introduce al menos una medida.",
+  "favouritesTitle": "Favoritos",
+  "favouritesAdd": "Añadir a favoritos",
+  "favouritesRemove": "Quitar de favoritos",
+  "frequentFoodsTitle": "Alimentos frecuentes",
+  "frequentFoodsEmpty": "Los alimentos que registres a menudo aparecerán aquí.",
+  "frequentFoodsCount": "Registrado {count} veces",
+  "templatesTitle": "Plantillas de comidas",
+  "templatesIntro": "Guarda las comidas familiares de un día y vuelve a aplicarlas — útil para desayunos habituales.",
+  "templatesEmpty": "Aún no hay plantillas. Registra un día que te guste y guárdalo.",
+  "templatesSaveFromToday": "Guardar desde hoy",
+  "templatesNameLabel": "Nombre de la plantilla",
+  "templatesNeedEntries": "Registra alimentos hoy antes de guardar una plantilla.",
+  "templatesSaved": "Plantilla guardada",
+  "templatesApply": "Aplicar a hoy",
+  "templatesApplied": "Se añadieron {count} elementos de la plantilla",
+  "templatesTodayCount": "{count} entradas del diario disponibles",
+  "templatesItemSummary": "{count} elementos · ≈ {kcal} kcal",
+  "@progressWaterTotal": {
+    "placeholders": {
+      "total": {
+        "type": "int"
+      },
+      "goal": {
+        "type": "int"
+      }
+    }
+  },
+  "@progressWaterAdd": {
+    "placeholders": {
+      "ml": {
+        "type": "int"
+      }
+    }
+  },
+  "@progressWeightValue": {
+    "placeholders": {
+      "kg": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressTrendSteady": {
+    "placeholders": {
+      "avg": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressTrendRising": {
+    "placeholders": {
+      "avg": {
+        "type": "String"
+      },
+      "delta": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressTrendFalling": {
+    "placeholders": {
+      "avg": {
+        "type": "String"
+      },
+      "delta": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressWaist": {
+    "placeholders": {
+      "cm": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressHip": {
+    "placeholders": {
+      "cm": {
+        "type": "String"
+      }
+    }
+  },
+  "@frequentFoodsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@templatesApplied": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@templatesTodayCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@templatesItemSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "kcal": {
+        "type": "int"
+      }
+    }
+  }
 }

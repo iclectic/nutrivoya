@@ -11,10 +11,24 @@ Western packaged foods, and to evaluate food by its actual nutritional
 composition, preparation, portion and dietary context — never by cultural
 stereotype.
 
-This repository currently contains **Milestones 1–9**:
+This repository currently contains **Milestones 1–10**:
 Foundation, Food Data Core, Food Logging, Calorie & Macro Targets,
 Cultural Food Intelligence (seed expansion), Recipe Builder,
-Multilingual Product, Barcode Products, and Nutrition Assistant.
+Multilingual Product, Barcode Products, Nutrition Assistant, and
+Advanced Tracking.
+
+## Status — Milestone 10 (Advanced Tracking)
+
+Milestone 10 adds calm progress tracking and quick-log helpers:
+
+- Weight logs with multi-day trend (average + weekly slope) — never a
+  single-day verdict
+- Optional waist/hip measurements (not used for calorie targets)
+- Daily water logging
+- Favourites (star on food details) and frequent foods in search
+- Meal templates saved from a diary day and re-applied later
+- Drift schema v2 for weight / measurements / water; favourites and
+  templates in local preferences
 
 ## Status — Milestone 9 (Nutrition Assistant)
 
@@ -250,11 +264,11 @@ scanning, photo recognition or AI features — those arrive in later milestones.
 
 ### What remains intentionally out of scope
 
-- Weight / water / body measurements / favourites system (Milestone 10)
 - Photo recognition (Milestone 11)
 - User-contributed “Add Product” publish workflow (submission + review)
 - Supabase diary sync (entries are flagged `syncPending`)
 - Full LLM chatbot (Ask Nutrivoya is structured / rule-based)
+- Wearables / social / grocery delivery
 
 ## Project structure
 
@@ -289,6 +303,7 @@ lib/
 │   ├── barcode/            # Barcode scanner + packaged lookup
 │   ├── recipes/            # Personal recipe builder
 │   ├── assistant/          # Ask Nutrivoya (rule-based guidance)
+│   ├── tracking/           # Progress, favourites, templates, water
 │   └── settings/           # Settings (theme, language, account, about)
 ├── l10n/                   # ARB source files
 └── shared/
@@ -390,5 +405,6 @@ guidance. Aggressive weight-loss targets are not enabled in pregnancy.
 
 ## Next milestone
 
-**Milestone 10 — Advanced Tracking:** weight trends, body measurements,
-water logging, favourites, frequent foods, and meal templates.
+**Milestone 11 — Photo Recognition:** camera food suggestions with
+portion estimation, user confirmation, then structured food lookup —
+never treat vision estimates as certain.

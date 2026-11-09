@@ -25,6 +25,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get commonSave => 'Guardar';
 
   @override
+  String get commonDelete => 'Eliminar';
+
+  @override
   String get commonSkip => 'Omitir';
 
   @override
@@ -1092,4 +1095,164 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get assistantTipLogSomething =>
       'Registra una comida para que el consejo use tu patrón real';
+
+  @override
+  String get progressTitle => 'Progreso';
+
+  @override
+  String get progressIntro =>
+      'Registra peso, agua y medidas como tendencias tranquilas: los cambios diarios son ruido, no un veredicto.';
+
+  @override
+  String get progressWater => 'Agua hoy';
+
+  @override
+  String progressWaterTotal(int total, int goal) {
+    return '$total ml de $goal ml';
+  }
+
+  @override
+  String progressWaterAdd(int ml) {
+    return '+$ml ml';
+  }
+
+  @override
+  String get progressWeight => 'Peso';
+
+  @override
+  String get progressLogWeight => 'Registrar peso';
+
+  @override
+  String get progressWeightKgLabel => 'Peso (kg)';
+
+  @override
+  String progressWeightValue(String kg) {
+    return '$kg kg';
+  }
+
+  @override
+  String get progressWeightEmpty =>
+      'Aún no hay registros de peso. Añade unos cuantos en varios días para ver una tendencia calmada.';
+
+  @override
+  String get progressWeightInvalid =>
+      'Introduce un peso plausible entre 20 y 400 kg.';
+
+  @override
+  String get progressTrendNote =>
+      'Las tendencias usan un promedio de varios días. Los cambios de un solo día son normales y no se juzgan.';
+
+  @override
+  String get progressTrendInsufficient =>
+      'Registra el peso unos días más para estimar una tendencia semanal.';
+
+  @override
+  String progressTrendSteady(String avg) {
+    return 'Alrededor de $avg kg — bastante estable estos días.';
+  }
+
+  @override
+  String progressTrendRising(String avg, String delta) {
+    return 'Alrededor de $avg kg — subiendo con suavidad (~$delta kg/semana). Mira el patrón, no un solo día.';
+  }
+
+  @override
+  String progressTrendFalling(String avg, String delta) {
+    return 'Alrededor de $avg kg — bajando con suavidad (~$delta kg/semana). Mira el patrón, no un solo día.';
+  }
+
+  @override
+  String get progressMeasurements => 'Medidas corporales';
+
+  @override
+  String get progressMeasurementsNote =>
+      'Cintura y cadera opcionales en cm. No se usan para objetivos calóricos.';
+
+  @override
+  String get progressMeasurementsEmpty => 'Aún no hay medidas registradas.';
+
+  @override
+  String get progressLogMeasurement => 'Registrar medida';
+
+  @override
+  String get progressWaistLabel => 'Cintura (cm)';
+
+  @override
+  String get progressHipLabel => 'Cadera (cm)';
+
+  @override
+  String progressWaist(String cm) {
+    return 'Cintura $cm cm';
+  }
+
+  @override
+  String progressHip(String cm) {
+    return 'Cadera $cm cm';
+  }
+
+  @override
+  String get progressMeasurementInvalid => 'Introduce al menos una medida.';
+
+  @override
+  String get favouritesTitle => 'Favoritos';
+
+  @override
+  String get favouritesAdd => 'Añadir a favoritos';
+
+  @override
+  String get favouritesRemove => 'Quitar de favoritos';
+
+  @override
+  String get frequentFoodsTitle => 'Alimentos frecuentes';
+
+  @override
+  String get frequentFoodsEmpty =>
+      'Los alimentos que registres a menudo aparecerán aquí.';
+
+  @override
+  String frequentFoodsCount(int count) {
+    return 'Registrado $count veces';
+  }
+
+  @override
+  String get templatesTitle => 'Plantillas de comidas';
+
+  @override
+  String get templatesIntro =>
+      'Guarda las comidas familiares de un día y vuelve a aplicarlas — útil para desayunos habituales.';
+
+  @override
+  String get templatesEmpty =>
+      'Aún no hay plantillas. Registra un día que te guste y guárdalo.';
+
+  @override
+  String get templatesSaveFromToday => 'Guardar desde hoy';
+
+  @override
+  String get templatesNameLabel => 'Nombre de la plantilla';
+
+  @override
+  String get templatesNeedEntries =>
+      'Registra alimentos hoy antes de guardar una plantilla.';
+
+  @override
+  String get templatesSaved => 'Plantilla guardada';
+
+  @override
+  String get templatesApply => 'Aplicar a hoy';
+
+  @override
+  String templatesApplied(int count) {
+    return 'Se añadieron $count elementos de la plantilla';
+  }
+
+  @override
+  String templatesTodayCount(int count) {
+    return '$count entradas del diario disponibles';
+  }
+
+  @override
+  String templatesItemSummary(int count, int kcal) {
+    return '$count elementos · ≈ $kcal kcal';
+  }
 }

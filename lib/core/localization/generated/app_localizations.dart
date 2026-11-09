@@ -136,6 +136,12 @@ abstract class AppLocalizations {
   /// **'Save'**
   String get commonSave;
 
+  /// No description provided for @commonDelete.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get commonDelete;
+
   /// No description provided for @commonSkip.
   ///
   /// In en, this message translates to:
@@ -1960,6 +1966,258 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Log a meal so balance advice can use your real pattern'**
   String get assistantTipLogSomething;
+
+  /// No description provided for @progressTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Progress'**
+  String get progressTitle;
+
+  /// No description provided for @progressIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Track weight, water and measurements as calm trends — day-to-day changes are noise, not a verdict.'**
+  String get progressIntro;
+
+  /// No description provided for @progressWater.
+  ///
+  /// In en, this message translates to:
+  /// **'Water today'**
+  String get progressWater;
+
+  /// No description provided for @progressWaterTotal.
+  ///
+  /// In en, this message translates to:
+  /// **'{total} ml of {goal} ml'**
+  String progressWaterTotal(int total, int goal);
+
+  /// No description provided for @progressWaterAdd.
+  ///
+  /// In en, this message translates to:
+  /// **'+{ml} ml'**
+  String progressWaterAdd(int ml);
+
+  /// No description provided for @progressWeight.
+  ///
+  /// In en, this message translates to:
+  /// **'Weight'**
+  String get progressWeight;
+
+  /// No description provided for @progressLogWeight.
+  ///
+  /// In en, this message translates to:
+  /// **'Log weight'**
+  String get progressLogWeight;
+
+  /// No description provided for @progressWeightKgLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Weight (kg)'**
+  String get progressWeightKgLabel;
+
+  /// No description provided for @progressWeightValue.
+  ///
+  /// In en, this message translates to:
+  /// **'{kg} kg'**
+  String progressWeightValue(String kg);
+
+  /// No description provided for @progressWeightEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No weight logs yet. Add a few over days to see a calm trend.'**
+  String get progressWeightEmpty;
+
+  /// No description provided for @progressWeightInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a plausible weight between 20 and 400 kg.'**
+  String get progressWeightInvalid;
+
+  /// No description provided for @progressTrendNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Trends use a multi-day average. Single-day changes are expected and not judged.'**
+  String get progressTrendNote;
+
+  /// No description provided for @progressTrendInsufficient.
+  ///
+  /// In en, this message translates to:
+  /// **'Log weight on a few more days to estimate a weekly trend.'**
+  String get progressTrendInsufficient;
+
+  /// No description provided for @progressTrendSteady.
+  ///
+  /// In en, this message translates to:
+  /// **'Around {avg} kg — roughly steady over recent days.'**
+  String progressTrendSteady(String avg);
+
+  /// No description provided for @progressTrendRising.
+  ///
+  /// In en, this message translates to:
+  /// **'Around {avg} kg — gently rising (~{delta} kg/week). Focus on patterns, not one day.'**
+  String progressTrendRising(String avg, String delta);
+
+  /// No description provided for @progressTrendFalling.
+  ///
+  /// In en, this message translates to:
+  /// **'Around {avg} kg — gently falling (~{delta} kg/week). Focus on patterns, not one day.'**
+  String progressTrendFalling(String avg, String delta);
+
+  /// No description provided for @progressMeasurements.
+  ///
+  /// In en, this message translates to:
+  /// **'Body measurements'**
+  String get progressMeasurements;
+
+  /// No description provided for @progressMeasurementsNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Optional waist and hip in centimetres. These are not used for calorie targets.'**
+  String get progressMeasurementsNote;
+
+  /// No description provided for @progressMeasurementsEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No measurements logged yet.'**
+  String get progressMeasurementsEmpty;
+
+  /// No description provided for @progressLogMeasurement.
+  ///
+  /// In en, this message translates to:
+  /// **'Log measurement'**
+  String get progressLogMeasurement;
+
+  /// No description provided for @progressWaistLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Waist (cm)'**
+  String get progressWaistLabel;
+
+  /// No description provided for @progressHipLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Hip (cm)'**
+  String get progressHipLabel;
+
+  /// No description provided for @progressWaist.
+  ///
+  /// In en, this message translates to:
+  /// **'Waist {cm} cm'**
+  String progressWaist(String cm);
+
+  /// No description provided for @progressHip.
+  ///
+  /// In en, this message translates to:
+  /// **'Hip {cm} cm'**
+  String progressHip(String cm);
+
+  /// No description provided for @progressMeasurementInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter at least one measurement.'**
+  String get progressMeasurementInvalid;
+
+  /// No description provided for @favouritesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Favourites'**
+  String get favouritesTitle;
+
+  /// No description provided for @favouritesAdd.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to favourites'**
+  String get favouritesAdd;
+
+  /// No description provided for @favouritesRemove.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove from favourites'**
+  String get favouritesRemove;
+
+  /// No description provided for @frequentFoodsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Frequent foods'**
+  String get frequentFoodsTitle;
+
+  /// No description provided for @frequentFoodsEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Foods you log often will appear here.'**
+  String get frequentFoodsEmpty;
+
+  /// No description provided for @frequentFoodsCount.
+  ///
+  /// In en, this message translates to:
+  /// **'Logged {count} times'**
+  String frequentFoodsCount(int count);
+
+  /// No description provided for @templatesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Meal templates'**
+  String get templatesTitle;
+
+  /// No description provided for @templatesIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Save a day\'s familiar meals and re-apply them later — useful for usual breakfasts and family patterns.'**
+  String get templatesIntro;
+
+  /// No description provided for @templatesEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No templates yet. Log a day you like, then save it as a template.'**
+  String get templatesEmpty;
+
+  /// No description provided for @templatesSaveFromToday.
+  ///
+  /// In en, this message translates to:
+  /// **'Save from today'**
+  String get templatesSaveFromToday;
+
+  /// No description provided for @templatesNameLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Template name'**
+  String get templatesNameLabel;
+
+  /// No description provided for @templatesNeedEntries.
+  ///
+  /// In en, this message translates to:
+  /// **'Log some foods today before saving a template.'**
+  String get templatesNeedEntries;
+
+  /// No description provided for @templatesSaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Template saved'**
+  String get templatesSaved;
+
+  /// No description provided for @templatesApply.
+  ///
+  /// In en, this message translates to:
+  /// **'Apply to today'**
+  String get templatesApply;
+
+  /// No description provided for @templatesApplied.
+  ///
+  /// In en, this message translates to:
+  /// **'Added {count} items from the template'**
+  String templatesApplied(int count);
+
+  /// No description provided for @templatesTodayCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} diary entries available to save'**
+  String templatesTodayCount(int count);
+
+  /// No description provided for @templatesItemSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} items · ≈ {kcal} kcal'**
+  String templatesItemSummary(int count, int kcal);
 }
 
 class _AppLocalizationsDelegate
