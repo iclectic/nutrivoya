@@ -806,5 +806,35 @@
     }
   },
   "settingsSyncDone": "تمت مزامنة المفكرة",
-  "settingsSyncUnavailable": "المزامنة غير متاحة — البيانات مخزّنة على هذا الجهاز"
+  "settingsSyncUnavailable": "المزامنة غير متاحة — البيانات مخزّنة على هذا الجهاز",
+  "addProductStatusVerified": "موثَّق من المراجع",
+  "addProductStatusRejected": "مرفوض",
+  "reviewQueueTitle": "قائمة المراجعة",
+  "reviewQueueEmpty": "لا إرسالات بانتظار المراجعة.",
+  "reviewQueueNeedReviewerMode": "فعّل وضع المراجع في الإعدادات للموافقة أو الرفض. المراجعة لا تختلق تغذية.",
+  "reviewQueueProvenanceNote": "الموافقة تغيّر المصدر فقط — التغذية الناقصة تبقى غير متاحة.",
+  "reviewQueueOpenFood": "فتح الطعام",
+  "reviewQueueApprove": "موافقة",
+  "reviewQueueReject": "رفض",
+  "reviewQueueApproved": "وُسِم كموثَّق (مصدر المستخدم محفوظ)",
+  "reviewQueueRejected": "رُفض الإرسال",
+  "reviewQueueBarcode": "باركود {code}",
+  "@reviewQueueBarcode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewQueueEnergy": "{kcal} سعرة / 100 غ",
+  "@reviewQueueEnergy": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewQueueNoEnergy": "الطاقة غير متاحة",
+  "settingsReviewerMode": "وضع المراجع",
+  "settingsReviewerModeNote": "السماح بالموافقة على الإرسالات المعلقة أو رفضها على هذا الجهاز."
 }

@@ -1470,4 +1470,59 @@ class AppLocalizationsPa extends AppLocalizations {
   @override
   String get settingsSyncUnavailable =>
       'ਸਿੰਕ ਉਪਲਬਧ ਨਹੀਂ — ਡੇਟਾ ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਸੰਭਾਲਿਆ ਹੈ';
+
+  @override
+  String get addProductStatusVerified => 'ਸਮੀਖਿਅਕ ਵੱਲੋਂ ਪ੍ਰਮਾਣਿਤ';
+
+  @override
+  String get addProductStatusRejected => 'ਰੱਦ';
+
+  @override
+  String get reviewQueueTitle => 'ਸਮੀਖਿਆ ਕਤਾਰ';
+
+  @override
+  String get reviewQueueEmpty => 'ਸਮੀਖਿਆ ਲਈ ਕੋਈ ਸਬਮਿਸ਼ਨ ਨਹੀਂ।';
+
+  @override
+  String get reviewQueueNeedReviewerMode =>
+      'ਮਨਜ਼ੂਰ/ਰੱਦ ਕਰਨ ਲਈ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਸਮੀਖਿਅਕ ਮੋਡ ਚਾਲੂ ਕਰੋ। ਸਮੀਖਿਆ ਪੋਸ਼ਣ ਨਹੀਂ ਘੜਦੀ।';
+
+  @override
+  String get reviewQueueProvenanceNote =>
+      'ਮਨਜ਼ੂਰੀ ਸਿਰਫ਼ ਸਰੋਤ ਸਥਿਤੀ ਬਦਲਦੀ ਹੈ — ਗਾਇਬ ਪੋਸ਼ਣ ਉਪਲਬਧ ਨਹੀਂ ਰਹਿੰਦਾ।';
+
+  @override
+  String get reviewQueueOpenFood => 'ਭੋਜਨ ਖੋਲ੍ਹੋ';
+
+  @override
+  String get reviewQueueApprove => 'ਮਨਜ਼ੂਰ';
+
+  @override
+  String get reviewQueueReject => 'ਰੱਦ';
+
+  @override
+  String get reviewQueueApproved => 'ਪ੍ਰਮਾਣਿਤ ਚਿੰਨ੍ਹਿਤ (ਉਪਭੋਗਤਾ ਸਰੋਤ ਕਾਇਮ)';
+
+  @override
+  String get reviewQueueRejected => 'ਸਬਮਿਸ਼ਨ ਰੱਦ';
+
+  @override
+  String reviewQueueBarcode(String code) {
+    return 'ਬਾਰਕੋਡ $code';
+  }
+
+  @override
+  String reviewQueueEnergy(int kcal) {
+    return '$kcal kcal / 100 ਗ';
+  }
+
+  @override
+  String get reviewQueueNoEnergy => 'ਊਰਜਾ ਉਪਲਬਧ ਨਹੀਂ';
+
+  @override
+  String get settingsReviewerMode => 'ਸਮੀਖਿਅਕ ਮੋਡ';
+
+  @override
+  String get settingsReviewerModeNote =>
+      'ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਲੰਬਿਤ ਸਬਮਿਸ਼ਨ ਮਨਜ਼ੂਰ ਜਾਂ ਰੱਦ ਕਰਨ ਦਿਓ।';
 }

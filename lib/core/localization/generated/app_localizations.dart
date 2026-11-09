@@ -2632,6 +2632,102 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Sync unavailable — data is stored on this device'**
   String get settingsSyncUnavailable;
+
+  /// No description provided for @addProductStatusVerified.
+  ///
+  /// In en, this message translates to:
+  /// **'Verified by reviewer'**
+  String get addProductStatusVerified;
+
+  /// No description provided for @addProductStatusRejected.
+  ///
+  /// In en, this message translates to:
+  /// **'Rejected'**
+  String get addProductStatusRejected;
+
+  /// No description provided for @reviewQueueTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Review queue'**
+  String get reviewQueueTitle;
+
+  /// No description provided for @reviewQueueEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No submissions waiting for review.'**
+  String get reviewQueueEmpty;
+
+  /// No description provided for @reviewQueueNeedReviewerMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Turn on Reviewer mode in Settings to approve or reject submissions. Review never invents nutrition values.'**
+  String get reviewQueueNeedReviewerMode;
+
+  /// No description provided for @reviewQueueProvenanceNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Approve only checks provenance — missing nutrition stays unavailable.'**
+  String get reviewQueueProvenanceNote;
+
+  /// No description provided for @reviewQueueOpenFood.
+  ///
+  /// In en, this message translates to:
+  /// **'Open food'**
+  String get reviewQueueOpenFood;
+
+  /// No description provided for @reviewQueueApprove.
+  ///
+  /// In en, this message translates to:
+  /// **'Approve'**
+  String get reviewQueueApprove;
+
+  /// No description provided for @reviewQueueReject.
+  ///
+  /// In en, this message translates to:
+  /// **'Reject'**
+  String get reviewQueueReject;
+
+  /// No description provided for @reviewQueueApproved.
+  ///
+  /// In en, this message translates to:
+  /// **'Marked verified (user-submitted provenance kept)'**
+  String get reviewQueueApproved;
+
+  /// No description provided for @reviewQueueRejected.
+  ///
+  /// In en, this message translates to:
+  /// **'Submission rejected'**
+  String get reviewQueueRejected;
+
+  /// No description provided for @reviewQueueBarcode.
+  ///
+  /// In en, this message translates to:
+  /// **'Barcode {code}'**
+  String reviewQueueBarcode(String code);
+
+  /// No description provided for @reviewQueueEnergy.
+  ///
+  /// In en, this message translates to:
+  /// **'{kcal} kcal / 100 g'**
+  String reviewQueueEnergy(int kcal);
+
+  /// No description provided for @reviewQueueNoEnergy.
+  ///
+  /// In en, this message translates to:
+  /// **'Energy unavailable'**
+  String get reviewQueueNoEnergy;
+
+  /// No description provided for @settingsReviewerMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Reviewer mode'**
+  String get settingsReviewerMode;
+
+  /// No description provided for @settingsReviewerModeNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Allow approving or rejecting pending product submissions on this device.'**
+  String get settingsReviewerModeNote;
 }
 
 class _AppLocalizationsDelegate

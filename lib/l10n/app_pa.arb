@@ -806,5 +806,35 @@
     }
   },
   "settingsSyncDone": "ਡਾਇਰੀ ਸਿੰਕ ਹੋ ਗਈ",
-  "settingsSyncUnavailable": "ਸਿੰਕ ਉਪਲਬਧ ਨਹੀਂ — ਡੇਟਾ ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਸੰਭਾਲਿਆ ਹੈ"
+  "settingsSyncUnavailable": "ਸਿੰਕ ਉਪਲਬਧ ਨਹੀਂ — ਡੇਟਾ ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਸੰਭਾਲਿਆ ਹੈ",
+  "addProductStatusVerified": "ਸਮੀਖਿਅਕ ਵੱਲੋਂ ਪ੍ਰਮਾਣਿਤ",
+  "addProductStatusRejected": "ਰੱਦ",
+  "reviewQueueTitle": "ਸਮੀਖਿਆ ਕਤਾਰ",
+  "reviewQueueEmpty": "ਸਮੀਖਿਆ ਲਈ ਕੋਈ ਸਬਮਿਸ਼ਨ ਨਹੀਂ।",
+  "reviewQueueNeedReviewerMode": "ਮਨਜ਼ੂਰ/ਰੱਦ ਕਰਨ ਲਈ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਸਮੀਖਿਅਕ ਮੋਡ ਚਾਲੂ ਕਰੋ। ਸਮੀਖਿਆ ਪੋਸ਼ਣ ਨਹੀਂ ਘੜਦੀ।",
+  "reviewQueueProvenanceNote": "ਮਨਜ਼ੂਰੀ ਸਿਰਫ਼ ਸਰੋਤ ਸਥਿਤੀ ਬਦਲਦੀ ਹੈ — ਗਾਇਬ ਪੋਸ਼ਣ ਉਪਲਬਧ ਨਹੀਂ ਰਹਿੰਦਾ।",
+  "reviewQueueOpenFood": "ਭੋਜਨ ਖੋਲ੍ਹੋ",
+  "reviewQueueApprove": "ਮਨਜ਼ੂਰ",
+  "reviewQueueReject": "ਰੱਦ",
+  "reviewQueueApproved": "ਪ੍ਰਮਾਣਿਤ ਚਿੰਨ੍ਹਿਤ (ਉਪਭੋਗਤਾ ਸਰੋਤ ਕਾਇਮ)",
+  "reviewQueueRejected": "ਸਬਮਿਸ਼ਨ ਰੱਦ",
+  "reviewQueueBarcode": "ਬਾਰਕੋਡ {code}",
+  "@reviewQueueBarcode": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewQueueEnergy": "{kcal} kcal / 100 ਗ",
+  "@reviewQueueEnergy": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewQueueNoEnergy": "ਊਰਜਾ ਉਪਲਬਧ ਨਹੀਂ",
+  "settingsReviewerMode": "ਸਮੀਖਿਅਕ ਮੋਡ",
+  "settingsReviewerModeNote": "ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਲੰਬਿਤ ਸਬਮਿਸ਼ਨ ਮਨਜ਼ੂਰ ਜਾਂ ਰੱਦ ਕਰਨ ਦਿਓ।"
 }

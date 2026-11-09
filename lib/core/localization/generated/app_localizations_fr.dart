@@ -1499,4 +1499,60 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get settingsSyncUnavailable =>
       'Synchronisation indisponible — données stockées sur cet appareil';
+
+  @override
+  String get addProductStatusVerified => 'Vérifié par un réviseur';
+
+  @override
+  String get addProductStatusRejected => 'Rejeté';
+
+  @override
+  String get reviewQueueTitle => 'File de revue';
+
+  @override
+  String get reviewQueueEmpty => 'Aucune soumission en attente de revue.';
+
+  @override
+  String get reviewQueueNeedReviewerMode =>
+      'Activez le mode réviseur dans les Réglages pour approuver ou rejeter. La revue n\'invente jamais de nutrition.';
+
+  @override
+  String get reviewQueueProvenanceNote =>
+      'L\'approbation ne change que la provenance — la nutrition manquante reste indisponible.';
+
+  @override
+  String get reviewQueueOpenFood => 'Ouvrir l\'aliment';
+
+  @override
+  String get reviewQueueApprove => 'Approuver';
+
+  @override
+  String get reviewQueueReject => 'Rejeter';
+
+  @override
+  String get reviewQueueApproved =>
+      'Marqué comme vérifié (provenance utilisateur conservée)';
+
+  @override
+  String get reviewQueueRejected => 'Soumission rejetée';
+
+  @override
+  String reviewQueueBarcode(String code) {
+    return 'Code-barres $code';
+  }
+
+  @override
+  String reviewQueueEnergy(int kcal) {
+    return '$kcal kcal / 100 g';
+  }
+
+  @override
+  String get reviewQueueNoEnergy => 'Énergie indisponible';
+
+  @override
+  String get settingsReviewerMode => 'Mode réviseur';
+
+  @override
+  String get settingsReviewerModeNote =>
+      'Autoriser l\'approbation ou le rejet des soumissions en attente sur cet appareil.';
 }

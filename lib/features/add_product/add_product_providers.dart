@@ -4,6 +4,7 @@ import '../../core/models/food.dart';
 import '../../core/models/product_submission.dart';
 import '../../core/services/product_submission_validator.dart';
 import 'product_submission_repository.dart';
+import 'submission_review_service.dart';
 
 final productSubmissionValidatorProvider =
     Provider<ProductSubmissionValidator>((ref) {
@@ -18,10 +19,21 @@ final productSubmissionsProvider =
   return ref.watch(productSubmissionRepositoryProvider).list();
 });
 
+final pendingReviewSubmissionsProvider =
+    Provider.autoDispose<List<ProductSubmission>>((ref) {
+  ref.watch(productSubmissionsRevisionProvider);
+  return ref.watch(productSubmissionRepositoryProvider).pendingReview();
+});
+
 final publishedUserFoodsProvider =
     Provider.autoDispose<List<Food>>((ref) {
   ref.watch(productSubmissionsRevisionProvider);
   return ref.watch(productSubmissionRepositoryProvider).publishedFoods();
+});
+
+final reviewerModeProvider = Provider<bool>((ref) {
+  ref.watch(productSubmissionsRevisionProvider);
+  return ref.watch(submissionReviewServiceProvider).isReviewerMode;
 });
 
 class AddProductController extends Notifier {
@@ -32,6 +44,11 @@ class AddProductController extends Notifier {
       ref.read(productSubmissionRepositoryProvider);
   ProductSubmissionValidator get _validator =>
       ref.read(productSubmissionValidatorProvider);
+  SubmissionReviewService get _review =>
+      ref.read(submissionReviewServiceProvider);
+
+  void _bump() =>
+      ref.read(productSubmissionsRevisionProvider.notifier).state++;
 
   ProductSubmissionValidation validate(ProductSubmission submission) =>
       _validator.validate(submission);
@@ -45,14 +62,15 @@ class AddProductController extends Notifier {
       submission.copyWith(
         status: ProductSubmissionStatus.draft,
         updatedAt: DateTime.now(),
+        syncPending: true,
       ),
     );
-    ref.read(productSubmissionsRevisionProvider.notifier).state++;
+    _bump();
     return result;
   }
 
-  /// Submit for review and publish into the personal library immediately as
-  /// `userSubmitted` + pending — never as authoritative.
+  /// Submit for review and add to the personal library as pending —
+  /// never as authoritative / verified.
   Future<ProductSubmissionValidation> submitAndPublish(
     ProductSubmission submission,
   ) async {
@@ -61,11 +79,14 @@ class AddProductController extends Notifier {
     final now = DateTime.now();
     await _repo.save(
       submission.copyWith(
-        status: ProductSubmissionStatus.publishedLocally,
+        status: ProductSubmissionStatus.pendingReview,
         updatedAt: now,
+        syncPending: true,
+        clearReview: true,
       ),
     );
-    ref.read(productSubmissionsRevisionProvider.notifier).state++;
+    _bump();
+    _review.syncSafely();
     return result;
   }
 
@@ -76,14 +97,37 @@ class AddProductController extends Notifier {
       existing.copyWith(
         status: ProductSubmissionStatus.withdrawn,
         updatedAt: DateTime.now(),
+        syncPending: true,
       ),
     );
-    ref.read(productSubmissionsRevisionProvider.notifier).state++;
+    _bump();
+    _review.syncSafely();
   }
 
   Future<void> delete(String id) async {
     await _repo.delete(id);
-    ref.read(productSubmissionsRevisionProvider.notifier).state++;
+    _bump();
+  }
+
+  Future<bool> approve(String id, {String? notes}) async {
+    final updated = await _review.approve(id, notes: notes);
+    if (updated == null) return false;
+    _bump();
+    _review.syncSafely();
+    return true;
+  }
+
+  Future<bool> reject(String id, {String? notes}) async {
+    final updated = await _review.reject(id, notes: notes);
+    if (updated == null) return false;
+    _bump();
+    _review.syncSafely();
+    return true;
+  }
+
+  Future<void> setReviewerMode(bool enabled) async {
+    await _review.setReviewerMode(enabled);
+    _bump();
   }
 }
 

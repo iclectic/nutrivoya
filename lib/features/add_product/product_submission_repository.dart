@@ -8,8 +8,8 @@ import '../../core/storage/local_preferences.dart';
 
 /// Offline store for user-contributed product submissions.
 ///
-/// Submissions are never treated as authoritative. Published entries become
-/// personal-library foods with `userSubmitted` provenance and pending review.
+/// Submissions are never treated as authoritative. Library entries stay
+/// `userSubmitted`; only reviewer verification upgrades [ReviewStatus].
 class ProductSubmissionRepository {
   ProductSubmissionRepository(this._prefs);
 
@@ -52,10 +52,16 @@ class ProductSubmissionRepository {
     await _persist(list().where((s) => s.id != id).toList());
   }
 
+  List<ProductSubmission> pendingReview() =>
+      list().where((s) => s.status.awaitsReview).toList();
+
+  List<ProductSubmission> pendingSync() =>
+      list().where((s) => s.syncPending).toList();
+
   /// Foods published into the personal library (searchable offline).
   List<Food> publishedFoods() {
     return list()
-        .where((s) => s.status == ProductSubmissionStatus.publishedLocally)
+        .where((s) => s.status.isInPersonalLibrary)
         .map((s) => s.toFood())
         .toList();
   }
@@ -64,11 +70,30 @@ class ProductSubmissionRepository {
     if (!id.startsWith('user:')) return null;
     final submissionId = id.substring(5);
     final submission = getById(submissionId);
-    if (submission == null ||
-        submission.status != ProductSubmissionStatus.publishedLocally) {
+    if (submission == null || !submission.status.isInPersonalLibrary) {
       return null;
     }
     return submission.toFood();
+  }
+
+  /// Merge a remote row using last-write-wins on [updatedAt].
+  Future<void> applyRemote(ProductSubmission remote) async {
+    final local = getById(remote.id);
+    if (local != null &&
+        local.syncPending &&
+        local.updatedAt.isAfter(remote.updatedAt)) {
+      return;
+    }
+    await save(remote.copyWith(syncPending: false));
+  }
+
+  Future<void> markSynced(Iterable<String> ids) async {
+    final idSet = ids.toSet();
+    final items = list().map((s) {
+      if (!idSet.contains(s.id)) return s;
+      return s.copyWith(syncPending: false);
+    }).toList();
+    await _persist(items);
   }
 
   Future<void> _persist(List<ProductSubmission> items) {

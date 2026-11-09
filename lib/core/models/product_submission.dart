@@ -14,13 +14,19 @@ enum ProductSubmissionStatus {
   /// Saved locally, not yet marked for personal library use.
   draft,
 
-  /// User submitted; awaiting review (local queue until remote review exists).
+  /// User submitted; awaiting community / reviewer verification.
   pendingReview,
 
-  /// Accepted into the personal offline library as `userSubmitted`.
+  /// In personal library while still pending remote review (legacy / local).
   publishedLocally,
 
-  /// Rejected / withdrawn by the user.
+  /// Reviewer-verified; still `userSubmitted` provenance, never invented.
+  verified,
+
+  /// Rejected by a reviewer.
+  rejected,
+
+  /// Withdrawn by the user.
   withdrawn,
 }
 
@@ -33,6 +39,16 @@ extension ProductSubmissionStatusX on ProductSubmissionStatus {
       orElse: () => ProductSubmissionStatus.draft,
     );
   }
+
+  /// Searchable in the personal library (not authoritative until verified).
+  bool get isInPersonalLibrary =>
+      this == ProductSubmissionStatus.pendingReview ||
+      this == ProductSubmissionStatus.publishedLocally ||
+      this == ProductSubmissionStatus.verified;
+
+  bool get awaitsReview =>
+      this == ProductSubmissionStatus.pendingReview ||
+      this == ProductSubmissionStatus.publishedLocally;
 }
 
 /// A user-contributed food / packaged product awaiting review.
@@ -57,6 +73,10 @@ class ProductSubmission {
     this.fatGPer100g,
     this.fibreGPer100g,
     this.notes,
+    this.reviewNotes,
+    this.reviewedAt,
+    this.reviewedBy,
+    this.syncPending = true,
   });
 
   final String id;
@@ -77,6 +97,14 @@ class ProductSubmission {
   final double? fatGPer100g;
   final double? fibreGPer100g;
   final String? notes;
+
+  /// Optional reviewer note (never used to invent nutrition).
+  final String? reviewNotes;
+  final DateTime? reviewedAt;
+  final String? reviewedBy;
+
+  /// Needs push to / pull merge with remote review store.
+  final bool syncPending;
 
   bool get hasAnyNutrition =>
       energyKcalPer100g != null ||
@@ -107,6 +135,10 @@ class ProductSubmission {
         if (fatGPer100g != null) 'fatGPer100g': fatGPer100g,
         if (fibreGPer100g != null) 'fibreGPer100g': fibreGPer100g,
         if (notes != null) 'notes': notes,
+        if (reviewNotes != null) 'reviewNotes': reviewNotes,
+        if (reviewedAt != null) 'reviewedAt': reviewedAt!.toIso8601String(),
+        if (reviewedBy != null) 'reviewedBy': reviewedBy,
+        'syncPending': syncPending,
       };
 
   factory ProductSubmission.fromJson(Map<String, dynamic> json) {
@@ -129,6 +161,12 @@ class ProductSubmission {
       fatGPer100g: (json['fatGPer100g'] as num?)?.toDouble(),
       fibreGPer100g: (json['fibreGPer100g'] as num?)?.toDouble(),
       notes: json['notes'] as String?,
+      reviewNotes: json['reviewNotes'] as String?,
+      reviewedAt: json['reviewedAt'] == null
+          ? null
+          : DateTime.parse(json['reviewedAt'] as String),
+      reviewedBy: json['reviewedBy'] as String?,
+      syncPending: json['syncPending'] as bool? ?? true,
     );
   }
 
@@ -149,6 +187,11 @@ class ProductSubmission {
     double? fatGPer100g,
     double? fibreGPer100g,
     String? notes,
+    String? reviewNotes,
+    DateTime? reviewedAt,
+    String? reviewedBy,
+    bool? syncPending,
+    bool clearReview = false,
   }) {
     return ProductSubmission(
       id: id ?? this.id,
@@ -167,6 +210,10 @@ class ProductSubmission {
       fatGPer100g: fatGPer100g ?? this.fatGPer100g,
       fibreGPer100g: fibreGPer100g ?? this.fibreGPer100g,
       notes: notes ?? this.notes,
+      reviewNotes: clearReview ? null : (reviewNotes ?? this.reviewNotes),
+      reviewedAt: clearReview ? null : (reviewedAt ?? this.reviewedAt),
+      reviewedBy: clearReview ? null : (reviewedBy ?? this.reviewedBy),
+      syncPending: syncPending ?? this.syncPending,
     );
   }
 
@@ -184,9 +231,12 @@ class ProductSubmission {
     put(NutrientCode.fatG, fatGPer100g);
     put(NutrientCode.fibreG, fibreGPer100g);
 
-    final confidence = hasAnyNutrition
-        ? NutritionConfidence.estimated
-        : NutritionConfidence.unknown;
+    final verified = status == ProductSubmissionStatus.verified;
+    final confidence = !hasAnyNutrition
+        ? NutritionConfidence.unknown
+        : (verified
+            ? NutritionConfidence.medium
+            : NutritionConfidence.estimated);
 
     final serving = defaultServingGrams ?? 100;
     final portions = <FoodPortion>[
@@ -233,11 +283,12 @@ class ProductSubmission {
       nutrientsPer100g: nutrients,
       source: FoodSource(
         type: FoodSourceType.userSubmitted,
-        name: 'User submitted',
+        name: verified ? 'User submitted (verified)' : 'User submitted',
         reference: barcode?.trim().isNotEmpty == true
             ? 'barcode ${barcode!.trim()}'
             : 'submission $id',
-        reviewStatus: ReviewStatus.pending,
+        reviewStatus:
+            verified ? ReviewStatus.verified : ReviewStatus.pending,
         confidence: confidence,
         updatedAt: updatedAt,
       ),

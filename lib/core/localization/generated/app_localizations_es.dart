@@ -1495,4 +1495,60 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get settingsSyncUnavailable =>
       'Sincronización no disponible — los datos se guardan en este dispositivo';
+
+  @override
+  String get addProductStatusVerified => 'Verificado por revisor';
+
+  @override
+  String get addProductStatusRejected => 'Rechazado';
+
+  @override
+  String get reviewQueueTitle => 'Cola de revisión';
+
+  @override
+  String get reviewQueueEmpty => 'No hay envíos pendientes de revisión.';
+
+  @override
+  String get reviewQueueNeedReviewerMode =>
+      'Activa el modo revisor en Ajustes para aprobar o rechazar. La revisión nunca inventa nutrición.';
+
+  @override
+  String get reviewQueueProvenanceNote =>
+      'Aprobar solo cambia la procedencia — la nutrición faltante sigue no disponible.';
+
+  @override
+  String get reviewQueueOpenFood => 'Abrir alimento';
+
+  @override
+  String get reviewQueueApprove => 'Aprobar';
+
+  @override
+  String get reviewQueueReject => 'Rechazar';
+
+  @override
+  String get reviewQueueApproved =>
+      'Marcado como verificado (se mantiene procedencia de usuario)';
+
+  @override
+  String get reviewQueueRejected => 'Envío rechazado';
+
+  @override
+  String reviewQueueBarcode(String code) {
+    return 'Código de barras $code';
+  }
+
+  @override
+  String reviewQueueEnergy(int kcal) {
+    return '$kcal kcal / 100 g';
+  }
+
+  @override
+  String get reviewQueueNoEnergy => 'Energía no disponible';
+
+  @override
+  String get settingsReviewerMode => 'Modo revisor';
+
+  @override
+  String get settingsReviewerModeNote =>
+      'Permitir aprobar o rechazar envíos pendientes en este dispositivo.';
 }

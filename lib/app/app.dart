@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../core/localization/generated/app_localizations.dart';
 import '../core/localization/locale_controller.dart';
 import '../core/storage/theme_controller.dart';
+import '../features/add_product/submission_review_service.dart';
 import '../features/diary/sync/diary_sync_service.dart';
 import 'router.dart';
 import 'theme.dart';
@@ -15,8 +16,9 @@ class NutrivoyaApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // Kick off diary sync when a signed-in Supabase session is available.
+    // Kick off diary / submission sync when a signed-in Supabase session is available.
     ref.watch(diaryAutoSyncProvider);
+    ref.watch(submissionAutoSyncProvider);
     final themeMode = ref.watch(themeModeProvider);
     final locale = ref.watch(localeProvider);
     final router = ref.watch(goRouterProvider);
