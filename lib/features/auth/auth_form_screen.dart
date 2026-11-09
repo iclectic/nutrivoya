@@ -127,7 +127,7 @@ class _AuthFormScreenState extends ConsumerState<AuthFormScreen> {
                   if (!widget.isSignUp) ...[
                     const SizedBox(height: 8),
                     Align(
-                      alignment: Alignment.centerRight,
+                      alignment: AlignmentDirectional.centerEnd,
                       child: TextButton(
                         onPressed: () => context.push('/reset-password'),
                         child: Text(l10n.authForgotPassword),

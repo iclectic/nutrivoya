@@ -48,13 +48,14 @@ class FoodName {
   final String normalizedName;
 
   /// Normalize a query/name for search: lowercase, collapse whitespace, fold
-  /// common Latin diacritics. Full Unicode normalization/transliteration is a
-  /// future enhancement.
+  /// Latin diacritics, and strip combining marks.
+  ///
+  /// Non-Latin scripts (Devanagari, Arabic, Gurmukhi, Hangul, etc.) are
+  /// preserved so users can search in those orthographies directly.
   static String normalize(String input) {
     var s = input.toLowerCase().trim();
     s = s.replaceAll(RegExp(r'\s+'), ' ');
-    // Fold common Latin diacritics to ASCII equivalents.
-    final diacriticsMap = <String, String>{
+    const diacriticsMap = <String, String>{
       'à': 'a', 'á': 'a', 'â': 'a', 'ã': 'a', 'ä': 'a', 'å': 'a', 'ā': 'a',
       'ç': 'c', 'ć': 'c',
       'è': 'e', 'é': 'e', 'ê': 'e', 'ë': 'e', 'ē': 'e',
@@ -66,10 +67,14 @@ class FoodName {
       'ś': 's', 'š': 's',
       'ž': 'z', 'ź': 'z', 'ż': 'z',
     };
-    diacriticsMap.forEach((key, value) {
-      s = s.replaceAll(key, value);
-    });
-    return s;
+    final buffer = StringBuffer();
+    for (final rune in s.runes) {
+      // Skip combining diacritical marks (NFD leftovers).
+      if (rune >= 0x0300 && rune <= 0x036F) continue;
+      final ch = String.fromCharCode(rune);
+      buffer.write(diacriticsMap[ch] ?? ch);
+    }
+    return buffer.toString();
   }
 
   FoodName copyWith({

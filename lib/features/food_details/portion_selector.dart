@@ -157,7 +157,7 @@ class _PortionSelectorState extends State<PortionSelector> {
               SizedBox(
                 width: 64,
                 child: Text('${_grams.round()} g',
-                    textAlign: TextAlign.right,
+                    textAlign: TextAlign.end,
                     style: Theme.of(context).textTheme.bodyMedium),
               ),
             ],
