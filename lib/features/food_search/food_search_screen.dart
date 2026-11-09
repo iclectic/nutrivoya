@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../core/models/food_search_result.dart';
 import '../../shared/extensions/app_localizations_x.dart';
 import '../../shared/widgets/empty_state.dart';
+import '../diary/diary_providers.dart';
 import '../food/food_providers.dart';
 
 /// Food search screen.
@@ -86,24 +87,59 @@ class _FoodSearchScreenState extends ConsumerState<FoodSearchScreen> {
   }
 
   Widget _suggestions(AppLocalizations l10n) {
-    final sections = [
-      (l10n.searchRecent, Icons.history),
-      (l10n.searchFrequent, Icons.trending_up),
-      (l10n.searchFavourites, Icons.star_outline),
-      (l10n.searchMyRecipes, Icons.menu_book_outlined),
-    ];
+    final recentAsync = ref.watch(recentFoodsProvider);
     return ListView(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       children: [
         EmptyState(icon: Icons.search, title: l10n.searchEmpty),
         const SizedBox(height: 16),
-        ...sections.map((s) => ListTile(
-              leading: Icon(s.$2),
-              title: Text(s.$1),
-              trailing: const Icon(Icons.chevron_right),
-              enabled: false,
-              onTap: () {},
-            )),
+        ListTile(
+          leading: const Icon(Icons.menu_book_outlined),
+          title: Text(l10n.searchMyRecipes),
+          trailing: const Icon(Icons.chevron_right),
+          onTap: () => context.push('/recipes'),
+        ),
+        const SizedBox(height: 8),
+        Text(l10n.searchRecent, style: Theme.of(context).textTheme.titleSmall),
+        recentAsync.when(
+          loading: () => const Padding(
+            padding: EdgeInsets.all(16),
+            child: Center(child: CircularProgressIndicator(strokeWidth: 2)),
+          ),
+          error: (_, _) => const SizedBox.shrink(),
+          data: (recent) {
+            if (recent.isEmpty) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: Text(
+                  l10n.diaryEmpty,
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        color: Theme.of(context).colorScheme.onSurfaceVariant,
+                      ),
+                ),
+              );
+            }
+            // Deduplicate by foodId, keep first (most recent).
+            final seen = <String>{};
+            final unique = recent.where((e) => seen.add(e.foodId)).toList();
+            return Column(
+              children: unique
+                  .take(8)
+                  .map(
+                    (e) => ListTile(
+                      contentPadding: EdgeInsets.zero,
+                      leading: const Icon(Icons.history),
+                      title: Text(e.foodName),
+                      subtitle: e.portionName != null
+                          ? Text(e.portionName!)
+                          : null,
+                      onTap: () => context.push('/food/${e.foodId}'),
+                    ),
+                  )
+                  .toList(),
+            );
+          },
+        ),
       ],
     );
   }

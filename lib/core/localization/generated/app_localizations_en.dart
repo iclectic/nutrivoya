@@ -215,6 +215,21 @@ class AppLocalizationsEn extends AppLocalizations {
       'Personalized calorie and macro targets will be calculated in a later step.';
 
   @override
+  String onboardingSummaryMaintenance(int kcal) {
+    return 'Estimated maintenance: $kcal kcal/day';
+  }
+
+  @override
+  String onboardingSummaryTarget(int kcal) {
+    return 'Suggested daily target: $kcal kcal';
+  }
+
+  @override
+  String onboardingSummaryMacros(int protein, int carbs, int fat, int fibre) {
+    return 'Protein $protein g · Carbs $carbs g · Fat $fat g · Fibre $fibre g';
+  }
+
+  @override
   String get dashboardGreetingMorning => 'Good morning';
 
   @override
@@ -256,6 +271,21 @@ class AppLocalizationsEn extends AppLocalizations {
       'Targets will be set up after onboarding.';
 
   @override
+  String dashboardCaloriesOf(int consumed, int target) {
+    return '$consumed / $target kcal';
+  }
+
+  @override
+  String dashboardCaloriesRemaining(int kcal) {
+    return '$kcal kcal remaining';
+  }
+
+  @override
+  String dashboardCaloriesOver(int kcal) {
+    return '$kcal kcal over target';
+  }
+
+  @override
   String get diaryTitle => 'Diary';
 
   @override
@@ -288,7 +318,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get searchNoResults =>
-      'No results yet. Food search will be available in a later milestone.';
+      'No matching foods found. Try another name, alias or spelling.';
 
   @override
   String get searchRecent => 'Recent';
@@ -398,6 +428,52 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get goalsFibreTarget => 'Fibre target';
+
+  @override
+  String get goalsBmr => 'Estimated BMR';
+
+  @override
+  String get goalsTdee => 'Estimated maintenance (TDEE)';
+
+  @override
+  String get goalsNeedProfile =>
+      'Complete onboarding to see personalized targets.';
+
+  @override
+  String get goalsEstimateDisclaimer =>
+      'Calculated expenditure is an estimate. Your actual needs may vary.';
+
+  @override
+  String get goalsRefineOverTime =>
+      'We can refine this estimate over time using your weight trend.';
+
+  @override
+  String get energyNoteEstimateDisclaimer =>
+      'Calculated expenditure is an estimate. Your actual needs may vary.';
+
+  @override
+  String get energyNotePhysiologicalUnspecified =>
+      'Without a physiological calculation input, we averaged standard equations. Confidence is lower.';
+
+  @override
+  String get energyNoteAgeOutsideAdultRange =>
+      'Energy equations are less reliable outside typical adult ages. Consider professional guidance.';
+
+  @override
+  String get energyNoteLoseWhileLowWeight =>
+      'Your profile suggests a low body weight. Aggressive weight loss is not recommended — please seek qualified support if needed.';
+
+  @override
+  String get energyNoteDeficitCapped =>
+      'We limited the calorie deficit to a safer rate. Crash dieting is not supported.';
+
+  @override
+  String get energyNoteFloorApplied =>
+      'Your target was raised to a minimum energy intake for safety.';
+
+  @override
+  String get energyNoteTrackOnly =>
+      'You chose to track food only. The numbers below are maintenance estimates for reference.';
 
   @override
   String get confidenceLabel => 'Estimate confidence';
@@ -624,4 +700,83 @@ class AppLocalizationsEn extends AppLocalizations {
   String diaryEntryCalories(int kcal) {
     return '$kcal kcal';
   }
+
+  @override
+  String get recipesTitle => 'My recipes';
+
+  @override
+  String get recipesCreate => 'Create recipe';
+
+  @override
+  String get recipesEdit => 'Edit recipe';
+
+  @override
+  String get recipesEmptyTitle => 'No personal recipes yet';
+
+  @override
+  String get recipesEmptyBody =>
+      'Save family recipes like Mum\'s jollof or Grandma\'s dal so you can log the versions you actually cook.';
+
+  @override
+  String get recipesNameLabel => 'Recipe name';
+
+  @override
+  String get recipesServingsLabel => 'Servings';
+
+  @override
+  String get recipesYieldLabel => 'Total yield (g)';
+
+  @override
+  String get recipesYieldHint => 'Optional — defaults to ingredient sum';
+
+  @override
+  String get recipesIngredients => 'Ingredients';
+
+  @override
+  String get recipesIngredientsEmpty =>
+      'Add ingredients to calculate nutrition.';
+
+  @override
+  String get recipesAddIngredient => 'Add ingredient';
+
+  @override
+  String get recipesNotesLabel => 'Notes';
+
+  @override
+  String get recipesCalculatedNutrition => 'Calculated nutrition';
+
+  @override
+  String recipesWholeRecipeKcal(int kcal) {
+    return 'Whole recipe: ≈ $kcal kcal';
+  }
+
+  @override
+  String recipesPerServingKcal(int kcal) {
+    return '≈ $kcal kcal per serving';
+  }
+
+  @override
+  String recipesServingsCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count servings',
+      one: '1 serving',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get recipesPerServingShort => 'serving';
+
+  @override
+  String get recipesCalculationNote =>
+      'Calculated from your ingredients and quantities. Preparation and yield can change the values.';
+
+  @override
+  String get recipesDeleteTitle => 'Delete recipe?';
+
+  @override
+  String get recipesDeleteBody =>
+      'This removes the recipe from your personal collection. Diary entries already logged are not affected.';
 }

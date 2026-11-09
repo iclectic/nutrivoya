@@ -11,8 +11,61 @@ Western packaged foods, and to evaluate food by its actual nutritional
 composition, preparation, portion and dietary context — never by cultural
 stereotype.
 
-This repository currently contains **Milestone 1 — Foundation**,
-**Milestone 2 — Food Data Core**, and **Milestone 3 — Food Logging**.
+This repository currently contains **Milestones 1–6**:
+Foundation, Food Data Core, Food Logging, Calorie & Macro Targets,
+Cultural Food Intelligence (seed expansion), and Recipe Builder.
+
+## Status — Milestone 6 (Recipe Builder)
+
+Milestone 6 adds personal recipe creation with structured nutrition
+calculation from ingredients — never from an LLM inventing calories.
+
+### What is included in Milestone 6
+
+- `Recipe` and `RecipeIngredient` models with JSON persistence
+- `RecipeNutritionService` — ingredients → quantities → yield →
+  nutrients per 100 g → per serving
+- Offline `RecipeRepository` (SharedPreferences)
+- Recipes list, create/edit, and details screens
+- Ingredient picker backed by the food search repository
+- Entry points from Search (“My recipes”) and Settings
+- Tests for recipe nutrition calculation
+
+## Status — Milestone 5 (Cultural Food Intelligence — seed)
+
+Milestone 5 expands the curated offline dataset across continents and
+strengthens multilingual aliases / culturally meaningful portions.
+
+### What is included in Milestone 5
+
+- Expanded `LocalFoodDataset` (30+ foods) spanning South Asia, West &
+  East Africa, East & Southeast Asia, Latin America, the Caribbean,
+  Middle East / North Africa, and Eastern Europe
+- Alias / transliteration coverage (e.g. aubergine / brinjal / baingan /
+  बैंगन; dahi / laban; pho / phở bò)
+- Regional portions (fufu balls, injera pieces, katori, arepas, …)
+- Provenance + confidence retained on every record
+- Dataset coverage tests
+
+## Status — Milestone 4 (Calorie & Macro Targets)
+
+Milestone 4 introduces evidence-based energy and macro target calculation
+isolated in a tested domain service, wired through onboarding, goals and
+the dashboard.
+
+### What is included in Milestone 4
+
+- `EnergyRequirementService` — Mifflin–St Jeor BMR, activity multipliers,
+  goal-based calorie adjustment, protein/carb/fat/fibre targets
+- Safety guardrails: deficit caps, minimum calorie floors, low-BMI loss
+  warnings, age / unspecified-physio confidence notes
+- `EnergyRequirementResult` + enriched `NutritionTargets` (BMR/TDEE)
+- Onboarding summary shows live estimated targets
+- Onboarding language step wired to locale controller
+- Goals screen shows BMR, TDEE, targets and warnings
+- Dashboard shows consumed / target calories, remaining, and macro
+  progress (`82 / 120 g` style)
+- Unit tests for BMR/TDEE, goals, macros and guardrails
 
 ## Status — Milestone 3 (Food Logging)
 
@@ -128,12 +181,14 @@ scanning, photo recognition or AI features — those arrive in later milestones.
 - Bottom navigation
 - Unit and widget tests
 
-### What is intentionally out of scope for Milestone 3
+### What remains intentionally out of scope
 
-- BMR/TDEE and macro target calculations (Milestone 4)
-- Full Cultural Food Intelligence dataset (Milestone 5)
-- Recipe builder, barcode scanning, AI assistant, photo recognition
-- Supabase sync (entries are flagged `syncPending` for a future sync layer)
+- Barcode scanning (Milestone 8)
+- AI nutrition assistant (Milestone 9)
+- Weight / water / body measurements / favourites system (Milestone 10)
+- Photo recognition (Milestone 11)
+- Fully validated native translations (Milestone 7 — ARB placeholders remain)
+- Supabase diary sync (entries are flagged `syncPending`)
 
 ## Project structure
 
@@ -266,6 +321,6 @@ guidance. Aggressive weight-loss targets are not enabled in pregnancy.
 
 ## Next milestone
 
-**Milestone 4 — Goals & Targets:** BMR/TDEE calculations from the user
-profile, configurable macro targets, goal progress indicators on the
-dashboard, and goal-based calorie remaining displays.
+**Milestone 7 — Multilingual Product:** validated translations for the
+initial language set, expanded multilingual food aliases, and RTL layout
+verification for Arabic.

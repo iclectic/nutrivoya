@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../core/localization/locale_controller.dart';
 import '../../core/models/activity_level.dart';
 import '../../core/models/nutrition_goal.dart';
 import '../../core/models/physiological_input.dart';
 import '../../core/models/user_profile.dart';
+import '../../core/services/energy_requirement_service.dart';
 import '../../core/storage/local_preferences.dart';
 import '../../features/auth/auth_controller.dart';
 import '../../features/profile/profile_controller.dart';
@@ -387,6 +389,16 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   }
 
   Widget _languageStep(AppLocalizations l10n) {
+    final current = ref.watch(localeProvider) ?? const Locale('en');
+    final options = <(Locale, String)>[
+      (const Locale('en'), l10n.settingsLanguageEn),
+      (const Locale('fr'), l10n.settingsLanguageFr),
+      (const Locale('es'), l10n.settingsLanguageEs),
+      (const Locale('hi'), l10n.settingsLanguageHi),
+      (const Locale('pa'), l10n.settingsLanguagePa),
+      (const Locale('ar'), l10n.settingsLanguageAr),
+    ];
+
     return _StepPadding(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -398,20 +410,24 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     color: Theme.of(context).colorScheme.onSurfaceVariant,
                   )),
-          const SizedBox(height: 24),
-          Center(
-            child: Icon(Icons.language,
-                size: 64, color: Theme.of(context).colorScheme.primary),
-          ),
           const SizedBox(height: 16),
-          Text(l10n.settingsLanguage,
-              style: Theme.of(context).textTheme.titleSmall),
-          const SizedBox(height: 8),
-          Text(
-            l10n.settingsComingSoon,
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  color: Theme.of(context).colorScheme.onSurfaceVariant,
-                ),
+          RadioGroup<String>(
+            groupValue: current.languageCode,
+            onChanged: (code) {
+              if (code != null) {
+                ref.read(localeProvider.notifier).set(Locale(code));
+              }
+            },
+            child: Column(
+              children: options
+                  .map(
+                    (opt) => RadioListTile<String>(
+                      value: opt.$1.languageCode,
+                      title: Text(opt.$2),
+                    ),
+                  )
+                  .toList(),
+            ),
           ),
         ],
       ),
@@ -419,6 +435,21 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   }
 
   Widget _summaryStep(AppLocalizations l10n) {
+    final previewProfile = UserProfile(
+      id: 'preview',
+      ageYears: int.tryParse(_ageCtrl.text) ?? 0,
+      heightCm: double.tryParse(_heightCtrl.text) ?? 0,
+      weightKg: double.tryParse(_weightCtrl.text) ?? 0,
+      physiologicalInput: _physio,
+      activityLevel: _activity,
+      goal: _goal ?? NutritionGoal.trackOnly,
+      familiarCuisines: List.unmodifiable(_cuisines),
+    );
+
+    final estimate = previewProfile.isPlausible
+        ? const EnergyRequirementService().estimate(previewProfile)
+        : null;
+
     return _StepPadding(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -434,7 +465,46 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
           Card(
             child: Padding(
               padding: const EdgeInsets.all(16),
-              child: Text(l10n.onboardingSummaryComingSoon),
+              child: estimate == null
+                  ? Text(l10n.onboardingSummaryComingSoon)
+                  : Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          l10n.onboardingSummaryMaintenance(
+                            estimate.tdeeKcal.round(),
+                          ),
+                          style: Theme.of(context).textTheme.titleSmall,
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          l10n.onboardingSummaryTarget(
+                            estimate.calorieTargetKcal?.round() ?? 0,
+                          ),
+                          style: Theme.of(context).textTheme.headlineSmall,
+                        ),
+                        const SizedBox(height: 12),
+                        Text(
+                          l10n.onboardingSummaryMacros(
+                            estimate.targets.proteinTargetG?.round() ?? 0,
+                            estimate.targets.carbTargetG?.round() ?? 0,
+                            estimate.targets.fatTargetG?.round() ?? 0,
+                            estimate.targets.fibreTargetG?.round() ?? 0,
+                          ),
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                        const SizedBox(height: 12),
+                        Text(
+                          l10n.goalsEstimateDisclaimer,
+                          style:
+                              Theme.of(context).textTheme.bodySmall?.copyWith(
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .onSurfaceVariant,
+                                  ),
+                        ),
+                      ],
+                    ),
             ),
           ),
         ],

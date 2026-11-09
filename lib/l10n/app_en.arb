@@ -75,6 +75,27 @@
   "onboardingSummaryTitle": "Your estimated nutrition target",
   "onboardingSummaryBody": "This is an estimate based on standard equations. Your actual needs may vary, and we can refine this over time using your weight trend.",
   "onboardingSummaryComingSoon": "Personalized calorie and macro targets will be calculated in a later step.",
+  "onboardingSummaryMaintenance": "Estimated maintenance: {kcal} kcal/day",
+  "@onboardingSummaryMaintenance": {
+    "placeholders": {
+      "kcal": {"type": "int"}
+    }
+  },
+  "onboardingSummaryTarget": "Suggested daily target: {kcal} kcal",
+  "@onboardingSummaryTarget": {
+    "placeholders": {
+      "kcal": {"type": "int"}
+    }
+  },
+  "onboardingSummaryMacros": "Protein {protein} g · Carbs {carbs} g · Fat {fat} g · Fibre {fibre} g",
+  "@onboardingSummaryMacros": {
+    "placeholders": {
+      "protein": {"type": "int"},
+      "carbs": {"type": "int"},
+      "fat": {"type": "int"},
+      "fibre": {"type": "int"}
+    }
+  },
 
   "dashboardGreetingMorning": "Good morning",
   "dashboardGreetingAfternoon": "Good afternoon",
@@ -89,6 +110,25 @@
   "dashboardEmptyTitle": "Nothing logged yet",
   "dashboardEmptyBody": "Search for a food to start tracking your day.",
   "dashboardTargetsPlaceholder": "Targets will be set up after onboarding.",
+  "dashboardCaloriesOf": "{consumed} / {target} kcal",
+  "@dashboardCaloriesOf": {
+    "placeholders": {
+      "consumed": {"type": "int"},
+      "target": {"type": "int"}
+    }
+  },
+  "dashboardCaloriesRemaining": "{kcal} kcal remaining",
+  "@dashboardCaloriesRemaining": {
+    "placeholders": {
+      "kcal": {"type": "int"}
+    }
+  },
+  "dashboardCaloriesOver": "{kcal} kcal over target",
+  "@dashboardCaloriesOver": {
+    "placeholders": {
+      "kcal": {"type": "int"}
+    }
+  },
 
   "diaryTitle": "Diary",
   "diaryMealBreakfast": "Breakfast",
@@ -101,7 +141,7 @@
   "searchTitle": "Search",
   "searchHint": "What did you eat?",
   "searchEmpty": "Search for foods like roti, jollof rice, dal or mango.",
-  "searchNoResults": "No results yet. Food search will be available in a later milestone.",
+  "searchNoResults": "No matching foods found. Try another name, alias or spelling.",
   "searchRecent": "Recent",
   "searchFrequent": "Frequent",
   "searchFavourites": "Favourites",
@@ -141,6 +181,19 @@
   "goalsCarbTarget": "Carbohydrate target",
   "goalsFatTarget": "Fat target",
   "goalsFibreTarget": "Fibre target",
+  "goalsBmr": "Estimated BMR",
+  "goalsTdee": "Estimated maintenance (TDEE)",
+  "goalsNeedProfile": "Complete onboarding to see personalized targets.",
+  "goalsEstimateDisclaimer": "Calculated expenditure is an estimate. Your actual needs may vary.",
+  "goalsRefineOverTime": "We can refine this estimate over time using your weight trend.",
+
+  "energyNoteEstimateDisclaimer": "Calculated expenditure is an estimate. Your actual needs may vary.",
+  "energyNotePhysiologicalUnspecified": "Without a physiological calculation input, we averaged standard equations. Confidence is lower.",
+  "energyNoteAgeOutsideAdultRange": "Energy equations are less reliable outside typical adult ages. Consider professional guidance.",
+  "energyNoteLoseWhileLowWeight": "Your profile suggests a low body weight. Aggressive weight loss is not recommended — please seek qualified support if needed.",
+  "energyNoteDeficitCapped": "We limited the calorie deficit to a safer rate. Crash dieting is not supported.",
+  "energyNoteFloorApplied": "Your target was raised to a minimum energy intake for safety.",
+  "energyNoteTrackOnly": "You chose to track food only. The numbers below are maintenance estimates for reference.",
 
   "confidenceLabel": "Estimate confidence",
   "confidenceHigh": "High",
@@ -233,5 +286,42 @@
     "placeholders": {
       "kcal": {"type": "int"}
     }
-  }
+  },
+
+  "recipesTitle": "My recipes",
+  "recipesCreate": "Create recipe",
+  "recipesEdit": "Edit recipe",
+  "recipesEmptyTitle": "No personal recipes yet",
+  "recipesEmptyBody": "Save family recipes like Mum's jollof or Grandma's dal so you can log the versions you actually cook.",
+  "recipesNameLabel": "Recipe name",
+  "recipesServingsLabel": "Servings",
+  "recipesYieldLabel": "Total yield (g)",
+  "recipesYieldHint": "Optional — defaults to ingredient sum",
+  "recipesIngredients": "Ingredients",
+  "recipesIngredientsEmpty": "Add ingredients to calculate nutrition.",
+  "recipesAddIngredient": "Add ingredient",
+  "recipesNotesLabel": "Notes",
+  "recipesCalculatedNutrition": "Calculated nutrition",
+  "recipesWholeRecipeKcal": "Whole recipe: ≈ {kcal} kcal",
+  "@recipesWholeRecipeKcal": {
+    "placeholders": {
+      "kcal": {"type": "int"}
+    }
+  },
+  "recipesPerServingKcal": "≈ {kcal} kcal per serving",
+  "@recipesPerServingKcal": {
+    "placeholders": {
+      "kcal": {"type": "int"}
+    }
+  },
+  "recipesServingsCount": "{count, plural, =1{1 serving} other{{count} servings}}",
+  "@recipesServingsCount": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "recipesPerServingShort": "serving",
+  "recipesCalculationNote": "Calculated from your ingredients and quantities. Preparation and yield can change the values.",
+  "recipesDeleteTitle": "Delete recipe?",
+  "recipesDeleteBody": "This removes the recipe from your personal collection. Diary entries already logged are not affected."
 }
