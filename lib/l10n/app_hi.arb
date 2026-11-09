@@ -1,6 +1,362 @@
 {
   "@@locale": "hi",
-  "appName": "न्यूट्रिवोया",
-  "appTagline": "ऐसा पोषण जो आपके खाने, आपकी संस्कृति और आपकी ज़िंदगी के साथ काम करता है।",
-  "@@comment": "Placeholder Hindi localization. Most strings fall back to English until validated by a native speaker."
+  "appName": "Nutrivoya",
+  "@appName": {
+    "description": "Application display name"
+  },
+  "appTagline": "पोषण जो आपके भोजन, आपकी संस्कृति और आपके जीवन के साथ काम करता है।",
+  "@appTagline": {
+    "description": "Welcome screen tagline"
+  },
+  "commonCancel": "रद्द करें",
+  "commonContinue": "जारी रखें",
+  "commonSave": "सहेजें",
+  "commonSkip": "छोड़ें",
+  "commonBack": "वापस",
+  "commonNext": "आगे",
+  "commonGetStarted": "शुरू करें",
+  "commonLoading": "लोड हो रहा है…",
+  "commonRetry": "फिर से कोशिश करें",
+  "commonError": "कुछ गलत हो गया",
+  "commonClose": "बंद करें",
+  "navDashboard": "आज",
+  "navDiary": "डायरी",
+  "navSearch": "खोजें",
+  "navSettings": "सेटिंग्स",
+  "authLoginTitle": "वापसी पर स्वागत है",
+  "authLoginSubtitle": "अपना पोषण ट्रैक जारी रखने के लिए साइन इन करें।",
+  "authSignupTitle": "अपना खाता बनाएँ",
+  "authSignupSubtitle": "अपनी सांस्कृतिक रूप से समझदार पोषण यात्रा शुरू करें।",
+  "authEmailLabel": "ईमेल",
+  "authPasswordLabel": "पासवर्ड",
+  "authEmailHint": "you@example.com",
+  "authLoginButton": "साइन इन",
+  "authSignupButton": "खाता बनाएँ",
+  "authSwitchToSignup": "खाता नहीं है? साइन अप करें",
+  "authSwitchToLogin": "पहले से खाता है? साइन इन करें",
+  "authForgotPassword": "पासवर्ड भूल गए?",
+  "authErrorInvalidCredentials": "अमान्य ईमेल या पासवर्ड।",
+  "authErrorEmailInUse": "इस ईमेल के लिए पहले से खाता मौजूद है।",
+  "authErrorWeakPassword": "कृपया एक मज़बूत पासवर्ड चुनें।",
+  "authErrorGeneric": "प्रमाणीकरण विफल। कृपया फिर से कोशिश करें।",
+  "onboardingWelcomeTitle": "Nutrivoya में आपका स्वागत है",
+  "onboardingWelcomeBody": "पोषण जो आपके भोजन, आपकी संस्कृति और आपके जीवन के साथ काम करता है।",
+  "onboardingGoalTitle": "आप चाहेंगे कि Nutrivoya किसमें मदद करे?",
+  "onboardingGoalMaintain": "अपना वजन बनाए रखें",
+  "onboardingGoalLose": "वजन घटाएँ",
+  "onboardingGoalGain": "वजन बढ़ाएँ",
+  "onboardingGoalBuildMuscle": "मांसपेशियाँ बनाएँ",
+  "onboardingGoalImprove": "अपना पोषण सुधारें",
+  "onboardingGoalTrack": "सिर्फ खाए गए भोजन को ट्रैक करें",
+  "onboardingProfileTitle": "अपने बारे में बताएँ",
+  "onboardingProfileSubtitle": "हम इसका उपयोग केवल आपकी पोषण आवश्यकताओं का अनुमान लगाने के लिए करते हैं। बाद में बदल सकते हैं।",
+  "onboardingAgeLabel": "आयु",
+  "onboardingHeightLabel": "ऊँचाई (सेमी)",
+  "onboardingWeightLabel": "वजन (किग्रा)",
+  "onboardingSexLabel": "शारीरिक गणना इनपुट",
+  "onboardingSexFemale": "महिला",
+  "onboardingSexMale": "पुरुष",
+  "onboardingSexPreferNotToSay": "बताना नहीं चाहते",
+  "onboardingSexHelp": "केवल ऊर्जा आवश्यकता समीकरणों के लिए उपयोग होता है। यह आपकी लिंग पहचान से अलग है।",
+  "onboardingActivityLabel": "गतिविधि स्तर",
+  "onboardingActivitySedentary": "अल्प सक्रिय",
+  "onboardingActivityLight": "हल्की सक्रियता",
+  "onboardingActivityModerate": "मध्यम सक्रियता",
+  "onboardingActivityActive": "बहुत सक्रिय",
+  "onboardingActivityExtra": "अत्यधिक सक्रिय",
+  "onboardingCuisineTitle": "कौन-से भोजन आपको परिचित लगते हैं?",
+  "onboardingCuisineSubtitle": "वैकल्पिक। खोज में परिचित भोजन को प्राथमिकता देने के लिए। आप छोड़ सकते हैं।",
+  "onboardingLanguageTitle": "अपनी भाषा चुनें",
+  "onboardingLanguageSubtitle": "आप इसे कभी भी सेटिंग्स में बदल सकते हैं।",
+  "onboardingSummaryTitle": "आपका अनुमानित पोषण लक्ष्य",
+  "onboardingSummaryBody": "यह मानक समीकरणों पर आधारित अनुमान है। आपकी वास्तविक आवश्यकताएँ भिन्न हो सकती हैं, और हम समय के साथ आपके वजन के रुझान से इसे परिष्कृत कर सकते हैं।",
+  "onboardingSummaryComingSoon": "व्यक्तिगत कैलोरी और मैक्रो लक्ष्य बाद के चरण में गणना होंगे।",
+  "onboardingSummaryMaintenance": "अनुमानित रखरखाव: {kcal} किलोकलोरी/दिन",
+  "@onboardingSummaryMaintenance": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingSummaryTarget": "सुझाया गया दैनिक लक्ष्य: {kcal} किलोकलोरी",
+  "@onboardingSummaryTarget": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingSummaryMacros": "प्रोटीन {protein} ग्रा · कार्ब्स {carbs} ग्रा · वसा {fat} ग्रा · फाइबर {fibre} ग्रा",
+  "@onboardingSummaryMacros": {
+    "placeholders": {
+      "protein": {
+        "type": "int"
+      },
+      "carbs": {
+        "type": "int"
+      },
+      "fat": {
+        "type": "int"
+      },
+      "fibre": {
+        "type": "int"
+      }
+    }
+  },
+  "dashboardGreetingMorning": "सुप्रभात",
+  "dashboardGreetingAfternoon": "नमस्कार",
+  "dashboardGreetingEvening": "शुभ संध्या",
+  "dashboardToday": "आज",
+  "dashboardCalories": "कैलोरी",
+  "dashboardProtein": "प्रोटीन",
+  "dashboardCarbs": "कार्बोहाइड्रेट",
+  "dashboardFat": "वसा",
+  "dashboardFibre": "फाइबर",
+  "dashboardLogFood": "भोजन जोड़ें",
+  "dashboardEmptyTitle": "अभी कुछ लॉग नहीं है",
+  "dashboardEmptyBody": "अपना दिन ट्रैक करने के लिए कोई भोजन खोजें।",
+  "dashboardTargetsPlaceholder": "ऑनबोर्डिंग के बाद लक्ष्य सेट होंगे।",
+  "dashboardCaloriesOf": "{consumed} / {target} किलोकलोरी",
+  "@dashboardCaloriesOf": {
+    "placeholders": {
+      "consumed": {
+        "type": "int"
+      },
+      "target": {
+        "type": "int"
+      }
+    }
+  },
+  "dashboardCaloriesRemaining": "{kcal} किलोकलोरी शेष",
+  "@dashboardCaloriesRemaining": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "dashboardCaloriesOver": "लक्ष्य से {kcal} किलोकलोरी अधिक",
+  "@dashboardCaloriesOver": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "diaryTitle": "डायरी",
+  "diaryMealBreakfast": "नाश्ता",
+  "diaryMealLunch": "दोपहर का भोजन",
+  "diaryMealDinner": "रात का भोजन",
+  "diaryMealSnacks": "स्नैक्स",
+  "diaryEmpty": "अभी कोई प्रविष्टि नहीं।",
+  "diaryAddToMeal": "भोजन जोड़ें",
+  "searchTitle": "खोजें",
+  "searchHint": "आपने क्या खाया?",
+  "searchEmpty": "रोटी, जोल्लोफ़ राइस, दाल या आम जैसे भोजन खोजें।",
+  "searchNoResults": "कोई मिलान नहीं मिला। कोई अन्य नाम, उपनाम या वर्तनी आज़माएँ।",
+  "searchRecent": "हाल के",
+  "searchFrequent": "बार-बार",
+  "searchFavourites": "पसंदीदा",
+  "searchMyRecipes": "मेरी रेसिपी",
+  "settingsTitle": "सेटिंग्स",
+  "settingsAppearance": "रूप",
+  "settingsTheme": "थीम",
+  "settingsThemeSystem": "सिस्टम",
+  "settingsThemeLight": "लाइट",
+  "settingsThemeDark": "डार्क",
+  "settingsLanguage": "भाषा",
+  "settingsLanguageEn": "English",
+  "settingsLanguageFr": "Français",
+  "settingsLanguageEs": "Español",
+  "settingsLanguageHi": "हिन्दी",
+  "settingsLanguagePa": "ਪੰਜਾਬੀ",
+  "settingsLanguageAr": "العربية",
+  "settingsAccount": "खाता",
+  "settingsSignOut": "साइन आउट",
+  "settingsAbout": "Nutrivoya के बारे में",
+  "settingsAboutBody": "Nutrivoya एक बहुभाषी, सांस्कृतिक रूप से समझदार पोषण और कैलोरी-ट्रैकिंग ऐप है जो लोगों को वास्तव में खाए जाने वाले भोजन को समझने और सुधारने में मदद करता है — बिना यह कहे कि स्वास्थ्य के लिए संस्कृति छोड़नी होगी।",
+  "settingsProfile": "प्रोफ़ाइल",
+  "settingsGoals": "लक्ष्य",
+  "settingsComingSoon": "जल्द आ रहा है",
+  "profileTitle": "प्रोफ़ाइल",
+  "profileGoal": "लक्ष्य",
+  "profileActivity": "गतिविधि स्तर",
+  "profileCuisines": "परिचित व्यंजन",
+  "profileEdit": "प्रोफ़ाइल संपादित करें",
+  "goalsTitle": "पोषण लक्ष्य",
+  "goalsNotSet": "अभी सेट नहीं",
+  "goalsCalorieTarget": "कैलोरी लक्ष्य",
+  "goalsProteinTarget": "प्रोटीन लक्ष्य",
+  "goalsCarbTarget": "कार्बोहाइड्रेट लक्ष्य",
+  "goalsFatTarget": "वसा लक्ष्य",
+  "goalsFibreTarget": "फाइबर लक्ष्य",
+  "goalsBmr": "अनुमानित BMR",
+  "goalsTdee": "अनुमानित रखरखाव (TDEE)",
+  "goalsNeedProfile": "व्यक्तिगत लक्ष्य देखने के लिए ऑनबोर्डिंग पूरा करें।",
+  "goalsEstimateDisclaimer": "गणना की गई ऊर्जा खपत एक अनुमान है। आपकी वास्तविक आवश्यकताएँ भिन्न हो सकती हैं।",
+  "goalsRefineOverTime": "हम समय के साथ आपके वजन के रुझान से इस अनुमान को परिष्कृत कर सकते हैं।",
+  "energyNoteEstimateDisclaimer": "गणना की गई ऊर्जा खपत एक अनुमान है। आपकी वास्तविक आवश्यकताएँ भिन्न हो सकती हैं।",
+  "energyNotePhysiologicalUnspecified": "शारीरिक गणना इनपुट के बिना हमने मानक समीकरणों का औसत लिया। विश्वास कम है।",
+  "energyNoteAgeOutsideAdultRange": "ऊर्जा समीकरण सामान्य वयस्क आयु से बाहर कम विश्वसनीय होते हैं। पेशेवर सलाह पर विचार करें।",
+  "energyNoteLoseWhileLowWeight": "आपकी प्रोफ़ाइल कम शरीर वजन का संकेत देती है। तीव्र वजन घटाना अनुशंसित नहीं है — ज़रूरत हो तो योग्य सहायता लें।",
+  "energyNoteDeficitCapped": "हमने कैलोरी घाटे को सुरक्षित दर तक सीमित किया। कठोर डाइटिंग समर्थित नहीं है।",
+  "energyNoteFloorApplied": "सुरक्षा के लिए आपका लक्ष्य न्यूनतम ऊर्जा सेवन तक बढ़ाया गया।",
+  "energyNoteTrackOnly": "आपने केवल ट्रैक करना चुना। नीचे दिए संख्याएँ संदर्भ के लिए रखरखाव अनुमान हैं।",
+  "confidenceLabel": "अनुमान का विश्वास",
+  "confidenceHigh": "उच्च",
+  "confidenceHighNote": "आधिकारिक खाद्य संरचना डेटा",
+  "confidenceMedium": "मध्यम",
+  "confidenceMediumNote": "मानकीकृत रेसिपी से गणना",
+  "confidenceEstimated": "अनुमानित",
+  "confidenceEstimatedNote": "सामान्य सामग्री और हिस्से के आकार पर आधारित",
+  "confidenceUnknown": "अज्ञात",
+  "sourceLabel": "स्रोत",
+  "sourceAuthoritative": "आधिकारिक खाद्य संरचना डेटासेट",
+  "sourcePackaged": "पैकेज्ड खाद्य डेटाबेस",
+  "sourceNutrivoyaCurated": "Nutrivoya क्यूरेटेड डेटासेट",
+  "sourceRecipeEstimated": "रेसिपी-आधारित अनुमान",
+  "sourceUserSubmitted": "उपयोगकर्ता द्वारा प्रस्तुत",
+  "portionLabel": "हिस्सा",
+  "portionSmall": "छोटा",
+  "portionMedium": "मध्यम",
+  "portionLarge": "बड़ा",
+  "portionGrams": "ग्राम",
+  "portionQuantity": "मात्रा",
+  "portionCustom": "कस्टम ग्राम",
+  "nutrientEnergyKcal": "कैलोरी",
+  "nutrientProteinG": "प्रोटीन",
+  "nutrientCarbohydrateG": "कार्बोहाइड्रेट",
+  "nutrientFatG": "वसा",
+  "nutrientFibreG": "फाइबर",
+  "nutrientSaturatedFatG": "संतृप्त वसा",
+  "nutrientSugarG": "चीनी",
+  "nutrientSodiumMg": "सोडियम",
+  "nutrientIronMg": "आयरन",
+  "nutrientCalciumMg": "कैल्शियम",
+  "nutrientPotassiumMg": "पोटैशियम",
+  "nutrientMagnesiumMg": "मैग्नीशियम",
+  "nutrientZincMg": "ज़िंक",
+  "nutrientVitaminAUg": "विटामिन A",
+  "nutrientVitaminCMg": "विटामिन C",
+  "nutrientVitaminDUg": "विटामिन D",
+  "nutrientVitaminB12Ug": "विटामिन B12",
+  "nutrientFolateUg": "फोलेट",
+  "foodDetailsTitle": "भोजन विवरण",
+  "foodDetailsAddToMeal": "भोजन में जोड़ें",
+  "foodDetailsPerPortion": "प्रति हिस्सा",
+  "foodDetailsPer100g": "प्रति 100 ग्रा",
+  "foodDetailsPreparationNote": "तैयारी और हिस्से का आकार मान बदल सकता है।",
+  "foodDetailsNoData": "पोषण डेटा उपलब्ध नहीं",
+  "foodDetailsApprox": "≈",
+  "foodDetailsLoggingSoon": "भोजन लॉगिंग अगले चरण में आएगी।",
+  "foodDetailsMacros": "मैक्रोज़",
+  "foodDetailsMicronutrients": "माइक्रोन्यूट्रिएंट्स",
+  "foodDetailsCuisine": "व्यंजन",
+  "foodDetailsRegion": "क्षेत्र",
+  "foodDetailsAliases": "इसे यह भी कहते हैं",
+  "searchResultsCount": "{count, plural, =0{कोई परिणाम नहीं} =1{1 परिणाम} other{{count} परिणाम}}",
+  "@searchResultsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "searchTryExample": "आज़माएँ: रोटी, जोल्लोफ़ राइस, दाल, आम",
+  "diaryAddToMealTitle": "किस भोजन में जोड़ें?",
+  "diaryEntryAdded": "{food} को {meal} में जोड़ा गया",
+  "@diaryEntryAdded": {
+    "placeholders": {
+      "food": {
+        "type": "String"
+      },
+      "meal": {
+        "type": "String"
+      }
+    }
+  },
+  "diaryEntryDeleted": "प्रविष्टि हटाई गई",
+  "diaryEntryUpdated": "प्रविष्टि अपडेट की गई",
+  "diaryEditEntry": "प्रविष्टि संपादित करें",
+  "diaryDeleteEntry": "प्रविष्टि हटाएँ",
+  "diaryConfirmDelete": "इस प्रविष्टि को डायरी से हटाएँ?",
+  "diaryConfirmDeleteYes": "हटाएँ",
+  "diaryGramsLabel": "ग्राम",
+  "diaryQuantityLabel": "मात्रा",
+  "diaryNoEntriesForMeal": "अभी कोई प्रविष्टि नहीं",
+  "diaryKcalShort": "किलोकलोरी",
+  "diarySelectDate": "तारीख चुनें",
+  "diaryToday": "आज",
+  "diaryYesterday": "कल",
+  "diaryEntryCalories": "{kcal} किलोकलोरी",
+  "@diaryEntryCalories": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "recipesTitle": "मेरी रेसिपी",
+  "recipesCreate": "रेसिपी बनाएँ",
+  "recipesEdit": "रेसिपी संपादित करें",
+  "recipesEmptyTitle": "अभी कोई निजी रेसिपी नहीं",
+  "recipesEmptyBody": "माँ का जोल्लोफ़ या दादी की दाल जैसी पारिवारिक रेसिपी सहेजें ताकि आप वही संस्करण लॉग कर सकें जो आप वास्तव में बनाते हैं।",
+  "recipesNameLabel": "रेसिपी का नाम",
+  "recipesServingsLabel": "सर्विंग्स",
+  "recipesYieldLabel": "कुल मात्रा (ग्रा)",
+  "recipesYieldHint": "वैकल्पिक — डिफ़ॉल्ट सामग्री का योग",
+  "recipesIngredients": "सामग्री",
+  "recipesIngredientsEmpty": "पोषण गणना के लिए सामग्री जोड़ें।",
+  "recipesAddIngredient": "सामग्री जोड़ें",
+  "recipesNotesLabel": "नोट्स",
+  "recipesCalculatedNutrition": "गणना किया गया पोषण",
+  "recipesWholeRecipeKcal": "पूरी रेसिपी: ≈ {kcal} किलोकलोरी",
+  "@recipesWholeRecipeKcal": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "recipesPerServingKcal": "≈ {kcal} किलोकलोरी प्रति सर्विंग",
+  "@recipesPerServingKcal": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "recipesServingsCount": "{count, plural, =1{1 सर्विंग} other{{count} सर्विंग्स}}",
+  "@recipesServingsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "recipesPerServingShort": "सर्विंग",
+  "recipesCalculationNote": "आपकी सामग्री और मात्राओं से गणना। तैयारी और उपज मान बदल सकती है।",
+  "recipesDeleteTitle": "रेसिपी हटाएँ?",
+  "recipesDeleteBody": "यह रेसिपी आपके निजी संग्रह से हटा देगा। पहले से लॉग डायरी प्रविष्टियाँ प्रभावित नहीं होंगी।",
+  "@@comment": "Hindi UI strings for Nutrivoya MVP. Native review welcome for idiomatic polish.",
+  "barcodeTitle": "बारकोड स्कैन करें",
+  "barcodeHint": "कैमरा पैकेज्ड भोजन के बारकोड पर लगाएँ, या नंबर मैन्युअल दर्ज करें।",
+  "barcodeManualLabel": "बारकोड नंबर",
+  "barcodeManualHint": "जैसे 3017620422003",
+  "barcodeLookupButton": "उत्पाद खोजें",
+  "barcodeCameraUnavailable": "इस डिवाइस पर कैमरा उपलब्ध नहीं। बारकोड मैन्युअल दर्ज करें।",
+  "barcodeNotFoundTitle": "उत्पाद नहीं मिला",
+  "barcodeNotFoundBody": "बारकोड {barcode} से कोई पैकेज्ड भोजन नहीं मिला। फिर कोशिश करें या अन्य तरीके से जोड़ें।",
+  "@barcodeNotFoundBody": {
+    "placeholders": {
+      "barcode": {
+        "type": "String"
+      }
+    }
+  },
+  "barcodeInvalid": "यह मान्य बारकोड नहीं लगता। 8–14 अंक उपयोग करें।",
+  "barcodeNetworkError": "पैकेज्ड-भोजन डेटाबेस तक नहीं पहुँच सके। कनेक्शन जाँचें और फिर कोशिश करें।",
+  "barcodeTryAgain": "फिर कोशिश करें",
+  "barcodeCrowdsourcedNote": "पैकेज्ड-भोजन डेटा Open Food Facts से आता है और अधूरा या समुदाय-योगदानित हो सकता है। लॉग करने से पहले हिस्सा आकार सत्यापित करें।"
 }

@@ -11,8 +11,10 @@ Western packaged foods, and to evaluate food by its actual nutritional
 composition, preparation, portion and dietary context — never by cultural
 stereotype.
 
-This repository currently contains **Milestones 1–6** on `main`, with
-Milestone 7 (multilingual) and Milestone 8 (barcode) landing via PRs.
+This repository currently contains **Milestones 1–8**:
+Foundation, Food Data Core, Food Logging, Calorie & Macro Targets,
+Cultural Food Intelligence (seed expansion), Recipe Builder,
+Multilingual Product, and Barcode Products.
 
 ## Status — Milestone 8 (Barcode Products)
 
@@ -35,6 +37,30 @@ details screen, and clear crowdsourced-data caveats.
 
 Crowdsourced OFF entries are never treated as authoritative. Users must
 verify serving size before logging.
+
+## Status — Milestone 7 (Multilingual Product)
+
+Milestone 7 fills validated UI translations for the MVP language set,
+expands multilingual / script food aliases, and hardens RTL behaviour
+for Arabic.
+
+### What is included in Milestone 7
+
+- Complete ARB translations for English, French, Spanish, Hindi,
+  Punjabi (Gurmukhi) and Arabic (no longer English fallback stubs)
+- Expanded food-name aliases across scripts (Devanagari, Gurmukhi,
+  Arabic) and Romance-language translations
+- `FoodName.normalize` keeps non-Latin scripts searchable and folds
+  Latin diacritics / combining marks
+- RTL-safe layout tweaks (`AlignmentDirectional`, `TextAlign.end`,
+  `EdgeInsetsDirectional`)
+- Widget tests asserting each locale loads real strings and Arabic
+  resolves to `TextDirection.rtl`
+- Search tests for Devanagari, Punjabi, Arabic and French aliases
+
+Translations are drafted for product use; native-speaker review remains
+welcome for idiomatic polish. Do not treat unreviewed machine tone as
+final brand voice.
 
 ## Status — Milestone 6 (Recipe Builder)
 
@@ -310,9 +336,9 @@ Localization uses Flutter's official `gen-l10n` tooling.
   to `AppConfig.supportedLocaleCodes`, add the asset entry in `pubspec.yaml`,
   and run `flutter gen-l10n`.
 
-> Placeholder translations (fr, es, hi, pa, ar) are **not** considered
-> validated. Nutrivoya does not claim translation quality until a native
-> speaker has reviewed the strings. Missing keys fall back to English.
+> MVP locales (en, fr, es, hi, pa, ar) ship with complete ARB coverage.
+> Native-speaker review remains welcome for idiomatic polish; Nutrivoya
+> does not claim brand-perfect phrasing in every language until reviewed.
 
 ## Architecture notes
 

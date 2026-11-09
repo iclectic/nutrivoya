@@ -16,259 +16,261 @@ class AppLocalizationsFr extends AppLocalizations {
       'Une nutrition qui s\'adapte à votre alimentation, votre culture et votre vie.';
 
   @override
-  String get commonCancel => 'Cancel';
+  String get commonCancel => 'Annuler';
 
   @override
-  String get commonContinue => 'Continue';
+  String get commonContinue => 'Continuer';
 
   @override
-  String get commonSave => 'Save';
+  String get commonSave => 'Enregistrer';
 
   @override
-  String get commonSkip => 'Skip';
+  String get commonSkip => 'Passer';
 
   @override
-  String get commonBack => 'Back';
+  String get commonBack => 'Retour';
 
   @override
-  String get commonNext => 'Next';
+  String get commonNext => 'Suivant';
 
   @override
-  String get commonGetStarted => 'Get started';
+  String get commonGetStarted => 'Commencer';
 
   @override
-  String get commonLoading => 'Loading…';
+  String get commonLoading => 'Chargement…';
 
   @override
-  String get commonRetry => 'Retry';
+  String get commonRetry => 'Réessayer';
 
   @override
-  String get commonError => 'Something went wrong';
+  String get commonError => 'Une erreur s\'est produite';
 
   @override
-  String get commonClose => 'Close';
+  String get commonClose => 'Fermer';
 
   @override
-  String get navDashboard => 'Today';
+  String get navDashboard => 'Aujourd\'hui';
 
   @override
-  String get navDiary => 'Diary';
+  String get navDiary => 'Journal';
 
   @override
-  String get navSearch => 'Search';
+  String get navSearch => 'Recherche';
 
   @override
-  String get navSettings => 'Settings';
+  String get navSettings => 'Réglages';
 
   @override
-  String get authLoginTitle => 'Welcome back';
+  String get authLoginTitle => 'Bon retour';
 
   @override
   String get authLoginSubtitle =>
-      'Sign in to continue tracking your nutrition.';
+      'Connectez-vous pour continuer à suivre votre nutrition.';
 
   @override
-  String get authSignupTitle => 'Create your account';
+  String get authSignupTitle => 'Créer votre compte';
 
   @override
   String get authSignupSubtitle =>
-      'Start your culturally intelligent nutrition journey.';
+      'Commencez votre parcours nutritionnel culturellement intelligent.';
 
   @override
-  String get authEmailLabel => 'Email';
+  String get authEmailLabel => 'E-mail';
 
   @override
-  String get authPasswordLabel => 'Password';
+  String get authPasswordLabel => 'Mot de passe';
 
   @override
-  String get authEmailHint => 'you@example.com';
+  String get authEmailHint => 'vous@exemple.com';
 
   @override
-  String get authLoginButton => 'Sign in';
+  String get authLoginButton => 'Se connecter';
 
   @override
-  String get authSignupButton => 'Create account';
+  String get authSignupButton => 'Créer un compte';
 
   @override
-  String get authSwitchToSignup => 'Don\'t have an account? Sign up';
+  String get authSwitchToSignup => 'Pas encore de compte ? S\'inscrire';
 
   @override
-  String get authSwitchToLogin => 'Already have an account? Sign in';
+  String get authSwitchToLogin => 'Déjà un compte ? Se connecter';
 
   @override
-  String get authForgotPassword => 'Forgot password?';
+  String get authForgotPassword => 'Mot de passe oublié ?';
 
   @override
-  String get authErrorInvalidCredentials => 'Invalid email or password.';
+  String get authErrorInvalidCredentials => 'E-mail ou mot de passe invalide.';
 
   @override
-  String get authErrorEmailInUse => 'An account already exists for this email.';
+  String get authErrorEmailInUse => 'Un compte existe déjà pour cet e-mail.';
 
   @override
-  String get authErrorWeakPassword => 'Please choose a stronger password.';
+  String get authErrorWeakPassword =>
+      'Veuillez choisir un mot de passe plus fort.';
 
   @override
-  String get authErrorGeneric => 'Authentication failed. Please try again.';
+  String get authErrorGeneric =>
+      'Échec de l\'authentification. Veuillez réessayer.';
 
   @override
-  String get onboardingWelcomeTitle => 'Welcome to Nutrivoya';
+  String get onboardingWelcomeTitle => 'Bienvenue sur Nutrivoya';
 
   @override
   String get onboardingWelcomeBody =>
-      'Nutrition that works with your food, your culture and your life.';
+      'Une nutrition qui s\'adapte à votre alimentation, votre culture et votre vie.';
 
   @override
   String get onboardingGoalTitle =>
-      'What would you like Nutrivoya to help with?';
+      'En quoi souhaitez-vous que Nutrivoya vous aide ?';
 
   @override
-  String get onboardingGoalMaintain => 'Maintain my weight';
+  String get onboardingGoalMaintain => 'Maintenir mon poids';
 
   @override
-  String get onboardingGoalLose => 'Lose weight';
+  String get onboardingGoalLose => 'Perdre du poids';
 
   @override
-  String get onboardingGoalGain => 'Gain weight';
+  String get onboardingGoalGain => 'Prendre du poids';
 
   @override
-  String get onboardingGoalBuildMuscle => 'Build muscle';
+  String get onboardingGoalBuildMuscle => 'Développer mes muscles';
 
   @override
-  String get onboardingGoalImprove => 'Improve my nutrition';
+  String get onboardingGoalImprove => 'Améliorer ma nutrition';
 
   @override
-  String get onboardingGoalTrack => 'Just track what I eat';
+  String get onboardingGoalTrack => 'Suivre simplement ce que je mange';
 
   @override
-  String get onboardingProfileTitle => 'Tell us about you';
+  String get onboardingProfileTitle => 'Parlez-nous de vous';
 
   @override
   String get onboardingProfileSubtitle =>
-      'We use this only to estimate your nutrition needs. You can change it later.';
+      'Nous utilisons ces informations uniquement pour estimer vos besoins nutritionnels. Vous pourrez les modifier plus tard.';
 
   @override
-  String get onboardingAgeLabel => 'Age';
+  String get onboardingAgeLabel => 'Âge';
 
   @override
-  String get onboardingHeightLabel => 'Height (cm)';
+  String get onboardingHeightLabel => 'Taille (cm)';
 
   @override
-  String get onboardingWeightLabel => 'Weight (kg)';
+  String get onboardingWeightLabel => 'Poids (kg)';
 
   @override
-  String get onboardingSexLabel => 'Physiological calculation input';
+  String get onboardingSexLabel => 'Paramètre physiologique de calcul';
 
   @override
-  String get onboardingSexFemale => 'Female';
+  String get onboardingSexFemale => 'Féminin';
 
   @override
-  String get onboardingSexMale => 'Male';
+  String get onboardingSexMale => 'Masculin';
 
   @override
-  String get onboardingSexPreferNotToSay => 'Prefer not to say';
+  String get onboardingSexPreferNotToSay => 'Préférer ne pas dire';
 
   @override
   String get onboardingSexHelp =>
-      'Used only for energy-requirement equations. This is separate from your gender identity.';
+      'Utilisé uniquement pour les équations de besoins énergétiques. Ceci est distinct de votre identité de genre.';
 
   @override
-  String get onboardingActivityLabel => 'Activity level';
+  String get onboardingActivityLabel => 'Niveau d\'activité';
 
   @override
-  String get onboardingActivitySedentary => 'Sedentary';
+  String get onboardingActivitySedentary => 'Sédentaire';
 
   @override
-  String get onboardingActivityLight => 'Lightly active';
+  String get onboardingActivityLight => 'Légèrement actif';
 
   @override
-  String get onboardingActivityModerate => 'Moderately active';
+  String get onboardingActivityModerate => 'Modérément actif';
 
   @override
-  String get onboardingActivityActive => 'Very active';
+  String get onboardingActivityActive => 'Très actif';
 
   @override
-  String get onboardingActivityExtra => 'Extra active';
+  String get onboardingActivityExtra => 'Extrêmement actif';
 
   @override
-  String get onboardingCuisineTitle => 'What foods feel familiar to you?';
+  String get onboardingCuisineTitle => 'Quels aliments vous sont familiers ?';
 
   @override
   String get onboardingCuisineSubtitle =>
-      'Optional. We use this to prioritize familiar foods in search. You can skip this.';
+      'Facultatif. Nous utilisons cela pour prioriser les aliments familiers dans la recherche. Vous pouvez passer.';
 
   @override
-  String get onboardingLanguageTitle => 'Choose your language';
+  String get onboardingLanguageTitle => 'Choisissez votre langue';
 
   @override
   String get onboardingLanguageSubtitle =>
-      'You can change this anytime in settings.';
+      'Vous pouvez changer cela à tout moment dans les réglages.';
 
   @override
-  String get onboardingSummaryTitle => 'Your estimated nutrition target';
+  String get onboardingSummaryTitle => 'Votre objectif nutritionnel estimé';
 
   @override
   String get onboardingSummaryBody =>
-      'This is an estimate based on standard equations. Your actual needs may vary, and we can refine this over time using your weight trend.';
+      'Ceci est une estimation basée sur des équations standard. Vos besoins réels peuvent varier, et nous pourrons affiner cette estimation au fil du temps grâce à votre tendance de poids.';
 
   @override
   String get onboardingSummaryComingSoon =>
-      'Personalized calorie and macro targets will be calculated in a later step.';
+      'Les objectifs caloriques et de macronutriments personnalisés seront calculés à une étape ultérieure.';
 
   @override
   String onboardingSummaryMaintenance(int kcal) {
-    return 'Estimated maintenance: $kcal kcal/day';
+    return 'Entretien estimé : $kcal kcal/jour';
   }
 
   @override
   String onboardingSummaryTarget(int kcal) {
-    return 'Suggested daily target: $kcal kcal';
+    return 'Objectif quotidien suggéré : $kcal kcal';
   }
 
   @override
   String onboardingSummaryMacros(int protein, int carbs, int fat, int fibre) {
-    return 'Protein $protein g · Carbs $carbs g · Fat $fat g · Fibre $fibre g';
+    return 'Protéines $protein g · Glucides $carbs g · Lipides $fat g · Fibres $fibre g';
   }
 
   @override
-  String get dashboardGreetingMorning => 'Good morning';
+  String get dashboardGreetingMorning => 'Bonjour';
 
   @override
-  String get dashboardGreetingAfternoon => 'Good afternoon';
+  String get dashboardGreetingAfternoon => 'Bon après-midi';
 
   @override
-  String get dashboardGreetingEvening => 'Good evening';
+  String get dashboardGreetingEvening => 'Bonsoir';
 
   @override
-  String get dashboardToday => 'Today';
+  String get dashboardToday => 'Aujourd\'hui';
 
   @override
   String get dashboardCalories => 'Calories';
 
   @override
-  String get dashboardProtein => 'Protein';
+  String get dashboardProtein => 'Protéines';
 
   @override
-  String get dashboardCarbs => 'Carbohydrates';
+  String get dashboardCarbs => 'Glucides';
 
   @override
-  String get dashboardFat => 'Fat';
+  String get dashboardFat => 'Lipides';
 
   @override
-  String get dashboardFibre => 'Fibre';
+  String get dashboardFibre => 'Fibres';
 
   @override
-  String get dashboardLogFood => 'Log food';
+  String get dashboardLogFood => 'Enregistrer un aliment';
 
   @override
-  String get dashboardEmptyTitle => 'Nothing logged yet';
+  String get dashboardEmptyTitle => 'Rien d\'enregistré pour l\'instant';
 
   @override
   String get dashboardEmptyBody =>
-      'Search for a food to start tracking your day.';
+      'Recherchez un aliment pour commencer à suivre votre journée.';
 
   @override
   String get dashboardTargetsPlaceholder =>
-      'Targets will be set up after onboarding.';
+      'Les objectifs seront définis après l\'onboarding.';
 
   @override
   String dashboardCaloriesOf(int consumed, int target) {
@@ -277,81 +279,81 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String dashboardCaloriesRemaining(int kcal) {
-    return '$kcal kcal remaining';
+    return '$kcal kcal restantes';
   }
 
   @override
   String dashboardCaloriesOver(int kcal) {
-    return '$kcal kcal over target';
+    return '$kcal kcal au-dessus de l\'objectif';
   }
 
   @override
-  String get diaryTitle => 'Diary';
+  String get diaryTitle => 'Journal';
 
   @override
-  String get diaryMealBreakfast => 'Breakfast';
+  String get diaryMealBreakfast => 'Petit-déjeuner';
 
   @override
-  String get diaryMealLunch => 'Lunch';
+  String get diaryMealLunch => 'Déjeuner';
 
   @override
-  String get diaryMealDinner => 'Dinner';
+  String get diaryMealDinner => 'Dîner';
 
   @override
-  String get diaryMealSnacks => 'Snacks';
+  String get diaryMealSnacks => 'Collations';
 
   @override
-  String get diaryEmpty => 'No entries yet.';
+  String get diaryEmpty => 'Aucune entrée pour l\'instant.';
 
   @override
-  String get diaryAddToMeal => 'Add food';
+  String get diaryAddToMeal => 'Ajouter un aliment';
 
   @override
-  String get searchTitle => 'Search';
+  String get searchTitle => 'Recherche';
 
   @override
-  String get searchHint => 'What did you eat?';
+  String get searchHint => 'Qu\'avez-vous mangé ?';
 
   @override
   String get searchEmpty =>
-      'Search for foods like roti, jollof rice, dal or mango.';
+      'Recherchez des aliments comme roti, riz jollof, dal ou mangue.';
 
   @override
   String get searchNoResults =>
-      'No matching foods found. Try another name, alias or spelling.';
+      'Aucun aliment correspondant. Essayez un autre nom, alias ou orthographe.';
 
   @override
-  String get searchRecent => 'Recent';
+  String get searchRecent => 'Récents';
 
   @override
-  String get searchFrequent => 'Frequent';
+  String get searchFrequent => 'Fréquents';
 
   @override
-  String get searchFavourites => 'Favourites';
+  String get searchFavourites => 'Favoris';
 
   @override
-  String get searchMyRecipes => 'My recipes';
+  String get searchMyRecipes => 'Mes recettes';
 
   @override
-  String get settingsTitle => 'Settings';
+  String get settingsTitle => 'Réglages';
 
   @override
-  String get settingsAppearance => 'Appearance';
+  String get settingsAppearance => 'Apparence';
 
   @override
-  String get settingsTheme => 'Theme';
+  String get settingsTheme => 'Thème';
 
   @override
-  String get settingsThemeSystem => 'System';
+  String get settingsThemeSystem => 'Système';
 
   @override
-  String get settingsThemeLight => 'Light';
+  String get settingsThemeLight => 'Clair';
 
   @override
-  String get settingsThemeDark => 'Dark';
+  String get settingsThemeDark => 'Sombre';
 
   @override
-  String get settingsLanguage => 'Language';
+  String get settingsLanguage => 'Langue';
 
   @override
   String get settingsLanguageEn => 'English';
@@ -372,199 +374,202 @@ class AppLocalizationsFr extends AppLocalizations {
   String get settingsLanguageAr => 'العربية';
 
   @override
-  String get settingsAccount => 'Account';
+  String get settingsAccount => 'Compte';
 
   @override
-  String get settingsSignOut => 'Sign out';
+  String get settingsSignOut => 'Se déconnecter';
 
   @override
-  String get settingsAbout => 'About Nutrivoya';
+  String get settingsAbout => 'À propos de Nutrivoya';
 
   @override
   String get settingsAboutBody =>
-      'Nutrivoya is a multilingual, culturally intelligent nutrition and calorie-tracking app that helps people understand and improve the food they actually eat — without telling them that health requires abandoning their culture.';
+      'Nutrivoya est une application multilingue et culturellement intelligente de suivi nutritionnel et calorique qui aide les gens à comprendre et améliorer les aliments qu\'ils mangent réellement — sans leur dire que la santé exige d\'abandonner leur culture.';
 
   @override
-  String get settingsProfile => 'Profile';
+  String get settingsProfile => 'Profil';
 
   @override
-  String get settingsGoals => 'Goals';
+  String get settingsGoals => 'Objectifs';
 
   @override
-  String get settingsComingSoon => 'Coming soon';
+  String get settingsComingSoon => 'Bientôt disponible';
 
   @override
-  String get profileTitle => 'Profile';
+  String get profileTitle => 'Profil';
 
   @override
-  String get profileGoal => 'Goal';
+  String get profileGoal => 'Objectif';
 
   @override
-  String get profileActivity => 'Activity level';
+  String get profileActivity => 'Niveau d\'activité';
 
   @override
-  String get profileCuisines => 'Familiar cuisines';
+  String get profileCuisines => 'Cuisines familières';
 
   @override
-  String get profileEdit => 'Edit profile';
+  String get profileEdit => 'Modifier le profil';
 
   @override
-  String get goalsTitle => 'Nutrition goals';
+  String get goalsTitle => 'Objectifs nutritionnels';
 
   @override
-  String get goalsNotSet => 'Not set yet';
+  String get goalsNotSet => 'Pas encore défini';
 
   @override
-  String get goalsCalorieTarget => 'Calorie target';
+  String get goalsCalorieTarget => 'Objectif calorique';
 
   @override
-  String get goalsProteinTarget => 'Protein target';
+  String get goalsProteinTarget => 'Objectif protéines';
 
   @override
-  String get goalsCarbTarget => 'Carbohydrate target';
+  String get goalsCarbTarget => 'Objectif glucides';
 
   @override
-  String get goalsFatTarget => 'Fat target';
+  String get goalsFatTarget => 'Objectif lipides';
 
   @override
-  String get goalsFibreTarget => 'Fibre target';
+  String get goalsFibreTarget => 'Objectif fibres';
 
   @override
-  String get goalsBmr => 'Estimated BMR';
+  String get goalsBmr => 'BMR estimé';
 
   @override
-  String get goalsTdee => 'Estimated maintenance (TDEE)';
+  String get goalsTdee => 'Entretien estimé (TDEE)';
 
   @override
   String get goalsNeedProfile =>
-      'Complete onboarding to see personalized targets.';
+      'Terminez l\'onboarding pour voir des objectifs personnalisés.';
 
   @override
   String get goalsEstimateDisclaimer =>
-      'Calculated expenditure is an estimate. Your actual needs may vary.';
+      'La dépense calculée est une estimation. Vos besoins réels peuvent varier.';
 
   @override
   String get goalsRefineOverTime =>
-      'We can refine this estimate over time using your weight trend.';
+      'Nous pourrons affiner cette estimation au fil du temps grâce à votre tendance de poids.';
 
   @override
   String get energyNoteEstimateDisclaimer =>
-      'Calculated expenditure is an estimate. Your actual needs may vary.';
+      'La dépense calculée est une estimation. Vos besoins réels peuvent varier.';
 
   @override
   String get energyNotePhysiologicalUnspecified =>
-      'Without a physiological calculation input, we averaged standard equations. Confidence is lower.';
+      'Sans paramètre physiologique, nous avons moyenné les équations standard. La confiance est plus faible.';
 
   @override
   String get energyNoteAgeOutsideAdultRange =>
-      'Energy equations are less reliable outside typical adult ages. Consider professional guidance.';
+      'Les équations énergétiques sont moins fiables hors des âges adultes typiques. Envisagez un accompagnement professionnel.';
 
   @override
   String get energyNoteLoseWhileLowWeight =>
-      'Your profile suggests a low body weight. Aggressive weight loss is not recommended — please seek qualified support if needed.';
+      'Votre profil suggère un poids corporel bas. Une perte de poids agressive n\'est pas recommandée — cherchez un soutien qualifié si besoin.';
 
   @override
   String get energyNoteDeficitCapped =>
-      'We limited the calorie deficit to a safer rate. Crash dieting is not supported.';
+      'Nous avons limité le déficit calorique à un rythme plus sûr. Les régimes drastiques ne sont pas pris en charge.';
 
   @override
   String get energyNoteFloorApplied =>
-      'Your target was raised to a minimum energy intake for safety.';
+      'Votre objectif a été relevé à un apport énergétique minimum pour la sécurité.';
 
   @override
   String get energyNoteTrackOnly =>
-      'You chose to track food only. The numbers below are maintenance estimates for reference.';
+      'Vous avez choisi de suivre uniquement. Les chiffres ci-dessous sont des estimations d\'entretien à titre indicatif.';
 
   @override
-  String get confidenceLabel => 'Estimate confidence';
+  String get confidenceLabel => 'Confiance de l\'estimation';
 
   @override
-  String get confidenceHigh => 'High';
+  String get confidenceHigh => 'Élevée';
 
   @override
-  String get confidenceHighNote => 'Official food-composition data';
+  String get confidenceHighNote =>
+      'Données officielles de composition des aliments';
 
   @override
-  String get confidenceMedium => 'Medium';
+  String get confidenceMedium => 'Moyenne';
 
   @override
-  String get confidenceMediumNote => 'Calculated from a standardized recipe';
+  String get confidenceMediumNote =>
+      'Calculée à partir d\'une recette standardisée';
 
   @override
-  String get confidenceEstimated => 'Estimated';
+  String get confidenceEstimated => 'Estimée';
 
   @override
   String get confidenceEstimatedNote =>
-      'Based on common ingredients and portion size';
+      'Basée sur des ingrédients et une portion courants';
 
   @override
-  String get confidenceUnknown => 'Unknown';
+  String get confidenceUnknown => 'Inconnue';
 
   @override
   String get sourceLabel => 'Source';
 
   @override
-  String get sourceAuthoritative => 'Authoritative food-composition dataset';
+  String get sourceAuthoritative =>
+      'Base de composition alimentaire officielle';
 
   @override
-  String get sourcePackaged => 'Packaged-food database';
+  String get sourcePackaged => 'Base d\'aliments emballés';
 
   @override
-  String get sourceNutrivoyaCurated => 'Nutrivoya curated dataset';
+  String get sourceNutrivoyaCurated => 'Jeu de données Nutrivoya';
 
   @override
-  String get sourceRecipeEstimated => 'Recipe-based estimate';
+  String get sourceRecipeEstimated => 'Estimation basée sur une recette';
 
   @override
-  String get sourceUserSubmitted => 'User-submitted';
+  String get sourceUserSubmitted => 'Soumis par un utilisateur';
 
   @override
   String get portionLabel => 'Portion';
 
   @override
-  String get portionSmall => 'Small';
+  String get portionSmall => 'Petite';
 
   @override
-  String get portionMedium => 'Medium';
+  String get portionMedium => 'Moyenne';
 
   @override
-  String get portionLarge => 'Large';
+  String get portionLarge => 'Grande';
 
   @override
-  String get portionGrams => 'Grams';
+  String get portionGrams => 'Grammes';
 
   @override
-  String get portionQuantity => 'Quantity';
+  String get portionQuantity => 'Quantité';
 
   @override
-  String get portionCustom => 'Custom grams';
+  String get portionCustom => 'Grammes personnalisés';
 
   @override
   String get nutrientEnergyKcal => 'Calories';
 
   @override
-  String get nutrientProteinG => 'Protein';
+  String get nutrientProteinG => 'Protéines';
 
   @override
-  String get nutrientCarbohydrateG => 'Carbohydrates';
+  String get nutrientCarbohydrateG => 'Glucides';
 
   @override
-  String get nutrientFatG => 'Fat';
+  String get nutrientFatG => 'Lipides';
 
   @override
-  String get nutrientFibreG => 'Fibre';
+  String get nutrientFibreG => 'Fibres';
 
   @override
-  String get nutrientSaturatedFatG => 'Saturated fat';
+  String get nutrientSaturatedFatG => 'Graisses saturées';
 
   @override
-  String get nutrientSugarG => 'Sugar';
+  String get nutrientSugarG => 'Sucres';
 
   @override
   String get nutrientSodiumMg => 'Sodium';
 
   @override
-  String get nutrientIronMg => 'Iron';
+  String get nutrientIronMg => 'Fer';
 
   @override
   String get nutrientCalciumMg => 'Calcium';
@@ -573,128 +578,128 @@ class AppLocalizationsFr extends AppLocalizations {
   String get nutrientPotassiumMg => 'Potassium';
 
   @override
-  String get nutrientMagnesiumMg => 'Magnesium';
+  String get nutrientMagnesiumMg => 'Magnésium';
 
   @override
   String get nutrientZincMg => 'Zinc';
 
   @override
-  String get nutrientVitaminAUg => 'Vitamin A';
+  String get nutrientVitaminAUg => 'Vitamine A';
 
   @override
-  String get nutrientVitaminCMg => 'Vitamin C';
+  String get nutrientVitaminCMg => 'Vitamine C';
 
   @override
-  String get nutrientVitaminDUg => 'Vitamin D';
+  String get nutrientVitaminDUg => 'Vitamine D';
 
   @override
-  String get nutrientVitaminB12Ug => 'Vitamin B12';
+  String get nutrientVitaminB12Ug => 'Vitamine B12';
 
   @override
   String get nutrientFolateUg => 'Folate';
 
   @override
-  String get foodDetailsTitle => 'Food details';
+  String get foodDetailsTitle => 'Détails de l\'aliment';
 
   @override
-  String get foodDetailsAddToMeal => 'Add to meal';
+  String get foodDetailsAddToMeal => 'Ajouter au repas';
 
   @override
-  String get foodDetailsPerPortion => 'per portion';
+  String get foodDetailsPerPortion => 'par portion';
 
   @override
-  String get foodDetailsPer100g => 'per 100 g';
+  String get foodDetailsPer100g => 'pour 100 g';
 
   @override
   String get foodDetailsPreparationNote =>
-      'Preparation and serving size can change the values.';
+      'La préparation et la taille de la portion peuvent modifier les valeurs.';
 
   @override
-  String get foodDetailsNoData => 'Nutrition data unavailable';
+  String get foodDetailsNoData => 'Données nutritionnelles indisponibles';
 
   @override
   String get foodDetailsApprox => '≈';
 
   @override
   String get foodDetailsLoggingSoon =>
-      'Food logging arrives in the next milestone.';
+      'L\'enregistrement des aliments arrive à la prochaine étape.';
 
   @override
   String get foodDetailsMacros => 'Macros';
 
   @override
-  String get foodDetailsMicronutrients => 'Micronutrients';
+  String get foodDetailsMicronutrients => 'Micronutriments';
 
   @override
   String get foodDetailsCuisine => 'Cuisine';
 
   @override
-  String get foodDetailsRegion => 'Region';
+  String get foodDetailsRegion => 'Région';
 
   @override
-  String get foodDetailsAliases => 'Also known as';
+  String get foodDetailsAliases => 'Aussi connu sous';
 
   @override
   String searchResultsCount(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count results',
-      one: '1 result',
-      zero: 'No results',
+      other: '$count résultats',
+      one: '1 résultat',
+      zero: 'Aucun résultat',
     );
     return '$_temp0';
   }
 
   @override
-  String get searchTryExample => 'Try: roti, jollof rice, dal, mango';
+  String get searchTryExample => 'Essayez : roti, riz jollof, dal, mangue';
 
   @override
-  String get diaryAddToMealTitle => 'Add to which meal?';
+  String get diaryAddToMealTitle => 'Ajouter à quel repas ?';
 
   @override
   String diaryEntryAdded(String food, String meal) {
-    return '$food added to $meal';
+    return '$food ajouté à $meal';
   }
 
   @override
-  String get diaryEntryDeleted => 'Entry deleted';
+  String get diaryEntryDeleted => 'Entrée supprimée';
 
   @override
-  String get diaryEntryUpdated => 'Entry updated';
+  String get diaryEntryUpdated => 'Entrée mise à jour';
 
   @override
-  String get diaryEditEntry => 'Edit entry';
+  String get diaryEditEntry => 'Modifier l\'entrée';
 
   @override
-  String get diaryDeleteEntry => 'Delete entry';
+  String get diaryDeleteEntry => 'Supprimer l\'entrée';
 
   @override
-  String get diaryConfirmDelete => 'Remove this entry from your diary?';
+  String get diaryConfirmDelete => 'Retirer cette entrée de votre journal ?';
 
   @override
-  String get diaryConfirmDeleteYes => 'Remove';
+  String get diaryConfirmDeleteYes => 'Retirer';
 
   @override
-  String get diaryGramsLabel => 'Grams';
+  String get diaryGramsLabel => 'Grammes';
 
   @override
-  String get diaryQuantityLabel => 'Quantity';
+  String get diaryQuantityLabel => 'Quantité';
 
   @override
-  String get diaryNoEntriesForMeal => 'No entries yet';
+  String get diaryNoEntriesForMeal => 'Aucune entrée pour l\'instant';
 
   @override
   String get diaryKcalShort => 'kcal';
 
   @override
-  String get diarySelectDate => 'Select date';
+  String get diarySelectDate => 'Choisir une date';
 
   @override
-  String get diaryToday => 'Today';
+  String get diaryToday => 'Aujourd\'hui';
 
   @override
-  String get diaryYesterday => 'Yesterday';
+  String get diaryYesterday => 'Hier';
 
   @override
   String diaryEntryCalories(int kcal) {
@@ -702,57 +707,58 @@ class AppLocalizationsFr extends AppLocalizations {
   }
 
   @override
-  String get recipesTitle => 'My recipes';
+  String get recipesTitle => 'Mes recettes';
 
   @override
-  String get recipesCreate => 'Create recipe';
+  String get recipesCreate => 'Créer une recette';
 
   @override
-  String get recipesEdit => 'Edit recipe';
+  String get recipesEdit => 'Modifier la recette';
 
   @override
-  String get recipesEmptyTitle => 'No personal recipes yet';
+  String get recipesEmptyTitle => 'Pas encore de recettes personnelles';
 
   @override
   String get recipesEmptyBody =>
-      'Save family recipes like Mum\'s jollof or Grandma\'s dal so you can log the versions you actually cook.';
+      'Enregistrez des recettes familiales comme le jollof de maman ou le dal de grand-mère pour suivre les versions que vous cuisinez vraiment.';
 
   @override
-  String get recipesNameLabel => 'Recipe name';
+  String get recipesNameLabel => 'Nom de la recette';
 
   @override
-  String get recipesServingsLabel => 'Servings';
+  String get recipesServingsLabel => 'Portions';
 
   @override
-  String get recipesYieldLabel => 'Total yield (g)';
+  String get recipesYieldLabel => 'Rendement total (g)';
 
   @override
-  String get recipesYieldHint => 'Optional — defaults to ingredient sum';
+  String get recipesYieldHint =>
+      'Facultatif — somme des ingrédients par défaut';
 
   @override
-  String get recipesIngredients => 'Ingredients';
+  String get recipesIngredients => 'Ingrédients';
 
   @override
   String get recipesIngredientsEmpty =>
-      'Add ingredients to calculate nutrition.';
+      'Ajoutez des ingrédients pour calculer la nutrition.';
 
   @override
-  String get recipesAddIngredient => 'Add ingredient';
+  String get recipesAddIngredient => 'Ajouter un ingrédient';
 
   @override
   String get recipesNotesLabel => 'Notes';
 
   @override
-  String get recipesCalculatedNutrition => 'Calculated nutrition';
+  String get recipesCalculatedNutrition => 'Nutrition calculée';
 
   @override
   String recipesWholeRecipeKcal(int kcal) {
-    return 'Whole recipe: ≈ $kcal kcal';
+    return 'Recette entière : ≈ $kcal kcal';
   }
 
   @override
   String recipesPerServingKcal(int kcal) {
-    return '≈ $kcal kcal per serving';
+    return '≈ $kcal kcal par portion';
   }
 
   @override
@@ -760,66 +766,66 @@ class AppLocalizationsFr extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$count servings',
-      one: '1 serving',
+      other: '$count portions',
+      one: '1 portion',
     );
     return '$_temp0';
   }
 
   @override
-  String get recipesPerServingShort => 'serving';
+  String get recipesPerServingShort => 'portion';
 
   @override
   String get recipesCalculationNote =>
-      'Calculated from your ingredients and quantities. Preparation and yield can change the values.';
+      'Calculée à partir de vos ingrédients et quantités. La préparation et le rendement peuvent modifier les valeurs.';
 
   @override
-  String get recipesDeleteTitle => 'Delete recipe?';
+  String get recipesDeleteTitle => 'Supprimer la recette ?';
 
   @override
   String get recipesDeleteBody =>
-      'This removes the recipe from your personal collection. Diary entries already logged are not affected.';
+      'Cela retire la recette de votre collection personnelle. Les entrées déjà enregistrées dans le journal ne sont pas affectées.';
 
   @override
-  String get barcodeTitle => 'Scan barcode';
+  String get barcodeTitle => 'Scanner un code-barres';
 
   @override
   String get barcodeHint =>
-      'Point your camera at a packaged-food barcode, or enter the number manually.';
+      'Pointez la caméra vers un code-barres d\'aliment emballé, ou saisissez le numéro manuellement.';
 
   @override
-  String get barcodeManualLabel => 'Barcode number';
+  String get barcodeManualLabel => 'Numéro de code-barres';
 
   @override
-  String get barcodeManualHint => 'e.g. 3017620422003';
+  String get barcodeManualHint => 'ex. 3017620422003';
 
   @override
-  String get barcodeLookupButton => 'Look up product';
+  String get barcodeLookupButton => 'Rechercher le produit';
 
   @override
   String get barcodeCameraUnavailable =>
-      'Camera unavailable on this device. Enter the barcode manually instead.';
+      'Caméra indisponible sur cet appareil. Saisissez le code-barres manuellement.';
 
   @override
-  String get barcodeNotFoundTitle => 'Product not found';
+  String get barcodeNotFoundTitle => 'Produit introuvable';
 
   @override
   String barcodeNotFoundBody(String barcode) {
-    return 'No packaged food matched barcode $barcode. You can try again or add the food another way.';
+    return 'Aucun aliment emballé ne correspond au code-barres $barcode. Réessayez ou ajoutez l\'aliment autrement.';
   }
 
   @override
   String get barcodeInvalid =>
-      'That does not look like a valid barcode. Use 8–14 digits.';
+      'Cela ne ressemble pas à un code-barres valide. Utilisez 8 à 14 chiffres.';
 
   @override
   String get barcodeNetworkError =>
-      'Could not reach the packaged-food database. Check your connection and try again.';
+      'Impossible d\'atteindre la base d\'aliments emballés. Vérifiez votre connexion et réessayez.';
 
   @override
-  String get barcodeTryAgain => 'Try again';
+  String get barcodeTryAgain => 'Réessayer';
 
   @override
   String get barcodeCrowdsourcedNote =>
-      'Packaged-food data comes from Open Food Facts and may be incomplete or crowdsourced. Always verify the serving size before logging.';
+      'Les données d\'aliments emballés proviennent d\'Open Food Facts et peuvent être incomplètes ou collaboratives. Vérifiez toujours la taille de portion avant d\'enregistrer.';
 }

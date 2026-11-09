@@ -1,6 +1,362 @@
 {
   "@@locale": "ar",
   "appName": "نوتريفويا",
+  "@appName": {
+    "description": "Application display name"
+  },
   "appTagline": "تغذية تعمل مع طعامك وثقافتك وحياتك.",
-  "@@comment": "Placeholder Arabic localization. Most strings fall back to English until validated by a native speaker. RTL layout is supported."
+  "@appTagline": {
+    "description": "Welcome screen tagline"
+  },
+  "commonCancel": "إلغاء",
+  "commonContinue": "متابعة",
+  "commonSave": "حفظ",
+  "commonSkip": "تخطي",
+  "commonBack": "رجوع",
+  "commonNext": "التالي",
+  "commonGetStarted": "ابدأ",
+  "commonLoading": "جارٍ التحميل…",
+  "commonRetry": "إعادة المحاولة",
+  "commonError": "حدث خطأ ما",
+  "commonClose": "إغلاق",
+  "navDashboard": "اليوم",
+  "navDiary": "المذكرة",
+  "navSearch": "بحث",
+  "navSettings": "الإعدادات",
+  "authLoginTitle": "مرحبًا بعودتك",
+  "authLoginSubtitle": "سجّل الدخول لمتابعة تتبّع تغذيتك.",
+  "authSignupTitle": "أنشئ حسابك",
+  "authSignupSubtitle": "ابدأ رحلتك الغذائية الواعية ثقافيًا.",
+  "authEmailLabel": "البريد الإلكتروني",
+  "authPasswordLabel": "كلمة المرور",
+  "authEmailHint": "you@example.com",
+  "authLoginButton": "تسجيل الدخول",
+  "authSignupButton": "إنشاء حساب",
+  "authSwitchToSignup": "ليس لديك حساب؟ سجّل",
+  "authSwitchToLogin": "لديك حساب بالفعل؟ سجّل الدخول",
+  "authForgotPassword": "نسيت كلمة المرور؟",
+  "authErrorInvalidCredentials": "بريد إلكتروني أو كلمة مرور غير صحيحة.",
+  "authErrorEmailInUse": "يوجد حساب بهذا البريد بالفعل.",
+  "authErrorWeakPassword": "يرجى اختيار كلمة مرور أقوى.",
+  "authErrorGeneric": "فشل المصادقة. يرجى المحاولة مرة أخرى.",
+  "onboardingWelcomeTitle": "مرحبًا بك في نوتريفويا",
+  "onboardingWelcomeBody": "تغذية تعمل مع طعامك وثقافتك وحياتك.",
+  "onboardingGoalTitle": "بماذا تريد أن تساعدك نوتريفويا؟",
+  "onboardingGoalMaintain": "الحفاظ على وزني",
+  "onboardingGoalLose": "خسارة الوزن",
+  "onboardingGoalGain": "زيادة الوزن",
+  "onboardingGoalBuildMuscle": "بناء العضلات",
+  "onboardingGoalImprove": "تحسين تغذيتي",
+  "onboardingGoalTrack": "تتبع ما آكله فقط",
+  "onboardingProfileTitle": "أخبرنا عنك",
+  "onboardingProfileSubtitle": "نستخدم هذه المعلومات فقط لتقدير احتياجاتك الغذائية. يمكنك تغييرها لاحقًا.",
+  "onboardingAgeLabel": "العمر",
+  "onboardingHeightLabel": "الطول (سم)",
+  "onboardingWeightLabel": "الوزن (كغ)",
+  "onboardingSexLabel": "مدخل الحساب الفسيولوجي",
+  "onboardingSexFemale": "أنثى",
+  "onboardingSexMale": "ذكر",
+  "onboardingSexPreferNotToSay": "أفضل عدم الإفصاح",
+  "onboardingSexHelp": "يُستخدم فقط في معادلات احتياج الطاقة. هذا منفصل عن هويتك الجندرية.",
+  "onboardingActivityLabel": "مستوى النشاط",
+  "onboardingActivitySedentary": "قليل الحركة",
+  "onboardingActivityLight": "نشاط خفيف",
+  "onboardingActivityModerate": "نشاط متوسط",
+  "onboardingActivityActive": "نشط جدًا",
+  "onboardingActivityExtra": "نشاط مكثّف",
+  "onboardingCuisineTitle": "أي أطعمة تبدو مألوفة لك؟",
+  "onboardingCuisineSubtitle": "اختياري. نستخدم ذلك لإعطاء أولوية للأطعمة المألوفة في البحث. يمكنك التخطي.",
+  "onboardingLanguageTitle": "اختر لغتك",
+  "onboardingLanguageSubtitle": "يمكنك تغيير ذلك في أي وقت من الإعدادات.",
+  "onboardingSummaryTitle": "هدفك الغذائي المقدَّر",
+  "onboardingSummaryBody": "هذا تقدير مبني على معادلات قياسية. قد تختلف احتياجاتك الفعلية، ويمكننا تحسين التقدير بمرور الوقت باستخدام اتجاه وزنك.",
+  "onboardingSummaryComingSoon": "ستُحسب أهداف السعرات والماكروز الشخصية في خطوة لاحقة.",
+  "onboardingSummaryMaintenance": "الصيانة المقدَّرة: {kcal} سعرة/يوم",
+  "@onboardingSummaryMaintenance": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingSummaryTarget": "الهدف اليومي المقترح: {kcal} سعرة",
+  "@onboardingSummaryTarget": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "onboardingSummaryMacros": "بروتين {protein} غ · كربوهيدرات {carbs} غ · دهون {fat} غ · ألياف {fibre} غ",
+  "@onboardingSummaryMacros": {
+    "placeholders": {
+      "protein": {
+        "type": "int"
+      },
+      "carbs": {
+        "type": "int"
+      },
+      "fat": {
+        "type": "int"
+      },
+      "fibre": {
+        "type": "int"
+      }
+    }
+  },
+  "dashboardGreetingMorning": "صباح الخير",
+  "dashboardGreetingAfternoon": "مساء الخير",
+  "dashboardGreetingEvening": "مساء الخير",
+  "dashboardToday": "اليوم",
+  "dashboardCalories": "السعرات",
+  "dashboardProtein": "البروتين",
+  "dashboardCarbs": "الكربوهيدرات",
+  "dashboardFat": "الدهون",
+  "dashboardFibre": "الألياف",
+  "dashboardLogFood": "تسجيل طعام",
+  "dashboardEmptyTitle": "لا شيء مسجَّل بعد",
+  "dashboardEmptyBody": "ابحث عن طعام لبدء تتبّع يومك.",
+  "dashboardTargetsPlaceholder": "ستُضبط الأهداف بعد الإعداد الأولي.",
+  "dashboardCaloriesOf": "{consumed} / {target} سعرة",
+  "@dashboardCaloriesOf": {
+    "placeholders": {
+      "consumed": {
+        "type": "int"
+      },
+      "target": {
+        "type": "int"
+      }
+    }
+  },
+  "dashboardCaloriesRemaining": "متبقّي {kcal} سعرة",
+  "@dashboardCaloriesRemaining": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "dashboardCaloriesOver": "زيادة {kcal} سعرة عن الهدف",
+  "@dashboardCaloriesOver": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "diaryTitle": "المذكرة",
+  "diaryMealBreakfast": "الإفطار",
+  "diaryMealLunch": "الغداء",
+  "diaryMealDinner": "العشاء",
+  "diaryMealSnacks": "وجبات خفيفة",
+  "diaryEmpty": "لا توجد إدخالات بعد.",
+  "diaryAddToMeal": "إضافة طعام",
+  "searchTitle": "بحث",
+  "searchHint": "ماذا أكلت؟",
+  "searchEmpty": "ابحث عن أطعمة مثل الروتي أو الجولوف أو العدس أو المانجو.",
+  "searchNoResults": "لم يُعثر على أطعمة مطابقة. جرّب اسمًا أو مرادفًا أو كتابة أخرى.",
+  "searchRecent": "الأخيرة",
+  "searchFrequent": "المتكررة",
+  "searchFavourites": "المفضلة",
+  "searchMyRecipes": "وصفاتي",
+  "settingsTitle": "الإعدادات",
+  "settingsAppearance": "المظهر",
+  "settingsTheme": "السمة",
+  "settingsThemeSystem": "النظام",
+  "settingsThemeLight": "فاتح",
+  "settingsThemeDark": "داكن",
+  "settingsLanguage": "اللغة",
+  "settingsLanguageEn": "English",
+  "settingsLanguageFr": "Français",
+  "settingsLanguageEs": "Español",
+  "settingsLanguageHi": "हिन्दी",
+  "settingsLanguagePa": "ਪੰਜਾਬੀ",
+  "settingsLanguageAr": "العربية",
+  "settingsAccount": "الحساب",
+  "settingsSignOut": "تسجيل الخروج",
+  "settingsAbout": "حول نوتريفويا",
+  "settingsAboutBody": "نوتريفويا تطبيق متعدد اللغات وواعٍ ثقافيًا لتتبّع التغذية والسعرات يساعد الناس على فهم وتحسين الطعام الذي يأكلونه فعليًا — دون أن يُطلب منهم التخلي عن ثقافتهم من أجل الصحة.",
+  "settingsProfile": "الملف الشخصي",
+  "settingsGoals": "الأهداف",
+  "settingsComingSoon": "قريبًا",
+  "profileTitle": "الملف الشخصي",
+  "profileGoal": "الهدف",
+  "profileActivity": "مستوى النشاط",
+  "profileCuisines": "المطابخ المألوفة",
+  "profileEdit": "تعديل الملف",
+  "goalsTitle": "الأهداف الغذائية",
+  "goalsNotSet": "غير محدَّد بعد",
+  "goalsCalorieTarget": "هدف السعرات",
+  "goalsProteinTarget": "هدف البروتين",
+  "goalsCarbTarget": "هدف الكربوهيدرات",
+  "goalsFatTarget": "هدف الدهون",
+  "goalsFibreTarget": "هدف الألياف",
+  "goalsBmr": "معدل الأيض الأساسي المقدَّر",
+  "goalsTdee": "الصيانة المقدَّرة (TDEE)",
+  "goalsNeedProfile": "أكمل الإعداد الأولي لرؤية أهداف مخصّصة.",
+  "goalsEstimateDisclaimer": "الإنفاق المحسوب تقدير. قد تختلف احتياجاتك الفعلية.",
+  "goalsRefineOverTime": "يمكننا تحسين هذا التقدير بمرور الوقت باستخدام اتجاه وزنك.",
+  "energyNoteEstimateDisclaimer": "الإنفاق المحسوب تقدير. قد تختلف احتياجاتك الفعلية.",
+  "energyNotePhysiologicalUnspecified": "بدون مدخل فسيولوجي، اعتمدنا متوسط المعادلات القياسية. الثقة أقل.",
+  "energyNoteAgeOutsideAdultRange": "معادلات الطاقة أقل موثوقية خارج أعمار البالغين المعتادة. فكّر في استشارة مختص.",
+  "energyNoteLoseWhileLowWeight": "يشير ملفك إلى وزن جسم منخفض. لا يُنصح بفقدان الوزن العدواني — اطلب دعمًا مؤهلاً عند الحاجة.",
+  "energyNoteDeficitCapped": "حدّدنا عجز السعرات بمعدل أكثر أمانًا. الحميات القاسية غير مدعومة.",
+  "energyNoteFloorApplied": "رُفع هدفك إلى حد أدنى من الطاقة للأمان.",
+  "energyNoteTrackOnly": "اخترت التتبّع فقط. الأرقام أدناه تقديرات صيانة للاسترشاد.",
+  "confidenceLabel": "ثقة التقدير",
+  "confidenceHigh": "عالية",
+  "confidenceHighNote": "بيانات رسمية لتركيب الأغذية",
+  "confidenceMedium": "متوسطة",
+  "confidenceMediumNote": "محسوبة من وصفة معيارية",
+  "confidenceEstimated": "مقدَّرة",
+  "confidenceEstimatedNote": "بناءً على مكونات وحجم حصة شائعين",
+  "confidenceUnknown": "غير معروف",
+  "sourceLabel": "المصدر",
+  "sourceAuthoritative": "مجموعة بيانات تركيب غذائي موثوقة",
+  "sourcePackaged": "قاعدة أطعمة معلّبة",
+  "sourceNutrivoyaCurated": "مجموعة بيانات نوتريفويا المنسّقة",
+  "sourceRecipeEstimated": "تقدير مبني على وصفة",
+  "sourceUserSubmitted": "مقدَّم من المستخدم",
+  "portionLabel": "الحصة",
+  "portionSmall": "صغيرة",
+  "portionMedium": "متوسطة",
+  "portionLarge": "كبيرة",
+  "portionGrams": "غرامات",
+  "portionQuantity": "الكمية",
+  "portionCustom": "غرامات مخصّصة",
+  "nutrientEnergyKcal": "السعرات",
+  "nutrientProteinG": "البروتين",
+  "nutrientCarbohydrateG": "الكربوهيدرات",
+  "nutrientFatG": "الدهون",
+  "nutrientFibreG": "الألياف",
+  "nutrientSaturatedFatG": "الدهون المشبعة",
+  "nutrientSugarG": "السكر",
+  "nutrientSodiumMg": "الصوديوم",
+  "nutrientIronMg": "الحديد",
+  "nutrientCalciumMg": "الكالسيوم",
+  "nutrientPotassiumMg": "البوتاسيوم",
+  "nutrientMagnesiumMg": "المغنيسيوم",
+  "nutrientZincMg": "الزنك",
+  "nutrientVitaminAUg": "فيتامين أ",
+  "nutrientVitaminCMg": "فيتامين ج",
+  "nutrientVitaminDUg": "فيتامين د",
+  "nutrientVitaminB12Ug": "فيتامين ب12",
+  "nutrientFolateUg": "الفولات",
+  "foodDetailsTitle": "تفاصيل الطعام",
+  "foodDetailsAddToMeal": "إضافة إلى الوجبة",
+  "foodDetailsPerPortion": "لكل حصة",
+  "foodDetailsPer100g": "لكل 100 غ",
+  "foodDetailsPreparationNote": "قد تغيّر طريقة التحضير وحجم الحصة القيم.",
+  "foodDetailsNoData": "بيانات التغذية غير متوفرة",
+  "foodDetailsApprox": "≈",
+  "foodDetailsLoggingSoon": "تسجيل الطعام يصل في المرحلة التالية.",
+  "foodDetailsMacros": "الماكروز",
+  "foodDetailsMicronutrients": "المغذيات الدقيقة",
+  "foodDetailsCuisine": "المطبخ",
+  "foodDetailsRegion": "المنطقة",
+  "foodDetailsAliases": "يُعرف أيضًا باسم",
+  "searchResultsCount": "{count, plural, =0{لا نتائج} =1{نتيجة واحدة} other{{count} نتائج}}",
+  "@searchResultsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "searchTryExample": "جرّب: روتي، جولوف، عدس، مانجو",
+  "diaryAddToMealTitle": "الإضافة إلى أي وجبة؟",
+  "diaryEntryAdded": "أُضيف {food} إلى {meal}",
+  "@diaryEntryAdded": {
+    "placeholders": {
+      "food": {
+        "type": "String"
+      },
+      "meal": {
+        "type": "String"
+      }
+    }
+  },
+  "diaryEntryDeleted": "تم حذف الإدخال",
+  "diaryEntryUpdated": "تم تحديث الإدخال",
+  "diaryEditEntry": "تعديل الإدخال",
+  "diaryDeleteEntry": "حذف الإدخال",
+  "diaryConfirmDelete": "إزالة هذا الإدخال من مذكرتك؟",
+  "diaryConfirmDeleteYes": "إزالة",
+  "diaryGramsLabel": "غرامات",
+  "diaryQuantityLabel": "الكمية",
+  "diaryNoEntriesForMeal": "لا توجد إدخالات بعد",
+  "diaryKcalShort": "سعرة",
+  "diarySelectDate": "اختر التاريخ",
+  "diaryToday": "اليوم",
+  "diaryYesterday": "أمس",
+  "diaryEntryCalories": "{kcal} سعرة",
+  "@diaryEntryCalories": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "recipesTitle": "وصفاتي",
+  "recipesCreate": "إنشاء وصفة",
+  "recipesEdit": "تعديل الوصفة",
+  "recipesEmptyTitle": "لا توجد وصفات شخصية بعد",
+  "recipesEmptyBody": "احفظ وصفات عائلية مثل جولوف أمي أو عدس جدتي لتسجيل النسخ التي تطبخها فعليًا.",
+  "recipesNameLabel": "اسم الوصفة",
+  "recipesServingsLabel": "الحصص",
+  "recipesYieldLabel": "المردود الكلي (غ)",
+  "recipesYieldHint": "اختياري — الافتراضي مجموع المكونات",
+  "recipesIngredients": "المكونات",
+  "recipesIngredientsEmpty": "أضف مكونات لحساب التغذية.",
+  "recipesAddIngredient": "إضافة مكوّن",
+  "recipesNotesLabel": "ملاحظات",
+  "recipesCalculatedNutrition": "التغذية المحسوبة",
+  "recipesWholeRecipeKcal": "الوصفة كاملة: ≈ {kcal} سعرة",
+  "@recipesWholeRecipeKcal": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "recipesPerServingKcal": "≈ {kcal} سعرة لكل حصة",
+  "@recipesPerServingKcal": {
+    "placeholders": {
+      "kcal": {
+        "type": "int"
+      }
+    }
+  },
+  "recipesServingsCount": "{count, plural, =1{حصة واحدة} other{{count} حصص}}",
+  "@recipesServingsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "recipesPerServingShort": "حصة",
+  "recipesCalculationNote": "محسوبة من مكوناتك وكمياتها. قد تغيّر طريقة التحضير والمردود القيم.",
+  "recipesDeleteTitle": "حذف الوصفة؟",
+  "recipesDeleteBody": "يزيل هذا الوصفة من مجموعتك الشخصية. إدخالات المذكرة المسجَّلة مسبقًا لن تتأثر.",
+  "@@comment": "Arabic UI strings for Nutrivoya MVP with RTL support. Native review welcome for idiomatic polish.",
+  "barcodeTitle": "مسح الرمز الشريطي",
+  "barcodeHint": "وجّه الكاميرا إلى رمز شريطي لطعام معلّب، أو أدخل الرقم يدويًا.",
+  "barcodeManualLabel": "رقم الرمز الشريطي",
+  "barcodeManualHint": "مثل 3017620422003",
+  "barcodeLookupButton": "البحث عن المنتج",
+  "barcodeCameraUnavailable": "الكاميرا غير متاحة على هذا الجهاز. أدخل الرمز الشريطي يدويًا.",
+  "barcodeNotFoundTitle": "المنتج غير موجود",
+  "barcodeNotFoundBody": "لم يُطابق أي طعام معلّب الرمز {barcode}. يمكنك المحاولة مجددًا أو إضافة الطعام بطريقة أخرى.",
+  "@barcodeNotFoundBody": {
+    "placeholders": {
+      "barcode": {
+        "type": "String"
+      }
+    }
+  },
+  "barcodeInvalid": "هذا لا يبدو رمزًا شريطيًا صالحًا. استخدم من 8 إلى 14 رقمًا.",
+  "barcodeNetworkError": "تعذّر الوصول إلى قاعدة الأطعمة المعلّبة. تحقق من اتصالك وحاول مجددًا.",
+  "barcodeTryAgain": "حاول مجددًا",
+  "barcodeCrowdsourcedNote": "بيانات الأطعمة المعلّبة تأتي من Open Food Facts وقد تكون غير مكتملة أو تعاونية. تحقق دائمًا من حجم الحصة قبل التسجيل."
 }
