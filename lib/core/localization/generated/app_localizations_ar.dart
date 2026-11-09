@@ -813,4 +813,261 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get barcodeCrowdsourcedNote =>
       'بيانات الأطعمة المعلّبة تأتي من Open Food Facts وقد تكون غير مكتملة أو تعاونية. تحقق دائمًا من حجم الحصة قبل التسجيل.';
+
+  @override
+  String get assistantTitle => 'اسأل نوتريڤويا';
+
+  @override
+  String get assistantIntro =>
+      'اسأل عن وجباتك أو الأطعمة الثقافية أو البروتين أو الجوع — تعتمد الإجابات على يومياتك وأهدافك وقاعدة الأطعمة. لا تُختلق أي أرقام.';
+
+  @override
+  String get assistantWellnessDisclaimer =>
+      'تقدم نوتريڤويا إرشادات عافية عامة وليست نصيحة طبية.';
+
+  @override
+  String get assistantMedicalDisclaimer =>
+      'يبدو هذا موضوعًا طبيًا أو عالي المخاطر. تحدّث إلى مختص صحي مؤهل. لا تستطيع نوتريڤويا التشخيص أو العلاج أو الوصفات.';
+
+  @override
+  String get assistantTryAsking => 'جرّب أن تسأل';
+
+  @override
+  String get assistantSuggestions => 'اقتراحات';
+
+  @override
+  String get assistantSources => 'المصادر';
+
+  @override
+  String get assistantInputHint => 'اسأل عن الأرز أو البروتين أو التوازن…';
+
+  @override
+  String get assistantSend => 'إرسال';
+
+  @override
+  String get assistantClear => 'مسح المحادثة';
+
+  @override
+  String get assistantPromptRice =>
+      'هل يمكنني الاستمرار في أكل الأرز أثناء خسارة الوزن؟';
+
+  @override
+  String get assistantPromptBalance => 'كيف أوازن وجبات اليوم؟';
+
+  @override
+  String get assistantPromptProtein => 'كيف أرفع البروتين بأطعمة مألوفة؟';
+
+  @override
+  String get assistantPromptHunger => 'لماذا ما زلت جائعًا قرب هدف السعرات؟';
+
+  @override
+  String get assistantPromptRoti => 'كم سعرة في الروتي؟';
+
+  @override
+  String assistantHeadlineCultural(String staple) {
+    return 'نعم — يمكن أن يناسب $staple أهدافك';
+  }
+
+  @override
+  String get assistantHeadlineBalance => 'توازن وجبات اليوم';
+
+  @override
+  String get assistantHeadlineProtein => 'رفع البروتين بأطعمة مألوفة';
+
+  @override
+  String get assistantHeadlineHunger => 'الجوع قرب هدف السعرات';
+
+  @override
+  String assistantHeadlineLookupFound(String foodName) {
+    return 'تغذية $foodName';
+  }
+
+  @override
+  String assistantHeadlineLookupMissing(String foodName) {
+    return 'لا تطابق لـ «$foodName»';
+  }
+
+  @override
+  String get assistantHeadlineSubstitute => 'عدّل قبل أن تستبدل';
+
+  @override
+  String get assistantHeadlineMedical => 'اطلب توجيهًا مهنيًا';
+
+  @override
+  String get assistantHeadlineUnknown => 'أحتاج سؤالًا أوضح';
+
+  @override
+  String assistantBodyCultural(String staple, String cuisine) {
+    return '$staple جزء معتاد من أكل $cuisine. لست مضطرًا للتخلي عنه — اضبط الحصص والمرافقات وفق هدفك.';
+  }
+
+  @override
+  String assistantBodyCulturalWithData(
+    String staple,
+    String foodName,
+    String portionName,
+    int kcal,
+    String sourceName,
+  ) {
+    return 'يمكن أن يبقى $staple في نمطك. وفق قاعدة الأطعمة، $foodName ($portionName) حوالي $kcal سعرة ($sourceName). فضّل حصة أصغر أو أضف خضارًا ومصدر بروتين بدل حذف الطعام الأساسي تمامًا.';
+  }
+
+  @override
+  String assistantBodyBalanceWithTargets(
+    int caloriesConsumed,
+    int calorieTarget,
+    int proteinConsumed,
+    int proteinTarget,
+    int entryCount,
+  ) {
+    return 'سجّلت اليوم $caloriesConsumed من $calorieTarget سعرة و$proteinConsumed من $proteinTarget غ بروتين عبر $entryCount إدخالات. استخدم أطعمة مألوفة وتعديلات صغيرة — دون أحكام أخلاقية على الطعام.';
+  }
+
+  @override
+  String assistantBodyBalanceNoTargets(
+    int caloriesConsumed,
+    int proteinConsumed,
+    int entryCount,
+  ) {
+    return 'سجّلت اليوم $caloriesConsumed سعرة و$proteinConsumed غ بروتين عبر $entryCount إدخالات. حدّد أهدافًا في الإعدادات لمزيد من الوضوح، أو واصل تسجيل الوجبات المألوفة.';
+  }
+
+  @override
+  String assistantBodyProteinWithTargets(
+    int proteinConsumed,
+    int proteinTarget,
+    int proteinGap,
+    String cuisine,
+  ) {
+    return 'سجّلت $proteinConsumed من $proteinTarget غ بروتين اليوم (يتبقى $proteinGap غ). أبقِ أساسيات $cuisine وأضف مرافقات غنية بالبروتين.';
+  }
+
+  @override
+  String assistantBodyProtein(int proteinConsumed, String cuisine) {
+    return 'سجّلت $proteinConsumed غ بروتين اليوم. ارفعه بمرافقات $cuisine مألوفة بدل استبدال وجباتك.';
+  }
+
+  @override
+  String assistantBodyHungerWithTargets(
+    int caloriesConsumed,
+    int calorieTarget,
+    int proteinConsumed,
+    int fibreConsumed,
+  ) {
+    return 'أنت عند $caloriesConsumed من $calorieTarget سعرة، مع $proteinConsumed غ بروتين و$fibreConsumed غ ألياف. قد يرتبط الجوع بالبروتين أو الألياف أو التوقيت أو الماء — وليس بفشل أخلاقي.';
+  }
+
+  @override
+  String assistantBodyHunger(
+    int caloriesConsumed,
+    int proteinConsumed,
+    int fibreConsumed,
+  ) {
+    return 'سجّلت $caloriesConsumed سعرة و$proteinConsumed غ بروتين و$fibreConsumed غ ألياف اليوم. غالبًا يتحسن الجوع بالبروتين والألياف وتناول أبطأ — لا بتصنيف الأطعمة كسيئة.';
+  }
+
+  @override
+  String assistantBodyLookupFound(
+    String foodName,
+    String portionName,
+    int kcal,
+    int proteinG,
+    String sourceName,
+    String confidence,
+  ) {
+    return '$foodName · $portionName: ≈ $kcal سعرة و$proteinG غ بروتين. المصدر: $sourceName. الثقة: $confidence.';
+  }
+
+  @override
+  String assistantBodyLookupNoNutrition(String foodName, String sourceName) {
+    return 'وُجد $foodName في $sourceName، لكن لا تتوفر بيانات سعرات موثوقة. لن تختلق نوتريڤويا رقمًا.';
+  }
+
+  @override
+  String assistantBodyLookupMissing(String foodName) {
+    return 'لا طعام منظم يطابق «$foodName». جرّب اسمًا آخر أو باركودًا أو وصفة شخصية — لن تُخمَّن السعرات.';
+  }
+
+  @override
+  String get assistantBodySubstitute =>
+      'ابدأ بتغيير حجم الحصة أو إضافة خضار أو مرافقة بروتين مع الطعام الذي تأكله أصلًا. الاستبدال اختياري — التعديل يحافظ غالبًا على الوجبات الثقافية.';
+
+  @override
+  String get assistantBodyMedical =>
+      'لا تستطيع نوتريڤويا تقديم مشورة حول التشخيص أو الأدوية أو مضاعفات الحمل أو اضطرابات الأكل أو حالات سريرية أخرى. راجع مختصًا مناسبًا.';
+
+  @override
+  String get assistantBodyUnknown =>
+      'جرّب أسئلة مثل «هل يمكنني أكل الأرز؟» أو «كيف أرفع البروتين؟» أو «كم سعرة في الروتي؟» أو «لماذا ما زلت جائعًا؟»';
+
+  @override
+  String get assistantTipAskRice => 'اسأل إن كان طعام ثقافي أساسي يناسب أهدافك';
+
+  @override
+  String get assistantTipAskBalance => 'اسأل كيف تبدو وجبات اليوم مقابل أهدافك';
+
+  @override
+  String get assistantTipAskProtein => 'اسأل كيف ترفع البروتين بأطعمة مألوفة';
+
+  @override
+  String get assistantTipAskFoodLookup =>
+      'اسأل «calories in …» لطعام في القاعدة';
+
+  @override
+  String get assistantTipSeekProfessional =>
+      'تواصل مع طبيب أو اختصاصي تغذية أو مختص مؤهل';
+
+  @override
+  String get assistantTipFoodNotFound =>
+      'جرّب تهجئة أخرى أو اسمًا بديلًا أو مسح باركود';
+
+  @override
+  String get assistantTipNutritionUnavailable =>
+      'بيانات التغذية غير متاحة — بلا سعرات مختلقة';
+
+  @override
+  String get assistantTipVerifyPortion =>
+      'أكد أن الحصة تطابق ما أكلت قبل التسجيل';
+
+  @override
+  String get assistantTipNoMoralFood =>
+      'لا طعام جيد أو سيئ بذاته — السياق والنمط هما المهمان';
+
+  @override
+  String get assistantTipHungerProteinFibre =>
+      'تحقق من البروتين والألياف — كلاهما يدعم الشبع';
+
+  @override
+  String get assistantTipHungerPace => 'كُل أبطأ قليلًا وأضف خضارًا للحجم';
+
+  @override
+  String get assistantTipProteinPairDal =>
+      'اربط الحبوب بالدال أو الفاصوليا أو العدس';
+
+  @override
+  String get assistantTipProteinPairYoghurt =>
+      'أضف لبنًا أو بانير أو منتجات ألبان مصفاة';
+
+  @override
+  String get assistantTipProteinPairEgg =>
+      'أضف بيضًا أو سمكًا أو توفو أو لحمًا قليل الدهن وفق مطبخك';
+
+  @override
+  String get assistantTipModifyNotReplace =>
+      'عدّل الوجبة التي تحبها قبل استبدالها';
+
+  @override
+  String get assistantTipModifyPortion =>
+      'جرّب أولًا حصة أصغر من الطعام الأساسي';
+
+  @override
+  String get assistantTipAddVegetables => 'أضف خضارًا أو سلطة للحجم والألياف';
+
+  @override
+  String get assistantTipAddProteinSide =>
+      'أضف مرافقة بروتين بدل حذف الطعام الأساسي';
+
+  @override
+  String get assistantTipLogSomething =>
+      'سجّل وجبة حتى يستخدم النصح نمطك الحقيقي';
 }

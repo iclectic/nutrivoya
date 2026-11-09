@@ -358,5 +358,238 @@
   "barcodeInvalid": "Cela ne ressemble pas à un code-barres valide. Utilisez 8 à 14 chiffres.",
   "barcodeNetworkError": "Impossible d'atteindre la base d'aliments emballés. Vérifiez votre connexion et réessayez.",
   "barcodeTryAgain": "Réessayer",
-  "barcodeCrowdsourcedNote": "Les données d'aliments emballés proviennent d'Open Food Facts et peuvent être incomplètes ou collaboratives. Vérifiez toujours la taille de portion avant d'enregistrer."
+  "barcodeCrowdsourcedNote": "Les données d'aliments emballés proviennent d'Open Food Facts et peuvent être incomplètes ou collaboratives. Vérifiez toujours la taille de portion avant d'enregistrer.",
+  "assistantTitle": "Demander à Nutrivoya",
+  "assistantIntro": "Posez des questions sur vos repas, aliments culturels, protéines ou faim — les réponses utilisent votre journal, vos objectifs et la base alimentaire. Aucun chiffre n'est inventé.",
+  "assistantWellnessDisclaimer": "Nutrivoya propose des conseils de bien-être généraux, pas un avis médical.",
+  "assistantMedicalDisclaimer": "Cela semble médical ou à haut risque. Consultez un professionnel de santé qualifié. Nutrivoya ne diagnostique pas, ne traite pas et ne prescrit pas.",
+  "assistantTryAsking": "Essayez de demander",
+  "assistantSuggestions": "Suggestions",
+  "assistantSources": "Sources",
+  "assistantInputHint": "Demandez à propos du riz, des protéines, de l'équilibre…",
+  "assistantSend": "Envoyer",
+  "assistantClear": "Effacer la conversation",
+  "assistantPromptRice": "Puis-je encore manger du riz en perdant du poids ?",
+  "assistantPromptBalance": "Comment équilibrer mes repas d'aujourd'hui ?",
+  "assistantPromptProtein": "Comment augmenter les protéines avec des aliments familiers ?",
+  "assistantPromptHunger": "Pourquoi ai-je encore faim près de mon objectif calorique ?",
+  "assistantPromptRoti": "Combien de calories dans un roti ?",
+  "assistantHeadlineCultural": "Oui — {staple} peut entrer dans vos objectifs",
+  "@assistantHeadlineCultural": {
+    "placeholders": {
+      "staple": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantHeadlineBalance": "Équilibre des repas d'aujourd'hui",
+  "assistantHeadlineProtein": "Augmenter les protéines avec des aliments familiers",
+  "assistantHeadlineHunger": "Faim près de votre objectif calorique",
+  "assistantHeadlineLookupFound": "Nutrition pour {foodName}",
+  "@assistantHeadlineLookupFound": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantHeadlineLookupMissing": "Aucun résultat pour « {foodName} »",
+  "@assistantHeadlineLookupMissing": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantHeadlineSubstitute": "Modifiez avant de remplacer",
+  "assistantHeadlineMedical": "Demandez un avis professionnel",
+  "assistantHeadlineUnknown": "J'ai besoin d'une question plus claire",
+  "assistantBodyCultural": "{staple} fait naturellement partie de l'alimentation {cuisine}. Vous n'avez pas à l'abandonner — ajustez les portions et les accompagnements selon votre objectif.",
+  "@assistantBodyCultural": {
+    "placeholders": {
+      "staple": {
+        "type": "String"
+      },
+      "cuisine": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyCulturalWithData": "{staple} peut rester dans votre alimentation. D'après la base, {foodName} ({portionName}) fait environ {kcal} kcal ({sourceName}). Préférez une portion plus petite ou ajoutez des légumes et une source de protéines plutôt que de supprimer l'aliment.",
+  "@assistantBodyCulturalWithData": {
+    "placeholders": {
+      "staple": {
+        "type": "String"
+      },
+      "foodName": {
+        "type": "String"
+      },
+      "portionName": {
+        "type": "String"
+      },
+      "kcal": {
+        "type": "int"
+      },
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyBalanceWithTargets": "Aujourd'hui vous avez enregistré {caloriesConsumed} sur {calorieTarget} kcal et {proteinConsumed} sur {proteinTarget} g de protéines sur {entryCount} entrées. Utilisez des aliments familiers et de petits ajustements — sans moraliser.",
+  "@assistantBodyBalanceWithTargets": {
+    "placeholders": {
+      "caloriesConsumed": {
+        "type": "int"
+      },
+      "calorieTarget": {
+        "type": "int"
+      },
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "proteinTarget": {
+        "type": "int"
+      },
+      "entryCount": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantBodyBalanceNoTargets": "Aujourd'hui vous avez enregistré {caloriesConsumed} kcal et {proteinConsumed} g de protéines sur {entryCount} entrées. Définissez des objectifs dans Réglages pour plus de clarté, ou continuez à noter vos repas habituels.",
+  "@assistantBodyBalanceNoTargets": {
+    "placeholders": {
+      "caloriesConsumed": {
+        "type": "int"
+      },
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "entryCount": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantBodyProteinWithTargets": "Vous avez enregistré {proteinConsumed} sur {proteinTarget} g de protéines aujourd'hui (il reste {proteinGap} g). Gardez les aliments {cuisine} et ajoutez des accompagnements riches en protéines.",
+  "@assistantBodyProteinWithTargets": {
+    "placeholders": {
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "proteinTarget": {
+        "type": "int"
+      },
+      "proteinGap": {
+        "type": "int"
+      },
+      "cuisine": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyProtein": "Vous avez enregistré {proteinConsumed} g de protéines aujourd'hui. Augmentez-les avec des accompagnements {cuisine} familiers plutôt qu'en remplaçant vos repas.",
+  "@assistantBodyProtein": {
+    "placeholders": {
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "cuisine": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyHungerWithTargets": "Vous êtes à {caloriesConsumed} sur {calorieTarget} kcal, avec {proteinConsumed} g de protéines et {fibreConsumed} g de fibres. La faim peut venir des protéines, des fibres, du rythme des repas ou de l'hydratation — pas d'un échec moral.",
+  "@assistantBodyHungerWithTargets": {
+    "placeholders": {
+      "caloriesConsumed": {
+        "type": "int"
+      },
+      "calorieTarget": {
+        "type": "int"
+      },
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "fibreConsumed": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantBodyHunger": "Vous avez enregistré {caloriesConsumed} kcal, {proteinConsumed} g de protéines et {fibreConsumed} g de fibres. La faim s'améliore souvent avec protéines, fibres et un rythme plus lent — pas en classant les aliments comme mauvais.",
+  "@assistantBodyHunger": {
+    "placeholders": {
+      "caloriesConsumed": {
+        "type": "int"
+      },
+      "proteinConsumed": {
+        "type": "int"
+      },
+      "fibreConsumed": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantBodyLookupFound": "{foodName} · {portionName} : ≈ {kcal} kcal et {proteinG} g de protéines. Source : {sourceName}. Confiance : {confidence}.",
+  "@assistantBodyLookupFound": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      },
+      "portionName": {
+        "type": "String"
+      },
+      "kcal": {
+        "type": "int"
+      },
+      "proteinG": {
+        "type": "int"
+      },
+      "sourceName": {
+        "type": "String"
+      },
+      "confidence": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyLookupNoNutrition": "{foodName} a été trouvé dans {sourceName}, mais aucune donnée calorique fiable n'est disponible. Nutrivoya n'inventera pas de chiffre.",
+  "@assistantBodyLookupNoNutrition": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      },
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodyLookupMissing": "Aucun aliment structuré ne correspond à « {foodName} ». Essayez un autre nom, un code-barres ou une recette personnelle — les calories ne seront pas estimées au hasard.",
+  "@assistantBodyLookupMissing": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantBodySubstitute": "Commencez par ajuster la portion, ajouter des légumes ou accompagner d'une source de protéines. Remplacer est optionnel — modifier conserve souvent les repas culturels.",
+  "assistantBodyMedical": "Nutrivoya ne peut pas conseiller sur un diagnostic, des médicaments, une grossesse à risque, des troubles alimentaires ou d'autres situations cliniques. Consultez un professionnel adapté.",
+  "assistantBodyUnknown": "Essayez : « Puis-je encore manger du riz ? », « Comment augmenter les protéines ? », « Combien de calories dans un roti ? » ou « Pourquoi ai-je encore faim ? »",
+  "assistantTipAskRice": "Demandez si un aliment culturel peut entrer dans vos objectifs",
+  "assistantTipAskBalance": "Demandez comment vos repas d'aujourd'hui se comparent à vos objectifs",
+  "assistantTipAskProtein": "Demandez comment augmenter les protéines avec des aliments familiers",
+  "assistantTipAskFoodLookup": "Demandez « calories dans … » pour un aliment de la base",
+  "assistantTipSeekProfessional": "Contactez un médecin, un diététicien ou un clinicien qualifié",
+  "assistantTipFoodNotFound": "Essayez une autre orthographe, un alias ou un scan de code-barres",
+  "assistantTipNutritionUnavailable": "Données nutritionnelles indisponibles — aucun calorie inventée",
+  "assistantTipVerifyPortion": "Vérifiez que la portion correspond à ce que vous avez mangé",
+  "assistantTipNoMoralFood": "Aucun aliment n'est bon ou mauvais en soi — le contexte compte",
+  "assistantTipHungerProteinFibre": "Vérifiez protéines et fibres — les deux favorisent la satiété",
+  "assistantTipHungerPace": "Mangez un peu plus lentement et ajoutez des légumes pour le volume",
+  "assistantTipProteinPairDal": "Associez les céréales au dal, aux haricots ou aux lentilles",
+  "assistantTipProteinPairYoghurt": "Ajoutez du yaourt, du paneer ou un laitier égoutté",
+  "assistantTipProteinPairEgg": "Ajoutez œuf, poisson, tofu ou viande maigre selon votre cuisine",
+  "assistantTipModifyNotReplace": "Modifiez le repas que vous aimez déjà avant de le remplacer",
+  "assistantTipModifyPortion": "Essayez d'abord une plus petite portion de l'aliment de base",
+  "assistantTipAddVegetables": "Ajoutez des légumes ou une salade pour le volume et les fibres",
+  "assistantTipAddProteinSide": "Ajoutez un accompagnement protéiné plutôt que de supprimer l'aliment",
+  "assistantTipLogSomething": "Enregistrez un repas pour que les conseils utilisent votre vrai schéma"
 }
