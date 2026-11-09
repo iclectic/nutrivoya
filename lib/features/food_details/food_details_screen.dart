@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../core/models/favourite_food.dart';
 import '../../core/models/food.dart';
 import '../../core/models/food_portion.dart';
 import '../../core/models/meal_type.dart';
@@ -11,6 +12,7 @@ import '../../core/utils/nutrition_calculator.dart';
 import '../../shared/extensions/app_localizations_x.dart';
 import '../diary/diary_providers.dart';
 import '../food/food_providers.dart';
+import '../tracking/tracking_providers.dart';
 import 'portion_selector.dart';
 
 /// Food details screen — the "Food Result Card" plus portion selection.
@@ -36,8 +38,35 @@ class _FoodDetailsScreenState extends ConsumerState<FoodDetailsScreen> {
     final l10n = context.l10n;
     final foodAsync = ref.watch(foodByIdProvider(widget.foodId));
 
+    final isFav = ref.watch(isFavouriteProvider(widget.foodId));
+
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.foodDetailsTitle)),
+      appBar: AppBar(
+        title: Text(l10n.foodDetailsTitle),
+        actions: [
+          foodAsync.maybeWhen(
+            data: (food) {
+              if (food == null) return const SizedBox.shrink();
+              return IconButton(
+                tooltip: isFav
+                    ? l10n.favouritesRemove
+                    : l10n.favouritesAdd,
+                icon: Icon(isFav ? Icons.star : Icons.star_border),
+                onPressed: () {
+                  ref.read(trackingControllerProvider.notifier).toggleFavourite(
+                        FavouriteFood(
+                          foodId: food.id,
+                          foodName: food.displayName,
+                          foodCanonicalName: food.canonicalName,
+                        ),
+                      );
+                },
+              );
+            },
+            orElse: () => const SizedBox.shrink(),
+          ),
+        ],
+      ),
       body: foodAsync.when(
         loading: () => const Center(child: CircularProgressIndicator()),
         error: (e, _) => Center(child: Text(l10n.commonError)),

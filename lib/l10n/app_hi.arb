@@ -591,5 +591,144 @@
   "assistantTipModifyPortion": "पहले मुख्य भोजन का छोटा हिस्सा आज़माएँ",
   "assistantTipAddVegetables": "मात्रा और फाइबर के लिए सब्ज़ियाँ या सलाद जोड़ें",
   "assistantTipAddProteinSide": "मुख्य भोजन हटाने के बजाय प्रोटीन युक्त साथ जोड़ें",
-  "assistantTipLogSomething": "वास्तविक पैटर्न के लिए कोई भोजन दर्ज करें"
+  "assistantTipLogSomething": "वास्तविक पैटर्न के लिए कोई भोजन दर्ज करें",
+  "commonDelete": "हटाएँ",
+  "progressTitle": "प्रगति",
+  "progressIntro": "वजन, पानी और माप को शांत रुझान के रूप में देखें — दिन-प्रतिदिन बदलाव शोर है, फैसला नहीं।",
+  "progressWater": "आज का पानी",
+  "progressWaterTotal": "{goal} में से {total} मि.ली.",
+  "progressWaterAdd": "+{ml} मि.ली.",
+  "progressWeight": "वजन",
+  "progressLogWeight": "वजन दर्ज करें",
+  "progressWeightKgLabel": "वजन (किग्रा)",
+  "progressWeightValue": "{kg} किग्रा",
+  "progressWeightEmpty": "अभी कोई वजन दर्ज नहीं। शांत रुझान देखने के लिए कुछ दिनों में दर्ज करें।",
+  "progressWeightInvalid": "20 से 400 किग्रा के बीच उचित वजन दर्ज करें।",
+  "progressTrendNote": "रुझान कई दिनों के औसत पर आधारित हैं। एक दिन का बदलाव सामान्य है।",
+  "progressTrendInsufficient": "साप्ताहिक रुझान के लिए कुछ और दिनों का वजन दर्ज करें।",
+  "progressTrendSteady": "लगभग {avg} किग्रा — हाल के दिनों में लगभग स्थिर।",
+  "progressTrendRising": "लगभग {avg} किग्रा — धीरे बढ़ रहा (~{delta} किग्रा/सप्ताह)। एक दिन नहीं, पैटर्न देखें।",
+  "progressTrendFalling": "लगभग {avg} किग्रा — धीरे घट रहा (~{delta} किग्रा/सप्ताह)। एक दिन नहीं, पैटर्न देखें।",
+  "progressMeasurements": "शारीरिक माप",
+  "progressMeasurementsNote": "वैकल्पिक कमर और कूल्हे सेमी में। कैलोरी लक्ष्यों में उपयोग नहीं।",
+  "progressMeasurementsEmpty": "अभी कोई माप दर्ज नहीं।",
+  "progressLogMeasurement": "माप दर्ज करें",
+  "progressWaistLabel": "कमर (सेमी)",
+  "progressHipLabel": "कूल्हे (सेमी)",
+  "progressWaist": "कमर {cm} सेमी",
+  "progressHip": "कूल्हे {cm} सेमी",
+  "progressMeasurementInvalid": "कम से कम एक माप दर्ज करें।",
+  "favouritesTitle": "पसंदीदा",
+  "favouritesAdd": "पसंदीदा में जोड़ें",
+  "favouritesRemove": "पसंदीदा से हटाएँ",
+  "frequentFoodsTitle": "अक्सर खाए जाने वाले",
+  "frequentFoodsEmpty": "अक्सर दर्ज भोजन यहाँ दिखेंगे।",
+  "frequentFoodsCount": "{count} बार दर्ज",
+  "templatesTitle": "भोजन टेम्पलेट",
+  "templatesIntro": "एक दिन के परिचित भोजन सहेजें और बाद में लागू करें — सामान्य नाश्ते के लिए उपयोगी।",
+  "templatesEmpty": "अभी कोई टेम्पलेट नहीं। पसंद का दिन दर्ज कर सहेजें।",
+  "templatesSaveFromToday": "आज से सहेजें",
+  "templatesNameLabel": "टेम्पलेट का नाम",
+  "templatesNeedEntries": "टेम्पलेट से पहले आज कुछ भोजन दर्ज करें।",
+  "templatesSaved": "टेम्पलेट सहेजा गया",
+  "templatesApply": "आज पर लागू करें",
+  "templatesApplied": "टेम्पलेट से {count} प्रविष्टियाँ जोड़ी गईं",
+  "templatesTodayCount": "सहेजने योग्य {count} डायरी प्रविष्टियाँ",
+  "templatesItemSummary": "{count} आइटम · ≈ {kcal} किलोकलोरी",
+  "@progressWaterTotal": {
+    "placeholders": {
+      "total": {
+        "type": "int"
+      },
+      "goal": {
+        "type": "int"
+      }
+    }
+  },
+  "@progressWaterAdd": {
+    "placeholders": {
+      "ml": {
+        "type": "int"
+      }
+    }
+  },
+  "@progressWeightValue": {
+    "placeholders": {
+      "kg": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressTrendSteady": {
+    "placeholders": {
+      "avg": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressTrendRising": {
+    "placeholders": {
+      "avg": {
+        "type": "String"
+      },
+      "delta": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressTrendFalling": {
+    "placeholders": {
+      "avg": {
+        "type": "String"
+      },
+      "delta": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressWaist": {
+    "placeholders": {
+      "cm": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressHip": {
+    "placeholders": {
+      "cm": {
+        "type": "String"
+      }
+    }
+  },
+  "@frequentFoodsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@templatesApplied": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@templatesTodayCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@templatesItemSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "kcal": {
+        "type": "int"
+      }
+    }
+  }
 }

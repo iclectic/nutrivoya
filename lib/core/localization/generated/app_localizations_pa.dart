@@ -25,6 +25,9 @@ class AppLocalizationsPa extends AppLocalizations {
   String get commonSave => 'ਸੰਭਾਲੋ';
 
   @override
+  String get commonDelete => 'ਮਿਟਾਓ';
+
+  @override
   String get commonSkip => 'ਛੱਡੋ';
 
   @override
@@ -1073,4 +1076,162 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get assistantTipLogSomething => 'ਅਸਲ ਪੈਟਰਨ ਲਈ ਕੋਈ ਭੋਜਨ ਦਰਜ ਕਰੋ';
+
+  @override
+  String get progressTitle => 'ਤਰੱਕੀ';
+
+  @override
+  String get progressIntro =>
+      'ਵਜ਼ਨ, ਪਾਣੀ ਅਤੇ ਮਾਪਾਂ ਨੂੰ ਸ਼ਾਂਤ ਰੁਝਾਨ ਵਜੋਂ ਵੇਖੋ — ਰੋਜ਼ਾਨਾ ਬਦਲਾਅ ਸ਼ੋਰ ਹੈ, ਫੈਸਲਾ ਨਹੀਂ।';
+
+  @override
+  String get progressWater => 'ਅੱਜ ਦਾ ਪਾਣੀ';
+
+  @override
+  String progressWaterTotal(int total, int goal) {
+    return '$goal ਵਿੱਚੋਂ $total ਮਿ.ਲੀ.';
+  }
+
+  @override
+  String progressWaterAdd(int ml) {
+    return '+$ml ਮਿ.ਲੀ.';
+  }
+
+  @override
+  String get progressWeight => 'ਵਜ਼ਨ';
+
+  @override
+  String get progressLogWeight => 'ਵਜ਼ਨ ਦਰਜ ਕਰੋ';
+
+  @override
+  String get progressWeightKgLabel => 'ਵਜ਼ਨ (ਕਿਗ੍ਰਾ)';
+
+  @override
+  String progressWeightValue(String kg) {
+    return '$kg ਕਿਗ੍ਰਾ';
+  }
+
+  @override
+  String get progressWeightEmpty =>
+      'ਅਜੇ ਕੋਈ ਵਜ਼ਨ ਨਹੀਂ। ਸ਼ਾਂਤ ਰੁਝਾਨ ਲਈ ਕੁਝ ਦਿਨਾਂ ਵਿੱਚ ਦਰਜ ਕਰੋ।';
+
+  @override
+  String get progressWeightInvalid =>
+      '20 ਤੋਂ 400 ਕਿਗ੍ਰਾ ਵਿਚਕਾਰ ਉਚਿਤ ਵਜ਼ਨ ਦਰਜ ਕਰੋ।';
+
+  @override
+  String get progressTrendNote =>
+      'ਰੁਝਾਨ ਕਈ ਦਿਨਾਂ ਦੇ ਔਸਤ \'ਤੇ ਅਧਾਰਿਤ ਹਨ। ਇੱਕ ਦਿਨ ਦਾ ਬਦਲਾਅ ਆਮ ਹੈ।';
+
+  @override
+  String get progressTrendInsufficient =>
+      'ਹਫ਼ਤਾਵਾਰੀ ਰੁਝਾਨ ਲਈ ਕੁਝ ਹੋਰ ਦਿਨਾਂ ਦਾ ਵਜ਼ਨ ਦਰਜ ਕਰੋ।';
+
+  @override
+  String progressTrendSteady(String avg) {
+    return 'ਲਗਭਗ $avg ਕਿਗ੍ਰਾ — ਹਾਲੀਆ ਦਿਨਾਂ ਵਿੱਚ ਲਗਭਗ ਸਥਿਰ।';
+  }
+
+  @override
+  String progressTrendRising(String avg, String delta) {
+    return 'ਲਗਭਗ $avg ਕਿਗ੍ਰਾ — ਹੌਲੀ ਵਧ ਰਿਹਾ (~$delta ਕਿਗ੍ਰਾ/ਹਫ਼ਤਾ)। ਇੱਕ ਦਿਨ ਨਹੀਂ, ਪੈਟਰਨ ਵੇਖੋ।';
+  }
+
+  @override
+  String progressTrendFalling(String avg, String delta) {
+    return 'ਲਗਭਗ $avg ਕਿਗ੍ਰਾ — ਹੌਲੀ ਘਟ ਰਿਹਾ (~$delta ਕਿਗ੍ਰਾ/ਹਫ਼ਤਾ)। ਇੱਕ ਦਿਨ ਨਹੀਂ, ਪੈਟਰਨ ਵੇਖੋ।';
+  }
+
+  @override
+  String get progressMeasurements => 'ਸਰੀਰਕ ਮਾਪ';
+
+  @override
+  String get progressMeasurementsNote =>
+      'ਵਿਕਲਪਿਕ ਲੱਕ ਅਤੇ ਕੁੱਲ੍ਹੇ ਸੈਮੀ ਵਿੱਚ। ਕੈਲੋਰੀ ਟੀਚਿਆਂ ਲਈ ਨਹੀਂ।';
+
+  @override
+  String get progressMeasurementsEmpty => 'ਅਜੇ ਕੋਈ ਮਾਪ ਨਹੀਂ।';
+
+  @override
+  String get progressLogMeasurement => 'ਮਾਪ ਦਰਜ ਕਰੋ';
+
+  @override
+  String get progressWaistLabel => 'ਲੱਕ (ਸੈਮੀ)';
+
+  @override
+  String get progressHipLabel => 'ਕੁੱਲ੍ਹੇ (ਸੈਮੀ)';
+
+  @override
+  String progressWaist(String cm) {
+    return 'ਲੱਕ $cm ਸੈਮੀ';
+  }
+
+  @override
+  String progressHip(String cm) {
+    return 'ਕੁੱਲ੍ਹੇ $cm ਸੈਮੀ';
+  }
+
+  @override
+  String get progressMeasurementInvalid => 'ਘੱਟੋ-ਘੱਟ ਇੱਕ ਮਾਪ ਦਰਜ ਕਰੋ।';
+
+  @override
+  String get favouritesTitle => 'ਪਸੰਦੀਦਾ';
+
+  @override
+  String get favouritesAdd => 'ਪਸੰਦੀਦਾ ਵਿੱਚ ਜੋੜੋ';
+
+  @override
+  String get favouritesRemove => 'ਪਸੰਦੀਦਾ ਤੋਂ ਹਟਾਓ';
+
+  @override
+  String get frequentFoodsTitle => 'ਅਕਸਰ ਖਾਧੇ ਜਾਣ ਵਾਲੇ';
+
+  @override
+  String get frequentFoodsEmpty => 'ਅਕਸਰ ਦਰਜ ਭੋਜਨ ਇੱਥੇ ਦਿਖਣਗੇ।';
+
+  @override
+  String frequentFoodsCount(int count) {
+    return '$count ਵਾਰ ਦਰਜ';
+  }
+
+  @override
+  String get templatesTitle => 'ਭੋਜਨ ਟੈਮਪਲੇਟ';
+
+  @override
+  String get templatesIntro =>
+      'ਇੱਕ ਦਿਨ ਦੇ ਜਾਣੇ-ਪਛਾਣੇ ਭੋਜਨ ਸੰਭਾਲੋ ਅਤੇ ਬਾਅਦ ਵਿੱਚ ਲਾਗੂ ਕਰੋ।';
+
+  @override
+  String get templatesEmpty =>
+      'ਅਜੇ ਕੋਈ ਟੈਮਪਲੇਟ ਨਹੀਂ। ਪਸੰਦੀਦਾ ਦਿਨ ਦਰਜ ਕਰਕੇ ਸੰਭਾਲੋ।';
+
+  @override
+  String get templatesSaveFromToday => 'ਅੱਜ ਤੋਂ ਸੰਭਾਲੋ';
+
+  @override
+  String get templatesNameLabel => 'ਟੈਮਪਲੇਟ ਦਾ ਨਾਮ';
+
+  @override
+  String get templatesNeedEntries => 'ਟੈਮਪਲੇਟ ਤੋਂ ਪਹਿਲਾਂ ਅੱਜ ਕੁਝ ਭੋਜਨ ਦਰਜ ਕਰੋ।';
+
+  @override
+  String get templatesSaved => 'ਟੈਮਪਲੇਟ ਸੰਭਾਲਿਆ ਗਿਆ';
+
+  @override
+  String get templatesApply => 'ਅੱਜ \'ਤੇ ਲਾਗੂ ਕਰੋ';
+
+  @override
+  String templatesApplied(int count) {
+    return 'ਟੈਮਪਲੇਟ ਤੋਂ $count ਐਂਟਰੀਆਂ ਜੋੜੀਆਂ';
+  }
+
+  @override
+  String templatesTodayCount(int count) {
+    return 'ਸੰਭਾਲਣ ਯੋਗ $count ਡਾਇਰੀ ਐਂਟਰੀਆਂ';
+  }
+
+  @override
+  String templatesItemSummary(int count, int kcal) {
+    return '$count ਆਈਟਮਾਂ · ≈ $kcal ਕਿਲੋਕੈਲੋਰੀ';
+  }
 }

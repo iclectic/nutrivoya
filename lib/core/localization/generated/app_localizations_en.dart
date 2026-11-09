@@ -25,6 +25,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get commonSave => 'Save';
 
   @override
+  String get commonDelete => 'Delete';
+
+  @override
   String get commonSkip => 'Skip';
 
   @override
@@ -1085,4 +1088,163 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get assistantTipLogSomething =>
       'Log a meal so balance advice can use your real pattern';
+
+  @override
+  String get progressTitle => 'Progress';
+
+  @override
+  String get progressIntro =>
+      'Track weight, water and measurements as calm trends — day-to-day changes are noise, not a verdict.';
+
+  @override
+  String get progressWater => 'Water today';
+
+  @override
+  String progressWaterTotal(int total, int goal) {
+    return '$total ml of $goal ml';
+  }
+
+  @override
+  String progressWaterAdd(int ml) {
+    return '+$ml ml';
+  }
+
+  @override
+  String get progressWeight => 'Weight';
+
+  @override
+  String get progressLogWeight => 'Log weight';
+
+  @override
+  String get progressWeightKgLabel => 'Weight (kg)';
+
+  @override
+  String progressWeightValue(String kg) {
+    return '$kg kg';
+  }
+
+  @override
+  String get progressWeightEmpty =>
+      'No weight logs yet. Add a few over days to see a calm trend.';
+
+  @override
+  String get progressWeightInvalid =>
+      'Enter a plausible weight between 20 and 400 kg.';
+
+  @override
+  String get progressTrendNote =>
+      'Trends use a multi-day average. Single-day changes are expected and not judged.';
+
+  @override
+  String get progressTrendInsufficient =>
+      'Log weight on a few more days to estimate a weekly trend.';
+
+  @override
+  String progressTrendSteady(String avg) {
+    return 'Around $avg kg — roughly steady over recent days.';
+  }
+
+  @override
+  String progressTrendRising(String avg, String delta) {
+    return 'Around $avg kg — gently rising (~$delta kg/week). Focus on patterns, not one day.';
+  }
+
+  @override
+  String progressTrendFalling(String avg, String delta) {
+    return 'Around $avg kg — gently falling (~$delta kg/week). Focus on patterns, not one day.';
+  }
+
+  @override
+  String get progressMeasurements => 'Body measurements';
+
+  @override
+  String get progressMeasurementsNote =>
+      'Optional waist and hip in centimetres. These are not used for calorie targets.';
+
+  @override
+  String get progressMeasurementsEmpty => 'No measurements logged yet.';
+
+  @override
+  String get progressLogMeasurement => 'Log measurement';
+
+  @override
+  String get progressWaistLabel => 'Waist (cm)';
+
+  @override
+  String get progressHipLabel => 'Hip (cm)';
+
+  @override
+  String progressWaist(String cm) {
+    return 'Waist $cm cm';
+  }
+
+  @override
+  String progressHip(String cm) {
+    return 'Hip $cm cm';
+  }
+
+  @override
+  String get progressMeasurementInvalid => 'Enter at least one measurement.';
+
+  @override
+  String get favouritesTitle => 'Favourites';
+
+  @override
+  String get favouritesAdd => 'Add to favourites';
+
+  @override
+  String get favouritesRemove => 'Remove from favourites';
+
+  @override
+  String get frequentFoodsTitle => 'Frequent foods';
+
+  @override
+  String get frequentFoodsEmpty => 'Foods you log often will appear here.';
+
+  @override
+  String frequentFoodsCount(int count) {
+    return 'Logged $count times';
+  }
+
+  @override
+  String get templatesTitle => 'Meal templates';
+
+  @override
+  String get templatesIntro =>
+      'Save a day\'s familiar meals and re-apply them later — useful for usual breakfasts and family patterns.';
+
+  @override
+  String get templatesEmpty =>
+      'No templates yet. Log a day you like, then save it as a template.';
+
+  @override
+  String get templatesSaveFromToday => 'Save from today';
+
+  @override
+  String get templatesNameLabel => 'Template name';
+
+  @override
+  String get templatesNeedEntries =>
+      'Log some foods today before saving a template.';
+
+  @override
+  String get templatesSaved => 'Template saved';
+
+  @override
+  String get templatesApply => 'Apply to today';
+
+  @override
+  String templatesApplied(int count) {
+    return 'Added $count items from the template';
+  }
+
+  @override
+  String templatesTodayCount(int count) {
+    return '$count diary entries available to save';
+  }
+
+  @override
+  String templatesItemSummary(int count, int kcal) {
+    return '$count items · ≈ $kcal kcal';
+  }
 }

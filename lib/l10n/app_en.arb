@@ -12,6 +12,7 @@
   "commonCancel": "Cancel",
   "commonContinue": "Continue",
   "commonSave": "Save",
+  "commonDelete": "Delete",
   "commonSkip": "Skip",
   "commonBack": "Back",
   "commonNext": "Next",
@@ -495,5 +496,115 @@
   "assistantTipModifyPortion": "Try a smaller serving of the staple first",
   "assistantTipAddVegetables": "Add vegetables or salad for volume and fibre",
   "assistantTipAddProteinSide": "Add a protein-rich side rather than cutting the staple",
-  "assistantTipLogSomething": "Log a meal so balance advice can use your real pattern"
+  "assistantTipLogSomething": "Log a meal so balance advice can use your real pattern",
+
+  "progressTitle": "Progress",
+  "progressIntro": "Track weight, water and measurements as calm trends — day-to-day changes are noise, not a verdict.",
+  "progressWater": "Water today",
+  "progressWaterTotal": "{total} ml of {goal} ml",
+  "@progressWaterTotal": {
+    "placeholders": {
+      "total": {"type": "int"},
+      "goal": {"type": "int"}
+    }
+  },
+  "progressWaterAdd": "+{ml} ml",
+  "@progressWaterAdd": {
+    "placeholders": {
+      "ml": {"type": "int"}
+    }
+  },
+  "progressWeight": "Weight",
+  "progressLogWeight": "Log weight",
+  "progressWeightKgLabel": "Weight (kg)",
+  "progressWeightValue": "{kg} kg",
+  "@progressWeightValue": {
+    "placeholders": {
+      "kg": {"type": "String"}
+    }
+  },
+  "progressWeightEmpty": "No weight logs yet. Add a few over days to see a calm trend.",
+  "progressWeightInvalid": "Enter a plausible weight between 20 and 400 kg.",
+  "progressTrendNote": "Trends use a multi-day average. Single-day changes are expected and not judged.",
+  "progressTrendInsufficient": "Log weight on a few more days to estimate a weekly trend.",
+  "progressTrendSteady": "Around {avg} kg — roughly steady over recent days.",
+  "@progressTrendSteady": {
+    "placeholders": {
+      "avg": {"type": "String"}
+    }
+  },
+  "progressTrendRising": "Around {avg} kg — gently rising (~{delta} kg/week). Focus on patterns, not one day.",
+  "@progressTrendRising": {
+    "placeholders": {
+      "avg": {"type": "String"},
+      "delta": {"type": "String"}
+    }
+  },
+  "progressTrendFalling": "Around {avg} kg — gently falling (~{delta} kg/week). Focus on patterns, not one day.",
+  "@progressTrendFalling": {
+    "placeholders": {
+      "avg": {"type": "String"},
+      "delta": {"type": "String"}
+    }
+  },
+  "progressMeasurements": "Body measurements",
+  "progressMeasurementsNote": "Optional waist and hip in centimetres. These are not used for calorie targets.",
+  "progressMeasurementsEmpty": "No measurements logged yet.",
+  "progressLogMeasurement": "Log measurement",
+  "progressWaistLabel": "Waist (cm)",
+  "progressHipLabel": "Hip (cm)",
+  "progressWaist": "Waist {cm} cm",
+  "@progressWaist": {
+    "placeholders": {
+      "cm": {"type": "String"}
+    }
+  },
+  "progressHip": "Hip {cm} cm",
+  "@progressHip": {
+    "placeholders": {
+      "cm": {"type": "String"}
+    }
+  },
+  "progressMeasurementInvalid": "Enter at least one measurement.",
+
+  "favouritesTitle": "Favourites",
+  "favouritesAdd": "Add to favourites",
+  "favouritesRemove": "Remove from favourites",
+
+  "frequentFoodsTitle": "Frequent foods",
+  "frequentFoodsEmpty": "Foods you log often will appear here.",
+  "frequentFoodsCount": "Logged {count} times",
+  "@frequentFoodsCount": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "templatesTitle": "Meal templates",
+  "templatesIntro": "Save a day's familiar meals and re-apply them later — useful for usual breakfasts and family patterns.",
+  "templatesEmpty": "No templates yet. Log a day you like, then save it as a template.",
+  "templatesSaveFromToday": "Save from today",
+  "templatesNameLabel": "Template name",
+  "templatesNeedEntries": "Log some foods today before saving a template.",
+  "templatesSaved": "Template saved",
+  "templatesApply": "Apply to today",
+  "templatesApplied": "Added {count} items from the template",
+  "@templatesApplied": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "templatesTodayCount": "{count} diary entries available to save",
+  "@templatesTodayCount": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "templatesItemSummary": "{count} items · ≈ {kcal} kcal",
+  "@templatesItemSummary": {
+    "placeholders": {
+      "count": {"type": "int"},
+      "kcal": {"type": "int"}
+    }
+  }
 }

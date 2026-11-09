@@ -24,6 +24,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get commonSave => 'حفظ';
 
   @override
+  String get commonDelete => 'حذف';
+
+  @override
   String get commonSkip => 'تخطي';
 
   @override
@@ -1070,4 +1073,160 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get assistantTipLogSomething =>
       'سجّل وجبة حتى يستخدم النصح نمطك الحقيقي';
+
+  @override
+  String get progressTitle => 'التقدم';
+
+  @override
+  String get progressIntro =>
+      'تتبّع الوزن والماء والقياسات كاتجاهات هادئة — تغيرات اليوم الواحد ضوضاء وليست حكمًا.';
+
+  @override
+  String get progressWater => 'الماء اليوم';
+
+  @override
+  String progressWaterTotal(int total, int goal) {
+    return '$total مل من $goal مل';
+  }
+
+  @override
+  String progressWaterAdd(int ml) {
+    return '+$ml مل';
+  }
+
+  @override
+  String get progressWeight => 'الوزن';
+
+  @override
+  String get progressLogWeight => 'تسجيل الوزن';
+
+  @override
+  String get progressWeightKgLabel => 'الوزن (كغ)';
+
+  @override
+  String progressWeightValue(String kg) {
+    return '$kg كغ';
+  }
+
+  @override
+  String get progressWeightEmpty =>
+      'لا سجلات وزن بعد. أضف بعضها على أيام لرؤية اتجاه هادئ.';
+
+  @override
+  String get progressWeightInvalid => 'أدخل وزنًا معقولًا بين 20 و400 كغ.';
+
+  @override
+  String get progressTrendNote =>
+      'تعتمد الاتجاهات على متوسط عدة أيام. تغيّر يوم واحد متوقع وغير محكوم عليه.';
+
+  @override
+  String get progressTrendInsufficient =>
+      'سجّل الوزن لعدة أيام إضافية لتقدير اتجاه أسبوعي.';
+
+  @override
+  String progressTrendSteady(String avg) {
+    return 'حوالي $avg كغ — مستقر تقريبًا في الأيام الأخيرة.';
+  }
+
+  @override
+  String progressTrendRising(String avg, String delta) {
+    return 'حوالي $avg كغ — ارتفاع لطيف (~$delta كغ/أسبوع). انظر للنمط لا ليوم واحد.';
+  }
+
+  @override
+  String progressTrendFalling(String avg, String delta) {
+    return 'حوالي $avg كغ — انخفاض لطيف (~$delta كغ/أسبوع). انظر للنمط لا ليوم واحد.';
+  }
+
+  @override
+  String get progressMeasurements => 'قياسات الجسم';
+
+  @override
+  String get progressMeasurementsNote =>
+      'خصر وورك اختياريان بالسنتيمتر. لا تُستخدم لأهداف السعرات.';
+
+  @override
+  String get progressMeasurementsEmpty => 'لا قياسات مسجّلة بعد.';
+
+  @override
+  String get progressLogMeasurement => 'تسجيل قياس';
+
+  @override
+  String get progressWaistLabel => 'الخصر (سم)';
+
+  @override
+  String get progressHipLabel => 'الورك (سم)';
+
+  @override
+  String progressWaist(String cm) {
+    return 'الخصر $cm سم';
+  }
+
+  @override
+  String progressHip(String cm) {
+    return 'الورك $cm سم';
+  }
+
+  @override
+  String get progressMeasurementInvalid => 'أدخل قياسًا واحدًا على الأقل.';
+
+  @override
+  String get favouritesTitle => 'المفضّلة';
+
+  @override
+  String get favouritesAdd => 'إضافة إلى المفضلة';
+
+  @override
+  String get favouritesRemove => 'إزالة من المفضلة';
+
+  @override
+  String get frequentFoodsTitle => 'أطعمة متكررة';
+
+  @override
+  String get frequentFoodsEmpty => 'ستظهر هنا الأطعمة التي تسجّلها كثيرًا.';
+
+  @override
+  String frequentFoodsCount(int count) {
+    return 'سُجّل $count مرات';
+  }
+
+  @override
+  String get templatesTitle => 'قوالب الوجبات';
+
+  @override
+  String get templatesIntro =>
+      'احفظ وجبات يوم مألوفة وأعد تطبيقها لاحقًا — مفيد لفطور معتاد.';
+
+  @override
+  String get templatesEmpty => 'لا قوالب بعد. سجّل يومًا يعجبك ثم احفظه.';
+
+  @override
+  String get templatesSaveFromToday => 'حفظ من اليوم';
+
+  @override
+  String get templatesNameLabel => 'اسم القالب';
+
+  @override
+  String get templatesNeedEntries => 'سجّل بعض الأطعمة اليوم قبل حفظ قالب.';
+
+  @override
+  String get templatesSaved => 'تم حفظ القالب';
+
+  @override
+  String get templatesApply => 'تطبيق على اليوم';
+
+  @override
+  String templatesApplied(int count) {
+    return 'أُضيفت $count عناصر من القالب';
+  }
+
+  @override
+  String templatesTodayCount(int count) {
+    return '$count إدخالات يومية متاحة للحفظ';
+  }
+
+  @override
+  String templatesItemSummary(int count, int kcal) {
+    return '$count عناصر · ≈ $kcal سعرة';
+  }
 }

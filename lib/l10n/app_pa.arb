@@ -591,5 +591,144 @@
   "assistantTipModifyPortion": "ਪਹਿਲਾਂ ਮੁੱਖ ਭੋਜਨ ਦਾ ਛੋਟਾ ਹਿੱਸਾ ਅਜ਼ਮਾਓ",
   "assistantTipAddVegetables": "ਮਾਤਰਾ ਅਤੇ ਫਾਈਬਰ ਲਈ ਸਬਜ਼ੀਆਂ ਜਾਂ ਸਲਾਦ ਜੋੜੋ",
   "assistantTipAddProteinSide": "ਮੁੱਖ ਭੋਜਨ ਹਟਾਉਣ ਦੀ ਬਜਾਏ ਪ੍ਰੋਟੀਨ ਵਾਲਾ ਸਾਥ ਜੋੜੋ",
-  "assistantTipLogSomething": "ਅਸਲ ਪੈਟਰਨ ਲਈ ਕੋਈ ਭੋਜਨ ਦਰਜ ਕਰੋ"
+  "assistantTipLogSomething": "ਅਸਲ ਪੈਟਰਨ ਲਈ ਕੋਈ ਭੋਜਨ ਦਰਜ ਕਰੋ",
+  "commonDelete": "ਮਿਟਾਓ",
+  "progressTitle": "ਤਰੱਕੀ",
+  "progressIntro": "ਵਜ਼ਨ, ਪਾਣੀ ਅਤੇ ਮਾਪਾਂ ਨੂੰ ਸ਼ਾਂਤ ਰੁਝਾਨ ਵਜੋਂ ਵੇਖੋ — ਰੋਜ਼ਾਨਾ ਬਦਲਾਅ ਸ਼ੋਰ ਹੈ, ਫੈਸਲਾ ਨਹੀਂ।",
+  "progressWater": "ਅੱਜ ਦਾ ਪਾਣੀ",
+  "progressWaterTotal": "{goal} ਵਿੱਚੋਂ {total} ਮਿ.ਲੀ.",
+  "progressWaterAdd": "+{ml} ਮਿ.ਲੀ.",
+  "progressWeight": "ਵਜ਼ਨ",
+  "progressLogWeight": "ਵਜ਼ਨ ਦਰਜ ਕਰੋ",
+  "progressWeightKgLabel": "ਵਜ਼ਨ (ਕਿਗ੍ਰਾ)",
+  "progressWeightValue": "{kg} ਕਿਗ੍ਰਾ",
+  "progressWeightEmpty": "ਅਜੇ ਕੋਈ ਵਜ਼ਨ ਨਹੀਂ। ਸ਼ਾਂਤ ਰੁਝਾਨ ਲਈ ਕੁਝ ਦਿਨਾਂ ਵਿੱਚ ਦਰਜ ਕਰੋ।",
+  "progressWeightInvalid": "20 ਤੋਂ 400 ਕਿਗ੍ਰਾ ਵਿਚਕਾਰ ਉਚਿਤ ਵਜ਼ਨ ਦਰਜ ਕਰੋ।",
+  "progressTrendNote": "ਰੁਝਾਨ ਕਈ ਦਿਨਾਂ ਦੇ ਔਸਤ 'ਤੇ ਅਧਾਰਿਤ ਹਨ। ਇੱਕ ਦਿਨ ਦਾ ਬਦਲਾਅ ਆਮ ਹੈ।",
+  "progressTrendInsufficient": "ਹਫ਼ਤਾਵਾਰੀ ਰੁਝਾਨ ਲਈ ਕੁਝ ਹੋਰ ਦਿਨਾਂ ਦਾ ਵਜ਼ਨ ਦਰਜ ਕਰੋ।",
+  "progressTrendSteady": "ਲਗਭਗ {avg} ਕਿਗ੍ਰਾ — ਹਾਲੀਆ ਦਿਨਾਂ ਵਿੱਚ ਲਗਭਗ ਸਥਿਰ।",
+  "progressTrendRising": "ਲਗਭਗ {avg} ਕਿਗ੍ਰਾ — ਹੌਲੀ ਵਧ ਰਿਹਾ (~{delta} ਕਿਗ੍ਰਾ/ਹਫ਼ਤਾ)। ਇੱਕ ਦਿਨ ਨਹੀਂ, ਪੈਟਰਨ ਵੇਖੋ।",
+  "progressTrendFalling": "ਲਗਭਗ {avg} ਕਿਗ੍ਰਾ — ਹੌਲੀ ਘਟ ਰਿਹਾ (~{delta} ਕਿਗ੍ਰਾ/ਹਫ਼ਤਾ)। ਇੱਕ ਦਿਨ ਨਹੀਂ, ਪੈਟਰਨ ਵੇਖੋ।",
+  "progressMeasurements": "ਸਰੀਰਕ ਮਾਪ",
+  "progressMeasurementsNote": "ਵਿਕਲਪਿਕ ਲੱਕ ਅਤੇ ਕੁੱਲ੍ਹੇ ਸੈਮੀ ਵਿੱਚ। ਕੈਲੋਰੀ ਟੀਚਿਆਂ ਲਈ ਨਹੀਂ।",
+  "progressMeasurementsEmpty": "ਅਜੇ ਕੋਈ ਮਾਪ ਨਹੀਂ।",
+  "progressLogMeasurement": "ਮਾਪ ਦਰਜ ਕਰੋ",
+  "progressWaistLabel": "ਲੱਕ (ਸੈਮੀ)",
+  "progressHipLabel": "ਕੁੱਲ੍ਹੇ (ਸੈਮੀ)",
+  "progressWaist": "ਲੱਕ {cm} ਸੈਮੀ",
+  "progressHip": "ਕੁੱਲ੍ਹੇ {cm} ਸੈਮੀ",
+  "progressMeasurementInvalid": "ਘੱਟੋ-ਘੱਟ ਇੱਕ ਮਾਪ ਦਰਜ ਕਰੋ।",
+  "favouritesTitle": "ਪਸੰਦੀਦਾ",
+  "favouritesAdd": "ਪਸੰਦੀਦਾ ਵਿੱਚ ਜੋੜੋ",
+  "favouritesRemove": "ਪਸੰਦੀਦਾ ਤੋਂ ਹਟਾਓ",
+  "frequentFoodsTitle": "ਅਕਸਰ ਖਾਧੇ ਜਾਣ ਵਾਲੇ",
+  "frequentFoodsEmpty": "ਅਕਸਰ ਦਰਜ ਭੋਜਨ ਇੱਥੇ ਦਿਖਣਗੇ।",
+  "frequentFoodsCount": "{count} ਵਾਰ ਦਰਜ",
+  "templatesTitle": "ਭੋਜਨ ਟੈਮਪਲੇਟ",
+  "templatesIntro": "ਇੱਕ ਦਿਨ ਦੇ ਜਾਣੇ-ਪਛਾਣੇ ਭੋਜਨ ਸੰਭਾਲੋ ਅਤੇ ਬਾਅਦ ਵਿੱਚ ਲਾਗੂ ਕਰੋ।",
+  "templatesEmpty": "ਅਜੇ ਕੋਈ ਟੈਮਪਲੇਟ ਨਹੀਂ। ਪਸੰਦੀਦਾ ਦਿਨ ਦਰਜ ਕਰਕੇ ਸੰਭਾਲੋ।",
+  "templatesSaveFromToday": "ਅੱਜ ਤੋਂ ਸੰਭਾਲੋ",
+  "templatesNameLabel": "ਟੈਮਪਲੇਟ ਦਾ ਨਾਮ",
+  "templatesNeedEntries": "ਟੈਮਪਲੇਟ ਤੋਂ ਪਹਿਲਾਂ ਅੱਜ ਕੁਝ ਭੋਜਨ ਦਰਜ ਕਰੋ।",
+  "templatesSaved": "ਟੈਮਪਲੇਟ ਸੰਭਾਲਿਆ ਗਿਆ",
+  "templatesApply": "ਅੱਜ 'ਤੇ ਲਾਗੂ ਕਰੋ",
+  "templatesApplied": "ਟੈਮਪਲੇਟ ਤੋਂ {count} ਐਂਟਰੀਆਂ ਜੋੜੀਆਂ",
+  "templatesTodayCount": "ਸੰਭਾਲਣ ਯੋਗ {count} ਡਾਇਰੀ ਐਂਟਰੀਆਂ",
+  "templatesItemSummary": "{count} ਆਈਟਮਾਂ · ≈ {kcal} ਕਿਲੋਕੈਲੋਰੀ",
+  "@progressWaterTotal": {
+    "placeholders": {
+      "total": {
+        "type": "int"
+      },
+      "goal": {
+        "type": "int"
+      }
+    }
+  },
+  "@progressWaterAdd": {
+    "placeholders": {
+      "ml": {
+        "type": "int"
+      }
+    }
+  },
+  "@progressWeightValue": {
+    "placeholders": {
+      "kg": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressTrendSteady": {
+    "placeholders": {
+      "avg": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressTrendRising": {
+    "placeholders": {
+      "avg": {
+        "type": "String"
+      },
+      "delta": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressTrendFalling": {
+    "placeholders": {
+      "avg": {
+        "type": "String"
+      },
+      "delta": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressWaist": {
+    "placeholders": {
+      "cm": {
+        "type": "String"
+      }
+    }
+  },
+  "@progressHip": {
+    "placeholders": {
+      "cm": {
+        "type": "String"
+      }
+    }
+  },
+  "@frequentFoodsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@templatesApplied": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@templatesTodayCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@templatesItemSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "kcal": {
+        "type": "int"
+      }
+    }
+  }
 }

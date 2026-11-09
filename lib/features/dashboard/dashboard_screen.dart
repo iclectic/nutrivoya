@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../core/models/diary_entry.dart';
 import '../../core/models/meal_type.dart';
@@ -27,6 +28,11 @@ class DashboardScreen extends ConsumerWidget {
       appBar: AppBar(
         title: Text(l10n.dashboardToday),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.show_chart),
+            tooltip: l10n.progressTitle,
+            onPressed: () => context.push('/progress'),
+          ),
           IconButton(
             icon: const Icon(Icons.calendar_today_outlined),
             tooltip: l10n.diarySelectDate,
