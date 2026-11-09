@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../features/add_product/add_product_screen.dart';
+import '../features/add_product/my_submissions_screen.dart';
 import '../features/assistant/assistant_screen.dart';
 import '../features/auth/auth_controller.dart';
 import '../features/auth/auth_form_screen.dart';
@@ -113,6 +115,26 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/photo',
         builder: (context, state) => const PhotoRecognitionScreen(),
+      ),
+      GoRoute(
+        path: '/add-product',
+        builder: (context, state) {
+          final extra = state.extra;
+          String? name;
+          String? barcode;
+          if (extra is Map) {
+            name = extra['name'] as String?;
+            barcode = extra['barcode'] as String?;
+          }
+          return AddProductScreen(
+            initialName: name,
+            initialBarcode: barcode,
+          );
+        },
+      ),
+      GoRoute(
+        path: '/submissions',
+        builder: (context, state) => const MySubmissionsScreen(),
       ),
       GoRoute(
         path: '/assistant',

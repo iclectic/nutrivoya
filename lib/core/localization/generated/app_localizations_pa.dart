@@ -1315,4 +1315,137 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get photoErrorFailed => 'ਉਹ ਫੋਟੋ ਵਰਤੀ ਨਹੀਂ ਜਾ ਸਕੀ। ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।';
+
+  @override
+  String get addProductTitle => 'ਉਤਪਾਦ ਜੋੜੋ';
+
+  @override
+  String get addProductIntro =>
+      'ਆਪਣੀ ਨਿੱਜੀ ਲਾਇਬ੍ਰੇਰੀ ਲਈ ਗਾਇਬ ਭੋਜਨ ਜਾਂ ਪੈਕੇਜਡ ਉਤਪਾਦ ਭੇਜੋ। ਤੁਹਾਡੇ ਦਾਖਲ ਮੁੱਲ ਕਦੇ ਅਧਿਕਾਰਤ ਨਹੀਂ ਮੰਨੇ ਜਾਂਦੇ।';
+
+  @override
+  String get addProductProvenanceNote =>
+      'ਅਣਜਾਣ ਹੋਣ \'ਤੇ ਪੋਸ਼ਣ ਖਾਲੀ ਛੱਡੋ। Nutrivoya ਕੈਲੋਰੀ ਜਾਂ ਮੈਕਰੋ ਘੜ੍ਹਦਾ ਨਹੀਂ।';
+
+  @override
+  String get addProductNameLabel => 'ਉਤਪਾਦ ਜਾਂ ਭੋਜਨ ਦਾ ਨਾਮ';
+
+  @override
+  String get addProductBrandLabel => 'ਬ੍ਰਾਂਡ (ਵਿਕਲਪਿਕ)';
+
+  @override
+  String get addProductBarcodeLabel => 'ਬਾਰਕੋਡ (ਵਿਕਲਪਿਕ)';
+
+  @override
+  String get addProductCuisineLabel => 'ਪਕਵਾਨ ਜਾਂ ਖੇਤਰ (ਵਿਕਲਪਿਕ)';
+
+  @override
+  String get addProductServingSection => 'ਸਰਵਿੰਗ';
+
+  @override
+  String get addProductServingGramsLabel => 'ਡਿਫਾਲਟ ਸਰਵਿੰਗ (ਗ੍ਰਾਮ)';
+
+  @override
+  String get addProductPortionNameLabel => 'ਹਿੱਸੇ ਦਾ ਨਾਮ (ਵਿਕਲਪਿਕ)';
+
+  @override
+  String get addProductNutritionSection => 'ਪ੍ਰਤੀ 100 ਗ ਪੋਸ਼ਣ (ਵਿਕਲਪਿਕ)';
+
+  @override
+  String get addProductNutritionHint =>
+      'ਸਿਰਫ਼ ਲੇਬਲ ਜਾਂ ਭਰੋਸੇਯੋਗ ਸਰੋਤ ਤੋਂ ਜਾਣੇ ਮੁੱਲ ਦਰਜ ਕਰੋ। ਅਨੁਮਾਨ ਲਗਾਉਣ ਨਾਲੋਂ ਖਾਲੀ ਛੱਡੋ।';
+
+  @override
+  String get addProductEnergyLabel => 'ਊਰਜਾ (kcal / 100 ਗ)';
+
+  @override
+  String get addProductProteinLabel => 'ਪ੍ਰੋਟੀਨ (ਗ / 100 ਗ)';
+
+  @override
+  String get addProductCarbLabel => 'ਕਾਰਬੋਹਾਈਡਰੇਟ (ਗ / 100 ਗ)';
+
+  @override
+  String get addProductFatLabel => 'ਚਰਬੀ (ਗ / 100 ਗ)';
+
+  @override
+  String get addProductFibreLabel => 'ਫਾਈਬਰ (ਗ / 100 ਗ)';
+
+  @override
+  String get addProductNotesLabel => 'ਨੋਟਸ (ਵਿਕਲਪਿਕ)';
+
+  @override
+  String get addProductSubmit => 'ਮੇਰੀ ਲਾਇਬ੍ਰੇਰੀ ਵਿੱਚ ਸੰਭਾਲੋ';
+
+  @override
+  String get addProductSubmitNote =>
+      'ਉਪਭੋਗਤਾ-ਭੇਜਿਆ ਅਤੇ ਸਮੀਖਿਆ ਲੰਬਿਤ ਵਜੋਂ ਸੰਭਾਲਿਆ। ਸਿਰਫ਼ ਤੁਹਾਡੀ ਖੋਜ ਵਿੱਚ ਦਿਖਦਾ ਹੈ — ਪ੍ਰਮਾਣਿਤ ਪੋਸ਼ਣ ਨਹੀਂ।';
+
+  @override
+  String get addProductPublished =>
+      'ਤੁਹਾਡੀ ਨਿੱਜੀ ਲਾਇਬ੍ਰੇਰੀ ਵਿੱਚ ਸੰਭਾਲਿਆ (ਸਮੀਖਿਆ ਲੰਬਿਤ)';
+
+  @override
+  String get addProductErrorNameRequired => 'ਉਤਪਾਦ ਜਾਂ ਭੋਜਨ ਦਾ ਨਾਮ ਦਰਜ ਕਰੋ।';
+
+  @override
+  String get addProductErrorNameShort => 'ਨਾਮ ਬਹੁਤ ਛੋਟਾ ਹੈ।';
+
+  @override
+  String get addProductErrorServingInvalid =>
+      'ਸਰਵਿੰਗ 0 ਤੋਂ 5000 ਗ੍ਰਾਮ ਵਿਚਕਾਰ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ।';
+
+  @override
+  String get addProductErrorBarcodeInvalid =>
+      'ਬਾਰਕੋਡ 8–14 ਅੰਕਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।';
+
+  @override
+  String get addProductErrorEnergyInvalid =>
+      'ਊਰਜਾ ਪ੍ਰਤੀ 100 ਗ 0 ਤੋਂ 950 kcal ਵਿਚਕਾਰ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ।';
+
+  @override
+  String get addProductErrorProteinInvalid =>
+      'ਪ੍ਰੋਟੀਨ ਪ੍ਰਤੀ 100 ਗ 0 ਤੋਂ 1000 ਗ ਵਿਚਕਾਰ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।';
+
+  @override
+  String get addProductErrorCarbInvalid =>
+      'ਕਾਰਬੋਹਾਈਡਰੇਟ ਪ੍ਰਤੀ 100 ਗ 0 ਤੋਂ 1000 ਗ ਵਿਚਕਾਰ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।';
+
+  @override
+  String get addProductErrorFatInvalid =>
+      'ਚਰਬੀ ਪ੍ਰਤੀ 100 ਗ 0 ਤੋਂ 1000 ਗ ਵਿਚਕਾਰ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ।';
+
+  @override
+  String get addProductErrorFibreInvalid =>
+      'ਫਾਈਬਰ ਪ੍ਰਤੀ 100 ਗ 0 ਤੋਂ 1000 ਗ ਵਿਚਕਾਰ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।';
+
+  @override
+  String get addProductWarningNoNutrition =>
+      'ਕੋਈ ਪੋਸ਼ਣ ਨਹੀਂ — ਮੁੱਲ ਜੋੜਨ ਤੱਕ ਭੋਜਨ ਉਪਲਬਧ ਨਹੀਂ ਦਿਖੇਗਾ।';
+
+  @override
+  String get addProductWarningNoEnergy =>
+      'ਊਰਜਾ ਗਾਇਬ ਹੈ — ਸਿਰਫ਼ ਮੈਕਰੋ ਨਾਲ ਕੈਲੋਰੀ ਨਹੀਂ ਦਿਖੇਗੀ।';
+
+  @override
+  String get addProductWarningMacrosHigh =>
+      'ਪ੍ਰੋਟੀਨ + ਕਾਰਬ + ਚਰਬੀ 110 ਗ / 100 ਗ ਤੋਂ ਵੱਧ — ਲੇਬਲ ਚੈੱਕ ਕਰੋ।';
+
+  @override
+  String get addProductStatusDraft => 'ਡਰਾਫਟ';
+
+  @override
+  String get addProductStatusPending => 'ਸਮੀਖਿਆ ਲੰਬਿਤ';
+
+  @override
+  String get addProductStatusPublished => 'ਨਿੱਜੀ ਲਾਇਬ੍ਰੇਰੀ ਵਿੱਚ (ਸਮੀਖਿਆ ਲੰਬਿਤ)';
+
+  @override
+  String get addProductStatusWithdrawn => 'ਵਾਪਸ ਲਿਆ';
+
+  @override
+  String get mySubmissionsTitle => 'ਮੇਰੇ ਸਬਮਿਸ਼ਨ';
+
+  @override
+  String get mySubmissionsEmpty =>
+      'ਹਾਲੇ ਕੋਈ ਸਬਮਿਸ਼ਨ ਨਹੀਂ। ਖੋਜ, ਬਾਰਕੋਡ ਜਾਂ ਸੈਟਿੰਗਾਂ ਤੋਂ ਗਾਇਬ ਉਤਪਾਦ ਜੋੜੋ।';
 }

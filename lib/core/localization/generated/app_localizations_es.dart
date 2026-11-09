@@ -1338,4 +1338,139 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get photoErrorFailed =>
       'No se pudo usar esa foto. Inténtalo de nuevo o elige otra imagen.';
+
+  @override
+  String get addProductTitle => 'Añadir producto';
+
+  @override
+  String get addProductIntro =>
+      'Envía un alimento o producto envasado que falte a tu biblioteca personal. Los valores que introduzcas nunca se tratan como autoritativos.';
+
+  @override
+  String get addProductProvenanceNote =>
+      'Deja la nutrición en blanco si no la conoces. Nutrivoya no inventa calorías ni macros.';
+
+  @override
+  String get addProductNameLabel => 'Nombre del producto o alimento';
+
+  @override
+  String get addProductBrandLabel => 'Marca (opcional)';
+
+  @override
+  String get addProductBarcodeLabel => 'Código de barras (opcional)';
+
+  @override
+  String get addProductCuisineLabel => 'Cocina o región (opcional)';
+
+  @override
+  String get addProductServingSection => 'Ración';
+
+  @override
+  String get addProductServingGramsLabel => 'Ración por defecto (gramos)';
+
+  @override
+  String get addProductPortionNameLabel => 'Nombre de la porción (opcional)';
+
+  @override
+  String get addProductNutritionSection => 'Nutrición por 100 g (opcional)';
+
+  @override
+  String get addProductNutritionHint =>
+      'Introduce solo valores que conozcas de una etiqueta o fuente fiable. Mejor vacío que inventado.';
+
+  @override
+  String get addProductEnergyLabel => 'Energía (kcal / 100 g)';
+
+  @override
+  String get addProductProteinLabel => 'Proteína (g / 100 g)';
+
+  @override
+  String get addProductCarbLabel => 'Carbohidratos (g / 100 g)';
+
+  @override
+  String get addProductFatLabel => 'Grasa (g / 100 g)';
+
+  @override
+  String get addProductFibreLabel => 'Fibra (g / 100 g)';
+
+  @override
+  String get addProductNotesLabel => 'Notas (opcional)';
+
+  @override
+  String get addProductSubmit => 'Guardar en mi biblioteca';
+
+  @override
+  String get addProductSubmitNote =>
+      'Se guarda como enviado por el usuario con revisión pendiente. Solo aparece en tu búsqueda — no como nutrición verificada.';
+
+  @override
+  String get addProductPublished =>
+      'Guardado en tu biblioteca personal (revisión pendiente)';
+
+  @override
+  String get addProductErrorNameRequired =>
+      'Introduce un nombre de producto o alimento.';
+
+  @override
+  String get addProductErrorNameShort => 'El nombre es demasiado corto.';
+
+  @override
+  String get addProductErrorServingInvalid =>
+      'La ración debe estar entre 0 y 5000 gramos.';
+
+  @override
+  String get addProductErrorBarcodeInvalid =>
+      'El código de barras debe tener 8–14 dígitos.';
+
+  @override
+  String get addProductErrorEnergyInvalid =>
+      'La energía debe estar entre 0 y 950 kcal por 100 g.';
+
+  @override
+  String get addProductErrorProteinInvalid =>
+      'La proteína debe estar entre 0 y 1000 g por 100 g.';
+
+  @override
+  String get addProductErrorCarbInvalid =>
+      'Los carbohidratos deben estar entre 0 y 1000 g por 100 g.';
+
+  @override
+  String get addProductErrorFatInvalid =>
+      'La grasa debe estar entre 0 y 1000 g por 100 g.';
+
+  @override
+  String get addProductErrorFibreInvalid =>
+      'La fibra debe estar entre 0 y 1000 g por 100 g.';
+
+  @override
+  String get addProductWarningNoNutrition =>
+      'Sin nutrición — el alimento aparecerá como no disponible hasta que añadas valores.';
+
+  @override
+  String get addProductWarningNoEnergy =>
+      'Falta la energía — solo con macros no se mostrarán calorías.';
+
+  @override
+  String get addProductWarningMacrosHigh =>
+      'Proteína + carbohidratos + grasa superan 110 g por 100 g — revisa la etiqueta.';
+
+  @override
+  String get addProductStatusDraft => 'Borrador';
+
+  @override
+  String get addProductStatusPending => 'Revisión pendiente';
+
+  @override
+  String get addProductStatusPublished =>
+      'En biblioteca personal (revisión pendiente)';
+
+  @override
+  String get addProductStatusWithdrawn => 'Retirado';
+
+  @override
+  String get mySubmissionsTitle => 'Mis envíos';
+
+  @override
+  String get mySubmissionsEmpty =>
+      'Aún no hay envíos. Añade un producto que falte desde búsqueda, código de barras o Ajustes.';
 }

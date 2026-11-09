@@ -1330,4 +1330,137 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get photoErrorFailed =>
       'Could not use that photo. Try again or pick another image.';
+
+  @override
+  String get addProductTitle => 'Add Product';
+
+  @override
+  String get addProductIntro =>
+      'Submit a missing food or packaged product for your personal library. Values you enter are never treated as authoritative.';
+
+  @override
+  String get addProductProvenanceNote =>
+      'Leave nutrition blank when unknown. Nutrivoya will not invent calories or macros.';
+
+  @override
+  String get addProductNameLabel => 'Product or food name';
+
+  @override
+  String get addProductBrandLabel => 'Brand (optional)';
+
+  @override
+  String get addProductBarcodeLabel => 'Barcode (optional)';
+
+  @override
+  String get addProductCuisineLabel => 'Cuisine or region (optional)';
+
+  @override
+  String get addProductServingSection => 'Serving';
+
+  @override
+  String get addProductServingGramsLabel => 'Default serving (grams)';
+
+  @override
+  String get addProductPortionNameLabel => 'Portion name (optional)';
+
+  @override
+  String get addProductNutritionSection => 'Nutrition per 100 g (optional)';
+
+  @override
+  String get addProductNutritionHint =>
+      'Enter only values you know from a label or trusted source. Leave fields empty rather than guessing.';
+
+  @override
+  String get addProductEnergyLabel => 'Energy (kcal / 100 g)';
+
+  @override
+  String get addProductProteinLabel => 'Protein (g / 100 g)';
+
+  @override
+  String get addProductCarbLabel => 'Carbohydrate (g / 100 g)';
+
+  @override
+  String get addProductFatLabel => 'Fat (g / 100 g)';
+
+  @override
+  String get addProductFibreLabel => 'Fibre (g / 100 g)';
+
+  @override
+  String get addProductNotesLabel => 'Notes (optional)';
+
+  @override
+  String get addProductSubmit => 'Save to my library';
+
+  @override
+  String get addProductSubmitNote =>
+      'Saved as user-submitted with pending review. It appears in your search only — not as verified nutrition.';
+
+  @override
+  String get addProductPublished =>
+      'Saved to your personal library (pending review)';
+
+  @override
+  String get addProductErrorNameRequired => 'Enter a product or food name.';
+
+  @override
+  String get addProductErrorNameShort => 'Name is too short.';
+
+  @override
+  String get addProductErrorServingInvalid =>
+      'Serving must be between 0 and 5000 grams.';
+
+  @override
+  String get addProductErrorBarcodeInvalid => 'Barcode should be 8–14 digits.';
+
+  @override
+  String get addProductErrorEnergyInvalid =>
+      'Energy must be between 0 and 950 kcal per 100 g.';
+
+  @override
+  String get addProductErrorProteinInvalid =>
+      'Protein must be between 0 and 1000 g per 100 g.';
+
+  @override
+  String get addProductErrorCarbInvalid =>
+      'Carbohydrate must be between 0 and 1000 g per 100 g.';
+
+  @override
+  String get addProductErrorFatInvalid =>
+      'Fat must be between 0 and 1000 g per 100 g.';
+
+  @override
+  String get addProductErrorFibreInvalid =>
+      'Fibre must be between 0 and 1000 g per 100 g.';
+
+  @override
+  String get addProductWarningNoNutrition =>
+      'No nutrition entered — food will show as unavailable until you add values.';
+
+  @override
+  String get addProductWarningNoEnergy =>
+      'Energy is missing — macros alone will not show calories.';
+
+  @override
+  String get addProductWarningMacrosHigh =>
+      'Protein + carbs + fat exceed 110 g per 100 g — check the label.';
+
+  @override
+  String get addProductStatusDraft => 'Draft';
+
+  @override
+  String get addProductStatusPending => 'Pending review';
+
+  @override
+  String get addProductStatusPublished =>
+      'In personal library (pending review)';
+
+  @override
+  String get addProductStatusWithdrawn => 'Withdrawn';
+
+  @override
+  String get mySubmissionsTitle => 'My submissions';
+
+  @override
+  String get mySubmissionsEmpty =>
+      'No submissions yet. Add a missing product from search, barcode, or Settings.';
 }

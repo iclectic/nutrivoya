@@ -2362,6 +2362,240 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Could not use that photo. Try again or pick another image.'**
   String get photoErrorFailed;
+
+  /// No description provided for @addProductTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Product'**
+  String get addProductTitle;
+
+  /// No description provided for @addProductIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Submit a missing food or packaged product for your personal library. Values you enter are never treated as authoritative.'**
+  String get addProductIntro;
+
+  /// No description provided for @addProductProvenanceNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Leave nutrition blank when unknown. Nutrivoya will not invent calories or macros.'**
+  String get addProductProvenanceNote;
+
+  /// No description provided for @addProductNameLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Product or food name'**
+  String get addProductNameLabel;
+
+  /// No description provided for @addProductBrandLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Brand (optional)'**
+  String get addProductBrandLabel;
+
+  /// No description provided for @addProductBarcodeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Barcode (optional)'**
+  String get addProductBarcodeLabel;
+
+  /// No description provided for @addProductCuisineLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cuisine or region (optional)'**
+  String get addProductCuisineLabel;
+
+  /// No description provided for @addProductServingSection.
+  ///
+  /// In en, this message translates to:
+  /// **'Serving'**
+  String get addProductServingSection;
+
+  /// No description provided for @addProductServingGramsLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Default serving (grams)'**
+  String get addProductServingGramsLabel;
+
+  /// No description provided for @addProductPortionNameLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Portion name (optional)'**
+  String get addProductPortionNameLabel;
+
+  /// No description provided for @addProductNutritionSection.
+  ///
+  /// In en, this message translates to:
+  /// **'Nutrition per 100 g (optional)'**
+  String get addProductNutritionSection;
+
+  /// No description provided for @addProductNutritionHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter only values you know from a label or trusted source. Leave fields empty rather than guessing.'**
+  String get addProductNutritionHint;
+
+  /// No description provided for @addProductEnergyLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Energy (kcal / 100 g)'**
+  String get addProductEnergyLabel;
+
+  /// No description provided for @addProductProteinLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Protein (g / 100 g)'**
+  String get addProductProteinLabel;
+
+  /// No description provided for @addProductCarbLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Carbohydrate (g / 100 g)'**
+  String get addProductCarbLabel;
+
+  /// No description provided for @addProductFatLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Fat (g / 100 g)'**
+  String get addProductFatLabel;
+
+  /// No description provided for @addProductFibreLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Fibre (g / 100 g)'**
+  String get addProductFibreLabel;
+
+  /// No description provided for @addProductNotesLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Notes (optional)'**
+  String get addProductNotesLabel;
+
+  /// No description provided for @addProductSubmit.
+  ///
+  /// In en, this message translates to:
+  /// **'Save to my library'**
+  String get addProductSubmit;
+
+  /// No description provided for @addProductSubmitNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Saved as user-submitted with pending review. It appears in your search only — not as verified nutrition.'**
+  String get addProductSubmitNote;
+
+  /// No description provided for @addProductPublished.
+  ///
+  /// In en, this message translates to:
+  /// **'Saved to your personal library (pending review)'**
+  String get addProductPublished;
+
+  /// No description provided for @addProductErrorNameRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a product or food name.'**
+  String get addProductErrorNameRequired;
+
+  /// No description provided for @addProductErrorNameShort.
+  ///
+  /// In en, this message translates to:
+  /// **'Name is too short.'**
+  String get addProductErrorNameShort;
+
+  /// No description provided for @addProductErrorServingInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Serving must be between 0 and 5000 grams.'**
+  String get addProductErrorServingInvalid;
+
+  /// No description provided for @addProductErrorBarcodeInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Barcode should be 8–14 digits.'**
+  String get addProductErrorBarcodeInvalid;
+
+  /// No description provided for @addProductErrorEnergyInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Energy must be between 0 and 950 kcal per 100 g.'**
+  String get addProductErrorEnergyInvalid;
+
+  /// No description provided for @addProductErrorProteinInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Protein must be between 0 and 1000 g per 100 g.'**
+  String get addProductErrorProteinInvalid;
+
+  /// No description provided for @addProductErrorCarbInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Carbohydrate must be between 0 and 1000 g per 100 g.'**
+  String get addProductErrorCarbInvalid;
+
+  /// No description provided for @addProductErrorFatInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Fat must be between 0 and 1000 g per 100 g.'**
+  String get addProductErrorFatInvalid;
+
+  /// No description provided for @addProductErrorFibreInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Fibre must be between 0 and 1000 g per 100 g.'**
+  String get addProductErrorFibreInvalid;
+
+  /// No description provided for @addProductWarningNoNutrition.
+  ///
+  /// In en, this message translates to:
+  /// **'No nutrition entered — food will show as unavailable until you add values.'**
+  String get addProductWarningNoNutrition;
+
+  /// No description provided for @addProductWarningNoEnergy.
+  ///
+  /// In en, this message translates to:
+  /// **'Energy is missing — macros alone will not show calories.'**
+  String get addProductWarningNoEnergy;
+
+  /// No description provided for @addProductWarningMacrosHigh.
+  ///
+  /// In en, this message translates to:
+  /// **'Protein + carbs + fat exceed 110 g per 100 g — check the label.'**
+  String get addProductWarningMacrosHigh;
+
+  /// No description provided for @addProductStatusDraft.
+  ///
+  /// In en, this message translates to:
+  /// **'Draft'**
+  String get addProductStatusDraft;
+
+  /// No description provided for @addProductStatusPending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending review'**
+  String get addProductStatusPending;
+
+  /// No description provided for @addProductStatusPublished.
+  ///
+  /// In en, this message translates to:
+  /// **'In personal library (pending review)'**
+  String get addProductStatusPublished;
+
+  /// No description provided for @addProductStatusWithdrawn.
+  ///
+  /// In en, this message translates to:
+  /// **'Withdrawn'**
+  String get addProductStatusWithdrawn;
+
+  /// No description provided for @mySubmissionsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'My submissions'**
+  String get mySubmissionsTitle;
+
+  /// No description provided for @mySubmissionsEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No submissions yet. Add a missing product from search, barcode, or Settings.'**
+  String get mySubmissionsEmpty;
 }
 
 class _AppLocalizationsDelegate

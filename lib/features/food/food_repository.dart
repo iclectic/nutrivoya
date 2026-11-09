@@ -32,13 +32,18 @@ class CompositeFoodRepository implements FoodRepository {
     required FoodSearchService searchService,
     UsdaFoodDataCentralAdapter? usdaAdapter,
     PackagedFoodRepository? packagedFoodRepository,
+    List<Food> Function()? userFoods,
   })  : _searchService = searchService,
         _usdaAdapter = usdaAdapter,
-        _packaged = packagedFoodRepository;
+        _packaged = packagedFoodRepository,
+        _userFoods = userFoods;
 
   final FoodSearchService _searchService;
   final UsdaFoodDataCentralAdapter? _usdaAdapter;
   final PackagedFoodRepository? _packaged;
+
+  /// Optional personal-library foods (user-submitted, pending review).
+  final List<Food> Function()? _userFoods;
 
   @override
   Future<List<FoodSearchResult>> search(
@@ -46,6 +51,7 @@ class CompositeFoodRepository implements FoodRepository {
     UserProfile? profile,
   }) async {
     final local = LocalFoodDataset.all();
+    final user = _userFoods?.call() ?? const <Food>[];
 
     List<Food> remote = const [];
     if (_usdaAdapter != null && _usdaAdapter.isConfigured) {
@@ -75,16 +81,17 @@ class CompositeFoodRepository implements FoodRepository {
           debugPrint('[FoodRepository] packaged barcode search failed: $e');
         }
       }
+      // Fall through so a user-submitted barcode alias can still match.
     }
 
-    final merged = [...local, ...remote];
+    final merged = [...local, ...user, ...remote];
     return _searchService.search(query, merged, profile: profile);
   }
 
   @override
   Future<Food?> getById(String id) async {
     // Local ids have no prefix; USDA ids are prefixed with 'usda:';
-    // packaged (Open Food Facts) ids with 'off:'.
+    // packaged (Open Food Facts) ids with 'off:'; user submissions 'user:'.
     if (id.startsWith('usda:')) {
       if (_usdaAdapter == null || !_usdaAdapter.isConfigured) return null;
       try {
@@ -104,6 +111,13 @@ class CompositeFoodRepository implements FoodRepository {
         }
         return null;
       }
+    }
+    if (id.startsWith('user:')) {
+      final users = _userFoods?.call() ?? const <Food>[];
+      for (final food in users) {
+        if (food.id == id) return food;
+      }
+      return null;
     }
     return LocalFoodDataset.byId(id);
   }

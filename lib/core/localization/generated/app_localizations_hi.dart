@@ -1322,4 +1322,138 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get photoErrorFailed => 'वह फ़ोटो उपयोग नहीं हो सकी। फिर कोशिश करें।';
+
+  @override
+  String get addProductTitle => 'उत्पाद जोड़ें';
+
+  @override
+  String get addProductIntro =>
+      'अपनी व्यक्तिगत लाइब्रेरी के लिए गायब भोजन या पैकेज्ड उत्पाद जमा करें। आपके दर्ज मान कभी आधिकारिक नहीं माने जाते।';
+
+  @override
+  String get addProductProvenanceNote =>
+      'अज्ञात होने पर पोषण खाली छोड़ें। Nutrivoya कैलोरी या मैक्रो का आविष्कार नहीं करेगा।';
+
+  @override
+  String get addProductNameLabel => 'उत्पाद या भोजन का नाम';
+
+  @override
+  String get addProductBrandLabel => 'ब्रांड (वैकल्पिक)';
+
+  @override
+  String get addProductBarcodeLabel => 'बारकोड (वैकल्पिक)';
+
+  @override
+  String get addProductCuisineLabel => 'व्यंजन या क्षेत्र (वैकल्पिक)';
+
+  @override
+  String get addProductServingSection => 'सर्विंग';
+
+  @override
+  String get addProductServingGramsLabel => 'डिफ़ॉल्ट सर्विंग (ग्राम)';
+
+  @override
+  String get addProductPortionNameLabel => 'हिस्से का नाम (वैकल्पिक)';
+
+  @override
+  String get addProductNutritionSection => 'प्रति 100 ग पोषण (वैकल्पिक)';
+
+  @override
+  String get addProductNutritionHint =>
+      'केवल लेबल या विश्वसनीय स्रोत से ज्ञात मान दर्ज करें। अनुमान लगाने के बजाय खाली छोड़ें।';
+
+  @override
+  String get addProductEnergyLabel => 'ऊर्जा (kcal / 100 ग)';
+
+  @override
+  String get addProductProteinLabel => 'प्रोटीन (ग / 100 ग)';
+
+  @override
+  String get addProductCarbLabel => 'कार्बोहाइड्रेट (ग / 100 ग)';
+
+  @override
+  String get addProductFatLabel => 'वसा (ग / 100 ग)';
+
+  @override
+  String get addProductFibreLabel => 'फाइबर (ग / 100 ग)';
+
+  @override
+  String get addProductNotesLabel => 'नोट्स (वैकल्पिक)';
+
+  @override
+  String get addProductSubmit => 'मेरी लाइब्रेरी में सहेजें';
+
+  @override
+  String get addProductSubmitNote =>
+      'उपयोगकर्ता-प्रस्तुत और समीक्षा लंबित के रूप में सहेजा गया। केवल आपकी खोज में दिखता है — सत्यापित पोषण नहीं।';
+
+  @override
+  String get addProductPublished =>
+      'आपकी व्यक्तिगत लाइब्रेरी में सहेजा गया (समीक्षा लंबित)';
+
+  @override
+  String get addProductErrorNameRequired => 'उत्पाद या भोजन का नाम दर्ज करें।';
+
+  @override
+  String get addProductErrorNameShort => 'नाम बहुत छोटा है।';
+
+  @override
+  String get addProductErrorServingInvalid =>
+      'सर्विंग 0 से 5000 ग्राम के बीच होनी चाहिए।';
+
+  @override
+  String get addProductErrorBarcodeInvalid =>
+      'बारकोड 8–14 अंकों का होना चाहिए।';
+
+  @override
+  String get addProductErrorEnergyInvalid =>
+      'ऊर्जा प्रति 100 ग 0 से 950 kcal के बीच होनी चाहिए।';
+
+  @override
+  String get addProductErrorProteinInvalid =>
+      'प्रोटीन प्रति 100 ग 0 से 1000 ग के बीच होना चाहिए।';
+
+  @override
+  String get addProductErrorCarbInvalid =>
+      'कार्बोहाइड्रेट प्रति 100 ग 0 से 1000 ग के बीच होना चाहिए।';
+
+  @override
+  String get addProductErrorFatInvalid =>
+      'वसा प्रति 100 ग 0 से 1000 ग के बीच होनी चाहिए।';
+
+  @override
+  String get addProductErrorFibreInvalid =>
+      'फाइबर प्रति 100 ग 0 से 1000 ग के बीच होना चाहिए।';
+
+  @override
+  String get addProductWarningNoNutrition =>
+      'कोई पोषण दर्ज नहीं — मान जोड़ने तक भोजन अनुपलब्ध दिखेगा।';
+
+  @override
+  String get addProductWarningNoEnergy =>
+      'ऊर्जा गायब है — केवल मैक्रो से कैलोरी नहीं दिखेगी।';
+
+  @override
+  String get addProductWarningMacrosHigh =>
+      'प्रोटीन + कार्ब + वसा 110 ग / 100 ग से अधिक — लेबल जाँचें।';
+
+  @override
+  String get addProductStatusDraft => 'ड्राफ़्ट';
+
+  @override
+  String get addProductStatusPending => 'समीक्षा लंबित';
+
+  @override
+  String get addProductStatusPublished =>
+      'व्यक्तिगत लाइब्रेरी में (समीक्षा लंबित)';
+
+  @override
+  String get addProductStatusWithdrawn => 'वापस लिया';
+
+  @override
+  String get mySubmissionsTitle => 'मेरे सबमिशन';
+
+  @override
+  String get mySubmissionsEmpty =>
+      'अभी कोई सबमिशन नहीं। खोज, बारकोड या सेटिंग्स से गायब उत्पाद जोड़ें।';
 }

@@ -166,14 +166,20 @@ class _BarcodeScannerScreenState extends ConsumerState<BarcodeScannerScreen> {
                     label: Text(l10n.barcodeLookupButton),
                   ),
                   const SizedBox(height: 16),
-                  if (lookup is BarcodeLookupNotFound)
+                  if (lookup is BarcodeLookupNotFound) ...[
                     _StatusCard(
                       icon: Icons.search_off,
                       title: l10n.barcodeNotFoundTitle,
                       body: l10n.barcodeNotFoundBody(lookup.barcode),
                       actionLabel: l10n.barcodeTryAgain,
                       onAction: _resumeScanner,
+                      secondaryLabel: l10n.addProductTitle,
+                      onSecondary: () => context.push(
+                        '/add-product',
+                        extra: {'barcode': lookup.barcode},
+                      ),
                     ),
+                  ],
                   if (lookup is BarcodeLookupError)
                     _StatusCard(
                       icon: Icons.error_outline,
@@ -241,6 +247,8 @@ class _StatusCard extends StatelessWidget {
     required this.body,
     required this.actionLabel,
     required this.onAction,
+    this.secondaryLabel,
+    this.onSecondary,
   });
 
   final IconData icon;
@@ -248,6 +256,8 @@ class _StatusCard extends StatelessWidget {
   final String body;
   final String actionLabel;
   final VoidCallback onAction;
+  final String? secondaryLabel;
+  final VoidCallback? onSecondary;
 
   @override
   Widget build(BuildContext context) {
@@ -272,7 +282,17 @@ class _StatusCard extends StatelessWidget {
             const SizedBox(height: 8),
             Text(body),
             const SizedBox(height: 8),
-            TextButton(onPressed: onAction, child: Text(actionLabel)),
+            Wrap(
+              spacing: 8,
+              children: [
+                TextButton(onPressed: onAction, child: Text(actionLabel)),
+                if (secondaryLabel != null && onSecondary != null)
+                  FilledButton.tonal(
+                    onPressed: onSecondary,
+                    child: Text(secondaryLabel!),
+                  ),
+              ],
+            ),
           ],
         ),
       ),

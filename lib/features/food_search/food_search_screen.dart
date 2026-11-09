@@ -91,6 +91,14 @@ class _FoodSearchScreenState extends ConsumerState<FoodSearchScreen> {
                               icon: Icons.travel_explore_outlined,
                               title: l10n.searchNoResults,
                               message: l10n.searchTryExample,
+                              action: FilledButton.tonalIcon(
+                                onPressed: () => context.push(
+                                  '/add-product',
+                                  extra: {'name': query},
+                                ),
+                                icon: const Icon(Icons.add_box_outlined),
+                                label: Text(l10n.addProductTitle),
+                              ),
                             )
                           : _resultsList(l10n, results),
                     ),
