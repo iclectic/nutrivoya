@@ -3,12 +3,13 @@ import 'package:flutter/foundation.dart';
 import 'activity_level.dart';
 import 'nutrition_goal.dart';
 import 'physiological_input.dart';
+import 'reproductive_context.dart';
 
 /// User profile captured during onboarding.
 ///
 /// Only the minimum required for personalized energy estimates is stored.
-/// Optional fields (e.g. reproductive context) are intentionally absent in
-/// Milestone 1 and will be added behind explicit opt-in later.
+/// [reproductiveContext] is optional and stays [ReproductiveContext.none]
+/// unless the user explicitly opts in.
 @immutable
 class UserProfile {
   const UserProfile({
@@ -21,6 +22,7 @@ class UserProfile {
     required this.goal,
     this.familiarCuisines = const <String>[],
     this.displayName,
+    this.reproductiveContext = ReproductiveContext.none,
   });
 
   /// Supabase auth user id (or a local placeholder id when offline).
@@ -37,6 +39,9 @@ class UserProfile {
   final List<String> familiarCuisines;
 
   final String? displayName;
+
+  /// Explicit opt-in. Never inferred from other profile fields.
+  final ReproductiveContext reproductiveContext;
 
   /// Basic sanity guardrails. Does not perform medical validation.
   bool get isPlausible =>
@@ -57,6 +62,7 @@ class UserProfile {
     NutritionGoal? goal,
     List<String>? familiarCuisines,
     String? displayName,
+    ReproductiveContext? reproductiveContext,
   }) {
     return UserProfile(
       id: id ?? this.id,
@@ -68,6 +74,7 @@ class UserProfile {
       goal: goal ?? this.goal,
       familiarCuisines: familiarCuisines ?? this.familiarCuisines,
       displayName: displayName ?? this.displayName,
+      reproductiveContext: reproductiveContext ?? this.reproductiveContext,
     );
   }
 
@@ -84,7 +91,8 @@ class UserProfile {
           activityLevel == other.activityLevel &&
           goal == other.goal &&
           listEquals(familiarCuisines, other.familiarCuisines) &&
-          displayName == other.displayName;
+          displayName == other.displayName &&
+          reproductiveContext == other.reproductiveContext;
 
   @override
   int get hashCode => Object.hash(
@@ -97,5 +105,6 @@ class UserProfile {
         goal,
         Object.hashAll(familiarCuisines),
         displayName,
+        reproductiveContext,
       );
 }

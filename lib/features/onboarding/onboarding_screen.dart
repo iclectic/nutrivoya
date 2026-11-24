@@ -5,7 +5,9 @@ import 'package:go_router/go_router.dart';
 import '../../core/localization/locale_controller.dart';
 import '../../core/models/activity_level.dart';
 import '../../core/models/nutrition_goal.dart';
+import '../../core/models/energy_requirement.dart';
 import '../../core/models/physiological_input.dart';
+import '../../core/models/reproductive_context.dart';
 import '../../core/models/user_profile.dart';
 import '../../core/services/energy_requirement_service.dart';
 import '../../core/storage/local_preferences.dart';
@@ -15,8 +17,9 @@ import '../../shared/extensions/app_localizations_x.dart';
 
 /// Multi-step onboarding flow.
 ///
-/// Steps: welcome -> goal -> profile -> cuisines (optional) -> language ->
-/// summary. On completion the profile is persisted and onboarding flagged.
+/// Steps: welcome -> goal -> profile -> reproductive context (optional) ->
+/// cuisines (optional) -> language -> summary. On completion the profile is
+/// persisted and onboarding flagged.
 class OnboardingScreen extends ConsumerStatefulWidget {
   const OnboardingScreen({super.key});
 
@@ -27,13 +30,14 @@ class OnboardingScreen extends ConsumerStatefulWidget {
 class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   final _controller = PageController();
   int _step = 0;
-  static const int _totalSteps = 6;
+  static const int _totalSteps = 7;
 
   NutritionGoal? _goal;
   final _ageCtrl = TextEditingController();
   final _heightCtrl = TextEditingController();
   final _weightCtrl = TextEditingController();
   PhysiologicalInput _physio = PhysiologicalInput.unspecified;
+  ReproductiveContext _reproductive = ReproductiveContext.none;
   ActivityLevel _activity = ActivityLevel.sedentary;
   final List<String> _cuisines = [];
 
@@ -92,6 +96,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
       activityLevel: _activity,
       goal: _goal ?? NutritionGoal.trackOnly,
       familiarCuisines: List.unmodifiable(_cuisines),
+      reproductiveContext: _reproductive,
     );
 
     await ref.read(profileControllerProvider.notifier).save(profile);
@@ -123,6 +128,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                   _welcomeStep(l10n),
                   _goalStep(l10n),
                   _profileStep(l10n),
+                  _reproductiveStep(l10n),
                   _cuisineStep(l10n),
                   _languageStep(l10n),
                   _summaryStep(l10n),
@@ -146,7 +152,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                         onPressed: _back,
                         child: Text(l10n.commonBack),
                       ),
-                    if (_step == 3) // cuisines are optional
+                    if (_step == 3 || _step == 4)
                       TextButton(
                         onPressed: _next,
                         child: Text(l10n.commonSkip),
@@ -352,6 +358,53 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
     }
   }
 
+  Widget _reproductiveStep(AppLocalizations l10n) {
+    return _StepPadding(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(l10n.onboardingReproductiveTitle,
+              style: Theme.of(context).textTheme.titleLarge),
+          const SizedBox(height: 4),
+          Text(l10n.onboardingReproductiveSubtitle,
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    color: Theme.of(context).colorScheme.onSurfaceVariant,
+                  )),
+          const SizedBox(height: 16),
+          RadioGroup<ReproductiveContext>(
+            groupValue: _reproductive,
+            onChanged: (v) => setState(
+              () => _reproductive = v ?? ReproductiveContext.none,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: ReproductiveContext.values
+                  .map(
+                    (option) => RadioListTile<ReproductiveContext>(
+                      value: option,
+                      title: Text(_reproductiveLabel(option, l10n)),
+                      dense: true,
+                    ),
+                  )
+                  .toList(),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  String _reproductiveLabel(ReproductiveContext value, AppLocalizations l10n) {
+    switch (value) {
+      case ReproductiveContext.pregnant:
+        return l10n.onboardingReproductivePregnant;
+      case ReproductiveContext.breastfeeding:
+        return l10n.onboardingReproductiveBreastfeeding;
+      case ReproductiveContext.none:
+        return l10n.onboardingReproductiveNone;
+    }
+  }
+
   Widget _cuisineStep(AppLocalizations l10n) {
     return _StepPadding(
       child: Column(
@@ -444,6 +497,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
       activityLevel: _activity,
       goal: _goal ?? NutritionGoal.trackOnly,
       familiarCuisines: List.unmodifiable(_cuisines),
+      reproductiveContext: _reproductive,
     );
 
     final estimate = previewProfile.isPlausible
@@ -493,6 +547,22 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                           ),
                           style: Theme.of(context).textTheme.bodyMedium,
                         ),
+                        if (estimate.warningCodes.contains(
+                          EnergyWarningCode.lossDisabledReproductive,
+                        )) ...[
+                          const SizedBox(height: 12),
+                          Text(
+                            l10n.energyNoteLossDisabledReproductive,
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodySmall
+                                ?.copyWith(
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onSurfaceVariant,
+                                ),
+                          ),
+                        ],
                         const SizedBox(height: 12),
                         Text(
                           l10n.goalsEstimateDisclaimer,

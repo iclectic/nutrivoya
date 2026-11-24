@@ -883,5 +883,40 @@
   "photoOnDeviceAssistNote": "On-device assist is on: your description is matched to food vocabulary, then looked up in the database. Pixels alone never invent foods or calories.",
   "photoReasonRecognizer": "On-device vocabulary match",
   "photoReasonCuisineToken": "Familiar-cuisine vocabulary match",
-  "photoReasonSearchMatch": "Description search match"
+  "photoReasonSearchMatch": "Description search match",
+  "onboardingReproductiveTitle": "Reproductive context (optional)",
+  "onboardingReproductiveSubtitle": "Used only to turn off aggressive weight-loss targets. Nutrivoya does not give pregnancy medical advice. Leave this as not applicable unless you want a calorie deficit switched off.",
+  "onboardingReproductiveNone": "Not applicable",
+  "onboardingReproductivePregnant": "Pregnant",
+  "onboardingReproductiveBreastfeeding": "Breastfeeding",
+  "profileReproductive": "Reproductive context",
+  "energyNoteLossDisabledReproductive": "Weight-loss calorie targets are turned off for pregnancy and breastfeeding. The number shown is a maintenance estimate, not medical advice.",
+  "settingsPrivacy": "Privacy and safety",
+  "settingsDeleteAccount": "Delete account",
+  "settingsDeleteAccountNote": "Erases food data on this device and deletes a signed-in account.",
+  "accountDeleteTitle": "Delete account?",
+  "accountDeleteBody": "This removes your diary, profile, recipes, and submissions from this device. If you are signed in, your account is deleted too. This cannot be undone.",
+  "accountDeleteConfirm": "Delete",
+  "accountDeleteCancel": "Cancel",
+  "accountDeleteFailed": "Could not delete the account. Your data on this device was kept so you can try again.",
+  "privacyTitle": "Privacy and safety",
+  "privacyIntro": "Nutrivoya is a wellness app. It tracks food you choose to log. It does not diagnose or treat disease.",
+  "privacySafetyTitle": "Safety",
+  "privacySafetyBody": "For eating disorders, pregnancy complications, severe underweight, children, significant chronic illness, or medically prescribed diets, use professional guidance. Aggressive weight-loss targets are not applied when you opt in to pregnancy or breastfeeding.",
+  "privacyDataTitle": "Your data",
+  "privacyDataBody": "Profile, diary, recipes, favourites, and progress stay on this device. If you sign in, diary entries and food submissions can sync to your account. Theme and language stay on the device if you delete your account. Verified foods you already published remain in the shared catalog.",
+  "privacySourcesTitle": "Nutrition sources",
+  "privacySourcesBody": "Numbers come from the curated dataset, USDA FoodData Central when configured, Open Food Facts for barcodes, or foods you submit. Missing values stay unavailable. Crowdsourced and user-submitted records are not authoritative — confirm the serving before you log.",
+  "privacyPhotosTitle": "Camera and photos",
+  "privacyPhotosBody": "The camera scans barcodes and can photograph a meal. Photos are used on this device to help you describe food. Nutrivoya does not invent calories from a picture and does not upload meal photos by default.",
+  "privacyDeleteTitle": "Delete your account",
+  "privacyDeleteBody": "Deleting your account removes the remote account when you are signed in, then erases the diary, profile, recipes, and submissions stored on this device. You confirm before anything is deleted.",
+  "privacyVersion": "Version {version}",
+  "@privacyVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  }
 }

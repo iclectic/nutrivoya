@@ -1667,4 +1667,101 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get photoReasonSearchMatch => 'ਵੇਰਵਾ ਖੋਜ ਮੇਲ';
+
+  @override
+  String get onboardingReproductiveTitle => 'ਪ੍ਰਜਨਨ ਸੰਦਰਭ (ਵਿਕਲਪਿਕ)';
+
+  @override
+  String get onboardingReproductiveSubtitle =>
+      'ਇਹ ਸਿਰਫ਼ ਤੇਜ਼ ਭਾਰ-ਘਟਾਉਣ ਦੇ ਟੀਚੇ ਬੰਦ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ। Nutrivoya ਗਰਭ ਅਵਸਥਾ ਦੀ ਡਾਕਟਰੀ ਸਲਾਹ ਨਹੀਂ ਦਿੰਦਾ। ਕੈਲੋਰੀ ਘਾਟਾ ਬੰਦ ਕਰਨਾ ਹੋਵੇ ਤਾਂ ਹੀ ਬਦਲੋ, ਨਹੀਂ ਤਾਂ «ਲਾਗੂ ਨਹੀਂ» ਰਹਿਣ ਦਿਓ।';
+
+  @override
+  String get onboardingReproductiveNone => 'ਲਾਗੂ ਨਹੀਂ';
+
+  @override
+  String get onboardingReproductivePregnant => 'ਗਰਭਵਤੀ';
+
+  @override
+  String get onboardingReproductiveBreastfeeding => 'ਦੁੱਧ ਚੁੰਘਾਉਣਾ';
+
+  @override
+  String get profileReproductive => 'ਪ੍ਰਜਨਨ ਸੰਦਰਭ';
+
+  @override
+  String get energyNoteLossDisabledReproductive =>
+      'ਗਰਭ ਅਵਸਥਾ ਅਤੇ ਦੁੱਧ ਚੁੰਘਾਉਣ ਵੇਲੇ ਭਾਰ ਘਟਾਉਣ ਦੇ ਕੈਲੋਰੀ ਟੀਚੇ ਬੰਦ ਹੁੰਦੇ ਹਨ। ਦਿਖਾਈ ਗਿਣਤੀ ਰੱਖ-ਰਖਾਅ ਦਾ ਅੰਦਾਜ਼ਾ ਹੈ, ਡਾਕਟਰੀ ਸਲਾਹ ਨਹੀਂ।';
+
+  @override
+  String get settingsPrivacy => 'ਪਰਦੇਦਾਰੀ ਅਤੇ ਸੁਰੱਖਿਆ';
+
+  @override
+  String get settingsDeleteAccount => 'ਖਾਤਾ ਮਿਟਾਓ';
+
+  @override
+  String get settingsDeleteAccountNote =>
+      'ਇਸ ਡਿਵਾਈਸ ਦਾ ਭੋਜਨ ਡਾਟਾ ਮਿਟਾਉਂਦਾ ਹੈ ਅਤੇ ਸਾਈਨ-ਇਨ ਖਾਤਾ ਹਟਾਉਂਦਾ ਹੈ।';
+
+  @override
+  String get accountDeleteTitle => 'ਖਾਤਾ ਮਿਟਾਓ?';
+
+  @override
+  String get accountDeleteBody =>
+      'ਇਸ ਨਾਲ ਇਸ ਡਿਵਾਈਸ ਤੋਂ ਤੁਹਾਡੀ ਡਾਇਰੀ, ਪ੍ਰੋਫ਼ਾਈਲ, ਰੈਸਿਪੀਆਂ ਅਤੇ ਸਬਮਿਸ਼ਨ ਹਟ ਜਾਂਦੇ ਹਨ। ਜੇ ਤੁਸੀਂ ਸਾਈਨ ਇਨ ਹੋ, ਤਾਂ ਖਾਤਾ ਵੀ ਮਿਟਦਾ ਹੈ। ਇਹ ਵਾਪਸ ਨਹੀਂ ਹੋ ਸਕਦਾ।';
+
+  @override
+  String get accountDeleteConfirm => 'ਮਿਟਾਓ';
+
+  @override
+  String get accountDeleteCancel => 'ਰੱਦ ਕਰੋ';
+
+  @override
+  String get accountDeleteFailed =>
+      'ਖਾਤਾ ਨਹੀਂ ਮਿਟਾਇਆ ਜਾ ਸਕਿਆ। ਇਸ ਡਿਵਾਈਸ ਦਾ ਡਾਟਾ ਰੱਖਿਆ ਗਿਆ ਹੈ ਤਾਂ ਜੋ ਤੁਸੀਂ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰ ਸਕੋ।';
+
+  @override
+  String get privacyTitle => 'ਪਰਦੇਦਾਰੀ ਅਤੇ ਸੁਰੱਖਿਆ';
+
+  @override
+  String get privacyIntro =>
+      'Nutrivoya ਇੱਕ ਵੈਲਨੈੱਸ ਐਪ ਹੈ। ਇਹ ਉਹੀ ਭੋਜਨ ਦਰਜ ਕਰਦੀ ਹੈ ਜੋ ਤੁਸੀਂ ਲਾਗ ਕਰਨਾ ਚੁਣਦੇ ਹੋ। ਇਹ ਬਿਮਾਰੀ ਦਾ ਨਿਦਾਨ ਜਾਂ ਇਲਾਜ ਨਹੀਂ ਕਰਦੀ।';
+
+  @override
+  String get privacySafetyTitle => 'ਸੁਰੱਖਿਆ';
+
+  @override
+  String get privacySafetyBody =>
+      'ਖਾਣ ਦੇ ਵਿਕਾਰ, ਗਰਭ ਅਵਸਥਾ ਦੀਆਂ ਪੇਚੀਦਗੀਆਂ, ਬਹੁਤ ਘੱਟ ਭਾਰ, ਬੱਚੇ, ਗੰਭੀਰ ਲੰਮੀ ਬਿਮਾਰੀ ਜਾਂ ਡਾਕਟਰੀ ਖੁਰਾਕ ਲਈ ਪੇਸ਼ੇਵਰ ਮਾਰਗਦਰਸ਼ਨ ਲਵੋ। ਗਰਭ ਅਵਸਥਾ ਜਾਂ ਦੁੱਧ ਚੁੰਘਾਉਣਾ ਚੁਣਨ ਤੇ ਤੇਜ਼ ਭਾਰ-ਘਟਾਉਣ ਦੇ ਟੀਚੇ ਲਾਗੂ ਨਹੀਂ ਹੁੰਦੇ।';
+
+  @override
+  String get privacyDataTitle => 'ਤੁਹਾਡਾ ਡਾਟਾ';
+
+  @override
+  String get privacyDataBody =>
+      'ਪ੍ਰੋਫ਼ਾਈਲ, ਡਾਇਰੀ, ਰੈਸਿਪੀਆਂ, ਪਸੰਦੀਦਾ ਅਤੇ ਤਰੱਕੀ ਇਸ ਡਿਵਾਈਸ ਤੇ ਰਹਿੰਦੇ ਹਨ। ਸਾਈਨ ਇਨ ਕਰਨ ਤੇ ਡਾਇਰੀ ਅਤੇ ਭੋਜਨ ਸਬਮਿਸ਼ਨ ਖਾਤੇ ਨਾਲ ਸਿੰਕ ਹੋ ਸਕਦੇ ਹਨ। ਖਾਤਾ ਮਿਟਾਉਣ ਤੇ ਥੀਮ ਅਤੇ ਭਾਸ਼ਾ ਡਿਵਾਈਸ ਤੇ ਰਹਿੰਦੇ ਹਨ। ਪਹਿਲਾਂ ਪ੍ਰਕਾਸ਼ਿਤ ਤਸਦੀਕਸ਼ੁਦਾ ਭੋਜਨ ਸਾਂਝੀ ਸੂਚੀ ਵਿੱਚ ਰਹਿੰਦੇ ਹਨ।';
+
+  @override
+  String get privacySourcesTitle => 'ਪੋਸ਼ਣ ਸਰੋਤ';
+
+  @override
+  String get privacySourcesBody =>
+      'ਅੰਕ ਕਿਊਰੇਟਡ ਡਾਟਾਸੈੱਟ, ਸੰਰਚਿਤ ਹੋਣ ਤੇ USDA FoodData Central, ਬਾਰਕੋਡ ਲਈ Open Food Facts, ਜਾਂ ਤੁਹਾਡੇ ਭੇਜੇ ਭੋਜਨ ਤੋਂ ਆਉਂਦੇ ਹਨ। ਗੈਰ-ਮੌਜੂਦ ਮੁੱਲ ਅਣਉਪਲਬਧ ਰਹਿੰਦੇ ਹਨ। ਭੀੜ-ਸਰੋਤ ਅਤੇ ਵਰਤੋਂਕਾਰ ਸਬਮਿਸ਼ਨ ਅਧਿਕਾਰਤ ਨਹੀਂ — ਲਾਗ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਸਰਵਿੰਗ ਜਾਂਚੋ।';
+
+  @override
+  String get privacyPhotosTitle => 'ਕੈਮਰਾ ਅਤੇ ਫ਼ੋਟੋਆਂ';
+
+  @override
+  String get privacyPhotosBody =>
+      'ਕੈਮਰਾ ਬਾਰਕੋਡ ਪੜ੍ਹਦਾ ਹੈ ਅਤੇ ਭੋਜਨ ਦੀ ਫ਼ੋਟੋ ਲੈ ਸਕਦਾ ਹੈ। ਫ਼ੋਟੋਆਂ ਇਸ ਡਿਵਾਈਸ ਤੇ ਭੋਜਨ ਦੱਸਣ ਵਿੱਚ ਮਦਦ ਕਰਦੀਆਂ ਹਨ। Nutrivoya ਤਸਵੀਰ ਤੋਂ ਕੈਲੋਰੀ ਨਹੀਂ ਘੜਦਾ ਅਤੇ ਮੂਲ ਰੂਪ ਵਿੱਚ ਭੋਜਨ ਫ਼ੋਟੋਆਂ ਅੱਪਲੋਡ ਨਹੀਂ ਕਰਦਾ।';
+
+  @override
+  String get privacyDeleteTitle => 'ਆਪਣਾ ਖਾਤਾ ਮਿਟਾਓ';
+
+  @override
+  String get privacyDeleteBody =>
+      'ਖਾਤਾ ਮਿਟਾਉਣ ਤੇ ਸਾਈਨ-ਇਨ ਦੂਰ-ਖਾਤਾ ਹਟਦਾ ਹੈ, ਫਿਰ ਇਸ ਡਿਵਾਈਸ ਦੀ ਡਾਇਰੀ, ਪ੍ਰੋਫ਼ਾਈਲ, ਰੈਸਿਪੀਆਂ ਅਤੇ ਸਬਮਿਸ਼ਨ ਮਿਟਦੇ ਹਨ। ਕੁਝ ਵੀ ਮਿਟਣ ਤੋਂ ਪਹਿਲਾਂ ਤੁਸੀਂ ਪੁਸ਼ਟੀ ਕਰਦੇ ਹੋ।';
+
+  @override
+  String privacyVersion(String version) {
+    return 'ਸੰਸਕਰਣ $version';
+  }
 }

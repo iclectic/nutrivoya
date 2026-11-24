@@ -21,6 +21,11 @@ abstract class AuthRepository {
   Future<AuthResult> signIn({required String email, required String password});
   Future<AuthResult> signUp({required String email, required String password});
   Future<void> signOut();
+
+  /// Deletes the signed-in remote account. No-op when unconfigured.
+  /// Throws [AuthError] if the backend rejects the request.
+  Future<void> deleteRemoteAccount();
+
   Future<void> resetPassword({required String email});
   Stream<bool> get authStateChanges;
   String? get currentUserId;
@@ -95,6 +100,19 @@ class SupabaseAuthRepository implements AuthRepository {
   Future<void> signOut() => _client.auth.signOut();
 
   @override
+  Future<void> deleteRemoteAccount() async {
+    try {
+      await _client.rpc('delete_own_account');
+    } on AuthException catch (e) {
+      throw AuthError('accountDeleteFailed', detail: e.message);
+    } on PostgrestException catch (e) {
+      throw AuthError('accountDeleteFailed', detail: e.message);
+    } catch (e) {
+      throw AuthError('accountDeleteFailed', detail: e.toString());
+    }
+  }
+
+  @override
   Future<void> resetPassword({required String email}) =>
       _client.auth.resetPasswordForEmail(email.trim());
 
@@ -146,6 +164,9 @@ class UnconfiguredAuthRepository implements AuthRepository {
 
   @override
   Future<void> signOut() async {}
+
+  @override
+  Future<void> deleteRemoteAccount() async {}
 
   @override
   Future<void> resetPassword({required String email}) {

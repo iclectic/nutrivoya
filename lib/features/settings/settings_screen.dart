@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../core/errors/app_error.dart';
 import '../../core/localization/locale_controller.dart';
 import '../../core/storage/local_preferences.dart';
 import '../../core/storage/theme_controller.dart';
+import '../../features/account/account_deletion_service.dart';
 import '../../features/add_product/add_product_providers.dart';
 import '../../features/add_product/submission_review_service.dart';
 import '../../features/auth/auth_controller.dart';
@@ -204,6 +206,15 @@ class SettingsScreen extends ConsumerWidget {
               onTap: () => context.push('/recipes'),
             ),
             ListTile(
+              leading: Icon(
+                Icons.delete_outline,
+                color: Theme.of(context).colorScheme.error,
+              ),
+              title: Text(l10n.settingsDeleteAccount),
+              subtitle: Text(l10n.settingsDeleteAccountNote),
+              onTap: () => _confirmDeleteAccount(context, ref),
+            ),
+            ListTile(
               leading: const Icon(Icons.logout),
               title: Text(l10n.settingsSignOut),
               onTap: () async {
@@ -222,9 +233,60 @@ class SettingsScreen extends ConsumerWidget {
               title: Text(l10n.settingsAbout),
               subtitle: Text(l10n.settingsAboutBody),
             ),
+            ListTile(
+              leading: const Icon(Icons.privacy_tip_outlined),
+              title: Text(l10n.settingsPrivacy),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => context.push('/privacy'),
+            ),
           ],
         ),
       ),
+    );
+  }
+}
+
+Future<void> _confirmDeleteAccount(BuildContext context, WidgetRef ref) async {
+  final l10n = context.l10n;
+  final confirmed = await showDialog<bool>(
+    context: context,
+    builder: (dialogContext) {
+      return AlertDialog(
+        title: Text(l10n.accountDeleteTitle),
+        content: Text(l10n.accountDeleteBody),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(dialogContext).pop(false),
+            child: Text(l10n.accountDeleteCancel),
+          ),
+          TextButton(
+            onPressed: () => Navigator.of(dialogContext).pop(true),
+            child: Text(l10n.accountDeleteConfirm),
+          ),
+        ],
+      );
+    },
+  );
+  if (confirmed != true || !context.mounted) return;
+
+  final auth = ref.read(authControllerProvider);
+  final repo = ref.read(authRepositoryProvider);
+  final hasRemote = repo.isConfigured &&
+      auth is Authenticated &&
+      auth.userId != AuthController.localUserId;
+
+  try {
+    await ref.read(accountDeletionServiceProvider).deleteAccount(
+          hasRemoteAccount: hasRemote,
+        );
+    await ref.read(authControllerProvider.notifier).signOut();
+    await ref.read(profileControllerProvider.notifier).clear();
+    ref.read(onboardingCompleteProvider.notifier).state = false;
+    if (context.mounted) context.go('/login');
+  } on AuthError {
+    if (!context.mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(context.l10n.accountDeleteFailed)),
     );
   }
 }

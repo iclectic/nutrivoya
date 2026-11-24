@@ -1676,4 +1676,101 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get photoReasonSearchMatch => 'विवरण खोज मिलान';
+
+  @override
+  String get onboardingReproductiveTitle => 'प्रजनन संदर्भ (वैकल्पिक)';
+
+  @override
+  String get onboardingReproductiveSubtitle =>
+      'इसका उपयोग केवल आक्रामक वजन-घटाने के लक्ष्य बंद करने के लिए होता है। Nutrivoya गर्भावस्था की चिकित्सकीय सलाह नहीं देता। कैलोरी घाटा बंद करना चाहें तभी इसे बदलें, नहीं तो «लागू नहीं» रहने दें।';
+
+  @override
+  String get onboardingReproductiveNone => 'लागू नहीं';
+
+  @override
+  String get onboardingReproductivePregnant => 'गर्भवती';
+
+  @override
+  String get onboardingReproductiveBreastfeeding => 'स्तनपान';
+
+  @override
+  String get profileReproductive => 'प्रजनन संदर्भ';
+
+  @override
+  String get energyNoteLossDisabledReproductive =>
+      'गर्भावस्था और स्तनपान में वजन घटाने के कैलोरी लक्ष्य बंद रहते हैं। दिखाई गई संख्या रखरखाव का अनुमान है, चिकित्सकीय सलाह नहीं।';
+
+  @override
+  String get settingsPrivacy => 'गोपनीयता और सुरक्षा';
+
+  @override
+  String get settingsDeleteAccount => 'खाता हटाएँ';
+
+  @override
+  String get settingsDeleteAccountNote =>
+      'इस डिवाइस का भोजन डेटा मिटाता है और साइन-इन खाता हटाता है।';
+
+  @override
+  String get accountDeleteTitle => 'खाता हटाएँ?';
+
+  @override
+  String get accountDeleteBody =>
+      'इससे इस डिवाइस से आपकी डायरी, प्रोफ़ाइल, रेसिपी और सबमिशन हट जाते हैं। यदि आप साइन इन हैं, तो खाता भी हट जाता है। इसे वापस नहीं किया जा सकता।';
+
+  @override
+  String get accountDeleteConfirm => 'हटाएँ';
+
+  @override
+  String get accountDeleteCancel => 'रद्द करें';
+
+  @override
+  String get accountDeleteFailed =>
+      'खाता नहीं हटाया जा सका। इस डिवाइस का डेटा रखा गया है ताकि आप फिर कोशिश कर सकें।';
+
+  @override
+  String get privacyTitle => 'गोपनीयता और सुरक्षा';
+
+  @override
+  String get privacyIntro =>
+      'Nutrivoya एक वेलनेस ऐप है। यह वही भोजन दर्ज करता है जिसे आप लॉग करना चुनते हैं। यह रोग का निदान या उपचार नहीं करता।';
+
+  @override
+  String get privacySafetyTitle => 'सुरक्षा';
+
+  @override
+  String get privacySafetyBody =>
+      'खाने के विकार, गर्भावस्था की जटिलताएँ, बहुत कम वज़न, बच्चे, गंभीर दीर्घकालिक बीमारी या चिकित्सकीय आहार के लिए पेशेवर मार्गदर्शन लें। गर्भावस्था या स्तनपान चुनने पर आक्रामक वजन-घटाने के लक्ष्य लागू नहीं होते।';
+
+  @override
+  String get privacyDataTitle => 'आपका डेटा';
+
+  @override
+  String get privacyDataBody =>
+      'प्रोफ़ाइल, डायरी, रेसिपी, पसंदीदा और प्रगति इस डिवाइस पर रहती हैं। साइन इन करने पर डायरी और खाद्य सबमिशन आपके खाते से सिंक हो सकते हैं। खाता हटाने पर थीम और भाषा डिवाइस पर रहती हैं। पहले से प्रकाशित सत्यापित खाद्य साझा कैटलॉग में रहते हैं।';
+
+  @override
+  String get privacySourcesTitle => 'पोषण स्रोत';
+
+  @override
+  String get privacySourcesBody =>
+      'अंक क्यूरेटेड डेटासेट, कॉन्फ़िगर होने पर USDA FoodData Central, बारकोड के लिए Open Food Facts, या आपके सबमिट किए खाद्य से आते हैं। जो मान नहीं हैं वे अनुपलब्ध रहते हैं। भीड़-स्रोत और उपयोगकर्ता सबमिशन आधिकारिक नहीं हैं — लॉग करने से पहले सर्विंग जाँचें।';
+
+  @override
+  String get privacyPhotosTitle => 'कैमरा और फ़ोटो';
+
+  @override
+  String get privacyPhotosBody =>
+      'कैमरा बारकोड पढ़ता है और भोजन की फ़ोटो ले सकता है। फ़ोटो इस डिवाइस पर भोजन बताने में मदद करती हैं। Nutrivoya तस्वीर से कैलोरी नहीं गढ़ता और डिफ़ॉल्ट रूप से भोजन की फ़ोटो अपलोड नहीं करता।';
+
+  @override
+  String get privacyDeleteTitle => 'अपना खाता हटाएँ';
+
+  @override
+  String get privacyDeleteBody =>
+      'खाता हटाने पर साइन-इन दूरस्थ खाता हटता है, फिर इस डिवाइस की डायरी, प्रोफ़ाइल, रेसिपी और सबमिशन मिटते हैं। कुछ भी हटने से पहले आप पुष्टि करते हैं।';
+
+  @override
+  String privacyVersion(String version) {
+    return 'संस्करण $version';
+  }
 }

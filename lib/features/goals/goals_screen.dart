@@ -147,6 +147,8 @@ class GoalsScreen extends ConsumerWidget {
         return l10n.energyNotePhysiologicalUnspecified;
       case EnergyWarningCode.trackOnlyInformational:
         return l10n.energyNoteTrackOnly;
+      case EnergyWarningCode.lossDisabledReproductive:
+        return l10n.energyNoteLossDisabledReproductive;
     }
   }
 }

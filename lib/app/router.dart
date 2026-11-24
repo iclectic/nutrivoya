@@ -22,6 +22,7 @@ import '../features/recipes/recipe_details_screen.dart';
 import '../features/recipes/recipe_editor_screen.dart';
 import '../features/recipes/recipes_screen.dart';
 import '../features/photo/photo_recognition_screen.dart';
+import '../features/settings/privacy_screen.dart';
 import '../features/tracking/meal_templates_screen.dart';
 import '../features/tracking/progress_screen.dart';
 import 'main_shell.dart';
@@ -171,6 +172,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/goals',
         builder: (context, state) => const GoalsScreen(),
+      ),
+      GoRoute(
+        path: '/privacy',
+        builder: (context, state) => const PrivacyScreen(),
       ),
       GoRoute(
         path: '/recipes',

@@ -78,4 +78,7 @@ enum EnergyWarningCode {
 
   /// Goal is track-only; targets are informational maintenance estimates.
   trackOnlyInformational,
+
+  /// Pregnancy or breastfeeding opt-in: no aggressive weight-loss target.
+  lossDisabledReproductive,
 }

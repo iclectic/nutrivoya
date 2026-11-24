@@ -11,10 +11,29 @@ Western packaged foods, and to evaluate food by its actual nutritional
 composition, preparation, portion and dietary context — never by cultural
 stereotype.
 
-This repository currently contains **Milestones 1–18**:
+This repository currently contains **Milestones 1–19**:
 Foundation through Submission Review, Micronutrient Tracking,
-Cultural Meal Suggestions, Nutrition Education / Public Catalog, and
-deeper on-device photo recognition (tokens → structured lookup).
+Cultural Meal Suggestions, Nutrition Education / Public Catalog,
+on-device photo recognition (tokens → structured lookup), and
+store-readiness polish (privacy notice, account deletion, pregnancy
+guardrail).
+
+## Status — Milestone 19 (Store readiness)
+
+Milestone 19 covers the remaining product rules that a store build needs,
+without inventing nutrition:
+
+- Optional reproductive context (not applicable / pregnant / breastfeeding).
+  Default is not applicable. Nothing is inferred.
+- Pregnancy and breastfeeding turn off weight-loss calorie deficits.
+  The target stays a maintenance estimate. No pregnancy calorie bonus is
+  invented.
+- Settings → Privacy and safety: wellness scope, on-device data, sync,
+  sources, camera/photos
+- Delete account: remote deletion first (`0005_delete_own_account.sql`),
+  then on-device diary, profile, recipes, and submissions. Theme and
+  language stay. A failed remote delete leaves local data in place.
+- iOS privacy manifest and export-compliance flag (`ITSAppUsesNonExemptEncryption`)
 
 ## Status — Milestone 18 (On-device Photo Recognition)
 
@@ -387,7 +406,8 @@ lib/
 │   ├── tracking/           # Progress, favourites, templates, water
 │   ├── photo/              # Photo-assisted food suggestions
 │   ├── add_product/        # User submissions, review queue, sync
-│   └── settings/           # Settings (theme, language, account, about)
+│   ├── account/            # Account deletion (remote, then on-device)
+│   └── settings/           # Settings, privacy notice, account deletion
 ├── l10n/                   # ARB source files
 └── shared/
     ├── extensions/         # AppLocalizations context extension
@@ -484,10 +504,12 @@ Nutrivoya is a wellness and nutrition-tracking app. It does not diagnose or
 treat disease. For high-risk circumstances (eating disorders, pregnancy
 complications, severe underweight, children, significant chronic illness,
 medically prescribed diets) the app encourages appropriate professional
-guidance. Aggressive weight-loss targets are not enabled in pregnancy.
+guidance. Aggressive weight-loss targets are not enabled when someone opts in
+to pregnancy or breastfeeding.
 
 ## Next milestone
 
-Core milestones 1–18 are implemented against the original plan’s major
-features. Remaining stretch work is mainly store-readiness polish —
-always with user confirmation and structured nutrition lookup.
+Core milestones 1–19 are implemented. What still needs a person, not more
+app logic: store listing copy, screenshots, signing keys, and applying
+`supabase/migrations/0005_delete_own_account.sql` before remote account
+deletion can succeed. Nutrition stays user-confirmed and structured.

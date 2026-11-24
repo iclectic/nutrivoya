@@ -3,6 +3,7 @@ import 'package:nutrivoya/core/models/activity_level.dart';
 import 'package:nutrivoya/core/models/energy_requirement.dart';
 import 'package:nutrivoya/core/models/nutrition_goal.dart';
 import 'package:nutrivoya/core/models/physiological_input.dart';
+import 'package:nutrivoya/core/models/reproductive_context.dart';
 import 'package:nutrivoya/core/models/user_profile.dart';
 import 'package:nutrivoya/core/services/energy_requirement_service.dart';
 
@@ -16,6 +17,7 @@ void main() {
     PhysiologicalInput physio = PhysiologicalInput.female,
     ActivityLevel activity = ActivityLevel.moderate,
     NutritionGoal goal = NutritionGoal.maintainWeight,
+    ReproductiveContext reproductive = ReproductiveContext.none,
   }) {
     return UserProfile(
       id: 'test',
@@ -25,6 +27,7 @@ void main() {
       physiologicalInput: physio,
       activityLevel: activity,
       goal: goal,
+      reproductiveContext: reproductive,
     );
   }
 
@@ -143,6 +146,37 @@ void main() {
         result.warningCodes,
         contains(EnergyWarningCode.loseWhileLowWeight),
       );
+    });
+
+    test('pregnancy opt-in disables a weight-loss deficit', () {
+      final loss = service.estimate(
+        profile(goal: NutritionGoal.loseWeight),
+      );
+      final pregnant = service.estimate(
+        profile(
+          goal: NutritionGoal.loseWeight,
+          reproductive: ReproductiveContext.pregnant,
+        ),
+      );
+      expect(pregnant.calorieTargetKcal, pregnant.tdeeKcal);
+      expect(pregnant.appliedDeficitKcal, isNull);
+      expect(pregnant.calorieTargetKcal, greaterThan(loss.calorieTargetKcal!));
+      expect(
+        pregnant.warningCodes,
+        contains(EnergyWarningCode.lossDisabledReproductive),
+      );
+      expect(pregnant.confidence, EnergyEstimateConfidence.limited);
+    });
+
+    test('breastfeeding opt-in also keeps maintenance calories', () {
+      final result = service.estimate(
+        profile(
+          goal: NutritionGoal.loseWeight,
+          reproductive: ReproductiveContext.breastfeeding,
+        ),
+      );
+      expect(result.calorieTargetKcal, result.tdeeKcal);
+      expect(result.appliedDeficitKcal, isNull);
     });
 
     test('age outside adult range lowers confidence', () {

@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/models/activity_level.dart';
 import '../../core/models/nutrition_goal.dart';
 import '../../core/models/physiological_input.dart';
+import '../../core/models/reproductive_context.dart';
 import '../../features/profile/profile_controller.dart';
 import '../../shared/extensions/app_localizations_x.dart';
 
@@ -29,6 +30,8 @@ class ProfileScreen extends ConsumerWidget {
                   _row(l10n.onboardingWeightLabel, '${profile.weightKg} kg'),
                   _row(l10n.onboardingSexLabel,
                       _physioLabel(profile.physiologicalInput, l10n)),
+                  _row(l10n.profileReproductive,
+                      _reproductiveLabel(profile.reproductiveContext, l10n)),
                   _row(l10n.onboardingActivityLabel,
                       _activityLabel(profile.activityLevel, l10n)),
                   _row(l10n.profileGoal, _goalLabel(profile.goal, l10n)),
@@ -47,6 +50,17 @@ class ProfileScreen extends ConsumerWidget {
       trailing: Text(value,
           style: const TextStyle(fontWeight: FontWeight.w500)),
     );
+  }
+
+  String _reproductiveLabel(ReproductiveContext value, AppLocalizations l10n) {
+    switch (value) {
+      case ReproductiveContext.pregnant:
+        return l10n.onboardingReproductivePregnant;
+      case ReproductiveContext.breastfeeding:
+        return l10n.onboardingReproductiveBreastfeeding;
+      case ReproductiveContext.none:
+        return l10n.onboardingReproductiveNone;
+    }
   }
 
   String _physioLabel(PhysiologicalInput p, AppLocalizations l10n) {
