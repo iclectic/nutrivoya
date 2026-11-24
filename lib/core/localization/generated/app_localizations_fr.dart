@@ -1699,4 +1699,101 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get photoReasonSearchMatch => 'Correspondance recherche description';
+
+  @override
+  String get onboardingReproductiveTitle => 'Contexte reproductif (facultatif)';
+
+  @override
+  String get onboardingReproductiveSubtitle =>
+      'Sert seulement à désactiver les objectifs agressifs de perte de poids. Nutrivoya ne donne pas de conseil médical de grossesse. Laissez « Non concerné » sauf si vous voulez couper un déficit calorique.';
+
+  @override
+  String get onboardingReproductiveNone => 'Non concerné';
+
+  @override
+  String get onboardingReproductivePregnant => 'Enceinte';
+
+  @override
+  String get onboardingReproductiveBreastfeeding => 'Allaitement';
+
+  @override
+  String get profileReproductive => 'Contexte reproductif';
+
+  @override
+  String get energyNoteLossDisabledReproductive =>
+      'Les objectifs de déficit calorique sont désactivés pendant la grossesse et l\'allaitement. Le chiffre affiché est une estimation de maintien, pas un avis médical.';
+
+  @override
+  String get settingsPrivacy => 'Confidentialité et sécurité';
+
+  @override
+  String get settingsDeleteAccount => 'Supprimer le compte';
+
+  @override
+  String get settingsDeleteAccountNote =>
+      'Efface les données alimentaires de cet appareil et supprime un compte connecté.';
+
+  @override
+  String get accountDeleteTitle => 'Supprimer le compte ?';
+
+  @override
+  String get accountDeleteBody =>
+      'Cela retire votre journal, profil, recettes et soumissions de cet appareil. Si vous êtes connecté, le compte est aussi supprimé. Cette action est irréversible.';
+
+  @override
+  String get accountDeleteConfirm => 'Supprimer';
+
+  @override
+  String get accountDeleteCancel => 'Annuler';
+
+  @override
+  String get accountDeleteFailed =>
+      'Impossible de supprimer le compte. Les données de cet appareil ont été conservées pour que vous puissiez réessayer.';
+
+  @override
+  String get privacyTitle => 'Confidentialité et sécurité';
+
+  @override
+  String get privacyIntro =>
+      'Nutrivoya est une application de bien-être. Elle suit les aliments que vous choisissez d\'enregistrer. Elle ne diagnostique ni ne traite aucune maladie.';
+
+  @override
+  String get privacySafetyTitle => 'Sécurité';
+
+  @override
+  String get privacySafetyBody =>
+      'Pour les troubles alimentaires, les complications de grossesse, un poids très bas, les enfants, une maladie chronique importante ou un régime prescrit, demandez un accompagnement professionnel. Les objectifs agressifs de perte de poids ne s\'appliquent pas si vous indiquez une grossesse ou un allaitement.';
+
+  @override
+  String get privacyDataTitle => 'Vos données';
+
+  @override
+  String get privacyDataBody =>
+      'Le profil, le journal, les recettes, les favoris et le suivi restent sur cet appareil. Si vous vous connectez, le journal et les soumissions peuvent se synchroniser avec votre compte. Le thème et la langue restent sur l\'appareil si vous supprimez le compte. Les aliments vérifiés déjà publiés restent dans le catalogue partagé.';
+
+  @override
+  String get privacySourcesTitle => 'Sources nutritionnelles';
+
+  @override
+  String get privacySourcesBody =>
+      'Les chiffres viennent du jeu de données sélectionné, de USDA FoodData Central s\'il est configuré, d\'Open Food Facts pour les codes-barres, ou des aliments que vous soumettez. Les valeurs manquantes restent indisponibles. Les données participatives et les soumissions ne font pas autorité — vérifiez la portion avant d\'enregistrer.';
+
+  @override
+  String get privacyPhotosTitle => 'Appareil photo et photos';
+
+  @override
+  String get privacyPhotosBody =>
+      'L\'appareil photo lit les codes-barres et peut photographier un repas. Les photos servent sur cet appareil à décrire un aliment. Nutrivoya n\'invente pas de calories à partir d\'une image et n\'envoie pas les photos de repas par défaut.';
+
+  @override
+  String get privacyDeleteTitle => 'Supprimer votre compte';
+
+  @override
+  String get privacyDeleteBody =>
+      'La suppression retire le compte distant si vous êtes connecté, puis efface le journal, le profil, les recettes et les soumissions de cet appareil. Vous confirmez avant toute suppression.';
+
+  @override
+  String privacyVersion(String version) {
+    return 'Version $version';
+  }
 }

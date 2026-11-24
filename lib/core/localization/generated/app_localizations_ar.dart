@@ -1662,4 +1662,101 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get photoReasonSearchMatch => 'مطابقة بحث الوصف';
+
+  @override
+  String get onboardingReproductiveTitle => 'السياق الإنجابي (اختياري)';
+
+  @override
+  String get onboardingReproductiveSubtitle =>
+      'يُستخدم فقط لإيقاف أهداف إنقاص الوزن الشديدة. لا يقدّم Nutrivoya نصيحة طبية للحمل. اتركه «لا ينطبق» إلا إذا أردت إيقاف عجز السعرات.';
+
+  @override
+  String get onboardingReproductiveNone => 'لا ينطبق';
+
+  @override
+  String get onboardingReproductivePregnant => 'حامل';
+
+  @override
+  String get onboardingReproductiveBreastfeeding => 'رضاعة';
+
+  @override
+  String get profileReproductive => 'السياق الإنجابي';
+
+  @override
+  String get energyNoteLossDisabledReproductive =>
+      'تُوقف أهداف عجز السعرات أثناء الحمل والرضاعة. الرقم المعروض تقدير للمحافظة على الوزن، وليس نصيحة طبية.';
+
+  @override
+  String get settingsPrivacy => 'الخصوصية والسلامة';
+
+  @override
+  String get settingsDeleteAccount => 'حذف الحساب';
+
+  @override
+  String get settingsDeleteAccountNote =>
+      'يمسح بيانات الطعام على هذا الجهاز ويحذف الحساب عند تسجيل الدخول.';
+
+  @override
+  String get accountDeleteTitle => 'حذف الحساب؟';
+
+  @override
+  String get accountDeleteBody =>
+      'يزيل هذا اليوميات والملف والوصفات والإرسالات من هذا الجهاز. إذا كنت مسجّل الدخول، يُحذف الحساب أيضًا. لا يمكن التراجع.';
+
+  @override
+  String get accountDeleteConfirm => 'حذف';
+
+  @override
+  String get accountDeleteCancel => 'إلغاء';
+
+  @override
+  String get accountDeleteFailed =>
+      'تعذّر حذف الحساب. بقيت بيانات هذا الجهاز حتى تتمكن من المحاولة مرة أخرى.';
+
+  @override
+  String get privacyTitle => 'الخصوصية والسلامة';
+
+  @override
+  String get privacyIntro =>
+      'Nutrivoya تطبيق للعافية. يتتبع الطعام الذي تختار تسجيله. لا يشخّص المرض ولا يعالجه.';
+
+  @override
+  String get privacySafetyTitle => 'السلامة';
+
+  @override
+  String get privacySafetyBody =>
+      'لاضطرابات الأكل، أو مضاعفات الحمل، أو نقص الوزن الشديد، أو الأطفال، أو المرض المزمن المهم، أو الحميات الموصوفة طبيًا، اطلب إرشادًا مهنيًا. لا تُطبَّق أهداف إنقاص الوزن الشديدة عند اختيار الحمل أو الرضاعة.';
+
+  @override
+  String get privacyDataTitle => 'بياناتك';
+
+  @override
+  String get privacyDataBody =>
+      'يبقى الملف واليوميات والوصفات والمفضلات والتقدم على هذا الجهاز. عند تسجيل الدخول يمكن مزامنة اليوميات وإرسالات الطعام مع حسابك. يبقى المظهر واللغة على الجهاز إذا حذفت الحساب. تبقى الأطعمة المتحققة التي نشرتها في الفهرس المشترك.';
+
+  @override
+  String get privacySourcesTitle => 'مصادر التغذية';
+
+  @override
+  String get privacySourcesBody =>
+      'تأتي الأرقام من المجموعة المنسّقة، أو USDA FoodData Central عند إعداده، أو Open Food Facts للرموز الشريطية، أو الأطعمة التي ترسلها. تبقى القيم الناقصة غير متاحة. البيانات الجماعية وإرسالات المستخدمين ليست مرجعية — أكّد الحصة قبل التسجيل.';
+
+  @override
+  String get privacyPhotosTitle => 'الكاميرا والصور';
+
+  @override
+  String get privacyPhotosBody =>
+      'تقرأ الكاميرا الرموز الشريطية ويمكنها تصوير وجبة. تُستخدم الصور على هذا الجهاز لمساعدتك على وصف الطعام. لا يخترع Nutrivoya سعرات من صورة ولا يرفع صور الوجبات افتراضيًا.';
+
+  @override
+  String get privacyDeleteTitle => 'حذف حسابك';
+
+  @override
+  String get privacyDeleteBody =>
+      'حذف الحساب يزيل الحساب البعيد عند تسجيل الدخول، ثم يمسح اليوميات والملف والوصفات والإرسالات المخزّنة على هذا الجهاز. تؤكّد قبل حذف أي شيء.';
+
+  @override
+  String privacyVersion(String version) {
+    return 'الإصدار $version';
+  }
 }

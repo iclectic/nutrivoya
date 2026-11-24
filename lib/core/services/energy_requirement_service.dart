@@ -3,6 +3,7 @@ import '../models/energy_requirement.dart';
 import '../models/nutrition_goal.dart';
 import '../models/nutrition_targets.dart';
 import '../models/physiological_input.dart';
+import '../models/reproductive_context.dart';
 import '../models/user_profile.dart';
 
 /// Calculates estimated BMR, TDEE and daily nutrition targets.
@@ -71,6 +72,12 @@ class EnergyRequirementService {
       notes.add('energyNoteAgeOutsideAdultRange');
     }
 
+    if (profile.reproductiveContext != ReproductiveContext.none) {
+      confidence = EnergyEstimateConfidence.limited;
+      warnings.add(EnergyWarningCode.lossDisabledReproductive);
+      notes.add('energyNoteLossDisabledReproductive');
+    }
+
     final bmr = _bmr(
       weightKg: profile.weightKg,
       heightCm: profile.heightCm,
@@ -92,6 +99,7 @@ class EnergyRequirementService {
       goal: profile.goal,
       tdee: tdee,
       physio: profile.physiologicalInput,
+      reproductive: profile.reproductiveContext,
       warnings: warnings,
       notes: notes,
     );
@@ -162,6 +170,7 @@ class EnergyRequirementService {
     required NutritionGoal goal,
     required double tdee,
     required PhysiologicalInput physio,
+    required ReproductiveContext reproductive,
     required List<EnergyWarningCode> warnings,
     required List<String> notes,
   }) {
@@ -176,6 +185,13 @@ class EnergyRequirementService {
       case NutritionGoal.trackOnly:
         target = tdee;
       case NutritionGoal.loseWeight:
+        if (reproductive != ReproductiveContext.none) {
+          // Safety scope: aggressive weight-loss targets are not applied
+          // during pregnancy or breastfeeding. Do not invent a pregnancy
+          // calorie bonus — maintenance is the ceiling we will show.
+          target = tdee;
+          break;
+        }
         final rawDeficit = defaultDeficitKcal;
         final cappedByFraction = tdee * maxDeficitFraction;
         final allowedDeficit =

@@ -1683,4 +1683,101 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get photoReasonSearchMatch => 'Description search match';
+
+  @override
+  String get onboardingReproductiveTitle => 'Reproductive context (optional)';
+
+  @override
+  String get onboardingReproductiveSubtitle =>
+      'Used only to turn off aggressive weight-loss targets. Nutrivoya does not give pregnancy medical advice. Leave this as not applicable unless you want a calorie deficit switched off.';
+
+  @override
+  String get onboardingReproductiveNone => 'Not applicable';
+
+  @override
+  String get onboardingReproductivePregnant => 'Pregnant';
+
+  @override
+  String get onboardingReproductiveBreastfeeding => 'Breastfeeding';
+
+  @override
+  String get profileReproductive => 'Reproductive context';
+
+  @override
+  String get energyNoteLossDisabledReproductive =>
+      'Weight-loss calorie targets are turned off for pregnancy and breastfeeding. The number shown is a maintenance estimate, not medical advice.';
+
+  @override
+  String get settingsPrivacy => 'Privacy and safety';
+
+  @override
+  String get settingsDeleteAccount => 'Delete account';
+
+  @override
+  String get settingsDeleteAccountNote =>
+      'Erases food data on this device and deletes a signed-in account.';
+
+  @override
+  String get accountDeleteTitle => 'Delete account?';
+
+  @override
+  String get accountDeleteBody =>
+      'This removes your diary, profile, recipes, and submissions from this device. If you are signed in, your account is deleted too. This cannot be undone.';
+
+  @override
+  String get accountDeleteConfirm => 'Delete';
+
+  @override
+  String get accountDeleteCancel => 'Cancel';
+
+  @override
+  String get accountDeleteFailed =>
+      'Could not delete the account. Your data on this device was kept so you can try again.';
+
+  @override
+  String get privacyTitle => 'Privacy and safety';
+
+  @override
+  String get privacyIntro =>
+      'Nutrivoya is a wellness app. It tracks food you choose to log. It does not diagnose or treat disease.';
+
+  @override
+  String get privacySafetyTitle => 'Safety';
+
+  @override
+  String get privacySafetyBody =>
+      'For eating disorders, pregnancy complications, severe underweight, children, significant chronic illness, or medically prescribed diets, use professional guidance. Aggressive weight-loss targets are not applied when you opt in to pregnancy or breastfeeding.';
+
+  @override
+  String get privacyDataTitle => 'Your data';
+
+  @override
+  String get privacyDataBody =>
+      'Profile, diary, recipes, favourites, and progress stay on this device. If you sign in, diary entries and food submissions can sync to your account. Theme and language stay on the device if you delete your account. Verified foods you already published remain in the shared catalog.';
+
+  @override
+  String get privacySourcesTitle => 'Nutrition sources';
+
+  @override
+  String get privacySourcesBody =>
+      'Numbers come from the curated dataset, USDA FoodData Central when configured, Open Food Facts for barcodes, or foods you submit. Missing values stay unavailable. Crowdsourced and user-submitted records are not authoritative — confirm the serving before you log.';
+
+  @override
+  String get privacyPhotosTitle => 'Camera and photos';
+
+  @override
+  String get privacyPhotosBody =>
+      'The camera scans barcodes and can photograph a meal. Photos are used on this device to help you describe food. Nutrivoya does not invent calories from a picture and does not upload meal photos by default.';
+
+  @override
+  String get privacyDeleteTitle => 'Delete your account';
+
+  @override
+  String get privacyDeleteBody =>
+      'Deleting your account removes the remote account when you are signed in, then erases the diary, profile, recipes, and submissions stored on this device. You confirm before anything is deleted.';
+
+  @override
+  String privacyVersion(String version) {
+    return 'Version $version';
+  }
 }

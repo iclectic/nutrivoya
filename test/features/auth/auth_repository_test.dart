@@ -40,6 +40,10 @@ void main() {
       await repo.signOut(); // should not throw
     });
 
+    test('deleteRemoteAccount is a no-op when unconfigured', () async {
+      await repo.deleteRemoteAccount();
+    });
+
     test('authStateChanges is empty stream', () async {
       final events = await repo.authStateChanges.toList();
       expect(events, isEmpty);

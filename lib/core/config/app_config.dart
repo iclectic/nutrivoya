@@ -23,6 +23,10 @@ class AppConfig {
   /// App display name.
   static const String appName = 'Nutrivoya';
 
+  /// Marketing version. Keep in sync with the `version` in pubspec.yaml
+  /// (the part before `+`).
+  static const String appVersion = '1.0.0';
+
   /// Supported locale codes (BCP-47-ish). Keep in sync with ARB files.
   static const List<String> supportedLocaleCodes = [
     'en',

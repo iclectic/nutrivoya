@@ -66,6 +66,16 @@ class DiaryDatabase extends _$DiaryDatabase {
         },
       );
 
+  /// Erases diary, weight, measurement, and water rows on this device.
+  Future<void> clearUserData() {
+    return transaction(() async {
+      await delete(diaryEntries).go();
+      await delete(weightEntries).go();
+      await delete(bodyMeasurements).go();
+      await delete(waterLogs).go();
+    });
+  }
+
   static LazyDatabase _open() {
     return LazyDatabase(() async {
       final dir = await getApplicationDocumentsDirectory();

@@ -1697,4 +1697,101 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get photoReasonSearchMatch =>
       'Coincidencia de búsqueda por descripción';
+
+  @override
+  String get onboardingReproductiveTitle => 'Contexto reproductivo (opcional)';
+
+  @override
+  String get onboardingReproductiveSubtitle =>
+      'Solo sirve para desactivar metas agresivas de pérdida de peso. Nutrivoya no da consejo médico del embarazo. Déjalo en «No aplica» salvo que quieras apagar un déficit calórico.';
+
+  @override
+  String get onboardingReproductiveNone => 'No aplica';
+
+  @override
+  String get onboardingReproductivePregnant => 'Embarazo';
+
+  @override
+  String get onboardingReproductiveBreastfeeding => 'Lactancia';
+
+  @override
+  String get profileReproductive => 'Contexto reproductivo';
+
+  @override
+  String get energyNoteLossDisabledReproductive =>
+      'Los objetivos de déficit calórico están desactivados en el embarazo y la lactancia. La cifra es una estimación de mantenimiento, no un consejo médico.';
+
+  @override
+  String get settingsPrivacy => 'Privacidad y seguridad';
+
+  @override
+  String get settingsDeleteAccount => 'Eliminar cuenta';
+
+  @override
+  String get settingsDeleteAccountNote =>
+      'Borra los datos de comida de este dispositivo y elimina una cuenta con sesión iniciada.';
+
+  @override
+  String get accountDeleteTitle => '¿Eliminar la cuenta?';
+
+  @override
+  String get accountDeleteBody =>
+      'Esto quita tu diario, perfil, recetas y envíos de este dispositivo. Si has iniciado sesión, la cuenta también se elimina. No se puede deshacer.';
+
+  @override
+  String get accountDeleteConfirm => 'Eliminar';
+
+  @override
+  String get accountDeleteCancel => 'Cancelar';
+
+  @override
+  String get accountDeleteFailed =>
+      'No se pudo eliminar la cuenta. Los datos de este dispositivo se conservaron para que puedas intentarlo de nuevo.';
+
+  @override
+  String get privacyTitle => 'Privacidad y seguridad';
+
+  @override
+  String get privacyIntro =>
+      'Nutrivoya es una app de bienestar. Registra la comida que eliges anotar. No diagnostica ni trata enfermedades.';
+
+  @override
+  String get privacySafetyTitle => 'Seguridad';
+
+  @override
+  String get privacySafetyBody =>
+      'Ante trastornos de la conducta alimentaria, complicaciones del embarazo, peso muy bajo, infancia, enfermedad crónica importante o dietas prescritas, busca orientación profesional. Las metas agresivas de pérdida de peso no se aplican si indicas embarazo o lactancia.';
+
+  @override
+  String get privacyDataTitle => 'Tus datos';
+
+  @override
+  String get privacyDataBody =>
+      'El perfil, el diario, las recetas, los favoritos y el progreso permanecen en este dispositivo. Si inicias sesión, el diario y los envíos pueden sincronizarse con tu cuenta. El tema y el idioma se quedan en el dispositivo si eliminas la cuenta. Los alimentos verificados que ya publicaste siguen en el catálogo compartido.';
+
+  @override
+  String get privacySourcesTitle => 'Fuentes de nutrición';
+
+  @override
+  String get privacySourcesBody =>
+      'Las cifras vienen del conjunto curado, de USDA FoodData Central si está configurado, de Open Food Facts para códigos de barras, o de alimentos que envías. Los valores que faltan siguen como no disponibles. Los datos colaborativos y los envíos no son autoritativos: confirma la porción antes de registrar.';
+
+  @override
+  String get privacyPhotosTitle => 'Cámara y fotos';
+
+  @override
+  String get privacyPhotosBody =>
+      'La cámara lee códigos de barras y puede fotografiar una comida. Las fotos se usan en este dispositivo para describir un alimento. Nutrivoya no inventa calorías a partir de una imagen y no sube fotos de comidas de forma predeterminada.';
+
+  @override
+  String get privacyDeleteTitle => 'Eliminar tu cuenta';
+
+  @override
+  String get privacyDeleteBody =>
+      'Eliminar la cuenta quita la cuenta remota si has iniciado sesión y luego borra el diario, el perfil, las recetas y los envíos de este dispositivo. Confirmas antes de que se borre algo.';
+
+  @override
+  String privacyVersion(String version) {
+    return 'Versión $version';
+  }
 }

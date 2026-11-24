@@ -2974,6 +2974,174 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Description search match'**
   String get photoReasonSearchMatch;
+
+  /// No description provided for @onboardingReproductiveTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reproductive context (optional)'**
+  String get onboardingReproductiveTitle;
+
+  /// No description provided for @onboardingReproductiveSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Used only to turn off aggressive weight-loss targets. Nutrivoya does not give pregnancy medical advice. Leave this as not applicable unless you want a calorie deficit switched off.'**
+  String get onboardingReproductiveSubtitle;
+
+  /// No description provided for @onboardingReproductiveNone.
+  ///
+  /// In en, this message translates to:
+  /// **'Not applicable'**
+  String get onboardingReproductiveNone;
+
+  /// No description provided for @onboardingReproductivePregnant.
+  ///
+  /// In en, this message translates to:
+  /// **'Pregnant'**
+  String get onboardingReproductivePregnant;
+
+  /// No description provided for @onboardingReproductiveBreastfeeding.
+  ///
+  /// In en, this message translates to:
+  /// **'Breastfeeding'**
+  String get onboardingReproductiveBreastfeeding;
+
+  /// No description provided for @profileReproductive.
+  ///
+  /// In en, this message translates to:
+  /// **'Reproductive context'**
+  String get profileReproductive;
+
+  /// No description provided for @energyNoteLossDisabledReproductive.
+  ///
+  /// In en, this message translates to:
+  /// **'Weight-loss calorie targets are turned off for pregnancy and breastfeeding. The number shown is a maintenance estimate, not medical advice.'**
+  String get energyNoteLossDisabledReproductive;
+
+  /// No description provided for @settingsPrivacy.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy and safety'**
+  String get settingsPrivacy;
+
+  /// No description provided for @settingsDeleteAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete account'**
+  String get settingsDeleteAccount;
+
+  /// No description provided for @settingsDeleteAccountNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Erases food data on this device and deletes a signed-in account.'**
+  String get settingsDeleteAccountNote;
+
+  /// No description provided for @accountDeleteTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete account?'**
+  String get accountDeleteTitle;
+
+  /// No description provided for @accountDeleteBody.
+  ///
+  /// In en, this message translates to:
+  /// **'This removes your diary, profile, recipes, and submissions from this device. If you are signed in, your account is deleted too. This cannot be undone.'**
+  String get accountDeleteBody;
+
+  /// No description provided for @accountDeleteConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get accountDeleteConfirm;
+
+  /// No description provided for @accountDeleteCancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get accountDeleteCancel;
+
+  /// No description provided for @accountDeleteFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not delete the account. Your data on this device was kept so you can try again.'**
+  String get accountDeleteFailed;
+
+  /// No description provided for @privacyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy and safety'**
+  String get privacyTitle;
+
+  /// No description provided for @privacyIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'Nutrivoya is a wellness app. It tracks food you choose to log. It does not diagnose or treat disease.'**
+  String get privacyIntro;
+
+  /// No description provided for @privacySafetyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Safety'**
+  String get privacySafetyTitle;
+
+  /// No description provided for @privacySafetyBody.
+  ///
+  /// In en, this message translates to:
+  /// **'For eating disorders, pregnancy complications, severe underweight, children, significant chronic illness, or medically prescribed diets, use professional guidance. Aggressive weight-loss targets are not applied when you opt in to pregnancy or breastfeeding.'**
+  String get privacySafetyBody;
+
+  /// No description provided for @privacyDataTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your data'**
+  String get privacyDataTitle;
+
+  /// No description provided for @privacyDataBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile, diary, recipes, favourites, and progress stay on this device. If you sign in, diary entries and food submissions can sync to your account. Theme and language stay on the device if you delete your account. Verified foods you already published remain in the shared catalog.'**
+  String get privacyDataBody;
+
+  /// No description provided for @privacySourcesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Nutrition sources'**
+  String get privacySourcesTitle;
+
+  /// No description provided for @privacySourcesBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Numbers come from the curated dataset, USDA FoodData Central when configured, Open Food Facts for barcodes, or foods you submit. Missing values stay unavailable. Crowdsourced and user-submitted records are not authoritative — confirm the serving before you log.'**
+  String get privacySourcesBody;
+
+  /// No description provided for @privacyPhotosTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Camera and photos'**
+  String get privacyPhotosTitle;
+
+  /// No description provided for @privacyPhotosBody.
+  ///
+  /// In en, this message translates to:
+  /// **'The camera scans barcodes and can photograph a meal. Photos are used on this device to help you describe food. Nutrivoya does not invent calories from a picture and does not upload meal photos by default.'**
+  String get privacyPhotosBody;
+
+  /// No description provided for @privacyDeleteTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete your account'**
+  String get privacyDeleteTitle;
+
+  /// No description provided for @privacyDeleteBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Deleting your account removes the remote account when you are signed in, then erases the diary, profile, recipes, and submissions stored on this device. You confirm before anything is deleted.'**
+  String get privacyDeleteBody;
+
+  /// No description provided for @privacyVersion.
+  ///
+  /// In en, this message translates to:
+  /// **'Version {version}'**
+  String privacyVersion(String version);
 }
 
 class _AppLocalizationsDelegate

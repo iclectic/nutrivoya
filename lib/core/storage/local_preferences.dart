@@ -55,6 +55,20 @@ class LocalPreferences {
       _prefs.setString(key, value);
   Future<void> remove(String key) => _prefs.remove(key);
 
+  /// Removes on-device user data. Theme and language stay.
+  Future<void> clearUserData() async {
+    const keep = {_keyThemeMode, _keyLocale};
+    final keys = _prefs
+        .getKeys()
+        .where(
+          (key) => key.startsWith('nutrivoya.') && !keep.contains(key),
+        )
+        .toList();
+    for (final key in keys) {
+      await _prefs.remove(key);
+    }
+  }
+
   static Locale _parseLocale(String code) {
     final parts = code.split('-');
     if (parts.length == 1) return Locale(parts[0]);
